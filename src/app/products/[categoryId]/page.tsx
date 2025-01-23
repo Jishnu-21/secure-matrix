@@ -1,22 +1,36 @@
 'use client'
 
+import Image from 'next/image'
+import Link from 'next/link'
 import { useState } from 'react'
 import { categories } from '@/lib/data/categories'
-import ProductCard from "../components/ProductCard"
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
-import CTA from "../../components/CTA"
 import { notFound } from 'next/navigation'
 
-export default function CategoryPage({ params }: { params: { categoryId: string } }) {
+interface PageProps {
+  params: { 
+    categoryId: string 
+  }
+  searchParams?: { [key: string]: string | string[] | undefined }
+}
+
+async function getCategory(categoryId: string) {
+  const category = categories.find(cat => cat.id === categoryId)
+  if (!category) return null
+  return category
+}
+
+export default function CategoryPage({ params, searchParams }: PageProps) {
+  const [currentPage, setCurrentPage] = useState(1)
+  const productsPerPage = 5
+
   const category = categories.find(cat => cat.id === params.categoryId)
   
   if (!category) {
     notFound()
   }
 
-  const [currentPage, setCurrentPage] = useState(1)
-  const productsPerPage = 5
   const totalPages = Math.ceil(category.products.length / productsPerPage)
   
   // Get current products
@@ -43,7 +57,7 @@ export default function CategoryPage({ params }: { params: { categoryId: string 
 
   return (
     <>
-      <Header/>
+      <Header />
       <main className="bg-[#FAFAFA] relative min-h-screen">
         {/* Background Pattern Container */}
         <div 
@@ -67,20 +81,46 @@ export default function CategoryPage({ params }: { params: { categoryId: string 
                 {category.description}
               </p>
             </div>
-            <div className="space-y-20">
+
+            <div className="space-y-12">
               {currentProducts.map((product, index) => (
-                <ProductCard
-                  key={product.id}
-                  serviceType="PRODUIT"
-                  title={product.title}
-                  description={product.description}
-                  features={product.features}
-                  imagePath={product.imagePath}
-                  imageOnRight={index % 2 === 1}
-                  href={`/products/${params.categoryId}/${product.id}`}
-                />
+                <div key={product.id} className="bg-white rounded-lg shadow-md overflow-hidden">
+                  <div className={`flex flex-col ${index % 2 === 0 ? 'lg:flex-row' : 'lg:flex-row-reverse'}`}>
+                    <div className="lg:w-[40%] relative">
+                      <div className="aspect-w-16 aspect-h-10 lg:h-[350px]">
+                        <Image
+                          src={product.imagePath}
+                          alt={product.title}
+                          fill
+                          className="object-cover"
+                        />
+                      </div>
+                    </div>
+                    <div className="lg:w-[60%] p-10">
+                      <h3 className="text-2xl font-semibold text-[#333] mb-8">{product.title}</h3>
+                      <ul className="space-y-4">
+                        {product.features.map((feature, index) => (
+                          <li key={index} className="flex items-start space-x-3">
+                            <span className="text-[#D84315] text-2xl mt-1">•</span>
+                            <span className="text-[#666] text-lg flex-1 leading-relaxed">{feature}</span>
+                          </li>
+                        ))}
+                      </ul>
+                      <div className="mt-10">
+                        <Link 
+                          href={`/products/${params.categoryId}/${product.id}`}
+                          className="inline-block bg-[#D84315] text-white px-8 py-3 rounded-md hover:bg-[#BF360C] transition-colors text-lg"
+                        >
+                          Send Inquiry
+                        </Link>
+                      </div>
+                    </div>
+                  </div>
+                </div>
               ))}
             </div>
+
+            {/* Pagination */}
             {totalPages > 1 && (
               <div className="flex items-center justify-center mt-20 gap-4">
                 <button 
@@ -129,7 +169,7 @@ export default function CategoryPage({ params }: { params: { categoryId: string 
           </div>
         </div>
       </main>
-      <Footer/>
+      <Footer />
     </>
   )
 }

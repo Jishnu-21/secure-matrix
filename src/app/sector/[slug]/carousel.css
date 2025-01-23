@@ -1,0 +1,73 @@
+/* Custom styles for the carousel */
+.gallery-container .slick-track {
+  display: flex;
+  gap: 1rem;
+  touch-action: pan-y pinch-zoom;
+}
+
+.gallery-container .slick-slide {
+  height: inherit;
+  transition: transform 0.2s ease;
+}
+
+.gallery-container .slick-dots {
+  bottom: -40px;
+}
+
+.gallery-container .slick-dots li button:before {
+  font-size: 12px;
+  color: #D84315;
+  opacity: 0.5;
+}
+
+.gallery-container .slick-dots li.slick-active button:before {
+  opacity: 1;
+  color: #D84315;
+}
+
+/* Custom arrows */
+.gallery-container .slick-prev,
+.gallery-container .slick-next {
+  width: 40px;
+  height: 40px;
+  z-index: 1;
+}
+
+.gallery-container .slick-prev {
+  left: -50px;
+}
+
+.gallery-container .slick-next {
+  right: -50px;
+}
+
+.gallery-container .slick-prev:before,
+.gallery-container .slick-next:before {
+  font-size: 40px;
+  color: #D84315;
+}
+
+@media (max-width: 1024px) {
+  .gallery-container .slick-prev {
+    left: -30px;
+  }
+  
+  .gallery-container .slick-next {
+    right: -30px;
+  }
+}
+
+@media (max-width: 640px) {
+  .gallery-container .slick-prev {
+    left: -20px;
+  }
+  
+  .gallery-container .slick-next {
+    right: -20px;
+  }
+  
+  .gallery-container .slick-prev:before,
+  .gallery-container .slick-next:before {
+    font-size: 30px;
+  }
+}

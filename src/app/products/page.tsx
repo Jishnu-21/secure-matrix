@@ -37,7 +37,7 @@ export default function ProductsPage() {
   return (
     <>
       <Header/>
-      <main className="bg-[#FAFAFA] relative min-h-screen">
+      <main className="min-h-screen bg-[#FAFAFA]">
         {/* Background Pattern Container */}
         <div 
           className="absolute inset-0 w-full h-full z-0"
@@ -51,8 +51,8 @@ export default function ProductsPage() {
         />
 
         {/* Content */}
-        <div className="relative z-20 pt-40 pb-20">
-          <div className="container mx-auto max-w-[80%] px-4">
+        <div className="relative z-10 mt-10 top-40 pb-40">
+          <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center mb-20">
               <h1 className="text-3xl font-semibold text-[#333] mb-3">Showroom</h1>
               <div className="w-12 h-0.5 bg-[#D84315] mb-4"></div>
