@@ -7,9 +7,10 @@ interface StatItemProps {
   text: string;
   prefix?: string;
   suffix?: string;
+  isYear?: boolean;
 }
 
-const StatItem = ({ endNumber, text, prefix = '', suffix = '' }: StatItemProps) => {
+const StatItem = ({ endNumber, text, prefix = '', suffix = '', isYear = false }: StatItemProps) => {
   const [number, setNumber] = useState(0);
   const [isVisible, setIsVisible] = useState(false);
   const elementRef = useRef<HTMLDivElement>(null);
@@ -67,19 +68,21 @@ const StatItem = ({ endNumber, text, prefix = '', suffix = '' }: StatItemProps) 
       <p className="text-[#FF4A17] font-medium text-3xl md:text-4xl">
         {prefix}{number}{suffix}
       </p>
-      <p className="text-sm md:text-base text-gray-600">No. of {text}</p>
+      <p className="text-sm md:text-base text-gray-600">{isYear ? text : `No. of ${text}`}</p>
     </div>
   );
 };
 
 const Stats = () => {
   return (
-    <div className="relative -mt-16 mx-auto w-full max-w-[1400px] bg-white rounded shadow-xl py-10 px-8 md:px-16">
-      <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 justify-items-center max-w-[1200px] mx-auto">
-        <StatItem endNumber={25} text="Engineers" suffix=" ans" />
-        <StatItem endNumber={500} text="Engineers" prefix="+" />
-        <StatItem endNumber={98} text="Engineers" suffix="%" />
-        <StatItem endNumber={10} text="Engineers" prefix="+" suffix="K" />
+    <div className="relative -mt-16 mx-4 lg:mx-auto w-[calc(100%-2rem)] lg:w-full max-w-[1400px]">
+      <div className="bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.1)] py-10 px-8 md:px-16 border border-gray-100">
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 justify-items-center max-w-[1200px] mx-auto">
+          <StatItem endNumber={2017} text="Year of Establishment" isYear={true} />
+          <StatItem endNumber={15} text="Engineers" />
+          <StatItem endNumber={3} text="Designers" />
+          <StatItem endNumber={50} text="Employees" suffix="+" />
+        </div>
       </div>
     </div>
   );

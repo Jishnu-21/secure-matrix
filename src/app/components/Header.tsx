@@ -96,11 +96,11 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden px-4"
+          className="md:hidden px-4 text-[#D84315]"
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
-            className="w-6 h-6"
+            className="w-8 h-8"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -169,58 +169,63 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden absolute top-[100px] left-0 w-full bg-white shadow-lg">
-            <ul className="py-2">
-              {menuItems.map((item) => (
-                <div key={item.name}>
-                  <div
-                    className="relative"
-                    onClick={() => {
-                      if (item.dropdown) {
-                        setActiveDropdown(activeDropdown === item.name ? null : item.name);
-                      }
-                    }}
-                  >
-                    <Link
-                      href={item.path}
-                      className={`block px-4 py-2 text-black hover:bg-gray-100 ${
-                        isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) ? 'text-[#D84315]' : ''
-                      }`}
-                      onClick={(e) => {
-                        if (item.dropdown) {
-                          e.preventDefault();
-                        } else {
-                          setMobileMenuOpen(false);
-                        }
-                      }}
-                    >
-                      {item.name}
-                    </Link>
-
-                    {/* Mobile Dropdown */}
-                    {item.dropdown && activeDropdown === item.name && (
-                      <div className="bg-gray-50">
-                        {item.dropdown.map((dropdownItem) => (
-                          <Link
-                            key={dropdownItem.name}
-                            href={dropdownItem.path}
-                            className={`block px-8 py-2 text-black hover:bg-gray-100 ${
-                              pathname === dropdownItem.path ? 'text-[#D84315] bg-gray-50 font-medium' : ''
+          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: '100px' }}>
+            <div className="h-[calc(100vh-100px)] overflow-y-auto bg-white shadow-lg">
+              <div className="container mx-auto">
+                <ul className="py-6 px-4">
+                  {menuItems.map((item) => (
+                    <div key={item.name} className="mb-4">
+                      <div
+                        className="relative"
+                        onClick={() => {
+                          if (item.dropdown) {
+                            setActiveDropdown(activeDropdown === item.name ? null : item.name);
+                          }
+                        }}
+                      >
+                        <Link
+                          href={item.path}
+                          className={`block py-4 px-3 text-lg font-medium transition-colors rounded-lg
+                            ${isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
+                              ? 'text-[#D84315] bg-[#D84315]/5' 
+                              : 'text-gray-800 hover:bg-[#D84315]/5 hover:text-[#D84315]'
                             }`}
-                            onClick={() => {
+                          onClick={(e) => {
+                            if (item.dropdown) {
+                              e.preventDefault();
+                            } else {
                               setMobileMenuOpen(false);
-                              setActiveDropdown(null);
-                            }}
-                          >
-                            {dropdownItem.name}
-                          </Link>
-                        ))}
+                            }
+                          }}
+                        >
+                          {item.name}
+                        </Link>
+
+                        {/* Mobile Dropdown */}
+                        {item.dropdown && activeDropdown === item.name && (
+                          <div className="mt-2 ml-4 pl-4 border-l-2 border-[#D84315]/20 bg-gray-50 rounded-lg">
+                            {item.dropdown.map((dropdownItem) => (
+                              <Link
+                                key={dropdownItem.name}
+                                href={dropdownItem.path}
+                                className={`block py-4 px-3 transition-colors rounded-lg
+                                  ${pathname === dropdownItem.path 
+                                    ? 'text-[#D84315] bg-[#D84315]/5' 
+                                    : 'text-gray-700 hover:bg-[#D84315]/5 hover:text-[#D84315]'
+                                  }`}
+                                onClick={() => setMobileMenuOpen(false)}
+                              >
+                                {dropdownItem.name}
+                              </Link>
+                            ))}
+                          </div>
+                        )}
                       </div>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </ul>
+                    </div>
+                  ))}
+                </ul>
+              </div>
+            </div>
           </div>
         )}
       </div>

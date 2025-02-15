@@ -17,9 +17,9 @@ export interface Category {
 
 export const categories: Category[] = [
   {
-    id: 'teleprospection',
-    title: "Téléprospection / Télémarketing",
-    description: "Solutions complètes de télémarketing et gestion de la relation client",
+    id: 'Secure-gabion-box',
+    title: "SECURE® GABION BOX",
+    description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
     features: [
       "Prise de rendez-vous qualifiés",
       "Gestion de campagnes",

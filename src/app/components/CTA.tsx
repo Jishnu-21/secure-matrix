@@ -33,7 +33,7 @@ const CTA = () => {
           <div className="relative z-10 py-20 md:py-24 px-8 md:px-16">
             <div className="max-w-[900px] mx-auto text-center">
               <h2 className="text-2xl md:text-3xl font-medium text-white mb-6">
-                CTA
+              Build Stronger, Safer Environments with Us 
               </h2>
               <p className="text-white/90 text-base md:text-lg mb-12 leading-relaxed">
                 Maximisez votre croissance en discutant avec nos experts. Recevez dès maintenant un entretien en ligne pour bénéficier de conseils personnalisés et booster votre activité commerciale.

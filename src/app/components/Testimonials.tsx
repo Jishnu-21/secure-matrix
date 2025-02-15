@@ -1,6 +1,14 @@
 "use client";
 
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+
+// Import Swiper styles
+import 'swiper/css';
+import 'swiper/css/pagination';
+import './Testimonials.css';
 
 interface TestimonialCardProps {
   icon: string;
@@ -49,6 +57,18 @@ const TestimonialCard = ({ icon, text, author }: TestimonialCardProps) => (
 );
 
 const Testimonials = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const testimonials = [
     {
       icon: "/icons/stats.svg",
@@ -78,6 +98,42 @@ const Testimonials = () => {
       }
     }
   ];
+
+  const renderTestimonialsGrid = () => (
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
+      {testimonials.map((testimonial, index) => (
+        <TestimonialCard
+          key={index}
+          {...testimonial}
+        />
+      ))}
+    </div>
+  );
+
+  const renderMobileSwiper = () => (
+    <Swiper
+      modules={[Pagination, Autoplay]}
+      spaceBetween={20}
+      slidesPerView={1}
+      pagination={{ 
+        clickable: true,
+        dynamicBullets: true
+      }}
+      autoplay={{
+        delay: 3000,
+        disableOnInteraction: false,
+        pauseOnMouseEnter: true
+      }}
+      loop={true}
+      className="testimonials-swiper"
+    >
+      {testimonials.map((testimonial, index) => (
+        <SwiperSlide key={index}>
+          <TestimonialCard {...testimonial} />
+        </SwiperSlide>
+      ))}
+    </Swiper>
+  );
 
   return (
     <section className="py-24 md:py-32 px-4 relative overflow-hidden min-h-[800px] flex items-center">
@@ -120,15 +176,8 @@ const Testimonials = () => {
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
 
-        {/* Testimonials Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 md:gap-12">
-          {testimonials.map((testimonial, index) => (
-            <TestimonialCard
-              key={index}
-              {...testimonial}
-            />
-          ))}
-        </div>
+        {/* Testimonials Content */}
+        {isMobile ? renderMobileSwiper() : renderTestimonialsGrid()}
       </div>
     </section>
   );

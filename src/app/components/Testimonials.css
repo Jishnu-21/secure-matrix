@@ -1,0 +1,26 @@
+.testimonials-swiper {
+  padding-bottom: 50px !important;
+}
+
+.testimonials-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #D1D5DB;
+  opacity: 1;
+}
+
+.testimonials-swiper .swiper-pagination-bullet-active {
+  background: #DA491A;
+}
+
+.testimonials-swiper .swiper-slide {
+  height: auto;
+  padding: 4px 2px;
+}
+
+@media (max-width: 768px) {
+  .testimonials-swiper {
+    padding-left: 4px;
+    padding-right: 4px;
+  }
+}

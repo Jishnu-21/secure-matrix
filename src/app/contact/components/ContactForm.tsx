@@ -61,15 +61,15 @@ export default function ContactForm() {
 
         <div className="flex flex-col bg-[#e6eaf0] p-8 h-full">
           <div className="flex flex-col items-center mb-8">
-            <h2 className="text-xl font-semibold text-black mb-2">
-              Restons Connectés pour Booster Vos Ventes
+            <h2 className="text-xl font-bold text-black mb-2">
+            Get in touch for inquiries, support, or collaboration. We're here to assist you.
             </h2>
             <div className="w-12 h-0.5 bg-[#D84315]"></div>
           </div>
           <form onSubmit={handleSubmit} className="space-y-6 flex-grow">
             <div>
               <Input
-                placeholder="Input Text Label"
+                placeholder="Name"
                 value={formData.name}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, name: e.target.value })}
                 className="bg-white border-0 text-black placeholder:text-gray-500 h-12 shadow-sm"
@@ -77,7 +77,7 @@ export default function ContactForm() {
             </div>
             <div>
               <Input
-                placeholder="Input Text Label"
+                placeholder="Email"
                 type="email"
                 value={formData.email}
                 onChange={(e: React.ChangeEvent<HTMLInputElement>) => setFormData({ ...formData, email: e.target.value })}
@@ -86,7 +86,7 @@ export default function ContactForm() {
             </div>
             <div className="flex-grow">
               <Textarea
-                placeholder="Bonjour..."
+                placeholder="Message"
                 value={formData.message}
                 onChange={(e: React.ChangeEvent<HTMLTextAreaElement>) => setFormData({ ...formData, message: e.target.value })}
                 className="min-h-[240px] bg-white border-0 text-black placeholder:text-gray-500 shadow-sm"

@@ -1,0 +1,19 @@
+.swiper {
+  padding-bottom: 50px !important;
+}
+
+.swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #D1D5DB;
+  opacity: 1;
+}
+
+.swiper-pagination-bullet-active {
+  background: #DA491A;
+}
+
+.swiper-slide {
+  height: auto;
+  padding: 4px;
+}

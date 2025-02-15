@@ -54,10 +54,10 @@ export default function ProductsPage() {
         <div className="relative z-10 mt-10 top-40 pb-40">
           <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div className="flex flex-col items-center mb-20">
-              <h1 className="text-3xl font-semibold text-[#333] mb-3">Showroom</h1>
+              <h1 className="text-3xl font-semibold text-[#333] mb-3">Our Product Range</h1>
               <div className="w-12 h-0.5 bg-[#D84315] mb-4"></div>
               <p className="text-center text-[#666] max-w-xl">
-                Profitez de notre expertise pour atteindre vos objectifs commerciaux et boostez votre croissance avec Blade-secure.
+              Reliable solutions for erosion control and ground reinforcement
               </p>
             </div>
             <div className="space-y-20">

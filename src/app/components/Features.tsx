@@ -9,19 +9,19 @@ interface FeatureItemProps {
 }
 
 const FeatureItem = ({ icon, title, description }: FeatureItemProps) => (
-  <div className="flex items-center gap-4 md:gap-6">
-    <div className="flex-shrink-0 w-14 h-14 md:w-16 md:h-16 rounded-full bg-[#F8D7CE] flex items-center justify-center">
+  <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
+    <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-[#F8D7CE] flex items-center justify-center">
       <Image 
         src={icon} 
         alt={title} 
         width={24} 
         height={24} 
-        className="w-6 h-6 md:w-7 md:h-7 opacity-80"
+        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 opacity-80"
       />
     </div>
-    <div>
-      <h3 className="text-base md:text-lg font-medium text-[#1A5632] mb-1">{title}</h3>
-      <p className="text-sm text-gray-500 text-opacity-80">{description}</p>
+    <div className="flex-1">
+      <h3 className="text-base sm:text-lg font-medium text-[#1A5632] mb-1">{title}</h3>
+      <p className="text-sm text-gray-500 text-opacity-80 leading-relaxed">{description}</p>
     </div>
   </div>
 );
@@ -30,78 +30,84 @@ const Features = () => {
   const features = [
     {
       icon: "/icons/organic.svg",
-      title: "100% Organic food",
-      description: "100% healthy & Fresh food."
+      title: "Durable & Long-Lasting",
+      description: "Built for strength and longevity"
     },
     {
       icon: "/icons/support.svg",
-      title: "Great Support 24/7",
-      description: "Instant access to Contact"
+      title: "Innovative & Versatile",
+      description: "Solutions for diverse construction needs"
     },
     {
       icon: "/icons/feedback.svg",
-      title: "Customer Feedback",
-      description: "Our happy customer"
+      title: "Corrosion-Resistant",
+      description: "Protected against rust and weather"
     },
     {
       icon: "/icons/payment.svg",
-      title: "100% Sucure Payment",
-      description: "We ensure your money is save"
+      title: "Strong & Stable",
+      description: " Reinforced for structural integrity"
     },
     {
       icon: "/icons/shipping.svg",
-      title: "Free Shipping",
-      description: "Free shipping with discount"
+      title: "Eco-Friendly",
+      description: "Sustainable and efficient materials"
     },
     {
       icon: "/icons/organic-food.svg",
-      title: "100% Organic Food",
-      description: "100% healthy & Fresh food"
+      title: "Reliable & Trusted",
+      description: "Quality backed by expertise"
     }
   ];
 
   return (
-    <section className="py-16 md:py-24 px-4">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 bg-white relative">
       <div className="container mx-auto max-w-[1400px]">
-        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12 items-center">
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* Left side - Image */}
-          <div className="lg:col-span-5">
-            <div className="relative h-[300px] md:h-[400px] lg:h-[500px] w-full">
-              <Image
-                src="/images/factory.png"
-                alt="Factory"
-                fill
-                className="object-cover rounded-lg grayscale"
-                priority
-              />
+          <div className="lg:col-span-5 order-2 lg:order-1 h-full">
+            <div className="sticky top-24 h-[500px] w-full">
+              <div className="relative h-full w-full rounded-lg overflow-hidden">
+                <Image
+                  src="/images/factory.png"
+                  alt="Factory"
+                  fill
+                  className="object-cover grayscale hover:grayscale-0 transition-all duration-500"
+                  priority
+                />
+              </div>
             </div>
           </div>
 
           {/* Right side - Content */}
-          <div className="lg:col-span-7 lg:pl-8">
-            <h2 className="text-3xl md:text-4xl lg:text-[40px] font-medium mb-4">
-              <span className="text-[#1A5632]">100% Trusted</span>
-              <br />
-              <span className="text-[#1A5632]">Organic Food Store</span>
-            </h2>
-            <p className="text-gray-600 text-opacity-80 mb-8 md:mb-12">
-              Pellentesque a ante vulputate leo porttitor luctus sed eget eros. Nulla et rhoncus neque. Duis non diam eget est luctus tincidunt a a mi. Nulla eu eros consequat tortor tincidunt feugiat.
-            </p>
+          <div className="lg:col-span-7 lg:pl-8 order-1 lg:order-2">
+            <div className="sticky top-24">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium mb-4 leading-tight">
+                <span className="text-[#1A5632]">Secure Matrix,</span>
+                <br className="hidden sm:block" />
+                <span className="text-[#1A5632]">Engineering the Future of Safety.</span>
+              </h2>
+              <p className="text-gray-600 text-opacity-80 text-sm sm:text-base mb-8 md:mb-12 leading-relaxed">
+                We Secure Matrix Constro Engineering Solutions, are manufacturers of innovative construction materials that enhance security. Since 2017, we have specialized in manufacturing and supplying a wide range of products, including PVC-coated wire, gabion mattresses, fencing systems, and wall finishing solutions. Our focus is on delivering innovative, sustainable, and reliable materials that meet the needs of both residential and industrial projects. With a commitment to integrity and customer satisfaction, we strive to be a trusted partner in the construction industry. 
+              </p>
 
-            {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-10">
-              {features.map((feature, index) => (
-                <FeatureItem
-                  key={index}
-                  icon={feature.icon}
-                  title={feature.title}
-                  description={feature.description}
-                />
-              ))}
+              {/* Features Grid */}
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
+                {features.map((feature, index) => (
+                  <FeatureItem
+                    key={index}
+                    icon={feature.icon}
+                    title={feature.title}
+                    description={feature.description}
+                  />
+                ))}
+              </div>
             </div>
           </div>
         </div>
       </div>
+      {/* Depth Effect */}
+      <div className="absolute -bottom-8 left-0 right-0 h-16 bg-gradient-to-b from-white via-gray-50 to-gray-100/50"></div>
     </section>
   );
 };

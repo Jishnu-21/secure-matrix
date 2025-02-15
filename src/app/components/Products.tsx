@@ -1,6 +1,11 @@
 "use client";
 
 import Image from "next/image";
+import { useState, useEffect } from "react";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Pagination, Autoplay } from 'swiper/modules';
+import 'swiper/css';
+import 'swiper/css/pagination';
 
 interface ProductCardProps {
   title: string;
@@ -33,6 +38,18 @@ const ProductCard = ({ title, description, imageUrl }: ProductCardProps) => (
 );
 
 const Products = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 768);
+    };
+
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
+
   const products = [
     {
       title: "Téléprospection et Gestion de la Relation Client",
@@ -61,6 +78,46 @@ const Products = () => {
     }
   ];
 
+  const renderProductsGrid = () => (
+    <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+      {products.map((product, index) => (
+        <ProductCard
+          key={index}
+          {...product}
+        />
+      ))}
+    </div>
+  );
+
+  const renderMobileSwiper = () => (
+    <div className="relative pb-14">
+      <Swiper
+        modules={[Pagination, Autoplay]}
+        spaceBetween={16}
+        slidesPerView={1.1}
+        centeredSlides={true}
+        loop={true}
+        pagination={{
+          clickable: true,
+          bulletClass: 'swiper-pagination-bullet !bg-gray-300 !w-2.5 !h-2.5',
+          bulletActiveClass: '!bg-[#DA491A]',
+        }}
+        autoplay={{
+          delay: 3000,
+          disableOnInteraction: false,
+          pauseOnMouseEnter: true,
+        }}
+        className="!pb-10"
+      >
+        {products.map((product, index) => (
+          <SwiperSlide key={index} className="pb-4">
+            <ProductCard {...product} />
+          </SwiperSlide>
+        ))}
+      </Swiper>
+    </div>
+  );
+
   return (
     <section className="py-16 md:py-24 px-4 bg-white">
       <div className="container mx-auto max-w-[1400px]">
@@ -70,17 +127,8 @@ const Products = () => {
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
 
-        {/* Products Grid */}
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              title={product.title}
-              description={product.description}
-              imageUrl={product.imageUrl}
-            />
-          ))}
-        </div>
+        {/* Products Content */}
+        {isMobile ? renderMobileSwiper() : renderProductsGrid()}
 
         {/* Know More Button */}
         <div className="text-center mt-16">
