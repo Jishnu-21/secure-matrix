@@ -61,7 +61,7 @@ const Features = () => {
   ];
 
   return (
-    <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 bg-white relative">
+    <section className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 relative">
       <div className="container mx-auto max-w-[1400px]">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 md:gap-12">
           {/* Left side - Image */}

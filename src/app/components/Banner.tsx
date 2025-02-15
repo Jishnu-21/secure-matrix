@@ -105,9 +105,6 @@ const Banner = () => {
         <Stats />
       </div>
       {/* Depth Effect after Stats */}
-      <div className="relative bg-white">
-        <div className="absolute -top-8 left-0 right-0 h-16 bg-gradient-to-b from-gray-50 to-white"></div>
-      </div>
     </>
   );
 };
