@@ -129,10 +129,10 @@ const Products = () => {
 
   return (
     <section className="py-16 md:py-24 px-4 bg-white">
-      <div className="container mx-auto max-w-[1400px]">
+      <div className="container mx-auto max-w-[1400px] px-4">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-medium text-[#1A5632] mb-3">Our Products</h2>
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">Our Products</h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
 

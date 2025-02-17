@@ -138,7 +138,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 md:py-24 bg-[#FAFAFA] relative overflow-hidden">
+    <section className="py-14 md:py-20 bg-[#FAFAFA] relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
         <div
@@ -149,8 +149,8 @@ const WhyChooseUs = () => {
 
       <div className="container mx-auto max-w-[1400px] px-4">
         {/* Section Title */}
-        <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">Why Choose Us</h2>
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">Why Choose Us</h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
 

@@ -136,7 +136,7 @@ const Testimonials = () => {
   );
 
   return (
-    <section className="py-24 md:py-32 px-4 relative overflow-hidden min-h-[800px] flex items-center">
+    <section className="py-14 md:py-16 px-4 relative overflow-hidden min-h-[600px] flex items-center">
       {/* Background Pattern - Left */}
       <div className="absolute left-0 top-0 w-[50%] h-full opacity-10 pointer-events-none">
         <Image
@@ -169,8 +169,8 @@ const Testimonials = () => {
 
       <div className="container mx-auto max-w-[1400px] relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-20">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">
+        <div className="text-center mb-14">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">
           Testimonials
           </h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
