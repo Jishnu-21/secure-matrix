@@ -8,7 +8,7 @@ const Contact = () => {
   return (
     <>
       <Header/>
-      <main className="bg-[#FAFAFA] relative min-h-screen">
+      <main className="bg-[#FAFAFA] relative min-h-screen pb-10">
         {/* Background Pattern Container */}
         <div 
           className="absolute inset-0 w-full h-full z-0"
@@ -20,7 +20,7 @@ const Contact = () => {
             mixBlendMode: 'multiply'
           }}
         />
-        <div className="relative z-10 mt-10 top-40 pb-40">
+        <div className="relative z-10 pt-16 md:pt-32 pb-10 md:pb-20">
           {/* Content */}
           <div className="relative z-20">
             <ContactForm />

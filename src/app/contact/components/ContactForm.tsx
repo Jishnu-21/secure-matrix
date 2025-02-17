@@ -37,12 +37,12 @@ export default function ContactForm() {
 
   return (
     <div className="container max-w-6xl mx-auto px-4">
-      <div className="flex flex-col items-center mb-12">
+      <div className="flex flex-col items-center mb-8">
         <h1 className="text-3xl font-bold text-black mb-2">Contact us</h1>
         <div className="w-12 h-0.5 bg-[#D84315]"></div>
       </div>
-      <div className="grid md:grid-cols-2 gap-0 h-[600px]">
-        <div className="w-full h-full">
+      <div className="grid md:grid-cols-2 gap-4 md:gap-0">
+        <div className="w-full h-[600px]">
           <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}>
             <GoogleMap
               mapContainerStyle={mapContainerStyle}
@@ -59,7 +59,7 @@ export default function ContactForm() {
           </LoadScript>
         </div>
 
-        <div className="flex flex-col bg-[#e6eaf0] p-8 h-full">
+        <div className="flex flex-col bg-[#e6eaf0] p-8 min-h-[600px]">
           <div className="flex flex-col items-center mb-8">
             <h2 className="text-xl font-bold text-black mb-2">
             Get in touch for inquiries, support, or collaboration. We're here to assist you.
