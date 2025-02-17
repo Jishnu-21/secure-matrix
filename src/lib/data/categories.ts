@@ -9,6 +9,7 @@ export interface Product {
   price: string;
   priceUnit: string;
   imagePath: string;
+  minOrderQuantity?: string;
 }
 
 export interface Category {
@@ -44,7 +45,7 @@ export const categories: Category[] = [
         ],
         price: "75",
         priceUnit: "INR/Cubic Meter",
-        imagePath: "/images/products/gabion-box/gi-gabion-box.jpeg"
+        imagePath: "/images/products/gabion-box/GI-GABION-BOX.jpeg"
       },
       {
         id: 'stainless-steel-gabion-box-with-tail',
@@ -63,7 +64,7 @@ export const categories: Category[] = [
         ],
         price: "650",
         priceUnit: "INR/Cubic Meter",
-        imagePath: "/images/products/gabion-box/stainless-steel-gabion-box-with-tail.jpg"
+        imagePath: "/images/products/gabion-box/Stainless-Steel-Gabion-Box-With-Tail.jpg"
       },
       {
         id: 'secure-matrix-pvc-coated-gabion-box',
@@ -81,7 +82,7 @@ export const categories: Category[] = [
         ],
         price: "130",
         priceUnit: "INR/Square Meter",
-        imagePath: "/images/products/gabion-box/secure-matrix-pvc-coated-gabion-box.jpg"
+        imagePath: "/images/products/gabion-box/Secure-Matrix-PVC-Coated-Gabion-Box.jpg"
       },
       {
         id: 'jumbo-pvc-gabion-wall-net',
@@ -98,7 +99,7 @@ export const categories: Category[] = [
         ],
         price: "600",
         priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/jumbo-pvc-gabion-wall-net.jpg"
+        imagePath: "/images/products/gabion-box/Jumbo-Pvc-Gabion-Wall-Net.jpg"
       },
       {
         id: 'industrial-gi-gabion-boxes',
@@ -115,7 +116,7 @@ export const categories: Category[] = [
         ],
         price: "135",
         priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/industrial-gi-gabion-boxes.jpg"
+        imagePath: "/images/products/gabion-box/Industrial-GI-Gabion-Boxes.jpg"
       },
       {
         id: 'stainless-steel-hexagonal-mesh-revet-mattresses',
@@ -132,7 +133,7 @@ export const categories: Category[] = [
         ],
         price: "150",
         priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/stainless-steel-hexagonal-mesh-revet-mattresses.jpg"
+        imagePath: "/images/products/gabion-box/Stainless-Steel-Hexagonal-Mesh-Revet-Mattresses.jpg"
       },
       {
         id: 'welded-wire-fencing-gabion-wall-net',
@@ -149,7 +150,7 @@ export const categories: Category[] = [
         ],
         price: "135",
         priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/welded-wire-fencing-gabion-wall-net.jpg"
+        imagePath: "/images/products/gabion-box/Welded-Wire-Fencing-Gabion-Wall-Net.jpg"
       },
       {
         id: 'galvanized-iron-hexagonal-wire-mesh',
@@ -166,7 +167,7 @@ export const categories: Category[] = [
         ],
         price: "130",
         priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/galvanized-iron-hexagonal-wire-mesh.jpg"
+        imagePath: "/images/products/gabion-box/Galvanized-Iron-Hexagonal-Wire-Mesh.jpg"
       }
     ]
   },
@@ -192,7 +193,7 @@ export const categories: Category[] = [
         ],
         price: "110",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/cast-iron-weld-mesh-security-fence-system.jpg"
+        imagePath: "/images/products/fence-system/Cast-Iron-Weld-Mesh-Security-Fence-System.jpg"
       },
       {
         id: 'galvanized-iron-concertina-wire',
@@ -200,7 +201,7 @@ export const categories: Category[] = [
         description: "We manufacture Galvanized Iron Concertina Wire Fence System that is available in different specifications and can be availed from us at reasonable rates. These best quality, corrosion resistant, and strong coils are vastly used for metro stations, restricted zones, airport security, common fencing, military security and border security, as well. The surface of the mesh is treated i.e. it is galvanized and is made from iron making it more durable and tough. Before the dispatch, our offered Galvanized Iron Concertina Wire Fence System is checked for its defects and flawlessness",
         price: "70",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/galvanized-iron-concertina-wire-fence-system.jpg"
+        imagePath: "/images/products/fence-system/Galvanized-Iron-Concertina-Wire-Fence-System.jpg"
       },
       {
         id: 'anti-climb-up-security',
@@ -216,7 +217,7 @@ export const categories: Category[] = [
         ],
         price: "130",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/anti-climb-up-security-fence-system.jpg"
+        imagePath: "/images/products/fence-system/Anti-Climb-Up-Security-Fence-System.jpg"
       },
       {
         id: 'mild-steel-powder-coated-mesh',
@@ -233,7 +234,7 @@ export const categories: Category[] = [
         ],
         price: "130",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/mild-steel-powder-coated-mesh-fence-system.jpg"
+        imagePath: "/images/products/fence-system/Mild-Steel-Powder-Coated-Mesh-Fence-System.jpg"
       },
       {
         id: 'zinc-and-poly-epoxy-security',
@@ -250,7 +251,7 @@ export const categories: Category[] = [
         ],
         price: "110",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/pvc-coated-wire.jpg"
+        imagePath: "/images/products/fence-system/Zinc-Poly-Epoxy-Security-Fence-System.jpg"
       },
       {
         id: 'mild-steel-fence',
@@ -267,7 +268,7 @@ export const categories: Category[] = [
         ],
         price: "110",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/mild-steel-fence-system.jpg"
+        imagePath: "/images/products/fence-system/Mild-Steel-Fence-System.jpg"
       },
       {
         id: 'cast-iron-weld-mesh-security',
@@ -301,7 +302,7 @@ export const categories: Category[] = [
         ],
         price: "65",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/mild-steel-chain-link-fence-system.jpg"
+        imagePath: "/images/products/fence-system/Mild-Steel-Chain-Link-Fence-System.jpg"
       }
     ]
   },

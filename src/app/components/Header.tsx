@@ -5,6 +5,22 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
+const categories = [
+  {
+    id: 1,
+    title: "Gabion Box",
+    products: [
+    ],
+  },
+  {
+    id: 2,
+    title: "Gabion Mattresses",
+    products: [
+      
+    ]
+  },
+];
+
 const Header = () => {
   const pathname = usePathname();
   const [isHeaderVisible, setHeaderVisible] = useState(true);
@@ -42,12 +58,39 @@ const Header = () => {
     return pathname.startsWith(path);
   };
 
+  const renderDropdown = (items) => {
+    return (
+      <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
+        {items.map((item) => (
+          <div key={item.name} className="group relative">
+            <Link href={item.path} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
+              {item.name}
+            </Link>
+            {item.subItems && (
+              <div className="absolute left-full top-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
+                {renderDropdown(item.subItems)}
+              </div>
+            )}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
   const menuItems = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { 
       name: "Products", 
       path: "/products",
+      subItems: categories.map(category => ({
+        name: category.title,
+        path: `/products/${category.id}`,
+        subItems: category.products.map(product => ({
+          name: product.title,
+          path: `/products/${category.id}/${product.id}`
+        }))
+      }))
     },
     { 
       name: "Sector", 
@@ -163,6 +206,11 @@ const Header = () => {
                     ))}
                   </div>
                 )}
+                {item.subItems && (
+                  <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
+                    {renderDropdown(item.subItems)}
+                  </div>
+                )}
               </li>
             ))}
           </ul>
@@ -219,6 +267,11 @@ const Header = () => {
                                 {dropdownItem.name}
                               </Link>
                             ))}
+                          </div>
+                        )}
+                        {item.subItems && activeDropdown === item.name && (
+                          <div className="mt-1 ml-3 pl-3 border-l-2 border-[#D84315]/20 bg-gray-50 rounded-lg">
+                            {renderDropdown(item.subItems)}
                           </div>
                         )}
                       </div>

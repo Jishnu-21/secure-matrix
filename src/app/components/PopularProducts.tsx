@@ -66,7 +66,7 @@ const PopularProducts = () => {
 
   const products = [
     {
-      image: "/images/products/wire-fencing/iron-boundary-wire-fencing.jpg",
+      image: "/images/products/wire-fencing/Iron-Boundary-Wire-Fencing.jpg",
       category: "Wire Fencing",
       title: "Iron Boundary Wire Fencing",
       path: "/products/iron-boundary-wire-fencing",
@@ -77,7 +77,7 @@ const PopularProducts = () => {
       ],
     },
     {
-      image: "/images/products/gabion-box/welded-wire-fencing-gabion-wall-net.jpg",
+      image: "/images/products/gabion-box/Welded-Wire-Fencing-Gabion-Wall-Net.jpg",
       category: "Gabion Boxes",
       title: "Welded Wire Fencing Gabion Wall Net",
       path: "/products/Secure-gabion-box/welded-wire-fencing-gabion-wall-net",
@@ -88,7 +88,7 @@ const PopularProducts = () => {
       ],
     },
     {
-      image: "/images/products/wire-fencing/iron-boundary-wire-fencing.jpg",
+      image: "/images/products/wire-fencing/Iron-Boundary-Wire-Fencing.jpg",
       category: "Fence System",
       title: "Mild Steel Fence System",
       path: "/products/iron-boundary-wire-fencing",
@@ -99,7 +99,7 @@ const PopularProducts = () => {
       ],
     },
     {
-      image: "/images/products/fence-system/mild-steel-chain-link-fence-system.jpg",
+      image: "/images/products/fence-system/Pvc-Coated-Chain-Link-Fence-System.jpg",
       category: "Fence System",
       title: "Pvc Coated Chain Link Fencing",
       path: "/products/iron-boundary-wire-fencing",

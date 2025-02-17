@@ -22,7 +22,7 @@ const Page = () => {
                 
                 <div className="relative bg-[#FAFAFA]">
                   {/* Main Content */}
-                  <div className="relative z-20">
+                  <div className="relative z-20 space-y-6 md:space-y-10">
                     <Features />
                     <Products />
                     <WhyChooseUs />
@@ -30,7 +30,7 @@ const Page = () => {
                   </div>
 
                   {/* Testimonials with full background */}
-                  <div className="relative">
+                  <div className="relative mt-6 md:mt-10">
                     <div 
                       className="absolute inset-0 z-0"
                       style={{
@@ -47,7 +47,7 @@ const Page = () => {
                   </div>
 
                   {/* Logo Marquee with extended background */}
-                  <div className="relative">
+                  <div className="relative mt-6 md:mt-10">
                     <div 
                       className="absolute inset-0 z-0"
                       style={{
@@ -64,7 +64,7 @@ const Page = () => {
                   </div>
 
                   {/* Remaining Content */}
-                  <div className="relative z-20">
+                  <div className="relative z-20 mt-6 md:mt-10">
                     <LatestNews />
                     <CTA />
                   </div>
