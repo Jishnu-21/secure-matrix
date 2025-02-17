@@ -6,6 +6,7 @@ import { Autoplay } from 'swiper/modules';
 import { useState, useEffect } from 'react';
 import type { Swiper as SwiperType } from 'swiper';
 
+import Link from 'next/link';
 // Import Swiper styles
 import 'swiper/css';
 
@@ -14,11 +15,10 @@ interface ProductCardProps {
   category: string;
   title: string;
   description: string[];
-  author: string;
-  role: string;
+  path: string;
 }
 
-const ProductCard = ({ image, category, title, description, author, role }: ProductCardProps) => (
+const ProductCard = ({ image, category, title, description, path }: ProductCardProps) => (
   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
       {/* Left side - Image */}
@@ -50,8 +50,6 @@ const ProductCard = ({ image, category, title, description, author, role }: Prod
           </div>
         </div>
         <div>
-          <div className="font-medium text-gray-900 text-lg">{author}</div>
-          <div className="text-sm text-gray-500 mt-1">{role}</div>
         </div>
       </div>
     </div>
@@ -71,6 +69,7 @@ const PopularProducts = () => {
       image: "/images/products/wire-fencing/iron-boundary-wire-fencing.jpg",
       category: "Wire Fencing",
       title: "Iron Boundary Wire Fencing",
+      path: "/products/iron-boundary-wire-fencing",
       description: [
         "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
         "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
@@ -81,6 +80,7 @@ const PopularProducts = () => {
       image: "/images/products/gabion-box/welded-wire-fencing-gabion-wall-net.jpg",
       category: "Gabion Boxes",
       title: "Welded Wire Fencing Gabion Wall Net",
+      path: "/products/Secure-gabion-box/welded-wire-fencing-gabion-wall-net",
       description: [
         "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
         "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
@@ -91,6 +91,7 @@ const PopularProducts = () => {
       image: "/images/products/wire-fencing/iron-boundary-wire-fencing.jpg",
       category: "Fence System",
       title: "Mild Steel Fence System",
+      path: "/products/iron-boundary-wire-fencing",
       description: [
         "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
         "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
@@ -101,6 +102,7 @@ const PopularProducts = () => {
       image: "/images/products/fence-system/mild-steel-chain-link-fence-system.jpg",
       category: "Fence System",
       title: "Pvc Coated Chain Link Fencing",
+      path: "/products/iron-boundary-wire-fencing",
       description: [
         "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
         "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
@@ -132,7 +134,9 @@ const PopularProducts = () => {
           {/* Products Grid */}
           <div className="w-full">
             <div className="w-full">
+              <Link href={products[0].path}>
               <ProductCard {...products[0]} />
+              </Link>
             </div>
           </div>
         </div>
@@ -174,7 +178,9 @@ const PopularProducts = () => {
           >
             {products.map((product, index) => (
               <SwiperSlide key={index}>
+                <Link href={product.path}>
                 <ProductCard {...product} />
+                </Link>
               </SwiperSlide>
             ))}
           </Swiper>
