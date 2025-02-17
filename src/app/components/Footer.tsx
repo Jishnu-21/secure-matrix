@@ -32,12 +32,12 @@ const Footer = () => {
   ];
 
   return (
-    <footer className="bg-[#F3F4F6] px-4 pt-16 pb-8">
+    <footer className="bg-[#F3F4F6] px-4 sm:px-6 pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="container mx-auto max-w-[1400px]">
-        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-24 mb-12">
+        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-12 mb-8 sm:mb-12">
           {/* Logo and Description */}
-          <div className="md:col-span-3">
-            <Link href="/" className="inline-block mb-6">
+          <div className="lg:col-span-1">
+            <Link href="/" className="inline-block mb-4 sm:mb-6">
               <Image
                 src="/icons/logo.png"
                 alt="Secure Matrix"
@@ -52,10 +52,10 @@ const Footer = () => {
           </div>
 
           {/* Menu Sections Container */}
-          <div className="md:col-span-9 grid grid-cols-1 md:grid-cols-12 gap-8">
+          <div className="lg:col-span-3 grid grid-cols-2 sm:grid-cols-3 gap-8">
             {/* Menu */}
-            <div className="md:col-span-3 md:col-start-2">
-              <h3 className="text-gray-900 font-medium mb-4">Menu</h3>
+            <div className="space-y-4">
+              <h3 className="text-gray-900 font-medium">Menu</h3>
               <ul className="space-y-2">
                 {menuItems.Menu.map((item) => (
                   <li key={item.label}>
@@ -71,14 +71,14 @@ const Footer = () => {
             </div>
 
             {/* Services */}
-            <div className="md:col-span-4">
-              <h3 className="text-gray-900 font-medium mb-4">Services</h3>
+            <div className="col-span-2 sm:col-span-1 space-y-4">
+              <h3 className="text-gray-900 font-medium">Services</h3>
               <ul className="space-y-2">
                 {menuItems.Services.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-gray-600 hover:text-gray-900 text-sm transition-colors duration-200"
+                      className="text-gray-600 hover:text-gray-900 text-sm transition-colors duration-200 line-clamp-1"
                     >
                       {item.label}
                     </Link>
@@ -88,8 +88,8 @@ const Footer = () => {
             </div>
 
             {/* Ressources */}
-            <div className="md:col-span-3">
-              <h3 className="text-gray-900 font-medium mb-4">Ressources</h3>
+            <div className="space-y-4">
+              <h3 className="text-gray-900 font-medium">Ressources</h3>
               <ul className="space-y-2">
                 {menuItems.Ressources.map((item) => (
                   <li key={item.label}>
@@ -107,8 +107,8 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="pt-8 border-t border-gray-200 flex flex-col md:flex-row justify-between items-center gap-4">
-          <div className="text-sm text-gray-600">
+        <div className="pt-6 sm:pt-8 border-t border-gray-200 flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="text-sm text-gray-600 text-center sm:text-left">
             2024 Bizdev.Store - Designed by Yef.studio
           </div>
           <div className="flex items-center gap-4">

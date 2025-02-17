@@ -104,8 +104,7 @@ const Banner = () => {
       <div className="bg-gradient-to-b from-[#FAFAFA] to-gray-50 pb-10">
         <Stats />
       </div>
-      {/* Depth Effect after Stats */}
-    </>
+      {/* Depth Effect after Stats */}</>
   );
 };
 

@@ -23,7 +23,6 @@ const About = () => {
             mixBlendMode: 'multiply'
           }}
         />
-
         {/* Content */}
         <div className="relative z-20">
           <Hero />

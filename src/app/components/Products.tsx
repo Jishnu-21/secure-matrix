@@ -6,14 +6,16 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import { Pagination, Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/pagination';
+import Link from 'next/link';
 
 interface ProductCardProps {
   title: string;
   description: string;
   imageUrl: string;
+  path: string;
 }
 
-const ProductCard = ({ title, description, imageUrl }: ProductCardProps) => (
+const ProductCard = ({ title, description, imageUrl, path } : ProductCardProps) => (
   <div className="group relative overflow-hidden rounded-lg border-t-4 border-[#DA491A]">
     {/* Image with overlay */}
     <div className="relative h-[400px] md:h-[450px] lg:h-[500px] w-full">
@@ -52,39 +54,46 @@ const Products = () => {
 
   const products = [
     {
-      title: "Téléprospection et Gestion de la Relation Client",
-      description: "Boostez votre efficacité commerciale en externalisant la prospection et en maintenant des relations solides avec vos clients.",
-      imageUrl: "/images/products.png"
+      title: "Gabion Mattress",
+      description: "Durable and efficient for erosion control and landscape reinforcement.",
+      imageUrl: "/images/gabion-mattresss.jpg",
+      path:"/products/gabion-mattress"
     },
     {
-      title: "Prestations Externalisées",
-      description: "De l'acquisition de prospects à la télévente, profitez de services complets pour conquérir de nouveaux marchés et fidéliser votre clientèle.",
-      imageUrl: "/images/products.png"
+      title: "Fence System",
+      description: "Secure and adaptable fencing solutions for various applications.",
+      imageUrl: "/images/fence-system.jpg",
+      path:"/products/fence-system"
     },
     {
-      title: "Stratégie de Fidélisation Client",
-      description: "Créez des actions de fidélisation percutantes, des enquêtes de satisfaction aux relances d'invitations événements, pour renforcer vos relations clients.",
-      imageUrl: "/images/products.png"
+      title: "Wire Fencing",
+      description: "Strong and versatile fencing for enhanced security and durability.",
+      imageUrl: "/images/wire-fencing.jpg",
+      path:"/products/wire-fencing"
     },
     {
-      title: "Développement Commercial pour TPE & PME",
-      description: "Accompagnement des dirigeants dans la fidélisation, la prospection, le développement commercial, et la relation commerciale à distance.",
-      imageUrl: "/images/products.png"
+      title: "Gabion Wall Net",
+      description: " Robust and eco-friendly solution for retaining walls and enclosures.",
+      imageUrl: "/images/gabion-wall-net.jpg",
+      path:"/products/gabion-wall-net"
     },
     {
-      title: "Formations sur Mesure",
-      description: "Maîtrisez les techniques de téléprospection grâce à des formations adaptées, allant de la prospection commerciale à la fidélisation client.",
-      imageUrl: "/images/products.png"
-    }
+      title: "Barbed Wire",
+      description: "High-strength barrier for maximum security and protection.",
+      imageUrl: "/images/barbed-wire.jpg",
+      path:"/products/barbed-wire"
+    },
   ];
 
   const renderProductsGrid = () => (
     <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
       {products.map((product, index) => (
+        <Link key={index} href={product.path}>
         <ProductCard
           key={index}
           {...product}
         />
+        </Link>
       ))}
     </div>
   );
@@ -133,7 +142,9 @@ const Products = () => {
         {/* Know More Button */}
         <div className="text-center mt-16">
           <button className="inline-flex items-center text-[#DA491A] hover:text-[#DA491A]/80 transition-colors">
-            <span className="text-lg font-medium">En savoir plus</span>
+          <Link href="/products"> 
+            <span className="text-lg font-medium">View More</span>
+            </Link>
           </button>
         </div>
       </div>

@@ -32,3 +32,13 @@ body {
 .animate-marquee {
   animation: marquee 30s linear infinite;
 }
+
+/* Remove old Swiper styles */
+.swiper-button-next,
+.swiper-button-prev,
+.swiper-pagination-bullet,
+.swiper-pagination-bullet-active,
+.swiper-pagination-progressbar,
+.swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
+  display: none !important;
+}

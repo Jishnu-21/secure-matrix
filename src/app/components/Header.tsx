@@ -44,15 +44,10 @@ const Header = () => {
 
   const menuItems = [
     { name: "Home", path: "/" },
-    { name: "About us", path: "/about" },
+    { name: "About", path: "/about" },
     { 
       name: "Products", 
       path: "/products",
-      dropdown: [
-        { name: "Product Category 1", path: "/products/category1" },
-        { name: "Product Category 2", path: "/products/category2" },
-        { name: "Product Category 3", path: "/products/category3" },
-      ]
     },
     { 
       name: "Sector", 
@@ -85,22 +80,28 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full h-[100px] bg-white transition-transform duration-300 z-50 ${
+      className={`fixed top-0 w-full h-[70px] sm:h-[100px] bg-white transition-transform duration-300 z-50 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex h-[100px] justify-between items-center p-4 border-b border-gray-300">
-        <Link href="/" className="text-lg pl-4 md:pl-20 font-bold font-crimson text-black">
-          <Image src="/icons/logo.png" alt="Secure Matrix" width={100} height={100} />
+      <div className="flex h-full justify-between items-center px-4 sm:px-6 lg:px-8 border-b border-gray-300">
+        <Link href="/" className="text-lg pl-0 sm:pl-4 lg:pl-20 font-bold font-crimson text-black">
+          <Image 
+            src="/icons/logo.png" 
+            alt="Secure Matrix" 
+            width={100} 
+            height={100}
+            className="w-[80px] sm:w-[100px] h-auto" 
+          />
         </Link>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden px-4 text-[#D84315]"
+          className="md:hidden px-2 sm:px-4 text-[#D84315]"
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
-            className="w-8 h-8"
+            className="w-6 h-6 sm:w-8 sm:h-8"
             fill="none"
             strokeLinecap="round"
             strokeLinejoin="round"
@@ -118,7 +119,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-6 lg:space-x-10 pr-4 md:pr-20">
+          <ul className="flex space-x-4 lg:space-x-10 pr-0 lg:pr-20">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
@@ -128,7 +129,7 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black font-crimson relative ${
+                  className={`cursor-pointer text-black text-sm lg:text-base font-crimson relative ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                       ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
@@ -153,7 +154,7 @@ const Header = () => {
                       <Link
                         key={dropdownItem.name}
                         href={dropdownItem.path}
-                        className={`block px-6 py-3 text-black hover:bg-gray-50 transition-colors duration-200 ${
+                        className={`block px-4 py-3 text-sm text-black hover:bg-gray-50 transition-colors duration-200 ${
                           pathname === dropdownItem.path ? 'text-[#D84315] bg-gray-50 font-medium' : ''
                         }`}
                       >
@@ -169,12 +170,12 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: '100px' }}>
-            <div className="h-[calc(100vh-100px)] overflow-y-auto bg-white shadow-lg">
-              <div className="container mx-auto">
-                <ul className="py-6 px-4">
+          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: '70px' }}>
+            <div className="h-[calc(100vh-70px)] overflow-y-auto bg-white shadow-lg">
+              <div className="container mx-auto px-4">
+                <ul className="py-4">
                   {menuItems.map((item) => (
-                    <div key={item.name} className="mb-4">
+                    <div key={item.name} className="mb-2">
                       <div
                         className="relative"
                         onClick={() => {
@@ -185,7 +186,7 @@ const Header = () => {
                       >
                         <Link
                           href={item.path}
-                          className={`block py-4 px-3 text-lg font-medium transition-colors rounded-lg
+                          className={`block py-3 px-3 text-base font-medium transition-colors rounded-lg
                             ${isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                               ? 'text-[#D84315] bg-[#D84315]/5' 
                               : 'text-gray-800 hover:bg-[#D84315]/5 hover:text-[#D84315]'
@@ -203,12 +204,12 @@ const Header = () => {
 
                         {/* Mobile Dropdown */}
                         {item.dropdown && activeDropdown === item.name && (
-                          <div className="mt-2 ml-4 pl-4 border-l-2 border-[#D84315]/20 bg-gray-50 rounded-lg">
+                          <div className="mt-1 ml-3 pl-3 border-l-2 border-[#D84315]/20 bg-gray-50 rounded-lg">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.path}
-                                className={`block py-4 px-3 transition-colors rounded-lg
+                                className={`block py-3 px-3 text-sm transition-colors rounded-lg
                                   ${pathname === dropdownItem.path 
                                     ? 'text-[#D84315] bg-[#D84315]/5' 
                                     : 'text-gray-700 hover:bg-[#D84315]/5 hover:text-[#D84315]'

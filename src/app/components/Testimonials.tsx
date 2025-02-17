@@ -171,7 +171,7 @@ const Testimonials = () => {
         {/* Section Title */}
         <div className="text-center mb-20">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">
-            Ce que nos clients pensent de nous
+          Testimonials
           </h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>

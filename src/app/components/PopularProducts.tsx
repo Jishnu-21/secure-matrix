@@ -1,6 +1,13 @@
 "use client";
 
 import Image from "next/image";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+import { useState, useEffect } from 'react';
+import type { Swiper as SwiperType } from 'swiper';
+
+// Import Swiper styles
+import 'swiper/css';
 
 interface ProductCardProps {
   image: string;
@@ -52,21 +59,86 @@ const ProductCard = ({ image, category, title, description, author, role }: Prod
 );
 
 const PopularProducts = () => {
+  const [activeIndex, setActiveIndex] = useState(0);
+  const [isClient, setIsClient] = useState(false);
+
+  useEffect(() => {
+    setIsClient(true);
+  }, []);
+
   const products = [
     {
-      image: "/images/popular.png",
-      category: "NOTRE ENGAGEMENT POUR LA CROISSANCE",
-      title: "Externalisation Commerciale, le Levier de votre Expansion",
+      image: "/images/products/wire-fencing/iron-boundary-wire-fencing.jpg",
+      category: "Wire Fencing",
+      title: "Iron Boundary Wire Fencing",
       description: [
         "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
         "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
         "En tant que partenaire essentiel, nous nous engageons à écouter, veiller, identifier, détecter, et contribuer à votre business en apportant de vrais leads. Optez pour Bizdev.store et propulsez votre entreprise vers de nouveaux horizons de croissance."
       ],
-      author: "Olivier Moula",
-      role: "CEO"
     },
-
+    {
+      image: "/images/products/gabion-box/welded-wire-fencing-gabion-wall-net.jpg",
+      category: "Gabion Boxes",
+      title: "Welded Wire Fencing Gabion Wall Net",
+      description: [
+        "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
+        "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
+        "En tant que partenaire essentiel, nous nous engageons à écouter, veiller, identifier, détecter, et contribuer à votre business en apportant de vrais leads. Optez pour Bizdev.store et propulsez votre entreprise vers de nouveaux horizons de croissance."
+      ],
+    },
+    {
+      image: "/images/products/wire-fencing/iron-boundary-wire-fencing.jpg",
+      category: "Fence System",
+      title: "Mild Steel Fence System",
+      description: [
+        "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
+        "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
+        "En tant que partenaire essentiel, nous nous engageons à écouter, veiller, identifier, détecter, et contribuer à votre business en apportant de vrais leads. Optez pour Bizdev.store et propulsez votre entreprise vers de nouveaux horizons de croissance."
+      ],
+    },
+    {
+      image: "/images/products/fence-system/mild-steel-chain-link-fence-system.jpg",
+      category: "Fence System",
+      title: "Pvc Coated Chain Link Fencing",
+      description: [
+        "Chez CRO, notre déclaration est ancrée dans 25 années d'expérience dédiées à la relation commerciale à distance.",
+        "Notre objectif ? Mettre à profit nos compétences et notre expertise client pour répondre à vos exigences en matière de services télémarketing et téléprospection B2B.",
+        "En tant que partenaire essentiel, nous nous engageons à écouter, veiller, identifier, détecter, et contribuer à votre business en apportant de vrais leads. Optez pour Bizdev.store et propulsez votre entreprise vers de nouveaux horizons de croissance."
+      ],
+    }
   ];
+
+  if (!isClient) {
+    return (
+      <section className="py-16 md:py-24 px-4 bg-[#FAFAFA] relative overflow-hidden">
+        {/* Background pattern */}
+        <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
+          <Image
+            src="/images/dots.png"
+            alt="Background pattern"
+            width={160}
+            height={160}
+          />
+        </div>
+
+        <div className="container mx-auto max-w-[1400px]">
+          {/* Section Title */}
+          <div className="text-center mb-16">
+            <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">Most Popular Products</h2>
+            <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
+          </div>
+
+          {/* Products Grid */}
+          <div className="w-full">
+            <div className="w-full">
+              <ProductCard {...products[0]} />
+            </div>
+          </div>
+        </div>
+      </section>
+    );
+  }
 
   return (
     <section className="py-16 md:py-24 px-4 bg-[#FAFAFA] relative overflow-hidden">
@@ -89,27 +161,39 @@ const PopularProducts = () => {
 
         {/* Products Grid */}
         <div className="w-full">
-          {products.map((product, index) => (
-            <ProductCard
-              key={index}
-              {...product}
-            />
-          ))}
-        </div>
-
-        {/* Navigation Indicators */}
-        <div className="flex justify-center items-center gap-3 mt-12">
-          {[0, 1, 2, 3, 4].map((_, index) => (
-            <button
-              key={index}
-              className={`h-[3px] transition-all duration-300 ${
-                index === 0 
-                  ? 'w-8 bg-[#DA491A]' 
-                  : 'w-4 bg-gray-300 hover:bg-[#DA491A]/50'
-              }`}
-              aria-label={`Go to slide ${index + 1}`}
-            />
-          ))}
+          <Swiper
+            modules={[Autoplay]}
+            spaceBetween={30}
+            slidesPerView={1}
+            autoplay={{
+              delay: 5000,
+              disableOnInteraction: false,
+            }}
+            onSlideChange={(swiper: SwiperType) => setActiveIndex(swiper.activeIndex)}
+            className="w-full"
+          >
+            {products.map((product, index) => (
+              <SwiperSlide key={index}>
+                <ProductCard {...product} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
+          
+          {/* Custom Navigation Indicators */}
+          <div className="flex justify-center items-center gap-3 mt-5">
+            {products.map((_, index) => (
+              <div
+                key={index}
+                className={`h-[3px] transition-all duration-300 ${
+                  index === activeIndex 
+                    ? 'w-8 bg-[#DA491A]' 
+                    : 'w-4 bg-gray-300 hover:bg-[#DA491A]/50'
+                }`}
+                role="button"
+                aria-label={`Go to slide ${index + 1}`}
+              />
+            ))}
+          </div>
         </div>
       </div>
     </section>
