@@ -6,6 +6,7 @@ import { MdFactory } from 'react-icons/md';
 import { BsBuildingsFill } from 'react-icons/bs';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Navigation, Pagination } from 'swiper/modules';
+import Image from 'next/image';
 import 'swiper/css';
 import 'swiper/css/navigation';
 import 'swiper/css/pagination';
@@ -59,7 +60,7 @@ const WhyChooseUs = () => {
     };
   }, []);
 
-  const features = [
+  const cards = [
     {
       icon: <FaCheckCircle />,
       title: "Quality First",
@@ -137,8 +138,8 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-16 md:py-0 px-4 bg-[#FAFAFA] relative overflow-hidden">
-      {/* Background Dots */}
+    <section className="py-16 md:py-24 bg-[#FAFAFA] relative overflow-hidden">
+      {/* Background pattern */}
       <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
         <div
           className="w-full h-full bg-contain bg-no-repeat bg-center"
@@ -146,44 +147,32 @@ const WhyChooseUs = () => {
         />
       </div>
 
-      <div className="container mx-auto max-w-[1400px]">
+      <div className="container mx-auto max-w-[1400px] px-4">
         {/* Section Title */}
         <div className="text-center mb-16">
-          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">Why Choose us</h2>
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">Why Choose Us</h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
 
-        {/* Features Grid/Slider */}
+        {/* Content Grid */}
         {isMobile ? (
-          <div className="relative px-4">
-            <Swiper
-              modules={[Navigation, Pagination]}
-              spaceBetween={20}
-              slidesPerView={1}
-              navigation
-              pagination={{ clickable: true }}
-              className="!pb-12"
-            >
-              {features.map((feature, index) => (
-                <SwiperSlide key={index} className="h-auto">
-                  <ChooseCard
-                    icon={feature.icon}
-                    title={feature.title}
-                    description={feature.description}
-                  />
-                </SwiperSlide>
-              ))}
-            </Swiper>
-          </div>
+          <Swiper
+            modules={[Navigation, Pagination]}
+            spaceBetween={20}
+            slidesPerView={1}
+            pagination={{ clickable: true }}
+            className="why-choose-swiper"
+          >
+            {cards.map((card, index) => (
+              <SwiperSlide key={index}>
+                <ChooseCard {...card} />
+              </SwiperSlide>
+            ))}
+          </Swiper>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 relative">
-            {features.map((feature, index) => (
-              <ChooseCard
-                key={index}
-                icon={feature.icon}
-                title={feature.title}
-                description={feature.description}
-              />
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+            {cards.map((card, index) => (
+              <ChooseCard key={index} {...card} />
             ))}
           </div>
         )}

@@ -8,7 +8,7 @@ const laboratoryServices = [
   {
     title: "MESH TENSILE TESTING M/C",
     description: "Should debris loss mass stopping be strongly. Building can while dirt in the natural earth slope. But we were worried. Carefully and intensively with fast-track time, nature as high level. It means we can make it happen. Carefully and intensively with fast-track time, nature as high level. It means we can make it happen. We can make it happen. We can make it happen. We can make it happen. We can make it happen.",
-    image: "/images/laboratory/image(6).png",
+    image: "/images/laboratory/image (6).png",
     features: [
       "To test the tensile strength of the Protection Mesh for Environmental protection",
       "Speed and deformation while test applied on cross section",
@@ -18,7 +18,7 @@ const laboratoryServices = [
   {
     title: "WIRE ROPE TENSILE TESTING M/C",
     description: "Should debris loss mass stopping be strongly. Building can while dirt in the natural earth slope. But we were worried. Carefully and intensively with fast-track time, nature as high level. It means we can make it happen. We can make it happen. We can make it happen.",
-    image: "/images/laboratory/image(6).png",
+    image: "/images/laboratory/image (6).png",
     features: [
       "Test parameters reference to Safety test and civil engineering",
       "Speed and deformation while test applied",
@@ -28,7 +28,7 @@ const laboratoryServices = [
   {
     title: "PUNCH TESTING M/C",
     description: "Testing points vary what service what test strength. Building can while dirt in the natural earth slope. But we were worried. Carefully and intensively with fast-track time, nature as high level. It means we can make it happen.",
-    image: "/images/laboratory/image(6).png",
+    image: "/images/laboratory/image (6).png",
     features: [
       "To test the tensile strength of the Protection Mesh for Environmental protection",
       "Test parameters reference to Safety test and civil engineering",
@@ -75,7 +75,7 @@ export default function LaboratoryPage() {
                         </div>
                       </div>
                       <div className="w-full lg:w-[60%] p-6 sm:p-8 md:p-10 lg:p-12">
-                        <p className="text-black font-bold text-lg sm:text-xl md:text-2xl mb-6 sm:mb-8 leading-relaxed">{service.description}</p>
+                        <p className="text-black font-semi-bold text-lg sm:text-xl md:text-xl mb-6 sm:mb-8 leading-relaxed">{service.description}</p>
                         <ul className="space-y-3 sm:space-y-4 md:space-y-5">
                           {service.features.map((feature, index) => (
                             <li key={index} className="flex items-start space-x-3 sm:space-x-4">
