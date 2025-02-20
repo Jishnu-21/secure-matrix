@@ -16,25 +16,39 @@ interface ProductCardProps {
 }
 
 const ProductCard = ({ title, description, imageUrl, path } : ProductCardProps) => (
-  <div className="group relative overflow-hidden rounded-lg border-t-4 border-[#DA491A]">
-    {/* Image with overlay */}
-    <div className="relative h-[400px] md:h-[450px] lg:h-[500px] w-full">
-      <Image
-        src={imageUrl}
-        alt={title}
-        fill
-        className="object-cover"
-      />
-      {/* Dark overlay */}
-      <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/50" />
-      {/* Orange gradient overlay */}
-      <div className="absolute inset-0 bg-gradient-to-t from-[#DA491A] via-transparent to-transparent opacity-30 group-hover:opacity-35 transition-opacity duration-300" />
-    </div>
+  <div className="group relative overflow-hidden rounded-lg transition-all duration-500 ease-out hover:shadow-2xl hover:-translate-y-2">
+    {/* Border Animation Container */}
+    <div className="absolute inset-0 rounded-lg bg-gradient-to-r from-[#DA491A] via-[#ff6b3d] to-[#DA491A] opacity-0 group-hover:opacity-100 transition-opacity duration-500" />
     
-    {/* Content */}
-    <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10">
-      <h3 className="text-xl md:text-2xl font-medium text-white mb-3">{title}</h3>
-      <p className="text-white/90 text-sm md:text-base leading-relaxed">{description}</p>
+    {/* Main Content Container */}
+    <div className="relative rounded-lg bg-white m-[2px] overflow-hidden">
+      {/* Image with overlay */}
+      <div className="relative h-[400px] md:h-[450px] lg:h-[500px] w-full">
+        <Image
+          src={imageUrl}
+          alt={title}
+          fill
+          className="object-cover transition-transform duration-700 ease-out group-hover:scale-110"
+        />
+        {/* Dark overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/0 via-black/0 to-black/50 transition-opacity duration-500 group-hover:opacity-80" />
+        {/* Orange gradient overlay */}
+        <div className="absolute inset-0 bg-gradient-to-t from-[#DA491A] via-transparent to-transparent opacity-30 group-hover:opacity-50 transition-all duration-500" />
+      </div>
+      
+      {/* Content */}
+      <div className="absolute bottom-0 left-0 right-0 p-6 md:p-8 z-10 transform transition-all duration-500 ease-out group-hover:translate-y-[-8px]">
+        <h3 className="text-xl md:text-2xl font-medium text-white mb-3 transition-all duration-300 group-hover:text-[#ffffff] group-hover:scale-105">{title}</h3>
+        <p className="text-white/90 text-sm md:text-base leading-relaxed transition-all duration-300 group-hover:opacity-100 group-hover:text-white">{description}</p>
+        <div className="mt-4 opacity-0 transform translate-y-4 transition-all duration-500 group-hover:opacity-100 group-hover:translate-y-0">
+          <span className="inline-flex items-center text-white text-sm font-medium group-hover:text-[#ffffff]">
+            Learn More 
+            <svg className="w-4 h-4 ml-2 transform transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+            </svg>
+          </span>
+        </div>
+      </div>
     </div>
   </div>
 );

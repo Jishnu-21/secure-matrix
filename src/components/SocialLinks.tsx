@@ -5,6 +5,17 @@ import { useState, useEffect } from 'react';
 
 export default function SocialLinks() {
   const [isOpen, setIsOpen] = useState(false);
+  const [showScrollTop, setShowScrollTop] = useState(false);
+
+  // Handle scroll to show/hide scroll to top button
+  useEffect(() => {
+    const handleScroll = () => {
+      setShowScrollTop(window.pageYOffset > 300);
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    return () => window.removeEventListener('scroll', handleScroll);
+  }, []);
 
   // Close menu when clicking outside
   useEffect(() => {
@@ -18,6 +29,13 @@ export default function SocialLinks() {
     document.addEventListener('click', handleClickOutside);
     return () => document.removeEventListener('click', handleClickOutside);
   }, []);
+
+  const scrollToTop = () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth',
+    });
+  };
 
   const socialLinks = [
     {
@@ -69,68 +87,103 @@ export default function SocialLinks() {
             {social.icon}
           </Link>
         ))}
+        
+        {/* Scroll to Top Button */}
+        <button
+          onClick={scrollToTop}
+          className={`bg-[#DA491A] p-3 rounded-lg shadow-lg transition-all duration-500 ${
+            showScrollTop 
+              ? 'opacity-100 translate-y-0 hover:scale-110 hover:bg-[#ff6b3d]' 
+              : 'opacity-0 translate-y-10 pointer-events-none'
+          }`}
+          aria-label="Scroll to top"
+        >
+          <svg
+            className="w-6 h-6 text-white transform transition-transform duration-300 group-hover:-translate-y-1"
+            fill="none"
+            stroke="currentColor"
+            viewBox="0 0 24 24"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <path
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth={2.5}
+              d="M5 10l7-7m0 0l7 7m-7-7v18"
+            />
+          </svg>
+        </button>
       </div>
 
       {/* Mobile View - Toggle button and expandable menu */}
       <div className="fixed bottom-6 right-6 md:hidden z-50 social-links-container">
-        {/* Social Links */}
-        <div className={`flex flex-col items-end gap-4 mb-4 transition-all duration-300 ${
-          isOpen 
-            ? 'opacity-100 translate-y-0' 
-            : 'opacity-0 translate-y-10 pointer-events-none'
-        }`}>
-          {socialLinks.map((social, index) => (
-            <Link 
-              key={social.name}
-              href={social.href} 
-              target="_blank" 
-              rel="noopener noreferrer"
-              className={`${social.bgColor} p-3 rounded-lg hover:scale-110 transition-all duration-300 shadow-lg
-                ${isOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'}
-              `}
-              style={{
-                transitionDelay: isOpen ? `${index * 100}ms` : '0ms'
-              }}
-            >
-              {social.icon}
-            </Link>
-          ))}
-        </div>
-
-        {/* Toggle Button */}
-        <button 
-          onClick={(e) => {
-            e.stopPropagation();
-            setIsOpen(!isOpen);
-          }}
-          className={`bg-[#DA491A] p-3 rounded-lg hover:scale-110 transition-all duration-300 shadow-lg ${
-            isOpen ? 'bg-gray-800' : ''
-          }`}
-        >
-          {isOpen ? (
-            <svg 
-              className="w-6 h-6 text-white transition-transform" 
+        <div className="flex flex-col gap-4 items-end">
+          <button
+            onClick={() => setIsOpen(!isOpen)}
+            className="bg-[#DA491A] p-3 rounded-full shadow-lg hover:bg-[#ff6b3d] transition-colors duration-300"
+          >
+            <svg
+              className={`w-6 h-6 text-white transform transition-transform duration-300 ${
+                isOpen ? 'rotate-180' : ''
+              }`}
               fill="none"
               stroke="currentColor"
               viewBox="0 0 24 24"
             >
-              <path 
-                strokeLinecap="round" 
-                strokeLinejoin="round" 
-                strokeWidth={2} 
-                d="M6 18L18 6M6 6l12 12"
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                strokeWidth={2}
+                d="M4 6h16M4 12h16m-7 6h7"
               />
             </svg>
-          ) : (
-            <svg 
-              className="w-6 h-6 text-white" 
-              fill="currentColor" 
-              viewBox="0 0 24 24"
+          </button>
+
+          {/* Mobile Scroll to Top Button */}
+          {showScrollTop && (
+            <button
+              onClick={scrollToTop}
+              className="bg-[#DA491A] p-3 rounded-full shadow-lg hover:scale-110 hover:bg-[#ff6b3d] transition-all duration-300"
+              aria-label="Scroll to top"
             >
-              <path d="M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zm0 14H6l-2 2V4h16v12z"/>
-            </svg>
+              <svg
+                className="w-6 h-6 text-white transform transition-transform duration-300 group-hover:-translate-y-1"
+                fill="none"
+                stroke="currentColor"
+                viewBox="0 0 24 24"
+                xmlns="http://www.w3.org/2000/svg"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  strokeWidth={2.5}
+                  d="M5 10l7-7m0 0l7 7m-7-7v18"
+                />
+              </svg>
+            </button>
           )}
-        </button>
+        </div>
+
+        {/* Mobile Menu */}
+        <div
+          className={`absolute bottom-full right-0 mb-4 transition-all duration-300 ${
+            isOpen ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-10 pointer-events-none'
+          }`}
+        >
+          <div className="flex flex-col gap-4 items-end">
+            {socialLinks.map((social) => (
+              <Link
+                key={social.name}
+                href={social.href}
+                target="_blank"
+                rel="noopener noreferrer"
+                className={`${social.bgColor} p-3 rounded-lg hover:scale-110 transition-transform duration-300 shadow-lg`}
+              >
+                {social.icon}
+              </Link>
+            ))}
+          </div>
+        </div>
       </div>
     </>
   );
