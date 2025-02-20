@@ -5,19 +5,34 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import React, { useState, useEffect } from "react";
 
-const categories = [
+interface Product {
+  id: number;
+  title: string;
+}
+
+interface Category {
+  id: number;
+  title: string;
+  products: Product[];
+}
+
+interface MenuItem {
+  name: string;
+  path: string;
+  subItems?: MenuItem[];
+  dropdown?: MenuItem[];
+}
+
+const categories: Category[] = [
   {
     id: 1,
     title: "Gabion Box",
-    products: [
-    ],
+    products: [],
   },
   {
     id: 2,
     title: "Gabion Mattresses",
-    products: [
-      
-    ]
+    products: [],
   },
 ];
 
@@ -58,7 +73,7 @@ const Header = () => {
     return pathname.startsWith(path);
   };
 
-  const renderDropdown = (items) => {
+  const renderDropdown = (items: MenuItem[]) => {
     return (
       <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
         {items.map((item) => (
@@ -77,7 +92,7 @@ const Header = () => {
     );
   };
 
-  const menuItems = [
+  const menuItems: MenuItem[] = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
     { 

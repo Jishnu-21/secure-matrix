@@ -307,6 +307,67 @@ export const categories: Category[] = [
     ]
   },
   {
+    id: 'gabion-wall-net',
+    title: "Gabion Wall Net",
+    description: "We offer gabion wall nets, which find several applications in civil engineering, highway & bridges, river & canal, landscaping, erosion control, retaining wall structures, dams & culverts, etc. These are ideal for preventing corrosion along water channels, creeks, lakes, rivers, and oceans. These nets can function well in several surroundings. The installation of these nets needs less labor than concrete walls. Gabion wall nets are extremely affordable and anti-erosion to slope.",
+    features: [
+    ],
+    imagePath: "/images/gabion-wall-net.jpg",
+    products: [
+      {
+        id: 'ss304-wire-mesh',
+        title: "SS304 Wire Mesh",
+        description: "SS304 Wire Mesh is mostly employed for commercial purposes, including bug screening and animal fence as well as industrial applications where separation or filtration are required. It describes two-or three-dimensional lattice structures constructed of two or more metallic wires connected by welding, weaving, netting, or knitting.",
+        specifications: [
+          { key: "Material", value: "Stainless Steel 304" },
+          { key: "Applications", value: "Bug screening, animal fence, filtration" },
+          { key: "Construction", value: "Two or three-dimensional lattice structures" },
+          { key: "Connection Methods", value: "Welding, weaving, netting, knitting" }
+        ],
+        price: "130",
+        priceUnit: "INR",
+        imagePath: "/images/products/gabion-wall-net/ss304-wire-mesh.jpg"
+      },
+      {
+        id: 'stainless-steel-weldmesh-gabion',
+        title: "Stainless Steel Weldmesh Gabion Wall Net",
+        description: "Professional grade weldmesh gabion wall net with customizable dimensions and powder coating options.",
+        specifications: [
+          { key: "Mesh Size Range", value: "25mm to 150mm" },
+          { key: "Wire Diameter Range", value: "1.5mm to 5.00mm" },
+          { key: "Length Range", value: "0.5 meter to 8.0 meter" },
+          { key: "Width Range", value: "0.5 Meter to 8.0 Meter" },
+          { key: "Height Range", value: "0.3 Meter to 1.5 meter" },
+          { key: "Wire Type", value: "GI" },
+          { key: "Surface treatment", value: "Powder Coating" },
+          { key: "Color", value: "Any RAL Shade" },
+          { key: "Production Capacity", value: "300 MT" },
+          { key: "Delivery Time", value: "20 Days" }
+        ],
+        price: "120",
+        priceUnit: "INR",
+        imagePath: "/images/products/gabion-wall-net/stainless-steel-weldmesh.jpg"
+      },
+      {
+        id: 'double-core-weld-mesh',
+        title: "Double Core Weld Mesh Gabion Wall Net",
+        description: "High-quality double core weld mesh gabion wall net with versatile applications.",
+        specifications: [
+          { key: "Hole Shape", value: "Round Hole Triangle Hole" },
+          { key: "Surface Treatment", value: "Galvanized" },
+          { key: "Product Type", value: "Wire Mesh" },
+          { key: "Mesh Type", value: "Steel Wire Mesh" },
+          { key: "Color", value: "Silver" },
+          { key: "Material", value: "Stainless Steel" },
+          { key: "Supply Ability", value: "3000000 Per Month" }
+        ],
+        price: "120",
+        priceUnit: "INR",
+        imagePath: "/images/products/gabion-wall-net/double-core-weld-mesh.jpg"
+      }
+    ]
+  },
+  {
     id: 'wire-fencing',
     title: "Wire Fencing",
     description: "We offer Wire fencings, which are made from optimum quality materials, making the properties safe. These are also used in garden protecting from animals, and birds. These rust-proof fencing provide advanced level of functionality and speak of advanced utilization.",
@@ -354,28 +415,6 @@ export const categories: Category[] = [
   ]
   },
   {
-    id: 'gabion-wall-net',
-    title: "Gabion Wall Net",
-    description: "We offer Mattress Gabion wall nets, which can be used in many situations including river control, reservoirs, stabilization of earth movement, landscaping, canal refurbishment, etc. These are simpler as well as speedy to erect and do not ask for tensioning.",
-    features: [
-    ],
-    imagePath: "/images/gabion-wall-net.jpg",
-    products: [
-      {
-        id: 'formation-commerciale',
-        title: "Formation Commerciale",
-        description: "Perfectionnement des techniques de vente",
-        features: [
-          "Techniques de vente",
-          "Négociation",
-          "Gestion client",
-          "Pratique terrain"
-        ],
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
     id: 'barbed-wire',
     title: "Barbed Wire",
     description: "Barbed wires are advanced type of steel fencing having sharp edges or points. These are utilized for the construction of strong, durable and inexpensive fences. The wires must be chosen for their physical properties and capacities.",
@@ -384,15 +423,26 @@ export const categories: Category[] = [
     imagePath: "/images/barbed-wire.jpg",
     products: [
       {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
+        id: 'stainless-steel-barbed-wire',
+        title: "Stainless Steel Barbed Wire",
+        description: "We offer Stainless Steel Barbed Wire that is made of galvanized or stainless-steel wires. This is also known as barb wire, which is a type of steel fencing wire constructed with sharp edges or points arranged at intervals along the strands. It is mainly used for insolation and protection in grassland borders, private places, railways, and highways. This type of wire gives good corrosion resistant performance even in moist environments. It is put on top of walls enclosing secured property and is used to build affordable fences. Stainless Steel Barbed Wire is also a major feature of the fortifications in trench warfare as a wire obstacle.",
+        specifications: [
+          { key: "Usage/Application", value: "Industrial" },
+          { key: "Material Grade", value: "SS 304" },
+          { key: "Weave Type", value: "Welded" },
+          { key: "Size", value: "50X50, 100X100, 75X75" },
+          { key: "Wire Diameter", value: "2.00mm to 4.00mm" },
+          { key: "Material", value: "Stainless Steel" },
+          { key: "Mesh Size", value: "0-10 per inch" },
+          { key: "Packaging Type", value: "Roll, Panels" },
+          { key: "Surface Treatment", value: "Powder Coated" },
+          { key: "Color", value: "Silver" },
+          { key: "Metal Type", value: "Steel" },
+          { key: "Supply Ability", value: "3000000 Kilograms Per Month" }
         ],
+        price: "85",
+        priceUnit: "INR",
+        minOrderQuantity: "1000 Kilograms",
         imagePath: "/images/product1.png"
       }
     ]
@@ -400,21 +450,29 @@ export const categories: Category[] = [
   {
     id: 'pvc-coated-wire',
     title: "PVC Coated Wire",
-    description: "The PVC coated wires are apt to use in daily life binding as well as industrial tying wire. These are apt for wire hanger as well as handicraft production. These flame retardant wires are also resistant to chemicals oils, alkalis, acids etc.",
+    description: "PVC coated wires are used for various applications. These are offered in various specifications and dimensions.",
     features: [
     ],
     imagePath: "/images/pvc-coated-wire.jpg",
     products: [
       {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
+        id: '2-5-sqmm-pvc-coated-wire',
+        title: "2.5 Sqmm PVC Coated Wire",
+        description: "Electrical cable construction for insulation, bedding, and sheathing. This can replace rubber insulated and sheathed cables in general household wiring due to its ease of processing. It is commonly used as an indoor domestic cable. The most common use for this type of 2.5 Sqmm PVC Coated Wire is for circuits that provide power to sockets. It consists of two cores and an earth core, all of which must be inserted with distinctive green and yellow sleeves.",
+        specifications: [
+          { key: "Wire Size", value: "2.5 sqmm" },
+          { key: "Brand", value: "Polymer" },
+          { key: "Color", value: "Green" },
+          { key: "Insulation Material", value: "PVC" },
+          { key: "Surface Treatment", value: "PVC Coated" },
+          { key: "Usage", value: "Safety & Security Purpose" },
+          { key: "Material", value: "PVC" },
+          { key: "Product Type", value: "PVC Coated Wire" },
+          { key: "Type", value: "Wire" }
         ],
+        price: "100",
+        priceUnit: "INR",
+        minOrderQuantity: "1000 Kilograms",
         imagePath: "/images/product1.png"
       }
     ]
@@ -574,4 +632,4 @@ export const categories: Category[] = [
     ]
   },
 
-]
+];
