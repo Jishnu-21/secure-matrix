@@ -1,10 +1,41 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss";
 
 :root {
   --background: #ffffff;
   --foreground: #000000;
+}
+
+/* Custom Scrollbar */
+.thumbnail-scroll {
+  position: relative;
+}
+
+.thumbnail-scroll::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 100%;
+  height: 2px;
+  background-color: #D84315;
+  z-index: 10;
+  opacity: 0;
+  transition: opacity 0.2s;
+}
+
+/* Only show scrollbar line when content is scrollable */
+.thumbnail-scroll:hover::before {
+  opacity: 1;
+}
+
+/* Hide default scrollbar */
+.thumbnail-scroll {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.thumbnail-scroll::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
 }
 
 @media (prefers-color-scheme: dark) {

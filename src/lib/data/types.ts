@@ -10,10 +10,13 @@ export interface Product {
   features?: string[];
   specifications?: ProductSpecification[];
   price?: string;
+  tradeInformation?: ProductSpecification[];
+  productDetails?: ProductSpecification[];
+  shortDescription: string;
+  keyFeatures: string[];
   priceUnit?: string;
+  imagePath: string[];
   minOrderQuantity?: string;
-  supplyAbility?: string;
-  imagePath: string;
 }
 
 export interface Category {

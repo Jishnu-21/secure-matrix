@@ -7,8 +7,12 @@ export interface Product {
   features: string[];
   specifications: { key: string; value: string }[];
   price: string;
+  tradeInformation: { key: string; value: string }[];
+  productDetails: { key: string; value: string }[];
+  shortDescription: string;
+  keyFeatures: string[];
   priceUnit: string;
-  imagePath: string;
+  imagePath: string[];
   minOrderQuantity?: string;
 }
 
@@ -30,606 +34,278 @@ export const categories: Category[] = [
     imagePath: "/images/popular.png",
     products: [
       {
-        id: 'gi-gabion-box',
-        title: "GI GABION BOX",
-        description: "High-quality GI Gabion Box suitable for various construction and erosion control applications.",
-        specifications: [
-          { key: "Wire Gauge", value: "2.70mm/3.70mm, 2.50mm/3.50mm, and 3.0mm, 4.0mm" },
-          { key: "Material", value: "Iron" },
-          { key: "Mesh Style", value: "Woven Mesh" },
-          { key: "Mesh Type", value: "Galvanized Iron Wire" },
-          { key: "Hole Shape", value: "Other" },
-          { key: "Surface Treatment", value: "Galvanized" },
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Supply Ability", value: "10000 Per Week" }
+        id: 'secure-gabion-box',
+        title: "Secure® Gabion Box",
+        description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for structural reinforcement and erosion control. Built with double-twisted hexagonal mesh, it offers superior flexibility and resistance against environmental stresses. The zinc galvanization protects against rust and corrosion, while the advanced Polymer PA6 Coating provides extra durability for aggressive environments. The interconnection of mesh wires ensures stability, making it an ideal solution for infrastructure, defense, and industrial applications.",
+        shortDescription: "SECURE® Gabion Box is a high-strength mesh, Designed for erosion control and structural reinforcement. Its double-twisted hexagonal mesh ensures flexibility and durability, while zinc galvanization and Polymer PA6 coating provide corrosion resistance in harsh environments. Ideal for infrastructure, defense, and industrial applications.",
+        productDetails:[
+          { key: "Material", value: "Stainless Steel" },
+          { key: "Mesh Style", value: "Woven Mesh,Galvanized Iron Wire" },
+          { key: "Surface Treatment", value: "Polymer PA6 Coated" },
+          { key: "Hole Shape", value: "Hexagonal" },
+          { key: "Usage", value: "Erosion Control,Retaining Wall,Riverbank Protection,Slope Stabilization" },
+          { key: "Structure", value: "Rectangular Wire Mesh Box with Double-Twisted Wire for Enhanced Durability" },
+          { key: "Certifications", value:"ISO-9001-2008"}
         ],
+        specifications: [
+          { key: "Wire Gauge", value: "2.50mm/3.50mm, 2.70mm/3.70mm, and 3.00mm, 4.00mm" },
+          { key: "Mesh Sizes", value: "60×80 mm, 80×100 mm, 100×120 mm" },
+          { key: "Mesh Wire Diameter", value: "2.00 mm – 3.40 mm" },
+          { key: "Coating Options", value: " Zinc Galvanized / Zn + Polymer PA6 Coated" },
+          { key: "Production Capacity", value: "600 MT" },
+        ],
+        tradeInformation: [
+          { key: "Supply Ability:", value: "10,000 Kilograms per Week" },
+          { key: "Delivery Time", value: "Within 5 Days" },
+          { key: "Packaging", value: "Folding Gabion Box, Lacing in Bundle Form" },
+          { key: "Distribution", value: "Available Across India" },
+        ],
+        keyFeatures: [
+          "Structural Reinforcement ",
+          "Erosion Control",
+          "Corrosion Resistance",
+          "Flexibility & Durability",
+          "Quick & Easy Installation",
+        ],
+        
         price: "75",
         priceUnit: "INR/Cubic Meter",
-        imagePath: "/images/products/gabion-box/GI-GABION-BOX.jpeg"
-      },
-      {
-        id: 'stainless-steel-gabion-box-with-tail',
-        title: "Stainless Steel Gabion Box With Tail",
-        description: "Pvc Gabion Box Tail Gabion with superior quality and durability",
-        specifications: [
-          { key: "Mesh Size", value: "60x80, 80x100 and 100x120" },
-          { key: "Mesh Wire Diameter", value: "2.00mm to 3.40mm" },
-          { key: "Mesh Wire Type", value: "Zn+PVC" },
-          { key: "Length", value: "1.0m to 10.0m" },
-          { key: "Width", value: "0.5m to 4.0m" },
-          { key: "Height", value: "0.3m to 1.5m" },
-          { key: "Hole & Shape", value: "Hexagonal" },
-          { key: "Production Capacity", value: "600MT" },
-          { key: "Delivery Time", value: "within 5 days" }
-        ],
-        price: "650",
-        priceUnit: "INR/Cubic Meter",
-        imagePath: "/images/products/gabion-box/Stainless-Steel-Gabion-Box-With-Tail.jpg"
-      },
-      {
-        id: 'secure-matrix-pvc-coated-gabion-box',
-        title: "Secure Matrix PVC Coated Gabion Box",
-        description: "Premium quality PVC coated gabion box with versatile applications",
-        specifications: [
-          { key: "Mesh Size Range", value: "60x80, 80x100 and 100x120" },
-          { key: "Length Range", value: "1meter to 10meter" },
-          { key: "Width Range", value: "0.5 Meter to 4.0 meter" },
-          { key: "Height Range", value: "0.3 meter to 2.0 Meter" },
-          { key: "Mesh Wire Diameter", value: "2.00mm to 3.40mm" },
-          { key: "Selvedge Wire Diameter", value: "2.40mm to 3.90mm" },
-          { key: "Wire Type", value: "Zn+PVC Coated" },
-          { key: "Color Available", value: "RAL 7037" }
-        ],
-        price: "130",
-        priceUnit: "INR/Square Meter",
-        imagePath: "/images/products/gabion-box/Secure-Matrix-PVC-Coated-Gabion-Box.jpg"
-      },
-      {
-        id: 'jumbo-pvc-gabion-wall-net',
-        title: "Jumbo PVC Gabion Wall Net",
-        description: "Heavy-duty PVC gabion wall net for enhanced protection",
-        specifications: [
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Surface Treatment", value: "Coated" },
-          { key: "Material", value: "Stainless Steel" },
-          { key: "Hole Shape", value: "Round Hole Triangle Hole" },
-          { key: "Mesh Type", value: "Steel Wire Mesh" },
-          { key: "Color", value: "Silver" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "600",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/Jumbo-Pvc-Gabion-Wall-Net.jpg"
-      },
-      {
-        id: 'industrial-gi-gabion-boxes',
-        title: "Industrial GI Gabion Boxes",
-        description: "Industrial-grade GI gabion boxes for commercial applications",
-        specifications: [
-          { key: "Surface Treatment", value: "Coated, Galvanized" },
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Hole Shape", value: "Round Hole Triangle Hole" },
-          { key: "Material", value: "Galvanized Steel" },
-          { key: "Mesh Type", value: "Galvanized Iron Wire" },
-          { key: "Color", value: "Silver" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "135",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/Industrial-GI-Gabion-Boxes.jpg"
-      },
-      {
-        id: 'stainless-steel-hexagonal-mesh-revet-mattresses',
-        title: "Stainless Steel Hexagonal Mesh Revet Mattresses",
-        description: "High-quality stainless steel hexagonal mesh revet mattresses",
-        specifications: [
-          { key: "Supply Ability", value: "3000000 Per Month" },
-          { key: "Color", value: "Silver" },
-          { key: "Mesh Type", value: "Steel Wire Mesh" },
-          { key: "Hole Shape", value: "Round Hole Triangle Hole" },
-          { key: "Surface Treatment", value: "Coated" },
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Material", value: "Stainless Steel" }
-        ],
-        price: "150",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/Stainless-Steel-Hexagonal-Mesh-Revet-Mattresses.jpg"
-      },
-      {
-        id: 'welded-wire-fencing-gabion-wall-net',
-        title: "Welded Wire Fencing Gabion Wall Net",
-        description: "Durable welded wire fencing gabion wall net",
-        specifications: [
-          { key: "Hole Shape", value: "Square Hole" },
-          { key: "Material", value: "Galvanized Steel" },
-          { key: "Mesh Type", value: "Galvanized Iron Wire" },
-          { key: "Color", value: "Silver" },
-          { key: "Surface Treatment", value: "Powder Coating" },
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "135",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/Welded-Wire-Fencing-Gabion-Wall-Net.jpg"
-      },
-      {
-        id: 'galvanized-iron-hexagonal-wire-mesh',
-        title: "Galvanized Iron Hexagonal Wire Mesh",
-        description: "Premium galvanized iron hexagonal wire mesh",
-        specifications: [
-          { key: "Surface Treatment", value: "Galvanized" },
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Mesh Type", value: "Galvanized Iron Wire" },
-          { key: "Material", value: "Galvanized Steel" },
-          { key: "Hole Shape", value: "Round Hole Triangle Hole" },
-          { key: "Color", value: "Silver" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "130",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-box/Galvanized-Iron-Hexagonal-Wire-Mesh.jpg"
+        imagePath: [
+          "/images/products/gabion-box/1.jpeg",
+          "/images/products/gabion-box/2.jpg",
+          "/images/products/gabion-box/3.jpg",
+          "/images/products/gabion-box/4.jpg",
+          "/images/products/gabion-box/5.jpg",
+        ]
       }
     ]
   },
   {
-    id: 'fence-system',
-    title: "Fence System",
-    description: "Fence systems are made to save a lot of time, money, labor, in an effective way.  These are suited well for several production environments. These rust-proof fences are simple to install and dissemble.",
+    id: 'secure-gabion-mattress',
+    title: "SECURE® Gabion Mattress",
+    description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
     features: [],
-    imagePath: "/images/fence-system.jpg",
+    imagePath: "/images/products/gabion-mattress/3.jpeg",
     products: [
       {
-        id: 'cast-iron-weld-mesh-fence-panel',
-        title: "Cast Iron Weld Mesh Fence Panel System",
-        description: "High-quality Cast Iron Weld Mesh Fence Panel System designed for superior security and durability.",
-        specifications: [
-          { key: "Material", value: "Cast Iron" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Metal Type", value: "Iron" },
-          { key: "Color", value: "Green" },
-          { key: "Product Type", value: "Weld Mesh Fence Panel System" },
-          { key: "Feature", value: "Easily Assembled" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "110",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Cast-Iron-Weld-Mesh-Security-Fence-System.jpg"
-      },
-      {
-        id: 'galvanized-iron-concertina-wire',
-        title: "Galvanized Iron Concertina Wire Fence System",
-        description: "We manufacture Galvanized Iron Concertina Wire Fence System that is available in different specifications and can be availed from us at reasonable rates. These best quality, corrosion resistant, and strong coils are vastly used for metro stations, restricted zones, airport security, common fencing, military security and border security, as well. The surface of the mesh is treated i.e. it is galvanized and is made from iron making it more durable and tough. Before the dispatch, our offered Galvanized Iron Concertina Wire Fence System is checked for its defects and flawlessness",
-        price: "70",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Galvanized-Iron-Concertina-Wire-Fence-System.jpg"
-      },
-      {
-        id: 'anti-climb-up-security',
-        title: "Anti Climb Up Security Fence System",
-        description: "Advanced security fence system designed to prevent climbing and unauthorized access.",
-        specifications: [
-          { key: "Color", value: "Green" },
-          { key: "Product Type", value: "Anti Climb Up Security Fence System" },
-          { key: "Metal Type", value: "Iron" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Material", value: "Cast Iron" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "130",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Anti-Climb-Up-Security-Fence-System.jpg"
-      },
-      {
-        id: 'mild-steel-powder-coated-mesh',
-        title: "Mild Steel Powder Coated Mesh Fence System",
-        description: "Durable powder coated mesh fence system for enhanced security.",
-        specifications: [
-          { key: "Supply Ability", value: "3000000 Per Month" },
-          { key: "Feature", value: "Easily Assembled" },
-          { key: "Metal Type", value: "Steel" },
-          { key: "Product Type", value: "Mesh Fence System" },
-          { key: "Color", value: "Green" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Material", value: "Mild Steel" }
-        ],
-        price: "130",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Mild-Steel-Powder-Coated-Mesh-Fence-System.jpg"
-      },
-      {
-        id: 'zinc-and-poly-epoxy-security',
-        title: "Zinc And Poly Epoxy Security Fence System",
-        description: "Advanced security fence system with zinc and poly epoxy coating for superior protection.",
-        specifications: [
-          { key: "Supply Ability", value: "3000000 Per Month" },
-          { key: "Product Type", value: "Zinc And Poly Epoxy Security Fence System" },
+        id: 'secure-gabion-revet-mattress',
+        title: "SECURE® Gabion Revet Mattress",
+        description: "The SECURE® Gabion Revet Mattress is a durable, interlocking containment system made from mechanically woven, double-twisted hexagonal steel wire mesh.It is an ideal solution for stabilizing wide or shallow areas, such as riverbeds, coastal zones, and slopes. Designed to blend naturally into the environment. Offers long-term structural stability while minimizing visual impact. The galvanized and PVC-coated surface ensures high corrosion resistance, making it suitable for industrial, agricultural, and defense applications.",
+        shortDescription: "SECURE® Gabion Revet Mattress is a durable, interlocking containment system. Ideal for stabilizing riverbeds, coastal zones, and slopes. It offers long-term structural stability while blending naturally into the environment. Galvanized and PVC-coated for high corrosion resistance. Suits industrial, agricultural, and defense applications.",
+        productDetails:[
+          { key: "Material", value: "High-Strength Stainless Steel Wire" },
+          { key: "Mesh Style", value: "Woven Mesh,Galvanized Iron Wire" },
+          { key: "Surface Treatment", value: " Galvanized / Zinc Coated / PVC Coated" },
           { key: "Color", value: "Silver" },
-          { key: "Metal Type", value: "Iron" },
-          { key: "Material", value: "Zinc & Poly Epoxy" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Feature", value: "Easily Assembled" }
+          { key: "Shape", value: "Hexagonal"},
+          { key: "Usage", value: "Safety & Security, Erosion Control, Slope Stabilization, Riverbank & Coastal Protection" },
+          { key: "Wire Type", value:" Zn + PVC Coated"}
         ],
-        price: "110",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Zinc-Poly-Epoxy-Security-Fence-System.jpg"
-      },
-      {
-        id: 'mild-steel-fence',
-        title: "Mild Steel Fence System",
-        description: "Standard mild steel fence system for general security applications.",
         specifications: [
-          { key: "Feature", value: "Easily Assembled" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Material", value: "Mild Steel" },
-          { key: "Metal Type", value: "Steel" },
-          { key: "Product Type", value: "Fence System" },
-          { key: "Color", value: "Silver" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
+          { key: "Wire Diameter", value: "As per requirement" },
+          { key: "Height", value: "0.3 m – 1.0 m" },
+          { key: "Length", value: "1.0 m – 5.0 m" },
+          { key: "Capacity", value: "300 MT" },
+          { key: "Mesh Sizes", value: "60 × 80 mm, 80 × 100 mm, 100 × 120 mm" },
         ],
-        price: "110",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Mild-Steel-Fence-System.jpg"
-      },
-      {
-        id: 'cast-iron-weld-mesh-security',
-        title: "Cast Iron Weld Mesh Security Fence System",
-        description: "Heavy-duty weld mesh security fence system made from cast iron.",
-        specifications: [
-          { key: "Supply Ability", value: "3000000 Per Month" },
-          { key: "Feature", value: "Easily Assembled" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Material", value: "Cast Iron" },
-          { key: "Metal Type", value: "Iron" },
-          { key: "Color", value: "Green" },
-          { key: "Product Type", value: "Weld Mesh Security Fence System" }
+        tradeInformation: [
+          { key: "Supply Ability:", value: "3,000,000 Kilograms per Month" },
+          { key: "Distribution", value: "Available Across India" },
         ],
-        price: "110",
-        priceUnit: "INR",
-        imagePath: "/images/products/fence-system/cast-iron-weld-mesh-security-fence-system.jpg"
-      },
-      {
-        id: 'mild-steel-chain-link',
-        title: "Mild Steel Chain Link Fence System",
-        description: "Versatile chain link fence system made from mild steel.",
-        specifications: [
-          { key: "Supply Ability", value: "3000000 Per Month" },
-          { key: "Feature", value: "Easily Assembled" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Material", value: "Mild Steel" },
-          { key: "Metal Type", value: "Steel" },
-          { key: "Color", value: "Silver" },
-          { key: "Product Type", value: "Chain Link Fence System" }
+        keyFeatures: [
+          "Environmentally Adaptive Design",
+          "Easy Installation",
+          "Double-Twisted Hexagonal Mesh",
+          "Corrosion-Resistant Coating",
+          "High Load Capacity",
         ],
+        
         price: "65",
         priceUnit: "INR",
-        imagePath: "/images/products/fence-system/Mild-Steel-Chain-Link-Fence-System.jpg"
-      }
-    ]
-  },
-  {
-    id: 'gabion-wall-net',
-    title: "Gabion Wall Net",
-    description: "We offer gabion wall nets, which find several applications in civil engineering, highway & bridges, river & canal, landscaping, erosion control, retaining wall structures, dams & culverts, etc. These are ideal for preventing corrosion along water channels, creeks, lakes, rivers, and oceans. These nets can function well in several surroundings. The installation of these nets needs less labor than concrete walls. Gabion wall nets are extremely affordable and anti-erosion to slope.",
-    features: [
-    ],
-    imagePath: "/images/gabion-wall-net.jpg",
-    products: [
-      {
-        id: 'ss304-wire-mesh',
-        title: "SS304 Wire Mesh",
-        description: "SS304 Wire Mesh is mostly employed for commercial purposes, including bug screening and animal fence as well as industrial applications where separation or filtration are required. It describes two-or three-dimensional lattice structures constructed of two or more metallic wires connected by welding, weaving, netting, or knitting.",
-        specifications: [
-          { key: "Material", value: "Stainless Steel 304" },
-          { key: "Applications", value: "Bug screening, animal fence, filtration" },
-          { key: "Construction", value: "Two or three-dimensional lattice structures" },
-          { key: "Connection Methods", value: "Welding, weaving, netting, knitting" }
-        ],
-        price: "130",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-wall-net/ss304-wire-mesh.jpg"
-      },
-      {
-        id: 'stainless-steel-weldmesh-gabion',
-        title: "Stainless Steel Weldmesh Gabion Wall Net",
-        description: "Professional grade weldmesh gabion wall net with customizable dimensions and powder coating options.",
-        specifications: [
-          { key: "Mesh Size Range", value: "25mm to 150mm" },
-          { key: "Wire Diameter Range", value: "1.5mm to 5.00mm" },
-          { key: "Length Range", value: "0.5 meter to 8.0 meter" },
-          { key: "Width Range", value: "0.5 Meter to 8.0 Meter" },
-          { key: "Height Range", value: "0.3 Meter to 1.5 meter" },
-          { key: "Wire Type", value: "GI" },
-          { key: "Surface treatment", value: "Powder Coating" },
-          { key: "Color", value: "Any RAL Shade" },
-          { key: "Production Capacity", value: "300 MT" },
-          { key: "Delivery Time", value: "20 Days" }
-        ],
-        price: "120",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-wall-net/stainless-steel-weldmesh.jpg"
-      },
-      {
-        id: 'double-core-weld-mesh',
-        title: "Double Core Weld Mesh Gabion Wall Net",
-        description: "High-quality double core weld mesh gabion wall net with versatile applications.",
-        specifications: [
-          { key: "Hole Shape", value: "Round Hole Triangle Hole" },
-          { key: "Surface Treatment", value: "Galvanized" },
-          { key: "Product Type", value: "Wire Mesh" },
-          { key: "Mesh Type", value: "Steel Wire Mesh" },
-          { key: "Color", value: "Silver" },
-          { key: "Material", value: "Stainless Steel" },
-          { key: "Supply Ability", value: "3000000 Per Month" }
-        ],
-        price: "120",
-        priceUnit: "INR",
-        imagePath: "/images/products/gabion-wall-net/double-core-weld-mesh.jpg"
-      }
-    ]
-  },
-  {
-    id: 'wire-fencing',
-    title: "Wire Fencing",
-    description: "We offer Wire fencings, which are made from optimum quality materials, making the properties safe. These are also used in garden protecting from animals, and birds. These rust-proof fencing provide advanced level of functionality and speak of advanced utilization.",
-    features: [],
-    imagePath: "/images/wire-fencing.jpg",
-    products: [
-      {
-        id: 'conseil-developpement',
-        title: "Conseil en Développement",
-        description: "Accompagnement stratégique pour votre croissance",
-        features: [
-          "Analyse de marché",
-          "Stratégie commerciale",
-          "Plan d'action",
-          "Suivi des résultats"
-        ],
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
-    id: 'gabion-mattress',
-    title: "Gabion Mattress",
-    description: "The Gabion Mattress are functional as the ideal additions to gardens of any size for erosion control as well as stabilizing ridges. These structures are utilized to transform as well as protect the space due to their space-saving design.",
-    features: [
-    ],
-    imagePath: "/images/gabion-mattresss.jpg",
-    products: [
-    {
-      id: 'square-stainless-steel-gabion-mattress',
-      title: "Square Stainless Steel Gabion Mattress",
-      description: "For filling rocks we have come up with Square Stainless Steel Gabion Mattress. This is majorly used for stabilizing slopes. It can also be used for safety and security purposes so that the rocks do not fall or run away on the path and injure people. This is made with top-class stainless steel and powder coated for getting treated surface with a silver finish. The shape of the holes in this is square so that it can stop rocks of any shape from coming out of it. Our Square Stainless Steel Gabion Mattress is highly sturdy and can withstand any condition.",
-      price: "120 INR",
-      imagePath: "/images/product1.png"
-    },
-    {
-      id: 'stainless-steel-sack-gabion-mattress',
-      title: "Stainless Steel Sack Gabion Mattress",
-      description: "Our Stainless Steel Sack Gabion Mattress is used to provide erosion protection for river banks. It is also used for bridge piers, for immediate defense from erosion from water. These are tubular units made with stainless steel that is filled with gabion stone so that the stones do not come out of it. These units are placed at the project sites after being tightly laced. The shape of these is hexagonal with a treatment of galvanization for a finished surface.",
-      price: "65 INR",
-      minOrderQuantity: "1000 Kilograms",
-     
-      imagePath: "/images/product1.png"
-    }
-  ]
-  },
-  {
-    id: 'barbed-wire',
-    title: "Barbed Wire",
-    description: "Barbed wires are advanced type of steel fencing having sharp edges or points. These are utilized for the construction of strong, durable and inexpensive fences. The wires must be chosen for their physical properties and capacities.",
-    features: [
-    ],
-    imagePath: "/images/barbed-wire.jpg",
-    products: [
-      {
-        id: 'stainless-steel-barbed-wire',
-        title: "Stainless Steel Barbed Wire",
-        description: "We offer Stainless Steel Barbed Wire that is made of galvanized or stainless-steel wires. This is also known as barb wire, which is a type of steel fencing wire constructed with sharp edges or points arranged at intervals along the strands. It is mainly used for insolation and protection in grassland borders, private places, railways, and highways. This type of wire gives good corrosion resistant performance even in moist environments. It is put on top of walls enclosing secured property and is used to build affordable fences. Stainless Steel Barbed Wire is also a major feature of the fortifications in trench warfare as a wire obstacle.",
-        specifications: [
-          { key: "Usage/Application", value: "Industrial" },
-          { key: "Material Grade", value: "SS 304" },
-          { key: "Weave Type", value: "Welded" },
-          { key: "Size", value: "50X50, 100X100, 75X75" },
-          { key: "Wire Diameter", value: "2.00mm to 4.00mm" },
-          { key: "Material", value: "Stainless Steel" },
-          { key: "Mesh Size", value: "0-10 per inch" },
-          { key: "Packaging Type", value: "Roll, Panels" },
-          { key: "Surface Treatment", value: "Powder Coated" },
-          { key: "Color", value: "Silver" },
-          { key: "Metal Type", value: "Steel" },
-          { key: "Supply Ability", value: "3000000 Kilograms Per Month" }
-        ],
-        price: "85",
-        priceUnit: "INR",
-        minOrderQuantity: "1000 Kilograms",
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
-    id: 'pvc-coated-wire',
-    title: "PVC Coated Wire",
-    description: "PVC coated wires are used for various applications. These are offered in various specifications and dimensions.",
-    features: [
-    ],
-    imagePath: "/images/pvc-coated-wire.jpg",
-    products: [
-      {
-        id: '2-5-sqmm-pvc-coated-wire',
-        title: "2.5 Sqmm PVC Coated Wire",
-        description: "Electrical cable construction for insulation, bedding, and sheathing. This can replace rubber insulated and sheathed cables in general household wiring due to its ease of processing. It is commonly used as an indoor domestic cable. The most common use for this type of 2.5 Sqmm PVC Coated Wire is for circuits that provide power to sockets. It consists of two cores and an earth core, all of which must be inserted with distinctive green and yellow sleeves.",
-        specifications: [
-          { key: "Wire Size", value: "2.5 sqmm" },
-          { key: "Brand", value: "Polymer" },
-          { key: "Color", value: "Green" },
-          { key: "Insulation Material", value: "PVC" },
-          { key: "Surface Treatment", value: "PVC Coated" },
-          { key: "Usage", value: "Safety & Security Purpose" },
-          { key: "Material", value: "PVC" },
-          { key: "Product Type", value: "PVC Coated Wire" },
-          { key: "Type", value: "Wire" }
-        ],
-        price: "100",
-        priceUnit: "INR",
-        minOrderQuantity: "1000 Kilograms",
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
-    id: 'chain-link-wire',
-    title: "Chain Link Wire",
-    description: "The Chain Link Fencings are utilized for securing as well as enclosing backyards, barns, construction sites, penitentiaries, and others. These fencing are appreciable for several economic advantages. These speak of high durability as well as affordability.",
-    features: [
-    ],
-    imagePath: "/images/chain-link-wire.jpg",
-    products: [
-      {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
-        ],
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
-    id: 'wall-finishing-material',
-    title: "Wall Finishing Material",
-    description: "We offer Wall finishing Materials, for a regular, even, smooth, durable and clean finished surface. These must be utilized for protecting against atmospheric influences as well as intrudes.  These galvanized and PVC coated structures are apt for exterior applications.",
-    features: [
-    ],
-    imagePath: "/images/wall-finishing-material.jpeg",
-    products: [
-      {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
-        ],
-        imagePath: "/images/product1.png"
+        imagePath: [
+          "/images/products/gabion-mattress/1.jpeg",
+          "/images/products/gabion-mattress/2.jpeg",
+          "/images/products/gabion-mattress/3.jpeg",
+          "/images/products/gabion-mattress/4.jpeg",
+          "/images/products/gabion-mattress/5.jpeg",
+          "/images/products/gabion-mattress/6.png",
+          "/images/products/gabion-mattress/7.jpeg",
+          "/images/products/gabion-mattress/8.jpeg",
+        ]
       }
     ]
   },
   {
     id: 'rock-fall-netting',
-    title: "Rock Fall Netting",
+    title: " Secure® Rock Fall Netting",
     description: "Offered Rock fall nettings are apt for simple drapery systems. These are suited for geotechnical as well as engineering applications. Supplied nettings allow for rock fall protection, slope stabilization, and surface protection applications.",
     features: [
     ],
     imagePath: "/images/rock-fall-netting.avif",
     products: [
       {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
+        id: 'secure-dt-mesh-rock-fall-netting',
+        title: "SECURE® DT Mesh Rock Fall Netting",
+        description: "SECURE® DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for superior rockfall protection and slope stabilization. Constructed from zinc-coated galvanized wire with an advanced PA6 polymer coating, it ensures exceptional durability and resistance to harsh environmental conditions. Reinforced with wire ropes spaced at regular intervals, it effectively prevents rockfalls, landslides, and debris movement in mountainous regions, cliffs, tunnels, and construction zones.",
+        shortDescription: "SECURE® DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for rockfall protection and slope stabilization. It offers superior durability, corrosion resistance, and flexibility. Effectively prevents rockfalls, landslides and construction zones, ensuring long-term safety and stability.",
+        productDetails:[
+          { key: "Material", value: "Stainless Steel / Zinc-Coated Galvanized Wire" },
+          { key: "Mesh Style", value: "Double-Twisted Hexagonal Wire Mesh" },
+          { key: "Surface Treatment", value: "Advanced PA6 Polymer Coating" },
+          { key: "Wire Rope Integration", value: "Installed at Regular Intervals" },
+          { key: "Usage", value: "Rockfall Protection, Slope Stabilization, Landslide Prevention"},
         ],
-        imagePath: "/images/product1.png"
+        specifications: [
+          { key: "Wire Diameter", value: "2.00 mm – 3.40 mm" },
+          { key: "Mesh Sizes", value: "60x80 mm, 80x100 mm, 100x120 mm" },
+          { key: "Coating Options", value: "Heavy GSM Wire / PVC Coated Wire" },
+        ],
+        tradeInformation: [
+          { key: "Supply Ability:", value: "3,000,000 Square Meters per Month" },
+          { key: "Delivery Time", value: "As per order Requirement" },
+          { key: "Main Domestic Market", value: "All Across India" },
+        ],
+        keyFeatures: [
+          "High-Strength Construction",
+          "Double-Twisted Hexagonal Mesh",
+          "Advanced PA6 Polymer Coating",
+          "Wire Rope Reinforcement",
+          "Ideal for construction and embankment",
+        ],
+        
+        price: "120",
+        priceUnit: "INR/Square Meter",
+        imagePath: [
+          "/images/products/rock-fall-netting/dt-mesh/1.jpeg",
+        ]
+      },
+      {
+        id: 'secure-rhomboidal-rock-fall-netting',
+        title: "SECURE® Rhomboidal Rock Fall Netting",
+        description: "SECURE® Rhomboidal Rock Fall Netting is an advanced, high-strength protective mesh system designed for maximum safety in challenging terrains. It features reinforced high-strength wire knots to enhance durability and resistance against static and dynamic stresses. These reinforcements are made using double steel wire knots, ensuring double binding with two separate wires. Ideal for rockfall protection, slope stabilization, and infrastructure security, this netting offers superior flexibility, impact resistance, and long-term performance.",
+        shortDescription: "SECURE® Rock Fall Netting is a high-strength protective mesh designed for rockfall prevention and slope stabilization. With reinforced wire knots and double steel binding, it ensures superior durability, impact resistance, and long-term performance in challenging terrains and infrastructure projects.",
+        productDetails:[
+          { key: "Material", value: "High-Strength Stainless Steel Wire Rope" },
+          { key: "Mesh Style", value: "Steel Cable Mesh with Reinforced Wire Knots" },
+          { key: "Surface Treatment", value: "Polished & Galvanized" },
+          { key: "Coating", value: "Heavy GSM Wire / PVC Coated Wire" },
+          { key: "Color", value: "Silver" },
+          { key: "Hole Shape", value: "Rhomboidal"},
+          { key: "Reinforcement", value: "High-Strength Wire Knots"},
+        ],
+        specifications: [
+          { key: "Diameter", value: "8.0 mm / 10.0 mm / 12.0 mm" },
+          { key: "Mesh Sizes", value: "250 × 250 mm, 300 × 300 mm, 400 × 400 mm " },
+          { key: "Tensile Strength", value: "Up to ~200 kN/m" },
+          { key: "Junction Tearing Strength", value: "20 kN to 24 kN" },
+          { key: "Cable pull-apart Strength", value: "10 kN to 11.5 kN" },
+          { key: "Failure Resistance", value: " High tear & pull-apart resistance, gradual failure load" },
+        ],
+        tradeInformation: [
+          { key: "Supply Ability:", value: "3,000,000 Square Meters per Month" },
+          { key: "Application Areas", value: "Rockfall Protection,Slope Stabilization,Tunnel and Cliff Safety,Infrastructure and Mining Security,Construction Zone Protection" },
+          { key: "Main Domestic Market", value: "All Across India" },
+        ],
+        keyFeatures: [
+          "Tensile Strength",
+          "Double-Twisted Hexagonal Mesh",
+          "Advanced PA6 Polymer Coating",
+          "Chemical & UV Protection",
+          "Controlled Water Permeability",
+        ],
+        
+        price: "120",
+        priceUnit: "INR/Square Meter",
+        imagePath: [
+          "/images/products/rock-fall-netting/rhomboidal-rock-fall/1.jpg",
+          "/images/products/rock-fall-netting/rhomboidal-rock-fall/2.jpg",
+          "/images/products/rock-fall-netting/rhomboidal-rock-fall/3.jpg",
+        ]
       }
     ]
   },
   {
-    id: 'industrial-wire-mesh',
-    title: "Industrial Wire Mesh",
-    description: "We offer Industrial Wire Mesh, which are used as Grills, Fences, Sifters, Cages, Safety barricades etc. These are also apt to be used as highly functional shelving. Find them at affordable rate from us.",
-    features: [
-    ],
-    imagePath: "/images/industrial-wire-mesh.jpeg",
+    id: 'Secure-geotextile',
+    title: "SECURE® Geotextile",
+    description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
+    features: [],
+    imagePath: "/images/products/geotextile/non-woven/2.webp",
     products: [
       {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
+        id: 'secure-non-woven-geotextile',
+        title: "SECURE® Non-Woven Geotextile",
+        description: "SECURE® Non-Woven Geotextile is a high-performance fabric engineered for soil stabilization, erosion control, and drainage applications. Made from polypropylene (PP) or polyester (PET) provides an additional protective layer to prevent soil displacement and improve structural integrity. Often used behind gabion walls, while holding back fine soil particles, reducing erosion risks in slopes, riverbanks, and construction sites. Its durable and permeable design ensures long-term reliability in harsh environmental conditions.",
+        shortDescription: "SECURE® Non-Woven Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
+        productDetails:[
+          { key: "Material", value: "Synthetic Fibers (Polypropylene - PP / Polyester - PET)" },
+          { key: "Fabric Type", value: "Non-Woven" },
+          { key: "Bonding Method", value: "Mechanically Bonded" },
+          { key: "Color", value: "White / Black / Grey" },
+          { key: "Usage", value: "Erosion Control,Retaining Wall,Riverbank Protection,Slope Stabilization" },
         ],
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
-    id: 'mesh-fencing',
-    title: "Mesh Fencing",
-    description: "Mesh fencings are offered with advanced security, easy installation, visual appealing, adaptable features, etc.  These high visibility fencing have resistance against rust and oxidation. Moreover, these fencings are easy to wipe down and simple to take care of.",
-    features: [
-    ],
-    imagePath: "/images/mesh-fencing.jpeg",
-    products: [
+        specifications: [
+          { key: "Weight Range", value: "100 GSM – 800 GSM" },
+          { key: "Width", value: "Up to 6 meters" },
+          { key: "Role length", value: " As per requirement" },
+          { key: "Tensile Strength", value: "High Durability for Heavy Loads" },
+          { key: "Permeability", value: "Excellent Water Drainage & Filtration" },
+        ],
+        tradeInformation: [
+          { key: "Delivery Time", value: "As per order requirement" },
+          { key: "Application Sectors", value: "Construction,Infrastructure,Road & Rail Projects,Environmental Protection" },
+          { key: "Distribution", value: "Available Across India" },
+        ],
+        keyFeatures: [
+          "Efficient Load Distribution",
+          "High Durability & Strength",
+          "Superior Soil Stabilization ",
+          "Efficient Drainage & Filtration ",
+          "Customizable & Wide Coverage",
+        ],
+        
+        price: "",
+        priceUnit: "",
+        imagePath: [
+          "/images/products/geotextile/non-woven/1.jpg",
+        ]
+      },
       {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
+        id: 'secure-woven-geotextile',
+        title: "SECURE® Woven Geotextile",
+        description: "SECURE® Woven Geotextile is a high-strength fabric engineered for soil stabilization, load distribution, and erosion control. It offers superior tensile strength and stability, making it ideal for applications requiring long-term durability. Commonly used in road construction, embankments, and heavy-load-bearing areas, it effectively reinforces weak soil while maintaining structural integrity",
+        shortDescription: "SECURE® Woven Geotextile provides high tensile strength and stability for soil reinforcement, load distribution, and erosion control. Ideal for road construction, embankments, and heavy-load areas, it ensures long-term durability and structural integrity.",
+        productDetails:[
+          { key: "Material", value: "Polypropylene (PP) / Polyester (PET)" },
+          { key: "Fabric Type", value: "Woven" },
+          { key: "Weaving Method", value: "High-Tensile Interlaced Fibers" },
+          { key: "Color", value: "Black" },
+          { key: "Usage", value: "Soil Reinforcement, Load Distribution, Erosion Control" },
         ],
-        imagePath: "/images/product1.png"
+        specifications: [
+          { key: "Weight Range", value: "90 GSM – 500 GSM" },
+          { key: "Width", value: "Up to 5.2 meters" },
+          { key: "Role length", value: "Customizable" },
+          { key: "Tensile Strength", value: "High Load-Bearing Capacity" },
+          { key: "Permeability", value: " Controlled Water Flow & Filtration" },
+        ],
+        tradeInformation: [
+          { key: "Delivery Time", value: "As per order requirement" },
+          { key: "Application Sectors", value: " Infrastructure,Road & Rail Projects,Coastal Protection" },
+          { key: "Distribution", value: "Available Across India" },
+        ],
+        keyFeatures: [
+          "Superior Soil Stabilization",
+          "High Tensile Strength",
+          "Effective Load Distribution",
+          "Controlled Water Permeability",
+        ],
+        
+        price: "",
+        priceUnit: "",
+        imagePath: [
+          "/images/products/geotextile/woven/1.jpeg",
+        ]
       }
     ]
-  },
-  {
-    id: 'wielded-wire-mesh',
-    title: "Wielded Wire Mesh",
-    description: "",
-    features: [
-    ],
-    imagePath: "/images/wielded-wire-mesh.jpeg",
-    products: [
-      {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
-        ],
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-  {
-    id: 'wire-netting',
-    title: "Wire-netting",
-    description: "",
-    features: [
-    ],
-    imagePath: "/images/wire-netting.jpg",
-    products: [
-      {
-        id: 'conseil-innovation',
-        title: "Conseil en Innovation",
-        description: "Accompagnement dans vos projets d'innovation",
-        features: [
-          "Veille technologique",
-          "Idéation",
-          "Prototypage",
-          "Mise en marché"
-        ],
-        imagePath: "/images/product1.png"
-      }
-    ]
-  },
-
+  }
 ];
