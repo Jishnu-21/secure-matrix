@@ -72,7 +72,6 @@ export const categories: Category[] = [
         priceUnit: "INR/Cubic Meter",
         imagePath: [
           "/images/products/gabion-box/1.jpeg",
-          "/images/products/gabion-box/2.jpg",
           "/images/products/gabion-box/3.jpg",
           "/images/products/gabion-box/4.jpg",
           "/images/products/gabion-box/5.jpg",

@@ -33,9 +33,9 @@ const Footer = () => {
               <Image
                 src="/icons/logo.png"
                 alt="Secure Matrix"
-                width={180}
+                width={140}
                 height={50}
-                className="h-auto"
+                className="h-auto w-[120px]"
               />
             </Link>
             <p className="text-gray-600 text-sm md:text-base mb-6">
