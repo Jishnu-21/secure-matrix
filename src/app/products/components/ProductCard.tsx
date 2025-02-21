@@ -57,8 +57,8 @@ export default function ProductCard({
     <Link href={href} className="block">
       <div className="bg-white shadow-sm hover:shadow-md transition-shadow rounded-lg overflow-hidden">
         <div className="flex flex-col md:flex-row">
-          <div className={`md:w-[45%] ${imageOrder}`}>
-            <div className="relative h-[500px]">
+          <div className={`w-full md:w-[45%] ${imageOrder} md:${imageOrder}`}>
+            <div className="relative h-[300px] md:h-[500px]">
               <Image
                 src={imagePath}
                 alt={title}
@@ -69,18 +69,18 @@ export default function ProductCard({
               />
             </div>
           </div>
-          <div className={`md:w-[55%] p-12 ${contentOrder}`}>
+          <div className={`w-full md:w-[55%] p-6 md:p-12 ${contentOrder} md:${contentOrder}`}>
             {serviceType && (
               <p className="text-[#D84315] uppercase text-xs tracking-wider mb-3">{serviceType}</p>
             )}
-            <h3 className="text-2xl font-semibold text-[#333] mb-4">{title}</h3>
-            <p className="text-[#666] mb-8 leading-relaxed">{description}</p>
+            <h3 className="text-xl md:text-2xl font-semibold text-[#333] mb-4">{title}</h3>
+            <p className="text-[#666] mb-6 md:mb-8 leading-relaxed">{description}</p>
             {features.length > 0 && (
               <div className="space-y-2">
                 {features.map((feature, index) => (
                   <div key={index} className="flex items-center gap-2">
-                    <div className="flex-shrink-0 w-5 h-5 rounded bg-[#D84315] text-white flex items-center justify-center">
-                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-3 h-3">
+                    <div className="flex-shrink-0 w-4 md:w-5 h-4 md:h-5 rounded bg-[#D84315] text-white flex items-center justify-center">
+                      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" className="w-2.5 md:w-3 h-2.5 md:h-3">
                         <path d="M12 4.5v15m7.5-7.5h-15" />
                       </svg>
                     </div>

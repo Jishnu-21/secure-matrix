@@ -22,7 +22,7 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
     <div>
       {/* Tab Navigation */}
       <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex min-w-max border-b border-gray-200">
+        <div className="flex min-w-max border-b border-gray-200 justify-center md:justify-start">
           {tabs.map((tab) => (
             <button
               key={tab.id}

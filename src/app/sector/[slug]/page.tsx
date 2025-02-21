@@ -151,6 +151,7 @@ export default function SectorPage({ params }: PageParams) {
     slidesToShow: 3,
     slidesToScroll: 1,
     autoplay: false,
+    arrows: false,
     draggable: true,
     swipe: true,
     swipeToSlide: true,
@@ -179,9 +180,9 @@ export default function SectorPage({ params }: PageParams) {
       <Header />
       <div className="flex-grow w-full">
         {/* Main Image and Title Section */}
-        <section className="mt-10 mb-10 mx-auto top-40 relative">
-          <div className="max-w-[1800px] mx-auto px-8">
-            <div className="relative w-full h-[600px] overflow-hidden">
+        <section className="mt-5 sm:mt-8 md:mt-10 top-20 sm:top-28 md:top-40 relative">
+          <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden">
               <Image 
                 src={data.mainImage}
                 alt={data.title}
@@ -190,9 +191,9 @@ export default function SectorPage({ params }: PageParams) {
                 style={{ objectFit: 'cover' }}
               />
             </div>
-            <div className="mt-12 mb-32">
-              <h1 className="text-4xl font-bold text-center text-black mb-6">{data.title}</h1>
-              <p className="text-xl text-gray-700 text-center max-w-5xl mx-auto leading-relaxed">
+            <div className="mt-8 sm:mt-10 md:mt-12 mb-16 sm:mb-24 md:mb-32">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-black mb-4 sm:mb-6 px-4">{data.title}</h1>
+              <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-4">
                 {data.description}
               </p>
             </div>
@@ -200,40 +201,41 @@ export default function SectorPage({ params }: PageParams) {
         </section>
 
         {/* Two Column Features Section */}
-        <div className="w-full bg-white py-16 mt-40">
+        <div className="w-full bg-white py-8 sm:py-12 md:py-16 mt-20 sm:mt-28 md:mt-40">
           <div className="w-full border-t-2 border-[#D84315] relative">
-            {/* Vertical divider line - moved outside grid to touch both borders */}
+            {/* Vertical divider line */}
             <div className="absolute top-[-2px] bottom-[-2px] left-1/2 w-[2px] bg-[#D84315] hidden md:block" style={{ transform: 'translateX(-1px)' }}></div>
             
-            <div className="max-w-[1800px] mx-auto px-8">
-              <div className="grid md:grid-cols-2 pt-8 pb-8">
+            <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+              <div className="grid md:grid-cols-2 gap-12 md:gap-0 pt-8 pb-8">
                 {/* Left Column */}
-                <div className="bg-white pr-16">
-                  <div className="flex items-start gap-6">
-                    <div className="w-16 h-16 rounded-full bg-[#F8D7D0] flex items-center justify-center flex-shrink-0">
+                <div className="bg-white md:pr-8 lg:pr-16">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F8D7D0] flex items-center justify-center flex-shrink-0">
                       <Image
                         src="/icons/leaf.svg"
                         alt="Gabion Box"
-                        width={32}
-                        height={32}
+                        width={24}
+                        height={24}
+                        className="sm:w-8 sm:h-8"
                       />
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-2xl font-bold text-black mb-6">{data.leftSection.title}</h2>
+                      <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">{data.leftSection.title}</h2>
                       <div className="space-y-4">
-                        <div className="flex items-start">
-                          <span className="font-bold text-black text-lg">• Function: </span>
-                          <span className="text-gray-800 ml-2 text-lg">{data.leftSection.purpose}</span>
+                        <div className="flex flex-col sm:flex-row sm:items-start">
+                          <span className="font-bold text-black text-base sm:text-lg">• Function: </span>
+                          <span className="text-gray-800 sm:ml-2 text-base sm:text-lg">{data.leftSection.purpose}</span>
                         </div>
-                        <div className="flex items-start">
-                          <span className="font-bold text-black text-lg">• Materials: </span>
-                          <span className="text-gray-800 ml-2 text-lg">{data.leftSection.materials}</span>
+                        <div className="flex flex-col sm:flex-row sm:items-start">
+                          <span className="font-bold text-black text-base sm:text-lg">• Materials: </span>
+                          <span className="text-gray-800 sm:ml-2 text-base sm:text-lg">{data.leftSection.materials}</span>
                         </div>
                         <div>
-                          <span className="font-bold text-black text-lg">• Installation Steps:</span>
+                          <span className="font-bold text-black text-base sm:text-lg">• Installation Steps:</span>
                           <ul className="mt-3 space-y-3">
                             {data.leftSection.installationSteps.map((step, index) => (
-                              <li key={index} className="flex items-start text-gray-800 text-lg">
+                              <li key={index} className="flex items-start text-gray-800 text-base sm:text-lg">
                                 <span className="mr-3 font-medium">{index + 1}.</span>
                                 <span>{step}</span>
                               </li>
@@ -246,36 +248,37 @@ export default function SectorPage({ params }: PageParams) {
                 </div>
 
                 {/* Right Column */}
-                <div className="bg-white pl-16">
-                  <div className="flex items-start gap-6">
-                    <div className="w-16 h-16 rounded-full bg-[#F8D7D0] flex items-center justify-center flex-shrink-0">
+                <div className="bg-white md:pl-8 lg:pl-16">
+                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
+                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F8D7D0] flex items-center justify-center flex-shrink-0">
                       <Image
                         src="/icons/leaf.svg"
                         alt="Soil Reinforcement"
-                        width={32}
-                        height={32}
+                        width={24}
+                        height={24}
+                        className="sm:w-8 sm:h-8"
                       />
                     </div>
                     <div className="flex-grow">
-                      <h2 className="text-2xl font-bold text-black mb-6">{data.rightSection.title}</h2>
+                      <h2 className="text-xl sm:text-2xl font-bold text-black mb-4 sm:mb-6">{data.rightSection.title}</h2>
                       <div className="space-y-4">
-                        <div className="flex items-start">
-                          <span className="font-bold text-black text-lg">• Geotextiles and Geogrids: </span>
-                          <span className="text-gray-800 ml-2 text-lg">Placed between gabion layers to reinforce the backfill soil.</span>
+                        <div className="flex flex-col sm:flex-row sm:items-start">
+                          <span className="font-bold text-black text-base sm:text-lg">• Geotextiles and Geogrids: </span>
+                          <span className="text-gray-800 sm:ml-2 text-base sm:text-lg">Placed between gabion layers to reinforce the backfill soil.</span>
                         </div>
                         <div>
-                          <span className="font-bold text-black text-lg">• Advantages:</span>
+                          <span className="font-bold text-black text-base sm:text-lg">• Advantages:</span>
                           <ul className="mt-3 space-y-3">
                             {data.rightSection.advantages.map((advantage, index) => (
-                              <li key={index} className="text-gray-800 text-lg ml-5">• {advantage}</li>
+                              <li key={index} className="text-gray-800 text-base sm:text-lg ml-5">• {advantage}</li>
                             ))}
                           </ul>
                         </div>
                         <div>
-                          <span className="font-bold text-black text-lg">• Benefits of Gabion Retaining Walls:</span>
+                          <span className="font-bold text-black text-base sm:text-lg">• Benefits of Gabion Retaining Walls:</span>
                           <ul className="mt-3 space-y-3">
                             {data.rightSection.benefits.map((benefit, index) => (
-                              <li key={index} className="text-gray-800 text-lg ml-5">• {benefit}</li>
+                              <li key={index} className="text-gray-800 text-base sm:text-lg ml-5">• {benefit}</li>
                             ))}
                           </ul>
                         </div>
@@ -291,15 +294,15 @@ export default function SectorPage({ params }: PageParams) {
         </div>
 
         {/* Gallery Section */}
-        <div className="w-full bg-gray-50 py-16">
-          <h1 className='text-2xl font-bold text-center text-black mb-8'>Applications</h1>
-          <div className="max-w-[1800px] mx-auto px-8">
+        <div className="w-full bg-gray-50 py-8 sm:py-12 md:py-16">
+          <h1 className="text-xl sm:text-2xl font-bold text-center text-black mb-6 sm:mb-8">Applications</h1>
+          <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
             {data.galleryImages.length > 3 ? (
               <div className="gallery-container cursor-grab active:cursor-grabbing">
                 <Slider {...sliderSettings} className="gallery-slider">
                   {data.galleryImages.map((image, index) => (
-                    <div key={index} className="px-4">
-                      <Link href={`/application/${image.link || ''}`} className="block relative h-[400px] w-full transition-transform duration-300 hover:scale-[1.02]">
+                    <div key={index} className="px-2 sm:px-4">
+                      <Link href={`/application/${image.link || ''}`} className="block relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] w-full transition-transform duration-300 hover:scale-[1.02]">
                         <Image
                           src={image.url}
                           alt={image.title || `Gallery image ${index + 1}`}
@@ -313,12 +316,12 @@ export default function SectorPage({ params }: PageParams) {
                 </Slider>
               </div>
             ) : (
-              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8">
                 {data.galleryImages.map((image, index) => (
                   <Link 
                     key={index} 
                     href={`/application/${image.link || ''}`}
-                    className="block relative h-[400px] transition-transform duration-300 hover:scale-[1.02]"
+                    className="block relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] transition-transform duration-300 hover:scale-[1.02]"
                   >
                     <Image
                       src={image.url}
