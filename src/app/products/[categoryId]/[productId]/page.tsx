@@ -63,7 +63,7 @@ export default function ProductPage({ params }: PageProps) {
     <>
       <Header />
       <main className="bg-[#FAFAFA] relative min-h-screen py-6 md:py-20">
-        <div className="container mx-auto max-w-7xl px-4 mt-4 md:mt-8">
+        <div className="container mx-auto max-w-7xl px-4 mt-12 md:mt-8">
           {/* Product Details Section */}
           <div className="bg-white rounded-lg p-4 md:p-8 shadow-md">
             <div className="grid grid-cols-1 md:grid-cols-12 gap-4 md:gap-10">
