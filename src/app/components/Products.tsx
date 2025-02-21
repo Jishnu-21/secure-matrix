@@ -154,7 +154,7 @@ const Products = () => {
         {isMobile ? renderMobileSwiper() : renderProductsGrid()}
 
         {/* Know More Button */}
-        <div className="text-center mt-16">
+        <div className="text-center">
           <button className="inline-flex items-center text-[#DA491A] hover:text-[#DA491A]/80 transition-colors">
           <Link href="/products"> 
             <span className="text-lg font-medium">View More</span>
