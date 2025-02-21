@@ -137,7 +137,7 @@ export const categories: Category[] = [
   },
   {
     id: 'rock-fall-netting',
-    title: " Secure® Rock Fall Netting",
+    title: "Secure® Rock Fall Netting",
     description: "Offered Rock fall nettings are apt for simple drapery systems. These are suited for geotechnical as well as engineering applications. Supplied nettings allow for rock fall protection, slope stabilization, and surface protection applications.",
     features: [
     ],

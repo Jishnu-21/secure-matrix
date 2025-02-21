@@ -3,7 +3,7 @@
     transform: translateX(0);
   }
   100% {
-    transform: translateX(-50%);
+    transform: translateX(calc(-250px * 7));
   }
 }
 
@@ -19,4 +19,20 @@
   white-space: nowrap;
 }
 
-
+@media (max-width: 768px) {
+  @keyframes scroll {
+    0% {
+      transform: translateX(0);
+    }
+    100% {
+      transform: translateX(calc(-150px * 7));
+    }
+  }
+  .slider {
+    animation: scroll 15s linear infinite;
+  }
+  .slider .slide {
+    width: 150px;
+    padding: 5px;
+  }
+}

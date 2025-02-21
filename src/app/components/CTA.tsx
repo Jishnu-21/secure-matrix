@@ -5,10 +5,9 @@ import Link from "next/link";
 
 const CTA = () => {
   return (
-    <section className=" md:py-14 lg:py-10 px-4">
-      <div className="container mx-auto max-w-[90%] md:max-w-[85%] lg:max-w-[80%]">
-        {/* CTA Container */}
-        <div className="relative overflow-hidden bg-[#E9B5A8] w-full mx-auto rounded-lg">
+    <section className="relative py-15 md:py-20 overflow-hidden">
+      <div className="container mx-auto px-4">
+        <div className="relative bg-[#E9B5A8] rounded-lg overflow-hidden">
           {/* Background Pattern - Left */}
           <div className="absolute left-0 top-0 w-full md:w-[50%] h-full opacity-10 pointer-events-none">
             <Image
@@ -30,7 +29,7 @@ const CTA = () => {
           </div>
 
           {/* Content Container */}
-          <div className="relative z-10 py-12 md:py-16 lg:py-20 px-4 sm:px-6 md:px-12 lg:px-16">
+          <div className="relative z-10 px-4 md:px-12 py-12 md:py-20">
             <div className="max-w-[900px] mx-auto text-center">
               <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-white mb-4 md:mb-6">
                 Build Stronger, Safer Environments with Us 

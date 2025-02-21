@@ -203,7 +203,7 @@ const LatestNews = () => {
   );
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-[#FAFAFA]">
+    <section className="py-6 md:py-24 px-4 bg-[#FAFAFA]">
       <div className="container mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">Latest News</h2>

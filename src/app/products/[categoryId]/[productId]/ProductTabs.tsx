@@ -1,34 +1,36 @@
-'use client'
+"use client";
 
-import { useState } from 'react'
-import { Product } from '@/lib/data/categories'
+import { useState } from "react";
+import { Product } from "@/lib/data/categories";
 
 interface ProductTabsProps {
-  product: Product
+  product: Product;
 }
 
-export default function ProductTabs({ product }: ProductTabsProps) {
-  const [activeTab, setActiveTab] = useState('description')
+const ProductTabs = ({ product }: ProductTabsProps) => {
+  const [activeTab, setActiveTab] = useState("description");
 
   const tabs = [
-    { id: 'description', label: 'Description' },
-    { id: 'details', label: 'Product Details' },
-    { id: 'specification', label: 'Specifications' },
-    { id: 'trade', label: 'Trade Information' }
-  ]
+    { id: "description", label: "Description" },
+    { id: "details", label: "Product Details" },
+    { id: "specification", label: "Specification" },
+    { id: "trade", label: "Trade Information" },
+    { id: "reviews", label: "Reviews" },
+  ];
 
   return (
     <div>
-      <div className="border-b border-gray-100">
-        <div className="flex justify-center">
+      {/* Tab Navigation */}
+      <div className="overflow-x-auto scrollbar-hide">
+        <div className="flex min-w-max border-b border-gray-200">
           {tabs.map((tab) => (
             <button
               key={tab.id}
               onClick={() => setActiveTab(tab.id)}
-              className={`py-4 px-4 md:px-8 text-sm md:text-base font-semibold transition-all duration-300 relative ${
+              className={`py-3 px-4 md:py-4 md:px-8 text-sm md:text-base font-semibold whitespace-nowrap transition-all duration-300 relative ${
                 activeTab === tab.id
-                  ? 'text-[#D84315] bg-white'
-                  : 'text-gray-600 hover:text-[#D84315] bg-gray-50'
+                  ? "text-[#D84315] bg-white"
+                  : "text-gray-600 hover:text-[#D84315] bg-gray-50"
               }`}
             >
               {tab.label}
@@ -40,48 +42,61 @@ export default function ProductTabs({ product }: ProductTabsProps) {
         </div>
       </div>
 
+      {/* Tab Content */}
       <div className="p-4 md:p-8">
-        {activeTab === 'description' && (
+        {activeTab === "description" && (
           <div className="prose max-w-none">
-            <p className="text-gray-600 leading-relaxed text-sm md:text-base">
+            <p className="text-sm md:text-base text-gray-600 leading-relaxed">
               {product.description}
             </p>
           </div>
         )}
 
-        {activeTab === 'specification' && (
+        {activeTab === "details" && (
           <div className="space-y-4">
-            {product.specifications?.map((spec, index) => (
-              <div key={index} className="flex items-start justify-between py-2 border-b border-gray-100 last:border-0">
-                <span className="font-medium text-gray-900 w-1/3 text-sm">{spec.key}</span>
-                <span className="text-gray-600 w-2/3 text-sm">{spec.value}</span>
+            {product.productDetails.map((detail, index) => (
+              <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base">
+                <div className="font-medium text-gray-700">{detail.key}:</div>
+                <div className="text-gray-600">{detail.value}</div>
               </div>
             ))}
           </div>
         )}
 
-        {activeTab === 'trade' && (
-          <div className="space-y-4">
-            {product.tradeInformation?.map((info, index) => (
-              <div key={index} className="flex items-start justify-between py-2 border-b border-gray-100 last:border-0">
-                <span className="font-medium text-gray-900 w-1/3 text-sm">{info.key}</span>
-                <span className="text-gray-600 w-2/3 text-sm">{info.value}</span>
-              </div>
-            ))}
+        {activeTab === "specification" && (
+          <div className="prose max-w-none">
+            <div className="space-y-4">
+              {product.specifications?.map((spec, index) => (
+                <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base">
+                  <div className="font-medium text-gray-700">{spec.key}:</div>
+                  <div className="text-gray-600">{spec.value}</div>
+                </div>
+              ))}
+            </div>
           </div>
         )}
 
-        {activeTab === 'details' && (
-          <div className="space-y-4">
-            {product.productDetails?.map((detail, index) => (
-              <div key={index} className="flex items-start justify-between py-2 border-b border-gray-100 last:border-0">
-                <span className="font-medium text-gray-900 w-1/3 text-sm">{detail.key}</span>
-                <span className="text-gray-600 w-2/3 text-sm">{detail.value}</span>
-              </div>
-            ))}
+        {activeTab === "trade" && (
+          <div className="prose max-w-none">
+            <div className="space-y-4">
+              {product.tradeInformation?.map((info, index) => (
+                <div key={index} className="grid grid-cols-1 md:grid-cols-2 gap-2 text-sm md:text-base">
+                  <div className="font-medium text-gray-700">{info.key}:</div>
+                  <div className="text-gray-600">{info.value}</div>
+                </div>
+              ))}
+            </div>
+          </div>
+        )}
+
+        {activeTab === "reviews" && (
+          <div className="prose max-w-none">
+            <p className="text-sm md:text-base text-gray-600">No reviews yet.</p>
           </div>
         )}
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default ProductTabs;

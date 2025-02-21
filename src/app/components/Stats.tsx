@@ -78,7 +78,7 @@ const Stats = () => {
     <div className="relative -mt-16 mx-4 lg:mx-auto w-[calc(100%-2rem)] lg:w-full max-w-[1400px]">
       <div className="bg-white rounded-lg shadow-[0_4px_20px_rgba(0,0,0,0.1)] py-10 px-8 md:px-16 border border-gray-100">
         <div className="grid grid-cols-2 md:grid-cols-4 gap-8 md:gap-16 justify-items-center max-w-[1200px] mx-auto">
-          <StatItem endNumber={2017} text="Year of Establishment" isYear={true} />
+          <StatItem endNumber={2017} text="Established in" isYear={true} />
           <StatItem endNumber={15} text="Engineers" />
           <StatItem endNumber={3} text="Designers" />
           <StatItem endNumber={50} text="Employees" suffix="+" />

@@ -157,7 +157,7 @@ const Products = () => {
 
         {/* Know More Button */}
         <div className="text-center mt-6 md:mt-8">
-          <Link href="/products" className="inline-flex items-center text-[#DA491A] hover:text-[#DA491A]/80 transition-colors"> 
+          <Link href="/products" className="inline-flex items-center text-[#DA491A] hover:text-[#DA491A]/90 hover:translate-y-1 transition-colors"> 
             <span className="text-lg font-medium">View More</span>
           </Link>
         </div>

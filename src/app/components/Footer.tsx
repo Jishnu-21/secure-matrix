@@ -26,35 +26,35 @@ const Footer = () => {
   return (
     <footer className="bg-[#F3F4F6] px-4 sm:px-6 pt-12 sm:pt-16 pb-6 sm:pb-8">
       <div className="container mx-auto max-w-[1400px]">
-        <div className="grid grid-cols-1 gap-8 lg:grid-cols-4 lg:gap-12 mb-8">
+        <div className="grid grid-cols-1 md:grid-cols-12 gap-8 md:gap-12 mb-8">
           {/* Logo and Description */}
-          <div className="lg:col-span-1">
-            <Link href="/" className="inline-block mb-4">
+          <div className="md:col-span-4 text-center md:text-left">
+            <Link href="/" className="inline-block mb-6">
               <Image
                 src="/icons/logo.png"
                 alt="Secure Matrix"
-                width={120}
-                height={60}
+                width={180}
+                height={50}
                 className="h-auto"
               />
             </Link>
-            <p className="text-gray-600 text-sm leading-relaxed max-w-[280px]">
+            <p className="text-gray-600 text-sm md:text-base mb-6">
             Gate No. 309/2, At Post Kuruli, Tal Khed,Pune - 410501, Maharashtra, India
             Phone : 08045804461
             </p>
           </div>
 
-          {/* Menu Sections Container */}
-          <div className="lg:col-span-2 grid grid-cols-2 gap-8">
-            {/* Menu */}
-            <div className="space-y-4">
-              <h3 className="text-gray-900 font-medium">Menu</h3>
+          {/* Menu and Services in same row for mobile */}
+          <div className="grid grid-cols-2 gap-4 md:col-span-4 text-center md:text-left">
+            {/* Menu Section */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Menu</h3>
               <ul className="space-y-2">
                 {menuItems.Menu.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-gray-600 hover:text-gray-900 text-sm transition-colors duration-200"
+                      className="text-gray-600 hover:text-[#D84315] transition-colors text-sm md:text-base"
                     >
                       {item.label}
                     </Link>
@@ -63,15 +63,15 @@ const Footer = () => {
               </ul>
             </div>
 
-            {/* Services */}
-            <div className="space-y-4">
-              <h3 className="text-gray-900 font-medium">Services</h3>
+            {/* Services Section */}
+            <div>
+              <h3 className="text-lg font-semibold mb-4">Services</h3>
               <ul className="space-y-2">
                 {menuItems.Services.map((item) => (
                   <li key={item.label}>
                     <Link
                       href={item.href}
-                      className="text-gray-600 hover:text-gray-900 text-sm transition-colors duration-200 line-clamp-1"
+                      className="text-gray-600 hover:text-[#D84315] transition-colors text-sm md:text-base"
                     >
                       {item.label}
                     </Link>
@@ -82,7 +82,7 @@ const Footer = () => {
           </div>
 
           {/* Video Section */}
-          <div className="lg:col-span-1">
+          <div className="md:col-span-4 text-center md:text-left">
             <div className="w-full aspect-video rounded-lg overflow-hidden shadow-lg">
               <video 
                 className="w-full h-full object-cover"
@@ -103,7 +103,7 @@ const Footer = () => {
 
         {/* Social Links and Copyright */}
         <div className="pt-6 border-t border-gray-200">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-4">
+          <div className="flex flex-col md:flex-row items-center justify-between">
             <div className="flex items-center space-x-6">
               {socialLinks.map((link) => {
                 const Icon = link.icon;
@@ -111,15 +111,15 @@ const Footer = () => {
                   <Link
                     key={link.label}
                     href={link.href}
-                    className="text-gray-600 hover:text-gray-900 transition-colors duration-200"
+                    className="text-gray-600 hover:text-[#D84315] transition-colors"
                   >
                     <Icon className="h-6 w-6" />
                   </Link>
                 );
               })}
             </div>
-            <p className="text-gray-600 text-sm">
-              {new Date().getFullYear()} Secure Matrix. All Rights Reserved.
+            <p className="text-gray-600 text-sm md:text-base text-center md:text-left">
+              {new Date().getFullYear()} Secure Matrix. All rights reserved.
             </p>
           </div>
         </div>

@@ -37,7 +37,7 @@ const ChooseCard = ({ icon, title, description }: ChooseCardProps) => (
       <h3 className="text-xl md:text-2xl font-medium mb-4 text-gray-800 transition-colors duration-500 group-hover:text-white">
         {title}
       </h3>
-      <div className="text-sm leading-relaxed text-gray-600 transition-colors duration-500 group-hover:text-white/90">
+      <div className="text-sm leading-relaxed text-gray-600 break-words transition-colors duration-500 group-hover:text-white/90">
         {description}
       </div>
     </div>
@@ -71,7 +71,7 @@ const WhyChooseUs = () => {
       title: "Manufacturing",
       description:( 
       <div className="space-y-3"> 
-        <p className="text-gray-600 group-hover:text-white/90 text-sm">
+        <p className="text-gray-600 group-hover:text-white/90 text-sm break-words">
           Our well-equipped manufacturing facilities allow us to produce:
         </p>
 
