@@ -21,27 +21,27 @@ const ProductTabs = ({ product }: ProductTabsProps) => {
   return (
     <div>
       {/* Tab Navigation */}
-      <div className="overflow-x-auto scrollbar-hide">
-        <div className="flex min-w-max border-b border-gray-200 justify-center md:justify-start">
-          {tabs.map((tab) => (
-            <button
-              key={tab.id}
-              onClick={() => setActiveTab(tab.id)}
-              className={`py-3 px-4 md:py-4 md:px-8 text-sm md:text-base font-semibold whitespace-nowrap transition-all duration-300 relative ${
-                activeTab === tab.id
-                  ? "text-[#D84315] bg-white"
-                  : "text-gray-600 hover:text-[#D84315] bg-gray-50"
-              }`}
-            >
-              {tab.label}
-              {activeTab === tab.id && (
-                <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#D84315]"></div>
-              )}
-            </button>
-          ))}
-        </div>
-      </div>
-
+     {/* Tab Navigation */}
+<div className="overflow-x-auto scrollbar-hide">
+  <div className="flex min-w-max border-b border-gray-200 justify-center">
+    {tabs.map((tab) => (
+      <button
+        key={tab.id}
+        onClick={() => setActiveTab(tab.id)}
+        className={`py-3 px-4 md:py-4 md:px-8 text-sm md:text-base font-semibold whitespace-nowrap transition-all duration-300 relative ${
+          activeTab === tab.id
+            ? "text-[#D84315] bg-white"
+            : "text-gray-600 hover:text-[#D84315] bg-gray-50"
+        }`}
+      >
+        {tab.label}
+        {activeTab === tab.id && (
+          <div className="absolute bottom-0 left-0 w-full h-0.5 bg-[#D84315]"></div>
+        )}
+      </button>
+    ))}
+  </div>
+</div>
       {/* Tab Content */}
       <div className="p-4 md:p-8">
         {activeTab === "description" && (
