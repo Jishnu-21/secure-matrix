@@ -11,7 +11,7 @@ const poppins = Poppins({
 });
 
 export const metadata: Metadata = {
-  title: "Secure Matrix",
+  title: "Secure Matrix- Your trusted partner in security solutions",
   description: "Secure Matrix - Your trusted partner in security solutions",
 };
 

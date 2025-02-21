@@ -75,23 +75,25 @@ export default function SocialLinks() {
   return (
     <>
       {/* Desktop View - Always visible */}
-      <div className="fixed bottom-6 right-6 hidden md:flex flex-col gap-4 z-50">
+      <div className="fixed bottom-6 right-6 hidden md:flex flex-col gap-3 z-50">
         {socialLinks.map((social) => (
           <Link 
             key={social.name}
             href={social.href} 
             target="_blank" 
             rel="noopener noreferrer"
-            className={`${social.bgColor} p-3 rounded-lg hover:scale-110 transition-transform duration-300 shadow-lg`}
+            className={`${social.bgColor} p-2 sm:p-2.5 lg:p-3 rounded-lg hover:scale-110 transition-transform duration-300 shadow-lg`}
           >
-            {social.icon}
+            <div className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6">
+              {social.icon}
+            </div>
           </Link>
         ))}
         
         {/* Scroll to Top Button */}
         <button
           onClick={scrollToTop}
-          className={`bg-[#DA491A] p-3 rounded-lg shadow-lg transition-all duration-500 ${
+          className={`bg-[#DA491A] p-2 sm:p-2.5 lg:p-3 rounded-lg shadow-lg transition-all duration-500 ${
             showScrollTop 
               ? 'opacity-100 translate-y-0 hover:scale-110 hover:bg-[#ff6b3d]' 
               : 'opacity-0 translate-y-10 pointer-events-none'
@@ -99,7 +101,7 @@ export default function SocialLinks() {
           aria-label="Scroll to top"
         >
           <svg
-            className="w-6 h-6 text-white transform transition-transform duration-300 group-hover:-translate-y-1"
+            className="w-5 h-5 sm:w-5 sm:h-5 lg:w-6 lg:h-6 text-white transform transition-transform duration-300 group-hover:-translate-y-1"
             fill="none"
             stroke="currentColor"
             viewBox="0 0 24 24"
