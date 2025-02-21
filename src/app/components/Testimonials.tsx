@@ -136,7 +136,7 @@ const Testimonials = () => {
   );
 
   return (
-    <section className="py-14 md:py-16 px-4 relative overflow-hidden min-h-[600px] flex items-center">
+    <section className="py-10 md:py-14 px-4 relative overflow-hidden min-h-[600px] flex items-center">
       {/* Background Pattern - Left */}
       <div className="absolute left-0 top-0 w-[50%] h-full opacity-10 pointer-events-none">
         <Image

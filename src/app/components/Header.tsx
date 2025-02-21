@@ -27,12 +27,22 @@ const categories: Category[] = [
   {
     id: 1,
     title: "Gabion Box",
-    products: [],
+    products: [
+      {
+        id: 1,
+        title: "Secure Gabion Box",
+      },
+    ],
   },
   {
     id: 2,
     title: "Gabion Mattresses",
-    products: [],
+    products: [
+      {
+        id: 1,
+        title: "Secure Gabion Rivet Mattress",
+      },
+    ],
   },
 ];
 
@@ -42,6 +52,7 @@ const Header = () => {
   const [lastScrollY, setLastScrollY] = useState(0);
   const [isMobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
   const handleScroll = () => {
     if (typeof window !== "undefined") {
@@ -73,17 +84,32 @@ const Header = () => {
     return pathname.startsWith(path);
   };
 
-  const renderDropdown = (items: MenuItem[]) => {
+  const renderDropdown = () => {
     return (
-      <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md">
-        {items.map((item) => (
-          <div key={item.name} className="group relative">
-            <Link href={item.path} className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-100">
-              {item.name}
+      <div
+        className={`absolute top-[100%] mt-[-2px] left-0 w-60 bg-white shadow-lg rounded-b-lg py-2 z-50 ${
+          isDropdownOpen ? "block" : "hidden"
+        }`}
+      >
+        {categories.map((category) => (
+          <div key={category.id} className="relative group/item">
+            <Link
+              href={`/products/${category.id}`}
+              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#D84315] cursor-pointer"
+            >
+              {category.title}
             </Link>
-            {item.subItems && (
-              <div className="absolute left-full top-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
-                {renderDropdown(item.subItems)}
+            {category.products && category.products.length > 0 && (
+              <div className="absolute left-full top-0 w-60 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block">
+                {category.products.map((product) => (
+                  <Link
+                    key={product.id}
+                    href={`/products/${category.id}/${product.id}`}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#D84315]"
+                  >
+                    {product.title}
+                  </Link>
+                ))}
               </div>
             )}
           </div>
@@ -204,7 +230,7 @@ const Header = () => {
                 {/* Dropdown */}
                 {item.dropdown && (
                   <div 
-                    className={`absolute top-8 left-1/2 transform -translate-x-1/2 w-[280px] bg-white shadow-lg rounded-lg overflow-hidden py-2 transition-all duration-200 ${
+                    className={`absolute top-[100%] mt-[-2px] left-1/2 transform -translate-x-1/2 w-[280px] bg-white shadow-lg rounded-lg overflow-hidden py-2 transition-all duration-200 ${
                       activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'
                     }`}
                   >

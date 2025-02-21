@@ -115,12 +115,12 @@ const PopularProducts = () => {
     return (
       <section className="py-10 md:py-14 px-4 bg-[#FAFAFA] relative overflow-hidden">
         {/* Background pattern */}
-        <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
+        <div className="absolute top-0 right-0 w-[50%] h-full opacity-10 pointer-events-none">
           <Image
-            src="/images/dots.png"
+            src="/images/hex-pattern.png"
             alt="Background pattern"
-            width={160}
-            height={160}
+            fill
+            className="object-cover"
           />
         </div>
 
@@ -147,12 +147,12 @@ const PopularProducts = () => {
   return (
     <section className="py-10 md:py-14 px-4 bg-[#FAFAFA] relative overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
+      <div className="absolute top-0 right-0 w-[50%] h-full opacity-10 pointer-events-none">
         <Image
-          src="/images/dots.png"
+          src="/images/hex-pattern.png"
           alt="Background pattern"
-          width={160}
-          height={160}
+          fill
+          className="object-cover"
         />
       </div>
 

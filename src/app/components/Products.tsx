@@ -68,16 +68,16 @@ const Products = () => {
 
   const products = [
     {
-      title: "Gabion Mattress",
+      title: "Secure Gabion Mattress",
       description: "Durable and efficient for erosion control and landscape reinforcement.",
       imageUrl: "/images/gabion-mattresss.jpg",
-      path:"/products/gabion-mattress"
+      path:"/products/secure-gabion-mattress"
     },
     {
-      title: "Fence System",
+      title: "Secure Gabion  Box",
       description: "Secure and adaptable fencing solutions for various applications.",
-      imageUrl: "/images/fence-system.jpg",
-      path:"/products/fence-system"
+      imageUrl: "/images/products/gabion-box/1.jpeg",
+      path:"/products/Secure-gabion-box"
     },
     {
       title: "Wire Fencing",
@@ -86,16 +86,16 @@ const Products = () => {
       path:"/products/wire-fencing"
     },
     {
-      title: "Gabion Wall Net",
+      title: "Secure Geotextile",
       description: " Robust and eco-friendly solution for retaining walls and enclosures.",
-      imageUrl: "/images/gabion-wall-net.jpg",
-      path:"/products/gabion-wall-net"
+      imageUrl: "/images/products/geotextile/woven/1.jpeg",
+      path:"/products/Secure-geotextile"
     },
     {
-      title: "Barbed Wire",
+      title: "Secure Rock Fall Netting",
       description: "High-strength barrier for maximum security and protection.",
-      imageUrl: "/images/barbed-wire.jpg",
-      path:"/products/barbed-wire"
+      imageUrl: "/images/products/rock-fall-netting/dt-mesh/1.jpeg",
+      path:"/products/rock-fall-netting"
     },
   ];
 
@@ -142,7 +142,7 @@ const Products = () => {
   );
 
   return (
-    <section className="py-16 md:py-24 px-4 bg-white">
+    <section className="py-10 md:py-14 px-4 bg-white">
       <div className="container mx-auto max-w-[1400px] px-4">
         {/* Section Title */}
         <div className="text-center mb-14">

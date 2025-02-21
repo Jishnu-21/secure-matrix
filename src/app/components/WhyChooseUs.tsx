@@ -138,7 +138,7 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section className="py-14 md:py-20 bg-[#FAFAFA] relative overflow-hidden">
+    <section className="py-10 md:py-14 bg-[#FAFAFA] relative overflow-hidden">
       {/* Background pattern */}
       <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
         <div

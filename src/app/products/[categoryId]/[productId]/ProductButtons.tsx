@@ -6,7 +6,7 @@ export default function ProductButtons() {
   return (
     <div className="mt-auto space-y-4">
       <Button 
-        className="w-full bg-[#D84315] hover:bg-[#BF360C] text-white h-11"
+        className="w-full bg-[#D84315] cursor-pointer hover:bg-[#BF360C] text-white h-11"
         onClick={() => {
           // Handle send inquiry
         }}
@@ -15,7 +15,7 @@ export default function ProductButtons() {
       </Button>
       <Button 
         variant="outline" 
-        className="w-full border-[#D84315] text-[#D84315] hover:bg-[#D84315] hover:text-white h-11"
+        className="w-full cursor-pointer border-[#D84315] text-[#D84315] hover:bg-[#D84315] hover:text-white h-11"
         onClick={() => {
           // Handle get quote
         }}
