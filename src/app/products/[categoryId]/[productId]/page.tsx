@@ -62,7 +62,7 @@ export default function ProductPage({ params }: PageProps) {
   return (
     <>
       <Header />
-      <main className="bg-[#FAFAFA] relative min-h-screen py-6 md:py-20">
+      <main className="bg-[#FAFAFA] relative min-h-screen mt-2 py-6 md:py-20">
         <div className="container mx-auto max-w-7xl px-4 mt-12 md:mt-8">
           {/* Product Details Section */}
           <div className="bg-white rounded-lg p-4 md:p-8 shadow-md">
