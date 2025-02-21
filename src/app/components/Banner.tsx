@@ -62,7 +62,7 @@ const Banner = () => {
               Civil Engineering
             </p>
             <div className="flex justify-center sm:justify-start">
-              <button className="inline-flex items-center bg-white text-[#FF4A17] px-6 sm:px-8 py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-8 sm:mb-0">
+              <button className="inline-flex items-center bg-white text-[#FF4A17] px-6 sm:px-8 py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-16 sm:mb-20 md:mb-24">
                <Link href="/about"> 
                 <span className="mr-3 text-base sm:text-lg font-medium">
                   Know more
@@ -101,10 +101,11 @@ const Banner = () => {
         {/* Depth Effect */}
         <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
       </section>
-      <div className="bg-gradient-to-b from-[#FAFAFA] to-gray-50 pb-10">
+      <div className="bg-gradient-to-b from-[#FAFAFA] to-gray-50 pb-10 flex justify-center w-full">
         <Stats />
       </div>
-      {/* Depth Effect after Stats */}</>
+      {/* Depth Effect after Stats */}
+    </>
   );
 };
 
