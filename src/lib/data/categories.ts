@@ -83,7 +83,7 @@ export const categories: Category[] = [
   {
     id: 'secure-gabion-mattress',
     title: "SECURE® Gabion Mattress",
-    description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
+    description: "The Gabion Mattress are functional as the ideal additions to gardens of any size for erosion control as well as stabilizing ridges. These structures are utilized to transform as well as protect the space due to their space-saving design.",
     features: [],
     imagePath: "/images/products/gabion-mattress/3.jpeg",
     products: [
@@ -227,7 +227,7 @@ export const categories: Category[] = [
   {
     id: 'Secure-geotextile',
     title: "SECURE® Geotextile",
-    description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
+    description: "The SECURE® Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
     features: [],
     imagePath: "/images/products/geotextile/non-woven/2.webp",
     products: [
