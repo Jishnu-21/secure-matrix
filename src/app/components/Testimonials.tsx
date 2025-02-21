@@ -169,7 +169,7 @@ const Testimonials = () => {
 
       <div className="container mx-auto max-w-[1400px] relative z-10">
         {/* Section Title */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-10">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">
           Testimonials
           </h2>

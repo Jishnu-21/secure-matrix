@@ -113,12 +113,12 @@ const Products = () => {
   );
 
   const renderMobileSwiper = () => (
-    <div className="relative pb-14">
+    <div className="relative">
       <Swiper
         modules={[Pagination, Autoplay]}
         spaceBetween={16}
-        slidesPerView={1.1}
-        centeredSlides={true}
+        slidesPerView={1}
+        centeredSlides={false}
         loop={true}
         pagination={{
           clickable: true,
@@ -133,8 +133,10 @@ const Products = () => {
         className="!pb-10"
       >
         {products.map((product, index) => (
-          <SwiperSlide key={index} className="pb-4">
-            <ProductCard {...product} />
+          <SwiperSlide key={index}>
+            <Link href={product.path}>
+              <ProductCard {...product} />
+            </Link>
           </SwiperSlide>
         ))}
       </Swiper>
@@ -143,9 +145,9 @@ const Products = () => {
 
   return (
     <section className="py-10 md:py-14 px-4 bg-white">
-      <div className="container mx-auto max-w-[1400px] px-4">
+      <div className="container mx-auto max-w-[1400px]">
         {/* Section Title */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 md:mb-10">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">Our Products</h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
@@ -154,12 +156,10 @@ const Products = () => {
         {isMobile ? renderMobileSwiper() : renderProductsGrid()}
 
         {/* Know More Button */}
-        <div className="text-center">
-          <button className="inline-flex items-center text-[#DA491A] hover:text-[#DA491A]/80 transition-colors">
-          <Link href="/products"> 
+        <div className="text-center mt-6 md:mt-8">
+          <Link href="/products" className="inline-flex items-center text-[#DA491A] hover:text-[#DA491A]/80 transition-colors"> 
             <span className="text-lg font-medium">View More</span>
-            </Link>
-          </button>
+          </Link>
         </div>
       </div>
     </section>

@@ -140,16 +140,18 @@ const WhyChooseUs = () => {
   return (
     <section className="py-10 md:py-14 bg-[#FAFAFA] relative overflow-hidden">
       {/* Background pattern */}
-      <div className="absolute top-0 right-0 w-40 h-40 opacity-10">
-        <div
-          className="w-full h-full bg-contain bg-no-repeat bg-center"
-          style={{ backgroundImage: 'url("/images/dots.png")' }}
+      <div className="absolute top-0 right-0 w-[50%] h-full opacity-10 pointer-events-none">
+        <Image
+          src="/images/hex-pattern.png"
+          alt="Background pattern"
+          fill
+          className="object-cover"
         />
       </div>
 
       <div className="container mx-auto max-w-[1400px] px-4">
         {/* Section Title */}
-        <div className="text-center mb-14">
+        <div className="text-center mb-8 md:mb-10">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">Why Choose Us</h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
@@ -158,19 +160,19 @@ const WhyChooseUs = () => {
         {isMobile ? (
           <Swiper
             modules={[Navigation, Pagination]}
-            spaceBetween={20}
+            spaceBetween={16}
             slidesPerView={1}
             pagination={{ clickable: true }}
             className="why-choose-swiper"
           >
             {cards.map((card, index) => (
-              <SwiperSlide key={index}>
+              <SwiperSlide key={index} className="pb-10">
                 <ChooseCard {...card} />
               </SwiperSlide>
             ))}
           </Swiper>
         ) : (
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 md:gap-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
             {cards.map((card, index) => (
               <ChooseCard key={index} {...card} />
             ))}
