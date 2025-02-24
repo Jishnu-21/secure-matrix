@@ -1,5 +1,6 @@
 'use client'
 
+import { use } from "react";
 import Image from 'next/image'
 import Header from "../../components/Header"
 import Footer from "../../components/Footer"
@@ -88,8 +89,11 @@ type Params = {
   slug: string
 }
 
-export default function ApplicationPage({ params }: { params: Params }) {
-  const slug = params.slug
+export default function ApplicationPage({ params }: { params: Promise<{ slug: string }> }) {
+  // Properly unwrap params using React.use()
+  const resolvedParams = use(params);
+  
+  const slug = resolvedParams.slug
   const data = applicationData[slug as keyof typeof applicationData]
   
   if (!data) return <div>Application not found</div>

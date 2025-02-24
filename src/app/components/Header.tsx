@@ -123,15 +123,19 @@ const Header = () => {
     { name: "About", path: "/about" },
     { 
       name: "Products", 
-      path: "/products",
-      subItems: categories.map(category => ({
-        name: category.title,
-        path: `/products/${category.id}`,
-        subItems: category.products.map(product => ({
-          name: product.title,
-          path: `/products/${category.id}/${product.id}`
-        }))
-      }))
+      path: "#",
+      dropdown: [
+        { name: "SECURE® GABION BOX ", path: "/products/Secure-gabion-box/secure-gabion-box" },
+        { name: "SECURE® GABION REVET MATTRESS ", path: "/products/secure-gabion-mattress/secure-gabion-revet-mattress" },
+        { name: "SECURE® DT MESH ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-dt-mesh-rock-fall-netting" },
+        { name: "SECURE® RHOMBOIDAL ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-rhomboidal-rock-fall-netting" },
+        { name: "SECURE® NON-WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-non-woven-geotextile" },
+        { name: "SECURE® WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-woven-geotextile" },
+        { name: "SECURE® Grid System", path: "/products/secure-grid-system" },
+        { name: "SECURE® PA6 Polymer Coating", path: "/products/secure-pa6-polymer-coating" },
+        { name: "SECURE® Mesh System", path: "/products/secure-mesh-system" },
+  
+      ]
     },
     { 
       name: "Sector", 

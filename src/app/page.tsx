@@ -28,7 +28,6 @@ const Page = () => {
                     <WhyChooseUs />
                     <PopularProducts />
                   </div>
-
                   {/* Testimonials with full background */}
                   <div className="relative mt-6 md:mt-10">
                     <div 
