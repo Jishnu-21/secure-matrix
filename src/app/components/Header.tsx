@@ -217,7 +217,7 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black text-sm lg:text-base font-crimson relative ${
+                  className={`cursor-pointer text-black text-sm lg:text-base font-crimson relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                       ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
@@ -229,6 +229,23 @@ const Header = () => {
                   }}
                 >
                   {item.name}
+                  {item.dropdown && (
+                    <svg 
+                      className={`w-3.5 h-3.5 ml-0.5 transition-transform duration-200 ${
+                        activeDropdown === item.name ? 'rotate-180 transform' : ''
+                      }`}
+                      fill="none" 
+                      stroke="currentColor" 
+                      viewBox="0 0 24 24"
+                    >
+                      <path 
+                        strokeLinecap="round" 
+                        strokeLinejoin="round" 
+                        strokeWidth={2} 
+                        d="M19 9l-7 7-7-7"
+                      />
+                    </svg>
+                  )}
                 </Link>
 
                 {/* Dropdown */}
@@ -279,11 +296,11 @@ const Header = () => {
                       >
                         <Link
                           href={item.path}
-                          className={`block py-3 px-3 text-base font-medium transition-colors rounded-lg
-                            ${isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
+                          className={`block py-3 px-3 text-base font-medium transition-colors rounded-lg inline-flex items-center justify-between w-full ${
+                            isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                               ? 'text-[#D84315] bg-[#D84315]/5' 
                               : 'text-gray-800 hover:bg-[#D84315]/5 hover:text-[#D84315]'
-                            }`}
+                          }`}
                           onClick={(e) => {
                             if (item.dropdown) {
                               e.preventDefault();
@@ -293,6 +310,23 @@ const Header = () => {
                           }}
                         >
                           {item.name}
+                          {item.dropdown && (
+                            <svg 
+                              className={`w-4 h-4 transition-transform duration-200 ${
+                                activeDropdown === item.name ? 'rotate-180 transform' : ''
+                              }`}
+                              fill="none" 
+                              stroke="currentColor" 
+                              viewBox="0 0 24 24"
+                            >
+                              <path 
+                                strokeLinecap="round" 
+                                strokeLinejoin="round" 
+                                strokeWidth={2} 
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          )}
                         </Link>
 
                         {/* Mobile Dropdown */}
