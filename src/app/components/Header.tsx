@@ -259,8 +259,10 @@ const Header = () => {
                       <Link
                         key={dropdownItem.name}
                         href={dropdownItem.path}
-                        className={`block px-4 py-3 text-sm text-black hover:bg-gray-50 transition-colors duration-200 ${
-                          pathname === dropdownItem.path ? 'text-[#D84315] bg-gray-50 font-medium' : ''
+                        className={`block px-4 py-3 text-sm transition-colors duration-200 ${
+                          pathname === dropdownItem.path 
+                            ? 'text-[#D84315] bg-[#D84315]/5 font-medium' 
+                            : 'text-gray-800 hover:bg-[#D84315]/5 hover:text-[#D84315]'
                         }`}
                       >
                         {dropdownItem.name}
