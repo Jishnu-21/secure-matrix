@@ -307,5 +307,140 @@ export const categories: Category[] = [
         ]
       }
     ]
-  }
+  },
+  {
+    id: 'secure-grid-system',
+    title: "SECURE® Grid System",
+    description: "The SECURE® Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
+    features: [],
+    imagePath: "/images/products/grid-system/1.jpg",
+    products: [
+      {
+        id: 'secure-grid-system',
+        title: "SECURE® Grid System",
+        description: "The Secure Grid System is a geosynthetic reinforcement solution designed to provide structural stability, reinforcement, and ground stabilization. Made of high-strength tensile ribs, it effectively interacts with surrounding soil, stone, or other substrates, ensuring superior load distribution and durability. Ideal for security fencing, road stabilization, and construction applications.",
+        shortDescription: "A high-strength geogrid system for reinforcement and stabilization, ensuring long-term structural integrity.",
+        specifications:[
+        
+        ],
+        productDetails: [
+          { key: "Material", value: "High-Density Polymer / Galvanized Iron" },
+          { key: "Type", value: "Geogrid Reinforcement System" },
+          { key: "Usage", value: "Soil Stabilization, Security Fencing, Load Distribution" },
+          { key: "Surface Treatment", value: "Galvanized / Coated for Corrosion Resistance" },
+        ],
+        tradeInformation: [
+          { key: "Supply Ability", value: "3,000,000 units/month" },
+          { key: "Price", value: "Varies based on size and customization" },
+          { key: "Packaging", value: "Standard industrial packaging for easy handling and transportation" },
+        ],
+        keyFeatures: [
+          "High Load-Bearing Capacity",
+          "Enhances Soil & Structural Stability",
+          "Corrosion & Weather Resistant",
+          "Lightweight Yet Extremely Durable",
+          "Environmentally Friendly & Recyclable",
+        ],
+        
+        price: "",
+        priceUnit: "",
+        imagePath: [
+          "/images/products/grid-system/1.jpg",
+        ]
+      }
+    ]
+  },
+  {
+    id: 'secure-pa6-polymer-coating',
+    title: "SECURE® PA6 Polymer Coating",
+    description: "The SECURE® PA6 Polymer Coating is an advanced polyamide coating solution applied to GI wires to enhance their corrosion resistance, durability, and visual appeal. With its superior UV stability, abrasion resistance, and chemical protection, this coating extends the lifespan of security fencing, electrical applications, and industrial uses. The availability of multicolor options adds aesthetic value, making it ideal for visually appealing fencing designs and event-linked branding.",
+    features: [],
+    imagePath: "/images/products/no-image.jpg",
+    products: [
+      {
+        id: 'secure-pa6-polymer-coating',
+        title: "SECURE® PA6 Polymer Coating",
+        description: "The SECURE® PA6 Polymer Coating is an advanced polyamide coating solution applied to GI wires to enhance their corrosion resistance, durability, and visual appeal. With its superior UV stability, abrasion resistance, and chemical protection, this coating extends the lifespan of security fencing, electrical applications, and industrial uses. The availability of multicolor options adds aesthetic value, making it ideal for visually appealing fencing designs and event-linked branding.",
+        shortDescription: "Upgrade your security with SECURE® PA6 Polymer Coating—designed for durability, flexibility, and vibrant aesthetics in fencing & industrial applications!",
+        productDetails:[
+          { key: "Material", value: "PA6 (Polyamide 6 / Nylon 6)" },
+          { key: "Coating Type", value: "Polymer Coated on Galvanized Iron (GI) Wire" },
+          { key: "Usage", value:"Safety, Security, Electrical Insulation, and Aesthetic Applications" },
+          { key: "Surface Treatment", value: "Smooth, Multi-Color Finish" },
+        ],
+        specifications: [
+          { key: "Base Wire", value: "Base Wire" },
+          { key: "Type", value: "Galvanized Iron (GI)" },
+          { key: "Coating Thickness", value: "Customizable" },
+          { key: "Color-Options", value: "Multiple (as per requirement)" },
+          { key: "Applications", value: "Security fencing, electrical insulation, industrial reinforcement" },
+        ],
+        tradeInformation: [
+          { key: "Payment Terms", value: "Cash in Advance (CID)" },
+          { key: "Supply Ability", value: "3,000,000 units/month" },
+          { key: "Delivery Time", value: " 3-4 Days" },
+          { key: "Main Domestic", value: "Market: All India" },
+        ],
+        keyFeatures: [
+          "Superior Durability: Engineered for long-lasting performance in extreme conditions",
+          "Corrosion & Abrasion Resistant: Advanced PA6 coating enhances lifespan",
+          "Eco-Friendly & Sustainable: Encourages vegetation growth while ensuring soil retention",
+          "High Structural Strength: Gabion Facia with integrated tail for added reinforcement",
+          "Versatile Application: Suitable for inclined structures, fencing, and erosion control",
+        ],
+        
+        price: "",
+        priceUnit: "",
+        imagePath: [
+          "/images/products/no-image.jpg",
+        ]
+      }
+    ]
+  },
+  {
+    id: 'secure-mesh-system',
+    title: "SECURE® Mesh System",
+    description: "The Green Secure Mesh System is a high-strength, corrosion-resistant fencing and erosion control solution designed for hostile environments. It is constructed using mechanically woven, double-twisted hexagonal wire mesh made from zinc-coated galvanized wire, further coated with PA6 (Polyamide 6, Nylon 6) polymer for enhanced durability, abrasion resistance, and longevity.",
+    features: [],
+    imagePath: "/images/products/no-image.jpg",
+    products: [
+      {
+        id: 'secure-mesh-system',
+        title: "SECURE® Mesh System",
+        description: "The Green Secure Mesh System is a high-strength, corrosion-resistant fencing and erosion control solution designed for hostile environments. It is constructed using mechanically woven, double-twisted hexagonal wire mesh made from zinc-coated galvanized wire, further coated with PA6 (Polyamide 6, Nylon 6) polymer for enhanced durability, abrasion resistance, and longevity.",
+        shortDescription: "The Green Secure Mesh System is a high-strength, corrosion-resistant fencing & erosion control solution designed for hostile environments. With polymer-coated hexagonal mesh and an integrated erosion control blanket, it ensures both structural stability and environmental sustainability.",
+        productDetails:[
+          { key: "Material", value: "Zinc-coated galvanized wire with PA6 (Nylon 6) polymer coating" },
+          { key: "Mesh Type", value: "Mechanically woven, double-twisted hexagonal wire mesh" },
+          { key: "Surface Treatment", value: "Corrosion-resistant polymer coating" },
+          { key: "Usage", value: "Ideal for hostile environments, erosion control, and structural reinforcemen" },
+        ],
+        specifications: [
+          { key: "Gabion Facia", value: "Integrated tail with a continuous base panel for reinforcement " },
+          { key: "Erosion Control", value: "Geotextile erosion control blanket for soil retention" },
+          { key: "Usage", value: "Fencing, erosion control, and structural reinforcement in inclined terrains" },
+          { key: "Durability", value: " Highly resistant to harsh weather, chemicals, and physical impact" },
+        ],
+        tradeInformation: [
+          { key: "Supply Ability", value: "Bulk availability" },
+          { key: "Delivery", value: " Fast & efficient" },
+          { key: "Payment", value: "CID" },
+          { key: "Market", value: "Nationwide Availability" },
+        ],
+        keyFeatures: [
+          "High Load-Bearing Capacity",
+          "Enhances Soil & Structural Stability",
+          "Corrosion & Weather Resistant",
+          "Lightweight Yet Extremely Durable",
+          "Environmentally Friendly & Recyclable",
+        ],
+        
+        price: "",
+        priceUnit: "",
+        imagePath: [
+          "/images/products/no-image.jpg",
+        ]
+      }
+    ]
+  },
 ];

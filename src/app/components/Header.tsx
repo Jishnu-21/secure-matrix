@@ -131,9 +131,9 @@ const Header = () => {
         { name: "SECURE® RHOMBOIDAL ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-rhomboidal-rock-fall-netting" },
         { name: "SECURE® NON-WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-non-woven-geotextile" },
         { name: "SECURE® WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-woven-geotextile" },
-        { name: "SECURE® Grid System", path: "/products/secure-grid-system" },
-        { name: "SECURE® PA6 Polymer Coating", path: "/products/secure-pa6-polymer-coating" },
-        { name: "SECURE® Mesh System", path: "/products/secure-mesh-system" },
+        { name: "SECURE® Grid System", path: "/products/secure-grid-system/secure-grid-system" },
+        { name: "SECURE® PA6 Polymer Coating", path: "/products/secure-pa6-polymer-coating/secure-pa6-polymer-coating" },
+        { name: "SECURE® Mesh System", path: "/products/secure-mesh-system/secure-mesh-system" },
   
       ]
     },
