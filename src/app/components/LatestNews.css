@@ -17,3 +17,17 @@
   height: auto;
   padding: 4px;
 }
+
+/* Modal styles */
+body.modal-open {
+  overflow: hidden;
+}
+
+.modal-open header {
+  display: none;
+}
+
+.modal-backdrop {
+  backdrop-filter: blur(8px);
+  background-color: rgba(255, 255, 255, 0.2);
+}
