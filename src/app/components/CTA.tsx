@@ -7,7 +7,7 @@ const CTA = () => {
   return (
     <section className="relative py-15 md:py-20 overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="relative bg-[#E9B5A8] rounded-lg overflow-hidden">
+        <div className="relative bg-[#DA491A] rounded-lg overflow-hidden">
           {/* Background Pattern - Left */}
           <div className="absolute left-0 top-0 w-full md:w-[50%] h-full opacity-10 pointer-events-none">
             <Image
@@ -31,28 +31,28 @@ const CTA = () => {
           {/* Content Container */}
           <div className="relative z-10 px-4 md:px-12 py-12 md:py-20">
             <div className="max-w-[900px] mx-auto text-center">
-              <h2 className="text-xl sm:text-2xl md:text-3xl font-medium text-white mb-4 md:mb-6">
+              <h2 className="text-xl sm:text-3xl md:text-4xl font-medium text-white mb-4 md:mb-6">
                 Build Stronger, Safer Environments with Us 
               </h2>
-              <p className="text-white/90 text-sm sm:text-base md:text-lg mb-8 md:mb-12 leading-relaxed px-2 sm:px-4 md:px-6">
-                Maximisez votre croissance en discutant avec nos experts. Recevez dès maintenant un entretien en ligne pour bénéficier de conseils personnalisés et booster votre activité commerciale.
+              <p className="text-white mb-6">
+                We are committed to creating safer, more resilient environments for you and your loved ones. Our innovative solutions are designed to address the challenges of today's construction and infrastructure needs, ensuring that your projects are not only completed on time but also delivered with the highest level of safety and quality.
               </p>
               <Link
                 href="#"
-                className="inline-flex items-center gap-2 bg-white text-black px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium hover:bg-white/90 transition-colors duration-300 rounded"
+                className="inline-flex items-center gap-2 bg-white text-[#DA491A] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium hover:bg-white/90 transition-colors duration-300 rounded group"
               >
                 Contact us
                 <svg
                   width="14"
                   height="14"
-                  viewBox="0 0 16 16"
+                  viewBox="0 0 24 24"
                   fill="none"
-                  className="mt-0.5 sm:w-4 sm:h-4"
+                  stroke="currentColor"
+                  strokeWidth="2"
+                  className="transform group-hover:translate-x-1 transition-transform sm:w-4 sm:h-4"
                 >
                   <path
-                    d="M1 8H15M15 8L8 1M15 8L8 15"
-                    stroke="currentColor"
-                    strokeWidth="2"
+                    d="M5 12h14M12 5l7 7-7 7"
                     strokeLinecap="round"
                     strokeLinejoin="round"
                   />

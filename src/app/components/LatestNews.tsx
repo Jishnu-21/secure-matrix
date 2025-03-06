@@ -107,20 +107,20 @@ const NewsCard = ({ news, onClick }: { news: NewsItem; onClick: () => void }) =>
         <span className="text-sm text-gray-500">Source: {news.source}</span>
         <button 
           onClick={onClick}
-          className="text-[#DA491A] hover:text-[#DA491A]/80 inline-flex items-center gap-2 font-medium cursor-pointer"
+          className="text-[#DA491A] hover:text-[#DA491A]/80 inline-flex items-center gap-2 font-medium cursor-pointer group"
         >
           Read More
           <svg 
             width="16" 
             height="16" 
-            viewBox="0 0 16 16" 
+            viewBox="0 0 24 24" 
             fill="none" 
-            className="mt-0.5"
+            stroke="currentColor"
+            strokeWidth="2"
+            className="transform group-hover:translate-x-1 transition-transform"
           >
             <path 
-              d="M1 8H15M15 8L8 1M15 8L8 15" 
-              stroke="currentColor" 
-              strokeWidth="2" 
+              d="M5 12h14M12 5l7 7-7 7" 
               strokeLinecap="round" 
               strokeLinejoin="round"
             />
