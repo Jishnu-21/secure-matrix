@@ -107,7 +107,7 @@ const NewsCard = ({ news, onClick }: { news: NewsItem; onClick: () => void }) =>
         <span className="text-sm text-gray-500">Source: {news.source}</span>
         <button 
           onClick={onClick}
-          className="text-[#DA491A] hover:text-[#DA491A]/80 inline-flex items-center gap-2 font-medium"
+          className="text-[#DA491A] hover:text-[#DA491A]/80 inline-flex items-center gap-2 font-medium cursor-pointer"
         >
           Read More
           <svg 
@@ -537,7 +537,7 @@ const LatestNews = () => {
       <div className="container mx-auto max-w-[1400px]">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-3">
-            Latest News
+            Blogs
           </h2>
           <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
         </div>
