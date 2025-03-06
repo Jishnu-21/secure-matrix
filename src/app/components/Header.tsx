@@ -168,7 +168,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full h-[70px] sm:h-[100px] bg-white transition-transform duration-300 z-50 ${
+      className={`fixed top-0 w-full h-[70px] sm:h-[100px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -177,9 +177,9 @@ const Header = () => {
           <Image 
             src="/icons/logo.png" 
             alt="Secure Matrix" 
-            width={100} 
-            height={100}
-            className="w-[80px] sm:w-[100px] h-auto" 
+            width={120} 
+            height={120}
+            className="w-[90px] sm:w-[120px] h-auto" 
           />
         </Link>
 
@@ -217,7 +217,7 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black text-sm lg:text-base font-crimson relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-sm lg:text-base font-crimson relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                       ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
@@ -251,7 +251,7 @@ const Header = () => {
                 {/* Dropdown */}
                 {item.dropdown && (
                   <div 
-                    className={`absolute top-[100%] mt-[-2px] left-1/2 transform -translate-x-1/2 w-[280px] bg-white shadow-lg rounded-lg overflow-hidden py-2 transition-all duration-200 ${
+                    className={`absolute top-[120%] mt-1 left-0 w-[320px] bg-[#FF5722] shadow-lg rounded-none overflow-hidden transition-all duration-200 divide-y divide-white/60 ${
                       activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'
                     }`}
                   >
@@ -259,11 +259,11 @@ const Header = () => {
                       <Link
                         key={dropdownItem.name}
                         href={dropdownItem.path}
-                        className={`block px-4 py-3 text-sm transition-colors duration-200 ${
-                          pathname === dropdownItem.path 
-                            ? 'text-[#D84315] bg-[#D84315]/5 font-medium' 
-                            : 'text-gray-800 hover:bg-[#D84315]/5 hover:text-[#D84315]'
-                        }`}
+                        className={`block px-4 py-[10px] text-[16px] font-medium transition-colors
+                          ${pathname === dropdownItem.path 
+                            ? 'text-black bg-white' 
+                            : 'text-white hover:text-black'
+                          }`}
                       >
                         {dropdownItem.name}
                       </Link>
@@ -333,15 +333,15 @@ const Header = () => {
 
                         {/* Mobile Dropdown */}
                         {item.dropdown && activeDropdown === item.name && (
-                          <div className="mt-1 ml-3 pl-3 border-l-2 border-[#D84315]/20 bg-gray-50 rounded-lg">
+                          <div className="mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#FF5722] rounded-none w-[320px] divide-y divide-white/60">
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.name}
                                 href={dropdownItem.path}
-                                className={`block py-3 px-3 text-sm transition-colors rounded-lg
+                                className={`block py-[10px] px-4 text-[16px] font-medium transition-colors
                                   ${pathname === dropdownItem.path 
-                                    ? 'text-[#D84315] bg-[#D84315]/5' 
-                                    : 'text-gray-700 hover:bg-[#D84315]/5 hover:text-[#D84315]'
+                                    ? 'text-black bg-white' 
+                                    : 'text-white hover:text-black'
                                   }`}
                                 onClick={() => setMobileMenuOpen(false)}
                               >
@@ -351,7 +351,7 @@ const Header = () => {
                           </div>
                         )}
                         {item.subItems && activeDropdown === item.name && (
-                          <div className="mt-1 ml-3 pl-3 border-l-2 border-[#D84315]/20 bg-gray-50 rounded-lg">
+                          <div className="mt-1 ml-3 pl-3 border-l-2 border-gray-200 bg-white rounded-lg">
                             {renderDropdown(item.subItems)}
                           </div>
                         )}
