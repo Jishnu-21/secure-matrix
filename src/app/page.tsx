@@ -40,9 +40,6 @@ const Page = () => {
                         mixBlendMode: 'multiply'
                       }}
                     />
-                    <div className="relative z-20">
-                      <Testimonials />
-                    </div>
                   </div>
 
                   {/* Logo Marquee with extended background */}
