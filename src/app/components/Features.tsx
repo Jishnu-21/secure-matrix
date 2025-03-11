@@ -11,13 +11,9 @@ interface FeatureItemProps {
 const FeatureItem = ({ icon, title, description }: FeatureItemProps) => (
   <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
     <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-[#F8D7CE] flex items-center justify-center">
-      <Image 
-        src={icon} 
-        alt={title} 
-        width={24} 
-        height={24} 
-        className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7 opacity-80"
-      />
+      <span className="material-icons text-[#1A5632] text-2xl sm:text-3xl md:text-4xl">
+        {icon}
+      </span>
     </div>
     <div className="flex-1">
       <h3 className="text-base sm:text-lg font-medium text-[#1A5632] mb-1">{title}</h3>
@@ -29,32 +25,32 @@ const FeatureItem = ({ icon, title, description }: FeatureItemProps) => (
 const Features = () => {
   const features = [
     {
-      icon: "/icons/organic.svg",
+      icon: "construction",
       title: "Durable & Long-Lasting",
       description: "Built for strength and longevity"
     },
     {
-      icon: "/icons/support.svg",
+      icon: "psychology",
       title: "Innovative & Versatile",
       description: "Solutions for diverse construction needs"
     },
     {
-      icon: "/icons/feedback.svg",
+      icon: "security",
       title: "Corrosion-Resistant",
       description: "Protected against rust and weather"
     },
     {
-      icon: "/icons/payment.svg",
+      icon: "foundation",
       title: "Strong & Stable",
       description: " Reinforced for structural integrity"
     },
     {
-      icon: "/icons/shipping.svg",
+      icon: "eco",
       title: "Eco-Friendly",
       description: "Sustainable and efficient materials"
     },
     {
-      icon: "/icons/organic-food.svg",
+      icon: "verified",
       title: "Reliable & Trusted",
       description: "Quality backed by expertise"
     }

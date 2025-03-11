@@ -7,7 +7,6 @@ import Features from './components/Features';
 import Products from './components/Products';
 import WhyChooseUs from './components/WhyChooseUs';
 import PopularProducts from './components/PopularProducts';
-import Testimonials from './components/Testimonials';
 import LogoMarquee from './components/LogoMarquee';
 import LatestNews from './components/LatestNews';
 import CTA from './components/CTA';

@@ -80,10 +80,10 @@ const Products = () => {
       path:"/products/Secure-gabion-box"
     },
     {
-      title: "Wire Fencing",
+      title: "Secure Grid System",
       description: "Strong and versatile fencing for enhanced security and durability.",
-      imageUrl: "/images/wire-fencing.jpg",
-      path:"/products/wire-fencing"
+      imageUrl: "/images/products/grid-system/1.jpg",
+      path:"/products/secure-grid-system"
     },
     {
       title: "Secure Geotextile",
