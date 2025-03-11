@@ -4,24 +4,6 @@ import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { Textarea } from "@/components/ui/textarea"
 import { useState } from "react"
-import { GoogleMap, LoadScript, Marker } from '@react-google-maps/api'
-
-const mapContainerStyle = {
-  width: '100%',
-  height: '100%',
-  minHeight: '600px',
-  borderRadius: '0'
-}
-
-const center = {
-  lat: 40.7589,
-  lng: -73.9851
-}
-
-const markers = [
-  { lat: 40.7589, lng: -73.9851 },
-  { lat: 40.7549, lng: -73.9840 }
-]
 
 export default function ContactForm() {
   const [formData, setFormData] = useState({
@@ -43,20 +25,13 @@ export default function ContactForm() {
       </div>
       <div className="grid md:grid-cols-2 gap-4 md:gap-0">
         <div className="w-full h-[600px]">
-          <LoadScript googleMapsApiKey={process.env.NEXT_PUBLIC_GOOGLE_MAPS_API_KEY || ''}>
-            <GoogleMap
-              mapContainerStyle={mapContainerStyle}
-              center={center}
-              zoom={13}
-            >
-              {markers.map((marker, index) => (
-                <Marker
-                  key={index}
-                  position={{ lat: marker.lat, lng: marker.lng }}
-                />
-              ))}
-            </GoogleMap>
-          </LoadScript>
+          <iframe 
+            src="https://maps.google.com/maps?q=18.71150307086937,73.83990901335487&t=&z=13&ie=UTF8&iwloc=&output=embed" 
+            width="100%" 
+            height="100%" 
+            style={{ border: 0 }}
+            allowFullScreen
+          />
         </div>
 
         <div className="flex flex-col bg-[#e6eaf0] p-8 min-h-[600px]">
