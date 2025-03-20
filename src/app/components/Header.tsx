@@ -153,13 +153,35 @@ const Header = () => {
         { 
           name: "Retaining Wall & Soil Reinforcement", 
           path: "/application/retaining-wall",
-          description: "Advanced solutions for soil stabilization and retaining wall construction"
         },
         { 
-          name: "River Protection", 
-          path: "/application/river-protection",
-          description: "Comprehensive river bank protection and erosion control systems"
-        }
+          name: "Rock Fall Mitigation", 
+          path: "/application/rock-fall-mitigation",
+        },
+        { 
+          name: "Gabion Architecture", 
+          path: "/application/gabion-architecture",
+        },
+        { 
+          name: "Coastal Protection from Floods with Gabion Boxes", 
+          path: "/application/coastal-protection",
+        },
+        { 
+          name: "Gabion Boxes in Transport and Mobility Infrastructure", 
+          path: "/application/transport-infrastructure",
+        },
+        { 
+          name: "Gabion Boxes in Defence & Security", 
+          path: "/application/defence-security",
+        },
+        { 
+          name: "Erosion Control & Soil Stabilization with Gabion Boxes and Geotextiles", 
+          path: "/application/erosion-control",
+        },
+        { 
+          name: "Fencing & Wire Systems", 
+          path: "/application/fencing-wire-systems",
+        },
       ]
     },
     { name: "Lab Testing", path: "/laboratory" },
