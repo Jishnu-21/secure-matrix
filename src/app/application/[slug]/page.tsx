@@ -72,7 +72,7 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
       );
     }
 
-    // Handle nested objects with title and features/description
+    // Handle nested objects with title and features/description/steps
     if (typeof value === 'object' && value !== null && 'title' in value) {
       return (
         <div key={key} className="mb-8">
@@ -86,6 +86,16 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
                 <li key={index} className="flex items-start text-gray-800 text-base sm:text-lg">
                   <span className="text-[#D84315] mr-2">•</span>
                   <span>{feature}</span>
+                </li>
+              ))}
+            </ul>
+          )}
+          {value.steps && (
+            <ul className="space-y-3 mt-4">
+              {value.steps.map((step: string, index: number) => (
+                <li key={index} className="flex items-start text-gray-800 text-base sm:text-lg">
+                  <span className="text-[#D84315] mr-2">{index + 1}.</span>
+                  <span>{step}</span>
                 </li>
               ))}
             </ul>

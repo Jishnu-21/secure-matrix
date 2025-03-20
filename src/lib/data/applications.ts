@@ -6,10 +6,8 @@ export const applicationData = {
     mainImage: '/images/application/image.png',
     leftSection: {
       title: 'Gabion Box for Retaining Walls',
-      overview: {
-        function: 'Acts as a gravity-based retaining structure, relying on its weight for stability',
-        materials: 'Made from welded or woven wire mesh, filled with stones or rocks for strength and durability.'
-      },
+      function: 'Acts as a gravity-based retaining structure, relying on its weight for stability',
+      materials: 'Made from welded or woven wire mesh, filled with stones or rocks for strength and durability.',
       installation: {
         title: 'Installation Process',
         steps: [
