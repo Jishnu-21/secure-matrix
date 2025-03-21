@@ -95,7 +95,11 @@ const Header = () => {
           <div key={category.id} className="relative group/item">
             <Link
               href={`/products/${category.id}`}
-              className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#D84315] cursor-pointer"
+              className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                isUnderSection(`/products/${category.id}`) 
+                ? "text-[#D84315] bg-gray-50" 
+                : "text-gray-800 hover:text-[#D84315]"
+              }`}
             >
               {category.title}
             </Link>
@@ -105,7 +109,11 @@ const Header = () => {
                   <Link
                     key={product.id}
                     href={`/products/${category.id}/${product.id}`}
-                    className="block px-4 py-2 text-gray-800 hover:bg-gray-100 hover:text-[#D84315]"
+                    className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                      isUnderSection(`/products/${category.id}/${product.id}`) 
+                      ? "text-[#D84315] bg-gray-50" 
+                      : "text-gray-800 hover:text-[#D84315]"
+                    }`}
                   >
                     {product.title}
                   </Link>
@@ -279,12 +287,12 @@ const Header = () => {
                   >
                     {item.dropdown.map((dropdownItem) => (
                       <Link
-                        key={dropdownItem.name}
+                        key={dropdownItem.path}
                         href={dropdownItem.path}
                         className={`block px-4 py-[10px] text-[16px] font-medium transition-colors
-                          ${pathname === dropdownItem.path 
-                            ? 'text-black bg-white' 
-                            : 'text-white hover:text-black'
+                          ${isUnderSection(dropdownItem.path) 
+                            ? 'text-white bg-[#c13d13]' 
+                            : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
                           }`}
                       >
                         {dropdownItem.name}
@@ -322,8 +330,8 @@ const Header = () => {
                           href={item.path}
                           className={`block py-3 px-3 text-base font-medium transition-colors rounded-lg inline-flex items-center justify-between w-full ${
                             isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
-                              ? 'text-[#D84315] bg-[#D84315]/5' 
-                              : 'text-gray-800 hover:bg-[#D84315]/5 hover:text-[#D84315]'
+                              ? 'text-[#D84315] bg-gray-50' 
+                              : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
                           }`}
                           onClick={(e) => {
                             if (item.dropdown) {
@@ -355,15 +363,17 @@ const Header = () => {
 
                         {/* Mobile Dropdown */}
                         {item.dropdown && activeDropdown === item.name && (
-                          <div className="mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#FF5722] rounded-none w-[320px] divide-y divide-white/60">
+                          <div 
+                            className={`mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#D84315] rounded-lg`}
+                          >
                             {item.dropdown.map((dropdownItem) => (
                               <Link
-                                key={dropdownItem.name}
+                                key={dropdownItem.path}
                                 href={dropdownItem.path}
                                 className={`block py-[10px] px-4 text-[16px] font-medium transition-colors
-                                  ${pathname === dropdownItem.path 
-                                    ? 'text-black bg-white' 
-                                    : 'text-white hover:text-black'
+                                  ${isUnderSection(dropdownItem.path) 
+                                    ? 'text-white bg-[#c13d13]' 
+                                    : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
                                   }`}
                                 onClick={() => setMobileMenuOpen(false)}
                               >

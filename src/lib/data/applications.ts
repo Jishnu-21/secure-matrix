@@ -3,7 +3,14 @@ export const applicationData = {
   'retaining-wall': {
     title: 'Retaining Wall & Soil Reinforcement',
     description: 'A gabion box is a wire mesh container filled with stones, commonly used for soil stabilization, erosioncontrol, and retaining walls. Combined with soil reinforcement techniques, it enhances stability andprevents slope failure.',
-    mainImage: '/images/application/image.png',
+    mainImage: [
+      '/images/application/retaining-wall/1.jpg',
+      '/images/application/retaining-wall/2.jpg',
+      '/images/application/retaining-wall/3.jpeg',
+      '/images/application/retaining-wall/4.jpeg',
+      '/images/application/retaining-wall/5.jpeg',
+      '/images/application/retaining-wall/6.jpeg',
+    ],
     leftSection: {
       title: 'Gabion Box for Retaining Walls',
       function: 'Acts as a gravity-based retaining structure, relying on its weight for stability',
@@ -44,7 +51,12 @@ export const applicationData = {
  'rock-fall-mitigation': {
   title: 'Rock Fall Mitigation Systems',
   description: 'Rock fall mitigation systems help prevent and control rockfalls, ensuring slope stability and safety in rocky terrains.',
-  mainImage: '/images/application/image.png',
+  mainImage: [
+    '/images/application/rock-fall/1.jpg',
+    '/images/application/rock-fall/2.jpg',
+    '/images/application/rock-fall/3.jpg',
+    '/images/application/rock-fall/4.jpg',
+  ],  
   leftSection: {
     title: 'Types of Rock Fall Netting',
     wireMeshNetting: {
@@ -86,8 +98,15 @@ export const applicationData = {
 'gabion-architecture': {
   title: 'Residential & Industrial Architecture with Gabion Boxes',
   description: 'Wire mesh gabion boxes are a versatile cornerstone in modern architecture, blending strength, sustainability, and aesthetic appeal. Made from galvanized or PVC-coated steel wire and filled with natural stones or materials, they create strong, flexible, and visually striking architectural elements.',
-  mainImage: '/images/application/image.png',
-  leftSection: {
+  mainImage: [
+    '/images/application/residential-industrial-arch/1.jpg',
+    '/images/application/residential-industrial-arch/2.jpg',
+    '/images/application/residential-industrial-arch/3.jpg',
+    '/images/application/residential-industrial-arch/4.jpeg',
+    '/images/application/residential-industrial-arch/5.jpg',
+    '/images/application/residential-industrial-arch/6.jpg',
+  ],  
+    leftSection: {
     title: 'Residential Architecture Applications',
     applications: [
       'Retaining Walls: Supports landscaping, creates terraces, and prevents soil erosion on sloped properties.',
@@ -120,7 +139,18 @@ export const applicationData = {
 'coastal-protection': {
  title: 'Coastal Protection from Floods with Gabion Boxes',
  description: 'Wire mesh gabion boxes provide robust, flexible, and durable coastal flood protection. They outperform traditional methods by absorbing and dissipating water pressure, adapting to shifting landscapes for long-lasting coastal defense.',
- mainImage: '/images/application/image.png',
+ mainImage: [
+  '/images/application/coastal-protection/1.jpg',
+  '/images/application/coastal-protection/2.jpg',
+  '/images/application/coastal-protection/3.jpeg',
+  '/images/application/coastal-protection/4.jpeg',
+  '/images/application/coastal-protection/5.jpeg',
+  '/images/application/coastal-protection/6.jpg',
+  '/images/application/coastal-protection/7.jpg',
+  '/images/application/coastal-protection/8.jpg',
+  '/images/application/coastal-protection/9.jpeg',
+  '/images/application/coastal-protection/10.jpeg',  
+], 
  leftSection: {
    title: 'How Gabion Boxes Mitigate Coastal Flooding',
    waveEnergyDissipation: [
@@ -163,7 +193,12 @@ export const applicationData = {
 'transport-infrastructure': {
  title: 'Gabion Boxes in Transport and Mobility Infrastructure',
  description: 'Gabion boxes are a superior choice for transport and mobility infrastructure, thanks to their durability, flexibility, and eco-friendly design. They withstand dynamic loads, prevent erosion, and support natural drainage, offering a resilient, cost-effective solution for challenging terrains.',
- mainImage: '/images/application/image.png',
+ mainImage: [
+  '/images/application/transport-mobility/1.jpg',
+  '/images/application/transport-mobility/2.jpg',
+  '/images/application/transport-mobility/3.jpg',
+  '/images/application/transport-mobility/4.jpeg',
+], 
  leftSection: {
    title: 'Applications in Transport/Mobility Infrastructure',
    roadHighwayWalls: [
@@ -210,7 +245,16 @@ export const applicationData = {
 'defence-security': {
  title: 'Gabion Boxes in Defence & Security',
  description: 'Wire mesh gabion boxes are a vital component in defense and security infrastructure, offering strength, versatility, and rapid deployment. Made from heavy-duty galvanized or PVC-coated steel wire, they\'re filled with stones or other materials, creating robust protective barriers. In military and security applications, gabions absorb and dissipate energy from explosions and ballistic impacts, making them essential for fortifications, perimeter security, and critical infrastructure protection.',
- mainImage: '/images/application/image.png',
+ mainImage: [
+  '/images/application/defence-security/1.jpg',
+  '/images/application/defence-security/2.jpeg',
+  '/images/application/defence-security/3.jpeg',
+  '/images/application/defence-security/4.jpeg',
+  '/images/application/defence-security/5.jpeg',
+  '/images/application/defence-security/6.jpeg',
+  '/images/application/defence-security/7.jpeg',
+  '/images/application/defence-security/8.jpeg',
+], 
  leftSection: {
    title: 'Defensive Barriers',
    militaryFortifications: [
@@ -244,7 +288,14 @@ export const applicationData = {
 'erosion-control': {
  title: 'Erosion Control & Soil Stabilization with Gabion Boxes and Geotextiles',
  description: 'Soil erosion and instability are major challenges in construction, infrastructure, and environmental conservation. Factors like heavy rainfall, wind, water flow, and human activities cause slope failures, sedimentation, and soil degradation — leading to environmental damage and infrastructure failure. The combination of gabion boxes and geotextiles has revolutionized modern civil engineering, offering a powerful solution for erosion control, slope reinforcement, and soil stabilization.',
- mainImage: '/images/application/image.png',
+ mainImage: [
+  '/images/application/residential-industrial-arch/1.jpg',
+  '/images/application/residential-industrial-arch/2.jpg',
+  '/images/application/residential-industrial-arch/3.jpg',
+  '/images/application/residential-industrial-arch/4.jpeg',
+  '/images/application/residential-industrial-arch/5.jpg',
+  '/images/application/residential-industrial-arch/6.jpg',
+], 
  leftSection: {
    title: 'Gabion Boxes: Strength & Durability',
    description: 'Gabion boxes are wire mesh cages filled with stones, providing structural stability and resisting external pressures.',
@@ -300,7 +351,12 @@ export const applicationData = {
 'fencing-wire-systems': {
  title: 'Fencing & Wire Systems',
  description: 'Fencing and wire systems are essential for security, safety, and boundary definition across residential, commercial, industrial, and agricultural applications. From safeguarding properties to managing livestock and enhancing aesthetics, fences play a critical role in maintaining control and protection.',
- mainImage: '/images/application/image.png',
+ mainImage: [
+  '/images/application/fencing-wiring/1.jpg',
+  '/images/application/fencing-wiring/2.jpg',
+  '/images/application/fencing-wiring/3.jpg',
+  '/images/application/fencing-wiring/4.jpg',
+], 
  leftSection: {
    title: 'Types of Fencing Systems',
    concertinaWire: {
