@@ -8,6 +8,13 @@ import Footer from "../../../components/Footer"
 import { use, useState, useEffect } from 'react'
 import Link from 'next/link'
 import ProductTabs from './ProductTabs'
+// Import Swiper React components
+import { Swiper, SwiperSlide } from 'swiper/react'
+import { Pagination } from 'swiper/modules'
+
+// Import Swiper styles
+import 'swiper/css'
+import 'swiper/css/pagination'
 
 interface PageProps {
   params: Promise<{
@@ -24,15 +31,25 @@ export default function ProductPage({ params }: PageProps) {
   const [selectedImage, setSelectedImage] = useState(0)
   const [startIndex, setStartIndex] = useState(0)
 
+  // Get related products with category info
+  const relatedProducts = categories.flatMap(cat => 
+    cat.products.map(prod => ({
+      ...prod,
+      categoryId: cat.id
+    }))
+  )
+  .filter(p => p.id !== product?.id) // Exclude current product
+  .slice(0, 3); // Take only 3 products
+
+  if (!category || !product) {
+    notFound()
+  }
+
   console.log('Page Product Data:', {
     categoryId: resolvedParams.categoryId,
     productId: resolvedParams.productId,
     product
   })
-
-  if (!category || !product) {
-    notFound()
-  }
 
   const productImages = product.imagePath
   const maxScrollIndex = Math.max(0, productImages.length - 4)
@@ -112,51 +129,148 @@ export default function ProductPage({ params }: PageProps) {
             <ProductTabs product={product} />
           </div>
 
+          {/* Related Products Section */}
+          <div className="mt-16 mb-16 bg-white rounded-lg p-6 md:p-8">
+            <h2 className="text-2xl font-semibold text-gray-900 mb-10 text-center">Related Products</h2>
+            
+            {/* Mobile view with Swiper */}
+            <div className="block md:hidden">
+              <Swiper
+                modules={[Pagination]}
+                spaceBetween={20}
+                slidesPerView={1}
+                pagination={{ clickable: true }}
+                className="mySwiper"
+              >
+                {relatedProducts.map(relatedProduct => (
+                  <SwiperSlide key={relatedProduct.id}>
+                    <Link 
+                      href={`/products/${relatedProduct.categoryId}/${relatedProduct.id}`}
+                      className="group block"
+                    >
+                      <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                        <div className="relative h-52 w-full">
+                          <Image
+                            src={relatedProduct.imagePath[0]}
+                            alt={relatedProduct.title}
+                            fill
+                            className="object-cover"
+                          />
+                        </div>
+                        <div className="p-5">
+                          <h3 className="text-lg font-medium text-gray-900 group-hover:text-[#D84315] transition-colors text-center">
+                            {relatedProduct.title}
+                          </h3>
+                          <p className="mt-3 text-sm text-gray-600 line-clamp-2 text-center">
+                            {relatedProduct.shortDescription}
+                          </p>
+                          <div className="mt-4 flex items-center justify-center">
+                            <button 
+                              onClick={(e) => {
+                                e.preventDefault();
+                                window.location.href = `/products/${relatedProduct.categoryId}/${relatedProduct.id}`;
+                              }}
+                              className="bg-[#D84315] text-white px-6 py-2 rounded hover:bg-[#BF360C] transition-colors text-sm font-medium"
+                            >
+                              View Details
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                    </Link>
+                  </SwiperSlide>
+                ))}
+              </Swiper>
+            </div>
+
+            {/* Desktop view with grid */}
+            <div className="hidden md:grid grid-cols-3 gap-8">
+              {relatedProducts.map(relatedProduct => (
+                <Link 
+                  key={relatedProduct.id}
+                  href={`/products/${relatedProduct.categoryId}/${relatedProduct.id}`}
+                  className="group"
+                >
+                  <div className="bg-white rounded-lg shadow-md overflow-hidden transition-all duration-300 group-hover:shadow-lg group-hover:-translate-y-1">
+                    <div className="relative h-52 w-full">
+                      <Image
+                        src={relatedProduct.imagePath[0]}
+                        alt={relatedProduct.title}
+                        fill
+                        className="object-cover"
+                      />
+                    </div>
+                    <div className="p-5">
+                      <h3 className="text-lg font-medium text-gray-900 group-hover:text-[#D84315] transition-colors text-center">
+                        {relatedProduct.title}
+                      </h3>
+                      <p className="mt-3 text-sm text-gray-600 line-clamp-2 text-center">
+                        {relatedProduct.shortDescription}
+                      </p>
+                      <div className="mt-4 flex items-center justify-center">
+                        <button 
+                          onClick={(e) => {
+                            e.preventDefault();
+                            window.location.href = `/products/${relatedProduct.categoryId}/${relatedProduct.id}`;
+                          }}
+                          className="bg-[#D84315] text-white px-6 py-2 rounded hover:bg-[#BF360C] transition-colors text-sm font-medium"
+                        >
+                          View Details
+                        </button>
+                      </div>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </div>
+          </div>
+
           {/* Inquiry Form */}
-          <div className="mt-8 md:mt-12 bg-gray-100 rounded-lg p-4 md:p-8">
-            <h2 className="text-base md:text-xl font-medium text-gray-900 mb-4 md:mb-6 text-center">Enter Buying Requirement Details</h2>
-            <form className="space-y-4 md:space-y-6">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-6">
+          <div className="mt-8 md:mt-12 bg-[#F5F5F5] rounded-lg p-6 md:p-8">
+            <h2 className="text-base font-medium font-semibold text-gray-900 mb-6 text-center">Enter Buying Requirement Details</h2>
+            <form className="max-w-2xl mx-auto space-y-4">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
                 <div>
-                  <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="text-sm text-gray-600 mb-1 block">
                     Name <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="text"
-                    id="name"
-                    className="w-full p-2 border border-gray-300 rounded-md text-sm md:text-base"
-                    placeholder="Name"
+                    placeholder="name"
+                    className="w-full px-3 py-2 bg-white rounded focus:outline-none"
+                    required
                   />
                 </div>
                 <div>
-                  <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                  <label className="text-sm text-gray-600 mb-1 block">
                     Email <span className="text-red-500">*</span>
                   </label>
                   <input
                     type="email"
-                    id="email"
-                    className="w-full p-2 border border-gray-300 rounded-md text-sm md:text-base"
-                    placeholder="Abc@example.com"
+                    placeholder="email"
+                    className="w-full px-3 py-2 bg-white rounded focus:outline-none"
+                    required
                   />
                 </div>
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label className="text-sm text-gray-600 mb-1 block">
                   Message
                 </label>
                 <textarea
-                  id="message"
                   rows={4}
-                  className="w-full p-2 border border-gray-300 rounded-md text-sm md:text-base"
-                  placeholder="Hello there!"
-                />
+                  placeholder="Write here..."
+                  className="w-full px-3 py-2 bg-white rounded focus:outline-none resize-none"
+                ></textarea>
               </div>
-              <button
-                type="submit"
-                className="w-full bg-[#D84315] text-white py-2.5 md:py-3 rounded-md hover:bg-[#BF360C] transition-colors text-sm md:text-base"
-              >
-                Send Inquiry →
-              </button>
+              <div className="flex justify-center">
+                <button
+                  type="submit"
+                  className="bg-[#D84315] text-white px-6 py-2 rounded flex items-center gap-1 hover:bg-[#BF360C] transition-colors"
+                >
+                  Send Inquiry <span className="text-sm">→</span>
+                </button>
+              </div>
             </form>
           </div>
         </div>

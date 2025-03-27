@@ -64,11 +64,18 @@ body {
   animation: marquee 30s linear infinite;
 }
 
+/* Swiper custom styles */
+.swiper-pagination-bullet {
+  background: #D84315 !important;
+  opacity: 0.5;
+}
+
+.swiper-pagination-bullet-active {
+  background: #D84315 !important;
+  opacity: 1;
+}
+
 /* Remove old Swiper styles */
-.swiper-button-next,
-.swiper-button-prev,
-.swiper-pagination-bullet,
-.swiper-pagination-bullet-active,
 .swiper-pagination-progressbar,
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   display: none !important;
