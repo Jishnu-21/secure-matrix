@@ -38,7 +38,7 @@ const CTA = () => {
                 We are committed to creating safer, more resilient environments for you and your loved ones. Our innovative solutions are designed to address the challenges of today's construction and infrastructure needs, ensuring that your projects are not only completed on time but also delivered with the highest level of safety and quality.
               </p>
               <Link
-                href="#"
+                href="/contact"
                 className="inline-flex items-center gap-2 bg-white text-[#DA491A] px-6 sm:px-8 py-3 sm:py-4 text-sm sm:text-base font-medium hover:bg-white/90 transition-colors duration-300 rounded group"
               >
                 Contact us
