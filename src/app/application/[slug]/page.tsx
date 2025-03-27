@@ -380,6 +380,7 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
                     </div>
                   </div>
                 </div>
+                <hr className="md:hidden border-t-2 border-gray-200 my-4 mx-2" />
 
                 {/* Right Column */}
                 <div className="bg-white md:pl-8 lg:pl-16">
@@ -397,6 +398,7 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
                     </div>
                   </div>
                 </div>
+                <hr className="md:hidden border-t-2 border-gray-200 my-4 mx-2" />
               </div>
             </div>
           </div>

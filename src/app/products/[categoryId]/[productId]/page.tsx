@@ -5,7 +5,7 @@ import Image from 'next/image'
 import { notFound } from 'next/navigation'
 import Header from "../../../components/Header"
 import Footer from "../../../components/Footer"
-import { use, useState } from 'react'
+import { use, useState, useEffect } from 'react'
 import Link from 'next/link'
 import ProductTabs from './ProductTabs'
 
@@ -50,6 +50,17 @@ export default function ProductPage({ params }: PageProps) {
     }
   }
 
+  // Auto slide effect
+  useEffect(() => {
+    const interval = setInterval(() => {
+      if (productImages?.length > 1) {
+        setSelectedImage((prev) => (prev === productImages.length - 1 ? 0 : prev + 1));
+      }
+    }, 3000); // Change image every 3 seconds
+
+    return () => clearInterval(interval);
+  }, [product]);
+
   const tabs = [
     { id: 'description', label: 'Description' },
     { id: 'details', label: 'Product Details' },
@@ -69,40 +80,18 @@ export default function ProductPage({ params }: PageProps) {
             <div className="flex flex-col gap-6">
               {/* Main Image */}
               <div className="w-full max-w-7xl mx-auto">
-                <div className="relative w-full h-[400px]">
+                <div className="relative w-full h-[400px] md:h-[600px]">
                   <Image
                     src={productImages[selectedImage]}
                     alt={product.title}
                     fill
-                    className="object-contain rounded-lg"
+                    className="object-cover rounded-lg"
+                    priority
                   />
                 </div>
               </div>
 
-              {/* Thumbnail Gallery */}
-              {productImages.length > 1 && (
-                <div className="w-full max-w-7xl mx-auto">
-                  <div className="flex justify-center gap-4 overflow-x-auto py-2">
-                    {productImages.map((image, index) => (
-                      <button
-                        key={index}
-                        onClick={() => setSelectedImage(index)}
-                        className={`relative w-20 h-20 border-2 ${
-                          selectedImage === index ? 'border-[#D84315]' : 'border-gray-300'
-                        } rounded-md overflow-hidden flex-shrink-0 transition-all duration-300`}
-                      >
-                        <Image
-                          src={image}
-                          alt={`Product thumbnail ${index + 1}`}
-                          fill
-                          className="object-cover"
-                        />
-                      </button>
-                    ))}
-                  </div>
-                </div>
-              )}
-
+           
               {/* Product Info */}
               <div className="flex flex-col items-center gap-4">
                 <h1 className="text-xl md:text-3xl font-bold text-gray-900 text-center">{product.title.toUpperCase()}</h1>                

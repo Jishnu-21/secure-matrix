@@ -1,17 +1,17 @@
-import { Category } from './types';
+import { Category as CategoryType } from './types';
 
 export interface Product {
   id: string;
   title: string;
   description: string;
-  features: string[];
-  specifications: { key: string; value: string }[];
-  price: string;
-  tradeInformation: { key: string; value: string }[];
-  productDetails: { key: string; value: string }[];
+  features?: string[];
+  specifications?: { key: string; value: string }[];
+  price?: string;
+  tradeInformation?: { key: string; value: string }[];
+  productDetails?: { key: string; value: string }[];
   shortDescription: string;
   keyFeatures: string[];
-  priceUnit: string;
+  priceUnit?: string;
   imagePath: string[];
   minOrderQuantity?: string;
 }

@@ -50,26 +50,26 @@ const Banner = () => {
           <div className="absolute inset-0 bg-black/60" />
         </div>
         <div className="relative z-10 h-full flex items-start pt-[150px]">
-          <div className="px-6 sm:px-20 md:pl-32 lg:pl-48 max-w-[1200px]">
+          <div className="px-6 sm:px-20 md:pl-32 lg:pl-40 xl:pl-48 max-w-[1200px]">
             <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-[40px] font-medium text-white leading-[1.2]">
+              <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-[35px] xl:text-[40px] font-medium text-white leading-[1.2]">
                 We are 'The Guardians of Every Territory'.
               </h2>
             </div>
-            <p className="text-xs sm:text-sm md:text-[18px] text-white/95 mt-4 mb-12 leading-[1.8] max-w-[600px] font-light tracking-wide">
+            <p className="text-xs sm:text-sm md:text-[16px] lg:text-[16px] xl:text-[18px] text-white/95 mt-4 mb-12 leading-[1.8] max-w-[600px] font-light tracking-wide">
               15+ years of Experience From Concept to Creation, we do it all.
               Security Shield for every space Environment Protection Solutions for
               Civil Engineering
             </p>
             <div className="flex justify-center sm:justify-start">
-              <button className="inline-flex items-center bg-white text-[#FF4A17] px-6 sm:px-8 py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-16 sm:mb-20 md:mb-24">
+              <button className="inline-flex items-center bg-white text-[#FF4A17] px-5 sm:px-6 lg:px-7 xl:px-8 py-2.5 sm:py-2.5 lg:py-2.5 xl:py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-16 sm:mb-20 md:mb-24">
                <Link href="/about"> 
-                <span className="mr-3 text-base sm:text-lg font-medium">
+                <span className="mr-3 text-sm sm:text-base lg:text-base xl:text-lg font-medium">
                   Know more
                 </span>
                 </Link>
                 <svg
-                  className="w-5 h-5 transform group-hover:translate-x-1 transition-transform"
+                  className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 xl:w-5 xl:h-5 transform group-hover:translate-x-1 transition-transform"
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="currentColor"
