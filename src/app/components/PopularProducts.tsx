@@ -1,4 +1,7 @@
+
 "use client";
+
+import { MdConstruction, MdPsychology, MdSecurity, MdFoundation, MdEco, MdVerified } from 'react-icons/md';
 
 import Image from "next/image";
 import { Swiper, SwiperSlide } from 'swiper/react';
@@ -16,9 +19,30 @@ interface ProductCardProps {
   title: string;
   description: string[];
   path: string;
+  keyFeatures?: string[];
 }
 
-const ProductCard = ({ image, category, title, description, path }: ProductCardProps) => (
+const getFeatureIcon = (feature: string) => {
+  const lowercaseFeature = feature.toLowerCase();
+  if (lowercaseFeature.includes('structural') || lowercaseFeature.includes('strength')) {
+    return <MdFoundation className="text-[#D84315]" />;
+  }
+  if (lowercaseFeature.includes('durability') || lowercaseFeature.includes('installation')) {
+    return <MdConstruction className="text-[#D84315]" />;
+  }
+  if (lowercaseFeature.includes('flexibility') || lowercaseFeature.includes('versatility')) {
+    return <MdPsychology className="text-[#D84315]" />;
+  }
+  if (lowercaseFeature.includes('corrosion') || lowercaseFeature.includes('protection')) {
+    return <MdSecurity className="text-[#D84315]" />;
+  }
+  if (lowercaseFeature.includes('eco') || lowercaseFeature.includes('environmental')) {
+    return <MdEco className="text-[#D84315]" />;
+  }
+  return <MdVerified className="text-[#D84315]" />;
+};
+
+const ProductCard = ({ image, category, title, description, path, keyFeatures }: ProductCardProps) => (
   <div className="bg-white rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300">
     <div className="grid grid-cols-1 md:grid-cols-2 gap-0">
       {/* Left side - Image */}
@@ -53,6 +77,21 @@ const ProductCard = ({ image, category, title, description, path }: ProductCardP
               </p>
             ))}
           </div>
+          
+          {/* Key Features */}
+          {keyFeatures && keyFeatures.length > 0 && (
+            <div className="mt-4 md:mt-8">
+              <h4 className="text-sm font-medium text-gray-900 mb-3">Key Features:</h4>
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-2">
+                {keyFeatures.map((feature, index) => (
+                  <div key={index} className="flex items-center gap-2">
+                    {getFeatureIcon(feature)}
+                    <span className="text-sm text-gray-600">{feature}</span>
+                  </div>
+                ))}
+              </div>
+            </div>
+          )}
         </div>
         <div>
         </div>
@@ -78,6 +117,13 @@ const PopularProducts = () => {
       description: [
         "SECURE® Non-Woven Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
       ],
+      keyFeatures: [
+        "Soil Erosion Prevention",
+        "High Filtration Efficiency",
+        "Durability in Harsh Conditions",
+        "Easy Installation",
+        "Environmental Protection"
+      ]
     },
     {
       image:"/images/products/gabion-mattress/1.jpeg",
@@ -87,6 +133,13 @@ const PopularProducts = () => {
       description: [
         "SECURE® Gabion Revet Mattress is a durable, interlocking containment system. Ideal for stabilizing riverbeds, coastal zones, and slopes. It offers long-term structural stability while blending naturally into the environment. Galvanized and PVC-coated for high corrosion resistance. Suits industrial, agricultural, and defense applications."
       ],
+      keyFeatures: [
+        "Structural Stability",
+        "Corrosion Resistance",
+        "Environmental Integration",
+        "Versatile Applications",
+        "Durable Construction"
+      ]
     },
     {
       image:"/images/products/gabion-box/1.jpeg",
@@ -96,6 +149,13 @@ const PopularProducts = () => {
       description: [
         "SECURE® Gabion Box is a high-strength mesh, Designed for erosion control and structural reinforcement. Its double-twisted hexagonal mesh ensures flexibility and durability, while zinc galvanization and Polymer PA6 coating provide corrosion resistance in harsh environments. Ideal for infrastructure, defense, and industrial applications.",
       ],
+      keyFeatures: [
+        "Structural Reinforcement",
+        "Erosion Control",
+        "Corrosion Resistance",
+        "Flexibility & Durability",
+        "Quick & Easy Installation"
+      ]
     },
     {
       image:"/images/products/rock-fall-netting/dt-mesh/1.jpeg",
@@ -105,6 +165,13 @@ const PopularProducts = () => {
       description: [
         "SECURE® DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for rockfall protection and slope stabilization. It offers superior durability, corrosion resistance, and flexibility. Effectively prevents rockfalls, landslides and construction zones, ensuring long-term safety and stability."
       ],
+      keyFeatures: [
+        "High-Strength Protection",
+        "Slope Stabilization",
+        "Corrosion Resistance",
+        "Flexible Installation",
+        "Long-term Durability"
+      ]
     }
   ];
 
