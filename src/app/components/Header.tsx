@@ -149,9 +149,11 @@ const Header = () => {
       name: "Sector", 
       path: "#",
       dropdown: [
+        { name: "Agriculture & Farming", path: "/sector/agriculture-farming" },
         { name: "Construction & Mining", path: "/sector/construction-mining" },
-        { name: "Infrastructure Development", path: "/sector/infrastructure" },
-        { name: "Environmental Protection", path: "/sector/environmental" },
+        { name: "Coastal Defence", path: "/sector/coastal-defence" },
+        { name: "Real Estate & Urban Dev", path: "/sector/real-estate" },
+        { name: "Defence & Security", path: "/sector/defence" }
       ]
     },
     { 
