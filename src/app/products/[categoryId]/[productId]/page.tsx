@@ -10,7 +10,7 @@ import Link from 'next/link'
 import ProductTabs from './ProductTabs'
 // Import Swiper React components
 import { Swiper, SwiperSlide } from 'swiper/react'
-import { Pagination } from 'swiper/modules'
+import { Pagination, Autoplay } from 'swiper/modules'
 
 // Import Swiper styles
 import 'swiper/css'
@@ -30,6 +30,16 @@ export default function ProductPage({ params }: PageProps) {
   const [activeTab, setActiveTab] = useState('description')
   const [selectedImage, setSelectedImage] = useState(0)
   const [startIndex, setStartIndex] = useState(0)
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth < 640);
+    };
+    checkMobile();
+    window.addEventListener('resize', checkMobile);
+    return () => window.removeEventListener('resize', checkMobile);
+  }, []);
 
   // Get related products with category info
   const relatedProducts = categories.flatMap(cat => 
@@ -86,6 +96,28 @@ export default function ProductPage({ params }: PageProps) {
     { id: 'reviews', label: 'Reviews' },
    
   ]
+
+  const ApplicationCard = ({ application, index }: { application: any; index: number }) => (
+    <div className="relative h-[300px] w-full overflow-hidden rounded-lg shadow-md transition-transform duration-300 group-hover:scale-[1.02]">
+      <Image
+        src={application.image}
+        alt={application.title}
+        fill
+        sizes="(max-width: 640px) 100vw, (max-width: 1024px) 50vw, 33vw"
+        priority={index === 0}
+        className="object-cover w-full h-full"
+        onError={(e: any) => {
+          e.target.src = "/images/products/gabion-mattress/1.jpeg";
+        }}
+      />
+      <div className="absolute inset-0 bg-black/30 hover:bg-black/20 transition-colors duration-300">
+        <div className="absolute inset-0 flex flex-col items-center justify-center text-center p-4">
+          <h3 className="text-white text-lg sm:text-xl font-semibold mb-2 drop-shadow-md">{application.title}</h3>
+          <p className="text-white text-sm sm:text-base opacity-90 drop-shadow-md">{application.description}</p>
+        </div>
+      </div>
+    </div>
+  );
 
   return (
     <>
@@ -225,6 +257,7 @@ export default function ProductPage({ params }: PageProps) {
             </div>
           </div>
 
+
           {/* Inquiry Form */}
           <div className="mt-8 md:mt-12 bg-[#F5F5F5] rounded-lg p-6 md:p-8">
             <h2 className="text-base font-medium font-semibold text-gray-900 mb-6 text-center">Enter Buying Requirement Details</h2>
@@ -273,6 +306,77 @@ export default function ProductPage({ params }: PageProps) {
               </div>
             </form>
           </div>
+
+
+
+          
+          {/* Applications Section */}
+          {product.applications && product.applications.length > 0 && (
+            <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
+              <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
+                <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">APPLICATIONS</h2>
+                {isMobile ? (
+                  <div className="applications-swiper">
+                    <Swiper
+                      modules={[Autoplay, Pagination]}
+                      spaceBetween={20}
+                      slidesPerView={1}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
+                      pagination={{
+                        clickable: true,
+                        bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#D84315]'
+                      }}
+                      className="w-full pb-10"
+                    >
+                      {product.applications.map((application, index) => (
+                        <SwiperSlide key={index}>
+                          <Link href={application.link} className="group block">
+                            <ApplicationCard application={application} index={index} />
+                          </Link>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                ) : product.applications.length === 2 ? (
+                  <div className="max-w-4xl mx-auto grid grid-cols-2 gap-8">
+                    {product.applications.map((application, index) => (
+                      <Link key={index} href={application.link} className="group block">
+                        <ApplicationCard application={application} index={index} />
+                      </Link>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="applications-swiper">
+                    <Swiper
+                      modules={[Autoplay, Pagination]}
+                      spaceBetween={20}
+                      slidesPerView={3}
+                      autoplay={{
+                        delay: 3000,
+                        disableOnInteraction: false,
+                      }}
+                      pagination={{
+                        clickable: true,
+                        bulletActiveClass: 'swiper-pagination-bullet-active !bg-[#D84315]'
+                      }}
+                      className="w-full pb-10"
+                    >
+                      {product.applications.map((application, index) => (
+                        <SwiperSlide key={index}>
+                          <Link href={application.link} className="group block">
+                            <ApplicationCard application={application} index={index} />
+                          </Link>
+                        </SwiperSlide>
+                      ))}
+                    </Swiper>
+                  </div>
+                )}
+              </div>
+            </section>
+          )}
         </div>
       </main>
       <Footer />

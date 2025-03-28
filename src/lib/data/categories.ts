@@ -1,4 +1,5 @@
 import { Category as CategoryType } from './types';
+import { applications } from './applications';
 
 export interface Product {
   id: string;
@@ -14,6 +15,12 @@ export interface Product {
   priceUnit?: string;
   imagePath: string[];
   minOrderQuantity?: string;
+  applications?: {
+    title: string;
+    description: string;
+    image: string;
+    link: string;
+  }[];
 }
 
 export interface Category {
@@ -67,7 +74,12 @@ export const categories: Category[] = [
           "Flexibility & Durability",
           "Quick & Easy Installation",
         ],
-        
+        applications: [
+          applications.gabion.coastal,
+          applications.gabion.retaining,
+          applications.gabion.erosion,
+          applications.gabion.transport
+        ],
         price: "75",
         priceUnit: "INR/Cubic Meter",
         imagePath: [
@@ -107,6 +119,12 @@ export const categories: Category[] = [
           { key: "Length", value: "1.0 m – 5.0 m" },
           { key: "Capacity", value: "300 MT" },
           { key: "Mesh Sizes", value: "60 × 80 mm, 80 × 100 mm, 100 × 120 mm" },
+        ],
+        applications: [
+          applications.gabion.retaining,
+          applications.gabion.architecture,
+          applications.gabion.transport,
+          applications.gabion.coastal
         ],
         tradeInformation: [
           { key: "Supply Ability:", value: "3,000,000 Kilograms per Month" },
@@ -160,6 +178,10 @@ export const categories: Category[] = [
           { key: "Mesh Sizes", value: "60x80 mm, 80x100 mm, 100x120 mm" },
           { key: "Coating Options", value: "Heavy GSM Wire / PVC Coated Wire" },
         ],
+        applications: [
+          applications.rockfall.protection,
+          applications.rockfall.mining
+        ],
         tradeInformation: [
           { key: "Supply Ability:", value: "3,000,000 Square Meters per Month" },
           { key: "Delivery Time", value: "As per order Requirement" },
@@ -200,6 +222,10 @@ export const categories: Category[] = [
           { key: "Junction Tearing Strength", value: "20 kN to 24 kN" },
           { key: "Cable pull-apart Strength", value: "10 kN to 11.5 kN" },
           { key: "Failure Resistance", value: " High tear & pull-apart resistance, gradual failure load" },
+        ],
+        applications: [
+          applications.rockfall.protection,
+          applications.rockfall.mining
         ],
         tradeInformation: [
           { key: "Supply Ability:", value: "3,000,000 Square Meters per Month" },
@@ -250,6 +276,10 @@ export const categories: Category[] = [
           { key: "Tensile Strength", value: "High Durability for Heavy Loads" },
           { key: "Permeability", value: "Excellent Water Drainage & Filtration" },
         ],
+        applications: [
+          applications.geotextile.soil,
+          applications.geotextile.drainage
+        ],
         tradeInformation: [
           { key: "Delivery Time", value: "As per order requirement" },
           { key: "Application Sectors", value: "Construction,Infrastructure,Road & Rail Projects,Environmental Protection" },
@@ -287,6 +317,10 @@ export const categories: Category[] = [
           { key: "Role length", value: "Customizable" },
           { key: "Tensile Strength", value: "High Load-Bearing Capacity" },
           { key: "Permeability", value: " Controlled Water Flow & Filtration" },
+        ],
+        applications: [
+          applications.geotextile.soil,
+          applications.geotextile.drainage
         ],
         tradeInformation: [
           { key: "Delivery Time", value: "As per order requirement" },
@@ -328,6 +362,10 @@ export const categories: Category[] = [
           { key: "Type", value: "Geogrid Reinforcement System" },
           { key: "Usage", value: "Soil Stabilization, Security Fencing, Load Distribution" },
           { key: "Surface Treatment", value: "Galvanized / Coated for Corrosion Resistance" },
+        ],
+        applications: [
+          applications.fencing.security,
+          applications.fencing.agriculture
         ],
         tradeInformation: [
           { key: "Supply Ability", value: "3,000,000 units/month" },
@@ -375,6 +413,10 @@ export const categories: Category[] = [
           { key: "Color-Options", value: "Multiple (as per requirement)" },
           { key: "Applications", value: "Security fencing, electrical insulation, industrial reinforcement" },
         ],
+        applications: [
+          applications.fencing.security,
+          applications.fencing.agriculture
+        ],
         tradeInformation: [
           { key: "Payment Terms", value: "Cash in Advance (CID)" },
           { key: "Supply Ability", value: "3,000,000 units/month" },
@@ -420,6 +462,10 @@ export const categories: Category[] = [
           { key: "Erosion Control", value: "Geotextile erosion control blanket for soil retention" },
           { key: "Usage", value: "Fencing, erosion control, and structural reinforcement in inclined terrains" },
           { key: "Durability", value: " Highly resistant to harsh weather, chemicals, and physical impact" },
+        ],
+        applications: [
+          applications.fencing.security,
+          applications.fencing.agriculture
         ],
         tradeInformation: [
           { key: "Supply Ability", value: "Bulk availability" },

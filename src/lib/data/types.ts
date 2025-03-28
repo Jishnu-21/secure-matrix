@@ -3,6 +3,13 @@ export interface ProductSpecification {
   value: string;
 }
 
+export interface Application {
+  title: string;
+  description: string;
+  image: string;
+  link: string;
+}
+
 export interface Product {
   id: string;
   title: string;
@@ -17,6 +24,7 @@ export interface Product {
   priceUnit?: string;
   imagePath: string[];
   minOrderQuantity?: string;
+  applications?: Application[];
 }
 
 export interface Category {

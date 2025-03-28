@@ -80,3 +80,18 @@ body {
 .swiper-pagination-progressbar .swiper-pagination-progressbar-fill {
   display: none !important;
 }
+
+/* Swiper Pagination Styles */
+.applications-swiper .swiper-pagination-bullet {
+  width: 10px;
+  height: 10px;
+  background: #999;
+  opacity: 0.6;
+  transition: all 0.3s ease;
+}
+
+.applications-swiper .swiper-pagination-bullet-active {
+  background: #D84315 !important;
+  opacity: 1;
+  transform: scale(1.2);
+}

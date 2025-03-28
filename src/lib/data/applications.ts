@@ -431,4 +431,81 @@ export const applicationData = {
    '/images/application/product.png',
  ]
 }
-}
+};
+
+export const applications = {
+  gabion: {
+    coastal: {
+      title: "Coastal Protection",
+      description: "Flood Defense & Erosion Control",
+      image: "/images/application/coastal-protection/1.jpg",
+      link: "/application/coastal-protection"
+    },
+    retaining: {
+      title: "Retaining Walls",
+      description: "Structural Support Systems",
+      image: "/images/application/retaining-wall/1.jpg",
+      link: "/application/retaining-wall"
+    },
+    erosion: {
+      title: "Erosion Control",
+      description: "Soil Stabilization Solutions",
+      image: "/images/application/erosion-control/1.jpeg",
+      link: "/application/erosion-control"
+    },
+    architecture: {
+      title: "Gabion Architecture",
+      description: "Aesthetic & Functional Design",
+      image: "/images/application/gabion-architecture/1.jpg",
+      link: "/application/gabion-architecture"
+    },
+    transport: {
+      title: "Transport Infrastructure",
+      description: "Road & Railway Protection",
+      image: "/images/application/transport-infrastructure/1.jpg",
+      link: "/application/transport-infrastructure"
+    }
+  },
+  rockfall: {
+    protection: {
+      title: "Rock Fall Protection",
+      description: "Slope Safety Solutions",
+      image: "/images/application/rock-fall-mitigation/1.jpg",
+      link: "/application/rock-fall-mitigation"
+    },
+    mining: {
+      title: "Mining Safety",
+      description: "Excavation & Tunnel Protection",
+      image: "/images/application/rock-fall-mitigation/2.jpg",
+      link: "/application/rock-fall-mitigation"
+    }
+  },
+  geotextile: {
+    soil: {
+      title: "Soil Stabilization",
+      description: "Ground Reinforcement Solutions",
+      image: "/images/application/erosion-control/2.jpg",
+      link: "/application/erosion-control"
+    },
+    drainage: {
+      title: "Drainage Systems",
+      description: "Water Management Solutions",
+      image: "/images/application/erosion-control/3.jpg",
+      link: "/application/erosion-control"
+    }
+  },
+  fencing: {
+    security: {
+      title: "Security Systems",
+      description: "Perimeter Protection Solutions",
+      image: "/images/application/defence-security/1.jpg",
+      link: "/application/defence-security"
+    },
+    agriculture: {
+      title: "Agricultural Fencing",
+      description: "Farm & Field Protection",
+      image: "/images/application/agriculture-farming/1.jpg",
+      link: "/application/agriculture-farming"
+    }
+  }
+};
