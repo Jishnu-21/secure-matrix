@@ -139,9 +139,9 @@ const Header = () => {
         { name: "SECURE RHOMBOIDAL ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-rhomboidal-rock-fall-netting" },
         { name: "SECURE NON-WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-non-woven-geotextile" },
         { name: "SECURE WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-woven-geotextile" },
-        { name: "SECURE Grid System", path: "/products/secure-grid-system/secure-grid-system" },
-        { name: "SECURE PA6 Polymer Coating", path: "/products/secure-pa6-polymer-coating/secure-pa6-polymer-coating" },
-        { name: "SECURE Mesh System", path: "/products/secure-mesh-system/secure-mesh-system" },
+        { name: "SECURE GRID SYSTEM", path: "/products/secure-grid-system/secure-grid-system" },
+        { name: "SECURE PA6 POLYMER COATING", path: "/products/secure-pa6-polymer-coating/secure-pa6-polymer-coating" },
+        { name: "SECURE MESH SYSTEM", path: "/products/secure-mesh-system/secure-mesh-system" },
   
       ]
     },
@@ -149,11 +149,11 @@ const Header = () => {
       name: "Sector", 
       path: "#",
       dropdown: [
-        { name: "Agriculture & Farming", path: "/sector/agriculture-farming" },
-        { name: "Construction & Mining", path: "/sector/construction-mining" },
-        { name: "Coastal Defence", path: "/sector/coastal-defence" },
-        { name: "Real Estate & Urban Dev", path: "/sector/real-estate" },
-        { name: "Defence & Security", path: "/sector/defence" }
+        { name: "AGRICULTURE & FARMING", path: "/sector/agriculture-farming" },
+        { name: "CONSTRUCTION & MINING", path: "/sector/construction-mining" },
+        { name: "COASTAL DEFENCE", path: "/sector/coastal-defence" },
+        { name: "REAL ESTATE & URBAN DEVELOPMENT", path: "/sector/real-estate" },
+        { name: "DEFENCE & SECURITY", path: "/sector/defence" }
       ]
     },
     { 
@@ -161,35 +161,35 @@ const Header = () => {
       path: "#",
       dropdown: [
         { 
-          name: "Retaining Wall & Soil Reinforcement", 
+          name: "RETAINING WALL & SOIL REINFORCEMENT", 
           path: "/application/retaining-wall",
         },
         { 
-          name: "Rock Fall Mitigation", 
+          name: "ROCK FALL MITIGATION", 
           path: "/application/rock-fall-mitigation",
         },
         { 
-          name: "Gabion Architecture", 
+          name: "GABION ARCHITECTURE", 
           path: "/application/gabion-architecture",
         },
         { 
-          name: "Coastal Protection from Floods with Gabion Boxes", 
+          name: "COASTAL PROTECTION FROM FLOODS WITH GABION BOXES", 
           path: "/application/coastal-protection",
         },
         { 
-          name: "Gabion Boxes in Transport and Mobility Infrastructure", 
+          name: "GABION BOXES IN TRANSPORT AND MOBILITY INFRASTRUCTURE", 
           path: "/application/transport-infrastructure",
         },
         { 
-          name: "Gabion Boxes in Defence & Security", 
+          name: "GABION BOXES IN DEFENCE & SECURITY", 
           path: "/application/defence-security",
         },
         { 
-          name: "Erosion Control & Soil Stabilization with Gabion Boxes and Geotextiles", 
+          name: "EROSION CONTROL & SOIL STABILIZATION WITH GABION BOXES AND GEO TEXTILES", 
           path: "/application/erosion-control",
         },
         { 
-          name: "Fencing & Wire Systems", 
+          name: "FENCING & WIRE SYSTEMS", 
           path: "/application/fencing-wire-systems",
         },
       ]
