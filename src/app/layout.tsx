@@ -13,6 +13,9 @@ const poppins = Poppins({
 export const metadata: Metadata = {
   title: "Secure Matrix- Your trusted partner in security solutions",
   description: "Secure Matrix - Your trusted partner in security solutions",
+  icons: {
+    icon: '/favicon.ico'
+  }
 };
 
 export default function RootLayout({
