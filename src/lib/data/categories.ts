@@ -28,16 +28,16 @@ export interface Category {
 export const categories: Category[] = [
   {
     id: 'Secure-gabion-box',
-    title: "SECURE® GABION BOX",
-    description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
+    title: "SECURE GABION BOX",
+    description: "The SECURE Gabion Box is a high-strength, rectangular wire mesh container designed for durability and resilience in demanding environments. Constructed using double-twisted, zinc-galvanized, and polymer-coated steel wire, it features interlinked hexagonal openings that provide superior structural integrity. Reinforced with thicker selvedge/edge wire, the Secure Gabion ensures enhanced rigidity, making it ideal for applications such as erosion control, retaining walls, and landscape reinforcement.",
     features: [],
     imagePath: "/images/popular.png",
     products: [
       {
         id: 'secure-gabion-box',
-        title: "Secure® Gabion Box",
-        description: "The SECURE® Gabion Box is a high-strength, rectangular wire mesh container designed for structural reinforcement and erosion control. Built with double-twisted hexagonal mesh, it offers superior flexibility and resistance against environmental stresses. The zinc galvanization protects against rust and corrosion, while the advanced Polymer PA6 Coating provides extra durability for aggressive environments. The interconnection of mesh wires ensures stability, making it an ideal solution for infrastructure, defense, and industrial applications.",
-        shortDescription: "SECURE® Gabion Box is a high-strength mesh, Designed for erosion control and structural reinforcement. Its double-twisted hexagonal mesh ensures flexibility and durability, while zinc galvanization and Polymer PA6 coating provide corrosion resistance in harsh environments. Ideal for infrastructure, defense, and industrial applications.",
+        title: "Secure Gabion Box",
+        description: "The SECURE Gabion Box is a high-strength, rectangular wire mesh container designed for structural reinforcement and erosion control. Built with double-twisted hexagonal mesh, it offers superior flexibility and resistance against environmental stresses. The zinc galvanization protects against rust and corrosion, while the advanced Polymer PA6 Coating provides extra durability for aggressive environments. The interconnection of mesh wires ensures stability, making it an ideal solution for infrastructure, defense, and industrial applications.",
+        shortDescription: "SECURE Gabion Box is a high-strength mesh, Designed for erosion control and structural reinforcement. Its double-twisted hexagonal mesh ensures flexibility and durability, while zinc galvanization and Polymer PA6 coating provide corrosion resistance in harsh environments. Ideal for infrastructure, defense, and industrial applications.",
         productDetails:[
           { key: "Material", value: "Stainless Steel" },
           { key: "Mesh Style", value: "Woven Mesh,Galvanized Iron Wire" },
@@ -82,16 +82,16 @@ export const categories: Category[] = [
   },
   {
     id: 'secure-gabion-mattress',
-    title: "SECURE® Gabion Mattress",
+    title: "SECURE Gabion Mattress",
     description: "The Gabion Mattress are functional as the ideal additions to gardens of any size for erosion control as well as stabilizing ridges. These structures are utilized to transform as well as protect the space due to their space-saving design.",
     features: [],
     imagePath: "/images/products/gabion-mattress/3.jpeg",
     products: [
       {
         id: 'secure-gabion-revet-mattress',
-        title: "SECURE® Gabion Revet Mattress",
-        description: "The SECURE® Gabion Revet Mattress is a durable, interlocking containment system made from mechanically woven, double-twisted hexagonal steel wire mesh.It is an ideal solution for stabilizing wide or shallow areas, such as riverbeds, coastal zones, and slopes. Designed to blend naturally into the environment. Offers long-term structural stability while minimizing visual impact. The galvanized and PVC-coated surface ensures high corrosion resistance, making it suitable for industrial, agricultural, and defense applications.",
-        shortDescription: "SECURE® Gabion Revet Mattress is a durable, interlocking containment system. Ideal for stabilizing riverbeds, coastal zones, and slopes. It offers long-term structural stability while blending naturally into the environment. Galvanized and PVC-coated for high corrosion resistance. Suits industrial, agricultural, and defense applications.",
+        title: "SECURE Gabion Revet Mattress",
+        description: "The SECURE Gabion Revet Mattress is a durable, interlocking containment system made from mechanically woven, double-twisted hexagonal steel wire mesh.It is an ideal solution for stabilizing wide or shallow areas, such as riverbeds, coastal zones, and slopes. Designed to blend naturally into the environment. Offers long-term structural stability while minimizing visual impact. The galvanized and PVC-coated surface ensures high corrosion resistance, making it suitable for industrial, agricultural, and defense applications.",
+        shortDescription: "SECURE Gabion Revet Mattress is a durable, interlocking containment system. Ideal for stabilizing riverbeds, coastal zones, and slopes. It offers long-term structural stability while blending naturally into the environment. Galvanized and PVC-coated for high corrosion resistance. Suits industrial, agricultural, and defense applications.",
         productDetails:[
           { key: "Material", value: "High-Strength Stainless Steel Wire" },
           { key: "Mesh Style", value: "Woven Mesh,Galvanized Iron Wire" },
@@ -137,7 +137,7 @@ export const categories: Category[] = [
   },
   {
     id: 'rock-fall-netting',
-    title: "Secure® Rock Fall Netting",
+    title: "Secure Rock Fall Netting",
     description: "Offered Rock fall nettings are apt for simple drapery systems. These are suited for geotechnical as well as engineering applications. Supplied nettings allow for rock fall protection, slope stabilization, and surface protection applications.",
     features: [
     ],
@@ -145,9 +145,9 @@ export const categories: Category[] = [
     products: [
       {
         id: 'secure-dt-mesh-rock-fall-netting',
-        title: "SECURE® DT Mesh Rock Fall Netting",
-        description: "SECURE® DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for superior rockfall protection and slope stabilization. Constructed from zinc-coated galvanized wire with an advanced PA6 polymer coating, it ensures exceptional durability and resistance to harsh environmental conditions. Reinforced with wire ropes spaced at regular intervals, it effectively prevents rockfalls, landslides, and debris movement in mountainous regions, cliffs, tunnels, and construction zones.",
-        shortDescription: "SECURE® DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for rockfall protection and slope stabilization. It offers superior durability, corrosion resistance, and flexibility. Effectively prevents rockfalls, landslides and construction zones, ensuring long-term safety and stability.",
+        title: "SECURE DT Mesh Rock Fall Netting",
+        description: "SECURE DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for superior rockfall protection and slope stabilization. Constructed from zinc-coated galvanized wire with an advanced PA6 polymer coating, it ensures exceptional durability and resistance to harsh environmental conditions. Reinforced with wire ropes spaced at regular intervals, it effectively prevents rockfalls, landslides, and debris movement in mountainous regions, cliffs, tunnels, and construction zones.",
+        shortDescription: "SECURE DT Mesh Rock Fall Netting is a high-strength, double-twisted hexagonal wire mesh designed for rockfall protection and slope stabilization. It offers superior durability, corrosion resistance, and flexibility. Effectively prevents rockfalls, landslides and construction zones, ensuring long-term safety and stability.",
         productDetails:[
           { key: "Material", value: "Stainless Steel / Zinc-Coated Galvanized Wire" },
           { key: "Mesh Style", value: "Double-Twisted Hexagonal Wire Mesh" },
@@ -181,9 +181,9 @@ export const categories: Category[] = [
       },
       {
         id: 'secure-rhomboidal-rock-fall-netting',
-        title: "SECURE® Rhomboidal Rock Fall Netting",
-        description: "SECURE® Rhomboidal Rock Fall Netting is an advanced, high-strength protective mesh system designed for maximum safety in challenging terrains. It features reinforced high-strength wire knots to enhance durability and resistance against static and dynamic stresses. These reinforcements are made using double steel wire knots, ensuring double binding with two separate wires. Ideal for rockfall protection, slope stabilization, and infrastructure security, this netting offers superior flexibility, impact resistance, and long-term performance.",
-        shortDescription: "SECURE® Rock Fall Netting is a high-strength protective mesh designed for rockfall prevention and slope stabilization. With reinforced wire knots and double steel binding, it ensures superior durability, impact resistance, and long-term performance in challenging terrains and infrastructure projects.",
+        title: "SECURE Rhomboidal Rock Fall Netting",
+        description: "SECURE Rhomboidal Rock Fall Netting is an advanced, high-strength protective mesh system designed for maximum safety in challenging terrains. It features reinforced high-strength wire knots to enhance durability and resistance against static and dynamic stresses. These reinforcements are made using double steel wire knots, ensuring double binding with two separate wires. Ideal for rockfall protection, slope stabilization, and infrastructure security, this netting offers superior flexibility, impact resistance, and long-term performance.",
+        shortDescription: "SECURE Rock Fall Netting is a high-strength protective mesh designed for rockfall prevention and slope stabilization. With reinforced wire knots and double steel binding, it ensures superior durability, impact resistance, and long-term performance in challenging terrains and infrastructure projects.",
         productDetails:[
           { key: "Material", value: "High-Strength Stainless Steel Wire Rope" },
           { key: "Mesh Style", value: "Steel Cable Mesh with Reinforced Wire Knots" },
@@ -226,16 +226,16 @@ export const categories: Category[] = [
   },
   {
     id: 'Secure-geotextile',
-    title: "SECURE® Geotextile",
-    description: "The SECURE® Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
+    title: "SECURE Geotextile",
+    description: "The SECURE Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
     features: [],
     imagePath: "/images/products/geotextile/non-woven/2.webp",
     products: [
       {
         id: 'secure-non-woven-geotextile',
-        title: "SECURE® Non-Woven Geotextile",
-        description: "SECURE® Non-Woven Geotextile is a high-performance fabric engineered for soil stabilization, erosion control, and drainage applications. Made from polypropylene (PP) or polyester (PET) provides an additional protective layer to prevent soil displacement and improve structural integrity. Often used behind gabion walls, while holding back fine soil particles, reducing erosion risks in slopes, riverbanks, and construction sites. Its durable and permeable design ensures long-term reliability in harsh environmental conditions.",
-        shortDescription: "SECURE® Non-Woven Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
+        title: "SECURE Non-Woven Geotextile",
+        description: "SECURE Non-Woven Geotextile is a high-performance fabric engineered for soil stabilization, erosion control, and drainage applications. Made from polypropylene (PP) or polyester (PET) provides an additional protective layer to prevent soil displacement and improve structural integrity. Often used behind gabion walls, while holding back fine soil particles, reducing erosion risks in slopes, riverbanks, and construction sites. Its durable and permeable design ensures long-term reliability in harsh environmental conditions.",
+        shortDescription: "SECURE Non-Woven Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
         productDetails:[
           { key: "Material", value: "Synthetic Fibers (Polypropylene - PP / Polyester - PET)" },
           { key: "Fabric Type", value: "Non-Woven" },
@@ -271,9 +271,9 @@ export const categories: Category[] = [
       },
       {
         id: 'secure-woven-geotextile',
-        title: "SECURE® Woven Geotextile",
-        description: "SECURE® Woven Geotextile is a high-strength fabric engineered for soil stabilization, load distribution, and erosion control. It offers superior tensile strength and stability, making it ideal for applications requiring long-term durability. Commonly used in road construction, embankments, and heavy-load-bearing areas, it effectively reinforces weak soil while maintaining structural integrity",
-        shortDescription: "SECURE® Woven Geotextile provides high tensile strength and stability for soil reinforcement, load distribution, and erosion control. Ideal for road construction, embankments, and heavy-load areas, it ensures long-term durability and structural integrity.",
+        title: "SECURE Woven Geotextile",
+        description: "SECURE Woven Geotextile is a high-strength fabric engineered for soil stabilization, load distribution, and erosion control. It offers superior tensile strength and stability, making it ideal for applications requiring long-term durability. Commonly used in road construction, embankments, and heavy-load-bearing areas, it effectively reinforces weak soil while maintaining structural integrity",
+        shortDescription: "SECURE Woven Geotextile provides high tensile strength and stability for soil reinforcement, load distribution, and erosion control. Ideal for road construction, embankments, and heavy-load areas, it ensures long-term durability and structural integrity.",
         productDetails:[
           { key: "Material", value: "Polypropylene (PP) / Polyester (PET)" },
           { key: "Fabric Type", value: "Woven" },
@@ -310,14 +310,14 @@ export const categories: Category[] = [
   },
   {
     id: 'secure-grid-system',
-    title: "SECURE® Grid System",
-    description: "The SECURE® Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
+    title: "SECURE Grid System",
+    description: "The SECURE Geotextile is a high-strength filtration fabric that prevents soil erosion and displacement while ensuring efficient water drainage. Designed for slopes, riverbanks, and infrastructure projects, it offers long-lasting protection in demanding environments.",
     features: [],
     imagePath: "/images/products/grid-system/1.jpg",
     products: [
       {
         id: 'secure-grid-system',
-        title: "SECURE® Grid System",
+        title: "SECURE Grid System",
         description: "The Secure Grid System is a geosynthetic reinforcement solution designed to provide structural stability, reinforcement, and ground stabilization. Made of high-strength tensile ribs, it effectively interacts with surrounding soil, stone, or other substrates, ensuring superior load distribution and durability. Ideal for security fencing, road stabilization, and construction applications.",
         shortDescription: "A high-strength geogrid system for reinforcement and stabilization, ensuring long-term structural integrity.",
         specifications:[
@@ -352,15 +352,15 @@ export const categories: Category[] = [
   },
   {
     id: 'secure-pa6-polymer-coating',
-    title: "SECURE® PA6 Polymer Coating",
-    description: "The SECURE® PA6 Polymer Coating is an advanced polyamide coating solution applied to GI wires to enhance their corrosion resistance, durability, and visual appeal. With its superior UV stability, abrasion resistance, and chemical protection, this coating extends the lifespan of security fencing, electrical applications, and industrial uses. The availability of multicolor options adds aesthetic value, making it ideal for visually appealing fencing designs and event-linked branding.",
+    title: "SECURE PA6 Polymer Coating",
+    description: "The SECURE PA6 Polymer Coating is an advanced polyamide coating solution applied to GI wires to enhance their corrosion resistance, durability, and visual appeal. With its superior UV stability, abrasion resistance, and chemical protection, this coating extends the lifespan of security fencing, electrical applications, and industrial uses. The availability of multicolor options adds aesthetic value, making it ideal for visually appealing fencing designs and event-linked branding.",
     features: [],
     imagePath: "/images/products/no-image.jpg",
     products: [
       {
         id: 'secure-pa6-polymer-coating',
-        title: "SECURE® PA6 Polymer Coating",
-        description: "The SECURE® PA6 Polymer Coating is an advanced polyamide coating solution applied to GI wires to enhance their corrosion resistance, durability, and visual appeal. With its superior UV stability, abrasion resistance, and chemical protection, this coating extends the lifespan of security fencing, electrical applications, and industrial uses. The availability of multicolor options adds aesthetic value, making it ideal for visually appealing fencing designs and event-linked branding.",
+        title: "SECURE PA6 Polymer Coating",
+        description: "The SECURE PA6 Polymer Coating is an advanced polyamide coating solution applied to GI wires to enhance their corrosion resistance, durability, and visual appeal. With its superior UV stability, abrasion resistance, and chemical protection, this coating extends the lifespan of security fencing, electrical applications, and industrial uses. The availability of multicolor options adds aesthetic value, making it ideal for visually appealing fencing designs and event-linked branding.",
         shortDescription: "Upgrade your security with SECURE® PA6 Polymer Coating—designed for durability, flexibility, and vibrant aesthetics in fencing & industrial applications!",
         productDetails:[
           { key: "Material", value: "PA6 (Polyamide 6 / Nylon 6)" },
@@ -399,14 +399,14 @@ export const categories: Category[] = [
   },
   {
     id: 'secure-mesh-system',
-    title: "SECURE® Mesh System",
+    title: "SECURE Mesh System",
     description: "The Green Secure Mesh System is a high-strength, corrosion-resistant fencing and erosion control solution designed for hostile environments. It is constructed using mechanically woven, double-twisted hexagonal wire mesh made from zinc-coated galvanized wire, further coated with PA6 (Polyamide 6, Nylon 6) polymer for enhanced durability, abrasion resistance, and longevity.",
     features: [],
     imagePath: "/images/products/no-image.jpg",
     products: [
       {
         id: 'secure-mesh-system',
-        title: "SECURE® Mesh System",
+        title: "SECURE Mesh System",
         description: "The Green Secure Mesh System is a high-strength, corrosion-resistant fencing and erosion control solution designed for hostile environments. It is constructed using mechanically woven, double-twisted hexagonal wire mesh made from zinc-coated galvanized wire, further coated with PA6 (Polyamide 6, Nylon 6) polymer for enhanced durability, abrasion resistance, and longevity.",
         shortDescription: "The Green Secure Mesh System is a high-strength, corrosion-resistant fencing & erosion control solution designed for hostile environments. With polymer-coated hexagonal mesh and an integrated erosion control blanket, it ensures both structural stability and environmental sustainability.",
         productDetails:[

@@ -8,7 +8,7 @@ const laboratoryServices = [
   {
     title: "MESH TENSILE TESTING M/C",
     description: "Secure Gabion wire mesh ensuring its strength, durability, and reliability instructural applications like erosion control, retaining walls, and slope stabilization. secure mesh withstand the tension and stresses it will face over time, sustain at high load. It ensures compliance with industry standards, confirming the material meets safety requirements and providing quality control. Additionally, tensile testing helps optimize the design of gabion structures, ensuring that they remain stable and effective, even in challenging environmental conditions.",
-    image: "/images/laboratory/image (6).png",
+    image: "/images/laboratory/0.jpg",
     features: [
       "Secure wire mesh Guarantee Peak Performance in Diverse Environmental Conditions",
       "Secure wire mesh ensure Safeguard Against Mesh Deformations",
@@ -19,7 +19,7 @@ const laboratoryServices = [
   {
     title: "WIRE ROPE TENSILE TESTING M/C",
     description: "Secure Matrix plays a pivotal role in Gabion wire tensile testing, which is essential for ensuring the wire&#39;s integrity under tension and environmental stress. By evaluating critical properties such as tensile strength, elongation,and load resistance,Secure Matrix Organization helps manufacturers and engineers confirm that the wire meets the necessary standards for durability,safety,and performance. Through the use of advanced testing equipment with precise technical specifications, Secure Matrix ensures that gabion wire can withstand harsh environmental conditions, guaranteeing longevity and reliability in construction and civil engineering applications.",
-    image: "/images/laboratory/image (6).png",
+    image: "/images/laboratory/1.jpg",
     features: [
       "Securing Structural Resilience and Safety",
       "SMCES guaranteeing adherence to industry standards and regulations",
@@ -31,7 +31,7 @@ const laboratoryServices = [
   {
     title: "PUNCH TESTING M/C",
     description: "Secure gabion wire mesh ensure mechanical strength, manufacturing uniformity to maintain the long-term functionality, durability, and safety of gabion-based structures. The Gabion Wire Mesh Punch Test is an indispensable procedure for assessing the material properties, structural integrity, and performance characteristics of wire mesh in gabion box.",
-    image: "/images/laboratory/image (6).png",
+    image: "/images/laboratory/2.jpg",
     features: [
       "A secure wire mesh guarantees superior tensile and shear resistance by integrating strong materials, effective reinforcement, and precise design",
       "SMCES ensures unwavering structural integrity and robust safety assurance",
