@@ -31,7 +31,7 @@ const Footer = () => {
           <div className="md:col-span-4 text-center md:text-left">
             <Link href="/" className="inline-block mb-6">
               <Image
-                src="/icons/logo.png"
+                src="/icons/logo.svg"
                 alt="Secure Matrix"
                 width={140}
                 height={50}

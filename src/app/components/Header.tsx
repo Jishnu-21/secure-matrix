@@ -207,7 +207,7 @@ const Header = () => {
       <div className="flex h-full justify-between items-center px-4 sm:px-6 lg:px-8 border-b border-gray-300">
         <Link href="/" className="text-lg pl-0 sm:pl-4 lg:pl-20 font-bold font-crimson text-black">
           <Image 
-            src="/icons/logo.png" 
+            src="/icons/logo.svg" 
             alt="Secure Matrix" 
             width={120} 
             height={120}
