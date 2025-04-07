@@ -241,7 +241,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-4 lg:space-x-10 pr-0 lg:pr-20">
+          <ul className="flex space-x-4 lg:space-x-6 pr-0 lg:pr-20">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
@@ -251,7 +251,7 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black hover:text-[#D84315] text-sm lg:text-base font-crimson relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-sm font-crimson relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                       ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
