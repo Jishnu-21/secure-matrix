@@ -95,7 +95,7 @@ const Header = () => {
           <div key={category.id} className="relative group/item">
             <Link
               href={`/products/${category.id}`}
-              className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+              className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer text-base ${
                 isUnderSection(`/products/${category.id}`) 
                 ? "text-[#D84315] bg-gray-50" 
                 : "text-gray-800 hover:text-[#D84315]"
@@ -109,7 +109,7 @@ const Header = () => {
                   <Link
                     key={product.id}
                     href={`/products/${category.id}/${product.id}`}
-                    className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer ${
+                    className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer text-base ${
                       isUnderSection(`/products/${category.id}/${product.id}`) 
                       ? "text-[#D84315] bg-gray-50" 
                       : "text-gray-800 hover:text-[#D84315]"
@@ -196,7 +196,7 @@ const Header = () => {
     },
     { name: "Lab Testing", path: "/laboratory" },
     { name: "Resources", path: "/resources" },
-    { name: "Design Solution and Analysis,", path: "/design" },
+    { name: "Design Solution and Analysis", path: "/design" },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -293,7 +293,7 @@ const Header = () => {
                       <Link
                         key={dropdownItem.path}
                         href={dropdownItem.path}
-                        className={`block px-4 py-[10px] text-[16px] font-medium transition-colors
+                        className={`block px-4 py-[10px] text-base font-medium transition-colors
                           ${isUnderSection(dropdownItem.path) 
                             ? 'text-white bg-[#c13d13]' 
                             : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
