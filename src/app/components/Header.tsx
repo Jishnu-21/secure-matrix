@@ -195,6 +195,8 @@ const Header = () => {
       ]
     },
     { name: "Lab Testing", path: "/laboratory" },
+    { name: "Resources", path: "/resources" },
+    { name: "Design Solution and Analysis,", path: "/design" },
     { name: "Contact", path: "/contact" },
   ];
 
