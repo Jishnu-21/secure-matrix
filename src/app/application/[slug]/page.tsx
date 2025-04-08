@@ -309,7 +309,7 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
         <section className="mt-5 sm:mt-8 md:mt-10 top-20 sm:top-28 md:top-40 relative">
           <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
             <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
-              {Array.isArray(data.mainImage) ? (
+              {Array.isArray(data?.mainImage) ? (
                 <>
                   {data.mainImage.map((image, index) => (
                     <Image
@@ -325,7 +325,25 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
                       }}
                     />
                   ))}
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2">
+                  {/* Left Arrow */}
+                  <button 
+                    onClick={() => setCurrentImageIndex(prev => prev === 0 ? data.mainImage.length - 1 : prev - 1)}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  {/* Right Arrow */}
+                  <button 
+                    onClick={() => setCurrentImageIndex(prev => prev === data.mainImage.length - 1 ? 0 : prev + 1)}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
                     {data.mainImage.map((_, index) => (
                       <button
                         key={index}
