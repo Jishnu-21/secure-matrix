@@ -294,7 +294,6 @@ export const applicationData = {
   '/images/application/residential-industrial-arch/3.jpg',
   '/images/application/residential-industrial-arch/4.jpeg',
   '/images/application/residential-industrial-arch/5.jpg',
-  '/images/application/residential-industrial-arch/6.jpg',
 ], 
  leftSection: {
    title: 'Gabion Boxes: Strength & Durability',

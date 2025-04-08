@@ -220,7 +220,6 @@ const sectorData = {
       '/images/sector/realestate/6.jpg',
       '/images/sector/realestate/7.jpg',
       '/images/sector/realestate/8.jpg',
-      '/images/sector/realestate/9.jpg',
     ],
     leftSection: {
       title: 'Urban Development Applications',
@@ -270,7 +269,6 @@ const sectorData = {
       '/images/sector/defence/5.jpg',
       '/images/sector/defence/6.jpg',
       '/images/sector/defence/7.jpg',
-      '/images/sector/defence/8.jpg',
     ],
     leftSection: {
       title: 'Military Applications',
