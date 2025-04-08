@@ -75,7 +75,6 @@ const sectorData = {
       '/images/sector/agriculture/1.jpg',
       '/images/sector/agriculture/2.jpg',
       '/images/sector/agriculture/3.jpg',
-      '/images/sector/agriculture/4.jpg'
     ],
     leftSection: {
       title: 'Agricultural Applications',
@@ -122,7 +121,6 @@ const sectorData = {
       '/images/sector/construction/1.jpg',
       '/images/sector/construction/2.jpg',
       '/images/sector/construction/3.jpg',
-      '/images/sector/construction/4.jpg'
     ],
     leftSection: {
       title: 'Construction Applications',
@@ -223,7 +221,6 @@ const sectorData = {
       '/images/sector/realestate/7.jpg',
       '/images/sector/realestate/8.jpg',
       '/images/sector/realestate/9.jpg',
-      '/images/sector/realestate/10.jpg'    
     ],
     leftSection: {
       title: 'Urban Development Applications',
