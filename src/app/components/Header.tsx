@@ -104,12 +104,12 @@ const Header = () => {
               {category.title}
             </Link>
             {category.products && category.products.length > 0 && (
-              <div className="absolute left-full top-0 w-60 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block">
+              <div className="absolute left-full top-0 w-60 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block max-h-[400px] overflow-y-auto">
                 {category.products.map((product) => (
                   <Link
                     key={product.id}
                     href={`/products/${category.id}/${product.id}`}
-                    className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer text-base ${
+                    className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm ${
                       isUnderSection(`/products/${category.id}/${product.id}`) 
                       ? "text-[#D84315] bg-gray-50" 
                       : "text-gray-800 hover:text-[#D84315]"
@@ -129,31 +129,50 @@ const Header = () => {
   const menuItems: MenuItem[] = [
     { name: "Home", path: "/" },
     { name: "About", path: "/about" },
+ 
+    { 
+      name: "Sector", 
+      path: "#",
+      dropdown: [
+        { name: "ENVIRONMENTAL PROTECTION", path: "/sector/environmental-protection" },
+        { name: "AGRICULTURAL PURPOSE", path: "/sector/agricultural-purpose" },
+        { name: "COASTAL & RIVER CONTROL WORK", path: "/sector/coastal-river-control-work" },
+        { name: "EMERGENCY & FLOOD", path: "/sector/emergency-flood" },
+        { name: "WATER RESOURCES & IRRIGATION", path: "/sector/water-resources-irrigation" },
+        { name: "TRANSPORTATION INFRASTRUCTURE", path: "/sector/transportation-infrastructure" },
+        { name: "DEFENCE & SECURITY", path: "/sector/defence-security" },
+        { name: "MINING", path: "/sector/mining" },
+      ]
+    },
     { 
       name: "Products", 
       path: "#",
       dropdown: [
         { name: "SECURE GABION BOX ", path: "/products/Secure-gabion-box/secure-gabion-box" },
-        { name: "SECURE GABION REVET MATTRESS ", path: "/products/secure-gabion-mattress/secure-gabion-revet-mattress" },
-        { name: "SECURE DT MESH ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-dt-mesh-rock-fall-netting" },
-        { name: "SECURE RHOMBOIDAL ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-rhomboidal-rock-fall-netting" },
-        { name: "SECURE NON-WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-non-woven-geotextile" },
-        { name: "SECURE WOVEN GEOTEXTILE", path: "/products/Secure-geotextile/secure-woven-geotextile" },
-        { name: "SECURE GRID SYSTEM", path: "/products/secure-grid-system/secure-grid-system" },
-        { name: "SECURE PA6 POLYMER COATING", path: "/products/secure-pa6-polymer-coating/secure-pa6-polymer-coating" },
-        { name: "SECURE MESH SYSTEM", path: "/products/secure-mesh-system/secure-mesh-system" },
+        { name: "SECURE GABION  MATTRESS ", path: "/products/secure-gabion-mattress/secure-gabion-revet-mattress" },
+        { name: "SECURE ROCK FALL NETTING", path: "/products/rock-fall-netting/secure-dt-mesh-rock-fall-netting" },
+        { name: "SECURE WIRE ROPE PANEL", path: "/products/wire-rope-panel/secure-wire-rope-panel" },
+        { name: "SECURE TERRAIN MESH", path: "/products/terrain-mesh/secure-terrain-mesh" },
+        { name: "SECURE EROSION CONTROL BLANKETS", path: "/products/erosion-control-blankets/secure-erosion-control-blankets" },
+        { name: "SECURE MESH SYSTEM", path: "/products/mesh-system/secure-mesh-system" },
+        { name: "SECURE DRAINAGE COMPOSITE", path: "/products/drainage-composite/secure-drainage-composite" },
+        { name: "SECURE GRID SYSTEM", path: "/products/grid-system/secure-grid-system" },
+        { name: "SECURE GEO STRAP", path: "/products/geo-strap/secure-geo-strap" },
+        { name: "DOUBLE SECUREMESH SYSTEM", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "SECURE COIR MAT", path: "/products/secure-coir-mat/secure-coir-mat" },
+        { name: "SECURE GEOBAG", path: "/products/secure-gobag/secure-gobag" },
+        { name: "SECURE COMPOSITE MESH", path: "/products/secure-composite-mesh/secure-composite-mesh" },
+        { name: "SECURE PRO 3D", path: "/products/secure-pro-3d/secure-pro-3d" },
+        { name: "SECURE PRO AURA 3D", path: "/products/secure-pro-aura-3d/secure-pro-aura-3d" },
+        { name: "SECURE PRO 3D", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "POLY SECURE", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "SECURE GEO COMPOSITE", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "SECURE SACK GABION", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "SECURE GEO CELL", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "SECURELINK-GEOGRID", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "GREEN SECUREMESH SYSTEM", path: "/products/double-securemesh-system/double-securemesh-system" },
+        { name: "SSECURE GREEN TERRAIN MESH", path: "/products/double-securemesh-system/double-securemesh-system" },  
   
-      ]
-    },
-    { 
-      name: "Sector", 
-      path: "#",
-      dropdown: [
-        { name: "AGRICULTURE & FARMING", path: "/sector/agriculture-farming" },
-        { name: "CONSTRUCTION & MINING", path: "/sector/construction-mining" },
-        { name: "COASTAL DEFENCE", path: "/sector/coastal-defence" },
-        { name: "REAL ESTATE & URBAN DEVELOPMENT", path: "/sector/real-estate" },
-        { name: "DEFENCE & SECURITY", path: "/sector/defence" }
       ]
     },
     { 
@@ -161,42 +180,61 @@ const Header = () => {
       path: "#",
       dropdown: [
         { 
-          name: "RETAINING WALL & SOIL REINFORCEMENT", 
+          name: "RETAINING WALL SOIL REINFORCEMENT", 
           path: "/application/retaining-wall",
         },
         { 
-          name: "ROCK FALL MITIGATION", 
+          name: "ROCKFALL PROTECTION", 
           path: "/application/rock-fall-mitigation",
         },
         { 
-          name: "GABION ARCHITECTURE", 
+          name: "EROSION CONTROL & SOIL STABILIZATION WITH GABION BOXES & GEOTEXTILES", 
           path: "/application/gabion-architecture",
         },
         { 
-          name: "COASTAL PROTECTION FROM FLOODS WITH GABION BOXES", 
+          name: "MARINE WORK", 
           path: "/application/coastal-protection",
         },
         { 
-          name: "GABION BOXES IN TRANSPORT AND MOBILITY INFRASTRUCTURE", 
+          name: "DEFENCE & SECURITY", 
           path: "/application/transport-infrastructure",
         },
         { 
-          name: "GABION BOXES IN DEFENCE & SECURITY", 
+          name: "FENCING WIRE", 
           path: "/application/defence-security",
         },
         { 
-          name: "EROSION CONTROL & SOIL STABILIZATION WITH GABION BOXES AND GEO TEXTILES", 
+          name: "HYDRAULIC WORK", 
           path: "/application/erosion-control",
-        },
-        { 
-          name: "FENCING & WIRE SYSTEMS", 
-          path: "/application/fencing-wire-systems",
         },
       ]
     },
-    { name: "Lab Testing", path: "/laboratory" },
-    { name: "Resources", path: "/resources" },
-    { name: "Design Solution and Analysis", path: "/design" },
+    { name: "Projects", path: "/projects" ,
+      dropdown: [
+        { name: "BEAUTIFICATION OF KARHA RIVER PROJECT, BARAMATI", path: "/projects/beautification-of-karha-river-project-baramati" },
+        { name: "RIVER REJUVENATION PROJECT - MULA RIVER FROM WAKAD BY PASS TO SANGAVI BRIDGE", path: "/projects/river-rejuvenation-project-mula-river-from-wakad-by-pass-to-sangavi-bridge" },
+        { name: "R K ASSOCIATES", path: "/projects/r-k-associates" },
+        { name: "KOLHAR K.T.WEIR REMAINING WORK AND DOWN STREAM PROTECTION WORK AT KOLHAR TAL RAHATA DIST-AHMEDNAGAR", path: "/projects/kolhar-k-t-weir-remaining-work-and-down-stream-protection-work-at-kolhar-tal-rahata-dist-ahmednagar" },
+        { name: "SPECIAL REPAIR WORK OF DAMAGED PORTION OF RIGHT BANK OF K.T. WEIR MANJUR, TAL- KOPARGAON, DIST- AHMEDNAGAR", path: "/projects/special-repair-work-of-damaged-portion-of-right-bank-of-k-t-weir-manjur-tal-kopargaon-dist-ahmednagar" },
+        { name: "CONSTRUCTION OF 8 LANE OF EXISTING 4 LANE FROM VADAPE TO THANE OF NH3(NEW NH 848) MH", path: "/projects/construction-of-8-lane-of-existing-4-lane-from-vadape-to-thane-of-nh3-new-nh-848-mh" },
+        { name: "DEVELOPEMENT OF TRANSPORT NAGAR AT RANCHI JHARKHAND ON EPC MODE", path: "/projects/development-of-transport-nagar-at-ranchi-jharkhand-on-epc-mode" },
+      ]
+    },
+    { name: "Advanced Technologies", path: "/advanced-technologies",
+      dropdown: [
+        { name: "DESIGN SOFTWARE", path: "/advanced-technologies/design-software" },
+        { name: "MATERIAL TESTING LAB", path: "/advanced-technologies/material-testing-lab" },
+      ]
+     },
+    { name: "Resources", path: "/resources" ,
+      dropdown: [
+        { name: "STANDARDS", path: "/resources/standards" },
+        { name: "TECHNICAL DATA SHEET", path: "/resources/technical-data-sheet" },  
+        { name: "BROCHURE", path: "/resources/brochure" },  
+        { name: "VIDEOS & PHOTOS", path: "/resources/videos-photos" },  
+        { name: "INSTALLATION MANUAL", path: "/resources/installation-manual" },  
+      ]
+    },
     { name: "Contact", path: "/contact" },
   ];
 
@@ -285,7 +323,7 @@ const Header = () => {
                 {/* Dropdown */}
                 {item.dropdown && (
                   <div 
-                    className={`absolute top-[120%] mt-1 left-0 w-[320px] bg-[#FF5722] shadow-lg rounded-none overflow-hidden transition-all duration-200 divide-y divide-white/60 ${
+                    className={`absolute top-[120%] mt-1 left-0 w-[320px] bg-[#FF5722] shadow-lg rounded-none transition-all duration-200 divide-y divide-white/60 ${item.name === 'Products' ? 'max-h-[400px] overflow-y-auto' : 'overflow-hidden'} ${
                       activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'
                     }`}
                   >
@@ -293,7 +331,7 @@ const Header = () => {
                       <Link
                         key={dropdownItem.path}
                         href={dropdownItem.path}
-                        className={`block px-4 py-[10px] text-base font-medium transition-colors
+                        className={`block px-4 py-[8px] text-sm font-medium transition-colors
                           ${isUnderSection(dropdownItem.path) 
                             ? 'text-white bg-[#c13d13]' 
                             : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
@@ -368,13 +406,13 @@ const Header = () => {
                         {/* Mobile Dropdown */}
                         {item.dropdown && activeDropdown === item.name && (
                           <div 
-                            className={`mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#D84315] rounded-lg`}
+                            className={`mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#D84315] rounded-lg ${item.name === 'Products' ? 'max-h-[300px] overflow-y-auto' : ''}`}
                           >
                             {item.dropdown.map((dropdownItem) => (
                               <Link
                                 key={dropdownItem.path}
                                 href={dropdownItem.path}
-                                className={`block py-[10px] px-4 text-[16px] font-medium transition-colors
+                                className={`block py-[8px] px-4 text-[14px] font-medium transition-colors
                                   ${isUnderSection(dropdownItem.path) 
                                     ? 'text-white bg-[#c13d13]' 
                                     : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
