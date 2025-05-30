@@ -84,7 +84,29 @@ const Header = () => {
     return pathname.startsWith(path);
   };
 
-  const renderDropdown = () => {
+  const renderDropdown = (items?: MenuItem[]) => {
+    // If items are provided, render those items
+    if (items) {
+      return (
+        <>
+          {items.map((item) => (
+            <Link
+              key={item.path}
+              href={item.path}
+              className={`block px-4 py-2 hover:bg-gray-100 cursor-pointer text-sm ${
+                isUnderSection(item.path) 
+                ? "text-[#D84315] bg-gray-50" 
+                : "text-gray-800 hover:text-[#D84315]"
+              }`}
+            >
+              {item.name}
+            </Link>
+          ))}
+        </>
+      );
+    }
+    
+    // Default dropdown for products categories
     return (
       <div
         className={`absolute top-[100%] mt-[-2px] left-0 w-60 bg-white shadow-lg rounded-b-lg py-2 z-50 ${
@@ -171,7 +193,7 @@ const Header = () => {
         { name: "SECURE GEO CELL", path: "/products/double-securemesh-system/double-securemesh-system" },
         { name: "SECURELINK-GEOGRID", path: "/products/double-securemesh-system/double-securemesh-system" },
         { name: "GREEN SECUREMESH SYSTEM", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "SSECURE GREEN TERRAIN MESH", path: "/products/double-securemesh-system/double-securemesh-system" },  
+        { name: "SECURE GREEN TERRAIN MESH", path: "/products/double-securemesh-system/double-securemesh-system" },  
   
       ]
     },
