@@ -21,6 +21,7 @@ interface MenuItem {
   path: string;
   subItems?: MenuItem[];
   dropdown?: MenuItem[];
+  external?: boolean;
 }
 
 const categories: Category[] = [
@@ -146,11 +147,23 @@ const Header = () => {
         ))}
       </div>
     );
-  };
+  }; 
 
   const menuItems: MenuItem[] = [
-    { name: "Home", path: "/" },
-    { name: "About", path: "/about" },
+    { name: "Home", path: "/" ,
+      dropdown:[
+        {name:"COMPANY PROFILE",path: '/profile'},
+        {name:"CERTIFICATIONS",path: '/certifications'},
+      ]
+    },
+    { name: "About", path: "/about",
+      dropdown:[
+        {name:"COMPANY HISTORY",path:'/companu-history'},
+        {name:"VISION",path:'/vision'},
+        {name:"MISSION",path:'/mission'},
+        {name:"PHOTOS",path:'/photos'},
+      ]
+     },
  
     { 
       name: "Sector", 
@@ -257,7 +270,13 @@ const Header = () => {
         { name: "INSTALLATION MANUAL", path: "/resources/installation-manual" },  
       ]
     },
-    { name: "Contact", path: "/contact" },
+    { name: "Contact", path: "/contact",
+      dropdown:[
+        {name:'LOCATION', path:'/contact#location'},
+        {name:'MOBILE NO', path:'/contact#phone'},
+        {name:'E-MAIL ID', path:'/contact#email'},
+      ]
+     },
   ];
 
   return (
@@ -317,7 +336,8 @@ const Header = () => {
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
                   }`}
                   onClick={(e) => {
-                    if (item.dropdown) {
+                    // Only prevent navigation for items with # as path
+                    if (item.dropdown && item.path === '#') {
                       e.preventDefault();
                     }
                   }}
@@ -349,19 +369,31 @@ const Header = () => {
                       activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'
                     }`}
                   >
-                    {item.dropdown.map((dropdownItem) => (
-                      <Link
-                        key={dropdownItem.path}
-                        href={dropdownItem.path}
-                        className={`block px-4 py-[8px] text-sm font-medium transition-colors
-                          ${isUnderSection(dropdownItem.path) 
-                            ? 'text-white bg-[#c13d13]' 
-                            : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
-                          }`}
-                      >
-                        {dropdownItem.name}
-                      </Link>
-                    ))}
+                    {item.dropdown.map((dropdownItem) => 
+                      dropdownItem.external ? (
+                        <a
+                          key={dropdownItem.path}
+                          href={dropdownItem.path}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className={`block px-4 py-[8px] text-sm font-medium transition-colors text-white/90 hover:text-white hover:bg-[#c13d13]`}
+                        >
+                          {dropdownItem.name}
+                        </a>
+                      ) : (
+                        <Link
+                          key={dropdownItem.path}
+                          href={dropdownItem.path}
+                          className={`block px-4 py-[8px] text-sm font-medium transition-colors
+                            ${isUnderSection(dropdownItem.path) 
+                              ? 'text-white bg-[#c13d13]' 
+                              : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
+                            }`}
+                        >
+                          {dropdownItem.name}
+                        </Link>
+                      )
+                    )}
                   </div>
                 )}
                 {item.subItems && (
@@ -398,7 +430,7 @@ const Header = () => {
                               : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
                           }`}
                           onClick={(e) => {
-                            if (item.dropdown) {
+                            if (item.dropdown && item.path === '#') {
                               e.preventDefault();
                             } else {
                               setMobileMenuOpen(false);
@@ -430,20 +462,33 @@ const Header = () => {
                           <div 
                             className={`mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#D84315] rounded-lg ${item.name === 'Products' ? 'max-h-[300px] overflow-y-auto' : ''}`}
                           >
-                            {item.dropdown.map((dropdownItem) => (
-                              <Link
-                                key={dropdownItem.path}
-                                href={dropdownItem.path}
-                                className={`block py-[8px] px-4 text-[14px] font-medium transition-colors
-                                  ${isUnderSection(dropdownItem.path) 
-                                    ? 'text-white bg-[#c13d13]' 
-                                    : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
-                                  }`}
-                                onClick={() => setMobileMenuOpen(false)}
-                              >
-                                {dropdownItem.name}
-                              </Link>
-                            ))}
+                            {item.dropdown.map((dropdownItem) => 
+                              dropdownItem.external ? (
+                                <a
+                                  key={dropdownItem.path}
+                                  href={dropdownItem.path}
+                                  target="_blank"
+                                  rel="noopener noreferrer"
+                                  className={`block py-[8px] px-4 text-[14px] font-medium transition-colors text-white/90 hover:text-white hover:bg-[#c13d13]`}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {dropdownItem.name}
+                                </a>
+                              ) : (
+                                <Link
+                                  key={dropdownItem.path}
+                                  href={dropdownItem.path}
+                                  className={`block py-[8px] px-4 text-[14px] font-medium transition-colors
+                                    ${isUnderSection(dropdownItem.path) 
+                                      ? 'text-white bg-[#c13d13]' 
+                                      : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
+                                    }`}
+                                  onClick={() => setMobileMenuOpen(false)}
+                                >
+                                  {dropdownItem.name}
+                                </Link>
+                              )
+                            )}
                           </div>
                         )}
                         {item.subItems && activeDropdown === item.name && (
