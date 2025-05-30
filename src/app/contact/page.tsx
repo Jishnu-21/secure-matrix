@@ -68,6 +68,19 @@ const Contact = () => {
             {/* Location Section with Map */}
             <section id="location" className="py-12 scroll-mt-32 transition-all duration-500">
               <div className="container max-w-6xl mx-auto px-4">
+                <div className="flex flex-col items-center mb-8">
+                  <div className="w-16 h-16 bg-[#D84315]/10 rounded-full flex items-center justify-center mb-4">
+                    <MdLocationOn className="text-[#D84315] text-3xl" />
+                  </div>
+                  <h2 className="text-2xl font-bold text-black mb-2">Our Location</h2>
+                  <div className="w-12 h-0.5 bg-[#D84315] mb-4"></div>
+                  <p className="text-gray-600 mb-8 text-center max-w-2xl">
+                    Secure Matrix Headquarters<br />
+                    123 Industrial Area, Phase 2<br />
+                    Pune, Maharashtra 411057<br />
+                    India
+                  </p>
+                </div>
                 <div className="grid md:grid-cols-2 gap-4 md:gap-0">
                   <div className="w-full h-[400px] md:h-[500px]">
                     <iframe 

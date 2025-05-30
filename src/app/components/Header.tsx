@@ -110,7 +110,7 @@ const Header = () => {
     // Default dropdown for products categories
     return (
       <div
-        className={`absolute top-[100%] mt-[-2px] left-0 w-60 bg-white shadow-lg rounded-b-lg py-2 z-50 ${
+        className={`absolute top-[100%] mt-[-2px] left-0 w-48 bg-white shadow-lg rounded-b-lg py-2 z-50 ${
           isDropdownOpen ? "block" : "hidden"
         }`}
       >
@@ -127,7 +127,7 @@ const Header = () => {
               {category.title}
             </Link>
             {category.products && category.products.length > 0 && (
-              <div className="absolute left-full top-0 w-60 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block max-h-[400px] overflow-y-auto">
+              <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block max-h-[400px] overflow-y-auto">
                 {category.products.map((product) => (
                   <Link
                     key={product.id}
@@ -166,7 +166,7 @@ const Header = () => {
      },
  
     { 
-      name: "Sector", 
+      name: "Sectors", 
       path: "#",
       dropdown: [
         { name: "ENVIRONMENTAL PROTECTION", path: "/sector/environmental-protection" },
@@ -270,7 +270,7 @@ const Header = () => {
         { name: "INSTALLATION MANUAL", path: "/resources/installation-manual" },  
       ]
     },
-    { name: "Contact", path: "/contact",
+    { name: "Contact-us", path: "/contact",
       dropdown:[
         {name:'LOCATION', path:'/contact#location'},
         {name:'MOBILE NO', path:'/contact#phone'},
@@ -365,7 +365,7 @@ const Header = () => {
                 {/* Dropdown */}
                 {item.dropdown && (
                   <div 
-                    className={`absolute top-[120%] mt-1 left-0 w-[320px] bg-[#FF5722] shadow-lg rounded-none transition-all duration-200 divide-y divide-white/60 ${item.name === 'Products' ? 'max-h-[400px] overflow-y-auto' : 'overflow-hidden'} ${
+                    className={`absolute top-[120%] mt-1 left-0 ${item.name === 'Contact-us' ? 'w-[180px]' : item.name === 'Projects' ? 'w-[320px]' : 'w-[240px]'} bg-[#FF5722] shadow-lg rounded-none transition-all duration-200 divide-y divide-white/60 ${item.name === 'Products' ? 'max-h-[400px] overflow-y-auto' : 'overflow-hidden'} ${
                       activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'
                     }`}
                   >
