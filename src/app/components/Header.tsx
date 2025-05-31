@@ -281,7 +281,7 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full h-[60px] sm:h-[80px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
+      className={`fixed top-0 w-full h-[60px] sm:h-[80px] lg:h-[90px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
@@ -293,7 +293,7 @@ const Header = () => {
               alt="Secure Matrix" 
               width={120} 
               height={120}
-              className="w-[70px] sm:w-[80px] md:w-[90px] lg:w-[100px] h-auto" 
+              className="w-[70px] sm:w-[80px] md:w-[90px] lg:w-[110px] xl:w-[120px] h-auto" 
             />
           </Link>
         </div>
@@ -322,7 +322,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-grow justify-end">
-          <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 pr-0 lg:pr-4">
+          <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-5 xl:space-x-6 pr-0 lg:pr-6">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
@@ -332,10 +332,10 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black hover:text-[#D84315] text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] uppercase font-medium relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-[10px] sm:text-[11px] md:text-[12px] lg:text-[14px] xl:text-[15px] uppercase font-medium relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
-                      ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[2px] after:bg-[#D84315]'
-                      : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-12px] hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#D84315]'
+                      ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-12px] lg:after:bottom-[-14px] after:left-0 after:w-full after:h-[2px] lg:after:h-[3px] after:bg-[#D84315]'
+                      : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-12px] lg:hover:after:bottom-[-14px] hover:after:left-0 hover:after:w-full hover:after:h-[2px] lg:hover:after:h-[3px] hover:after:bg-[#D84315]'
                   }`}
                   onClick={(e) => {
                     // Only prevent navigation for items with # as path
