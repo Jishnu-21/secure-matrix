@@ -285,20 +285,22 @@ const Header = () => {
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex h-full justify-between items-center px-2 sm:px-3 md:px-4 lg:px-6 border-b border-gray-300 max-w-[1440px] mx-auto">
-        <Link href="/" className="text-lg pl-0 sm:pl-1 md:pl-2 lg:pl-3 font-bold font-crimson text-black">
-          <Image 
-            src="/icons/logo.svg" 
-            alt="Secure Matrix" 
-            width={120} 
-            height={120}
-            className="w-[70px] sm:w-[80px] md:w-[90px] lg:w-[100px] h-auto" 
-          />
-        </Link>
+      <div className="flex h-full items-center px-2 sm:px-3 md:px-4 lg:px-6 border-b border-gray-300 max-w-[1440px] mx-auto">
+        <div className="flex-shrink-0">
+          <Link href="/" className="flex items-center font-bold font-crimson text-black">
+            <Image 
+              src="/icons/logo.svg" 
+              alt="Secure Matrix" 
+              width={120} 
+              height={120}
+              className="w-[70px] sm:w-[80px] md:w-[90px] lg:w-[100px] h-auto" 
+            />
+          </Link>
+        </div>
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden px-2 sm:px-4 text-[#D84315]"
+          className="md:hidden flex-shrink-0 px-2 sm:px-4 text-[#D84315]"
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -319,8 +321,8 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:block ml-4 lg:ml-8">
-          <ul className="flex flex-wrap justify-end space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 pr-0 lg:pr-10">
+        <nav className="hidden md:flex flex-grow justify-end">
+          <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 pr-0 lg:pr-4">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
