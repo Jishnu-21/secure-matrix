@@ -281,18 +281,18 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full h-[70px] sm:h-[100px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
+      className={`fixed top-0 w-full h-[60px] sm:h-[80px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex h-full justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 border-b border-gray-300 max-w-[1440px] mx-auto">
-        <Link href="/" className="text-lg pl-0 sm:pl-2 md:pl-4 lg:pl-6 font-bold font-crimson text-black">
+      <div className="flex h-full justify-between items-center px-2 sm:px-3 md:px-4 lg:px-6 border-b border-gray-300 max-w-[1440px] mx-auto">
+        <Link href="/" className="text-lg pl-0 sm:pl-1 md:pl-2 lg:pl-3 font-bold font-crimson text-black">
           <Image 
             src="/icons/logo.svg" 
             alt="Secure Matrix" 
             width={120} 
             height={120}
-            className="w-[80px] sm:w-[90px] md:w-[100px] lg:w-[120px] h-auto" 
+            className="w-[70px] sm:w-[80px] md:w-[90px] lg:w-[100px] h-auto" 
           />
         </Link>
 
@@ -319,8 +319,8 @@ const Header = () => {
         </button>
 
         {/* Desktop Navigation */}
-        <nav className="hidden md:block">
-          <ul className="flex flex-wrap justify-end space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 pr-0 lg:pr-20">
+        <nav className="hidden md:block ml-4 lg:ml-8">
+          <ul className="flex flex-wrap justify-end space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 pr-0 lg:pr-10">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
@@ -330,10 +330,10 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black hover:text-[#D84315] text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] uppercase font-medium relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-[10px] sm:text-[11px] md:text-[12px] lg:text-[13px] uppercase font-medium relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
-                      ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
-                      : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
+                      ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-12px] after:left-0 after:w-full after:h-[2px] after:bg-[#D84315]'
+                      : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-12px] hover:after:left-0 hover:after:w-full hover:after:h-[2px] hover:after:bg-[#D84315]'
                   }`}
                   onClick={(e) => {
                     // Only prevent navigation for items with # as path
