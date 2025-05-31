@@ -32,7 +32,7 @@ const Banner = () => {
 
   return (
     <>
-      <section className="relative min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-90px)] flex items-center bg-[#FAFAFA] overflow-hidden">
+      <section className="relative min-h-[calc(100vh-50px)] sm:min-h-[calc(100vh-60px)] md:min-h-[calc(100vh-70px)] lg:min-h-[calc(100vh-80px)] xl:min-h-[calc(100vh-90px)] flex items-center bg-[#FAFAFA] overflow-hidden">
         <div className="absolute inset-0">
           {bannerImages.map((image, index) => (
             <Image
@@ -49,7 +49,7 @@ const Banner = () => {
           ))}
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="relative z-10 h-full w-full flex items-start pt-[100px] sm:pt-[120px] md:pt-[140px] lg:pt-[150px]">
+        <div className="relative z-10 h-full w-full flex items-start pt-[80px] sm:pt-[90px] md:pt-[100px] lg:pt-[120px] xl:pt-[130px]">
           <div className="w-full px-2 sm:px-3 md:px-4 lg:px-6 max-w-[1440px] mx-auto">
             <div className="space-y-3 max-w-[800px] text-left">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] font-medium text-white leading-[1.2]">

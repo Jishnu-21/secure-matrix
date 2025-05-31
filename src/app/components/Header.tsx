@@ -281,48 +281,50 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full h-[60px] sm:h-[80px] lg:h-[90px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
+      className={`fixed top-0 w-full h-[50px] sm:h-[60px] md:h-[70px] lg:h-[80px] xl:h-[90px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex h-full items-center justify-between px-2 sm:px-3 md:px-4 lg:px-6 border-b border-gray-300 max-w-[1440px] mx-auto">
-        <div className="flex-shrink-0">
-          <Link href="/" className="flex items-center font-bold font-crimson text-black">
-            <Image 
-              src="/icons/logo.svg" 
-              alt="Secure Matrix" 
-              width={120} 
-              height={120}
-              className="w-[70px] sm:w-[80px] md:w-[90px] lg:w-[110px] xl:w-[120px] h-auto" 
-            />
-          </Link>
-        </div>
+      <div className="container mx-auto px-4">
+        <div className="flex items-center justify-between w-full py-1 sm:py-1.5 md:py-2 lg:py-2.5 xl:py-3">
+          <div className="flex-shrink-0 flex items-center">
+            <Link href="/" className="flex items-center font-bold font-crimson text-black">
+              <Image 
+                src="/icons/logo.svg" 
+                alt="Secure Matrix" 
+                width={120} 
+                height={120}
+                className="w-[60px] sm:w-[65px] md:w-[70px] lg:w-[80px] xl:w-[90px] 2xl:w-[100px] h-auto" 
+              />
+            </Link>
+          </div>
 
         {/* Mobile Menu Button */}
-        <button
-          className="md:hidden flex-shrink-0 px-0 text-[#D84315]"
-          onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
-        >
-          <svg
-            className="w-6 h-6 sm:w-8 sm:h-8"
-            fill="none"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            strokeWidth="2"
-            viewBox="0 0 24 24"
-            stroke="currentColor"
+          <button
+            className="md:hidden flex-shrink-0 px-0 text-[#D84315] focus:outline-none"
+            onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
+            aria-label="Toggle mobile menu"
           >
-            {isMobileMenuOpen ? (
-              <path d="M6 18L18 6M6 6l12 12" />
-            ) : (
-              <path d="M4 6h16M4 12h16M4 18h16" />
-            )}
-          </svg>
-        </button>
+            <svg
+              className="w-5 h-5 sm:w-6 sm:h-6 md:w-7 md:h-7"
+              fill="none"
+              strokeLinecap="round"
+              strokeLinejoin="round"
+              strokeWidth="2"
+              viewBox="0 0 24 24"
+              stroke="currentColor"
+            >
+              {isMobileMenuOpen ? (
+                <path d="M6 18L18 6M6 6l12 12" />
+              ) : (
+                <path d="M4 6h16M4 12h16M4 18h16" />
+              )}
+            </svg>
+          </button>
 
-        {/* Desktop Navigation */}
-        <nav className="hidden md:flex flex-grow justify-end">
-          <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-5 xl:space-x-6 pr-0 lg:pr-0 ml-6 md:ml-8 lg:ml-12">
+          {/* Desktop Navigation */}
+          <nav className="hidden md:flex flex-grow justify-end">
+            <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-4 xl:space-x-5 pr-0 ml-3 md:ml-4 lg:ml-6 xl:ml-8">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
@@ -332,10 +334,10 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black hover:text-[#D84315] text-[10px] sm:text-[11px] md:text-[12px] lg:text-[14px] xl:text-[15px] uppercase font-medium relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-[9px] sm:text-[10px] md:text-[11px] lg:text-[12px] xl:text-[13px] 2xl:text-[14px] uppercase font-bold relative inline-flex items-center gap-0.5 tracking-wide ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
-                      ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-12px] lg:after:bottom-[-14px] after:left-0 after:w-full after:h-[2px] lg:after:h-[3px] after:bg-[#D84315]'
-                      : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-12px] lg:hover:after:bottom-[-14px] hover:after:left-0 hover:after:w-full hover:after:h-[2px] lg:hover:after:h-[3px] hover:after:bg-[#D84315]'
+                      ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-8px] sm:after:bottom-[-10px] lg:after:bottom-[-12px] after:left-0 after:w-full after:h-[2px] lg:after:h-[2px] after:bg-[#D84315]'
+                      : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-8px] sm:hover:after:bottom-[-10px] lg:hover:after:bottom-[-12px] hover:after:left-0 hover:after:w-full hover:after:h-[2px] lg:hover:after:h-[2px] hover:after:bg-[#D84315]'
                   }`}
                   onClick={(e) => {
                     // Only prevent navigation for items with # as path
@@ -399,7 +401,7 @@ const Header = () => {
                   </div>
                 )}
                 {item.subItems && (
-                  <div className="absolute left-0 mt-2 w-48 bg-white shadow-lg rounded-md hidden group-hover:block">
+                  <div className="absolute left-0 mt-2 w-48 sm:w-52 lg:w-56 bg-white shadow-lg rounded-md py-2 z-50 hidden group-hover:block">
                     {renderDropdown(item.subItems)}
                   </div>
                 )}
@@ -410,10 +412,10 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: typeof window !== 'undefined' ? (window.innerWidth < 640 ? '70px' : '100px') : '70px' }}>
-            <div className="h-[calc(100vh-70px)] sm:h-[calc(100vh-100px)] overflow-y-auto bg-white shadow-lg">
+          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: typeof window !== 'undefined' ? (window.innerWidth < 640 ? '50px' : window.innerWidth < 768 ? '60px' : window.innerWidth < 1024 ? '70px' : window.innerWidth < 1280 ? '80px' : '90px') : '50px' }}>
+            <div className="h-[calc(100vh-50px)] sm:h-[calc(100vh-60px)] md:h-[calc(100vh-70px)] lg:h-[calc(100vh-80px)] xl:h-[calc(100vh-90px)] overflow-y-auto bg-white shadow-lg">
               <div className="container mx-auto px-4">
-                <ul className="py-4">
+                <ul className="py-4 space-y-1 sm:space-y-2">
                   {menuItems.map((item) => (
                     <div key={item.name} className="mb-2">
                       <div className="relative">
@@ -422,7 +424,7 @@ const Header = () => {
                             {item.path !== '#' ? (
                               <Link
                                 href={item.path}
-                                className={`flex-grow py-3 px-3 text-sm uppercase font-medium transition-colors rounded-l-lg ${
+                                className={`flex-grow py-3 px-3 text-sm uppercase font-bold transition-colors rounded-l-lg ${
                                   isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                                     ? 'text-[#D84315] bg-gray-50' 
                                     : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
@@ -445,19 +447,16 @@ const Header = () => {
                                 {item.name.toUpperCase()}
                               </div>
                             )}
-                            <div 
-                              className={`py-3 px-3 text-base font-medium transition-colors rounded-r-lg cursor-pointer ${
-                                isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
-                                  ? 'text-[#D84315] bg-gray-50' 
-                                  : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
-                              }`}
-                              onClick={(e) => {
-                                e.stopPropagation();
-                                setActiveDropdown(activeDropdown === item.name ? null : item.name);
-                              }}
+                            <div
+                              className="flex-none w-10 flex items-center justify-center text-gray-500 hover:text-[#D84315] cursor-pointer rounded-r-lg hover:bg-gray-50 transition-colors focus:outline-none"
+                              onClick={() => setActiveDropdown(activeDropdown === item.name ? null : item.name)}
+                              role="button"
+                              tabIndex={0}
+                              aria-expanded={activeDropdown === item.name}
+                              aria-label={`Toggle ${item.name} dropdown`}
                             >
                               <svg 
-                                className={`w-4 h-4 transition-transform duration-200 ${
+                                className={`w-4 h-4 sm:w-5 sm:h-5 transition-transform duration-200 ${
                                   activeDropdown === item.name ? 'rotate-180 transform' : ''
                                 }`}
                                 fill="none" 
@@ -493,7 +492,7 @@ const Header = () => {
                         {/* Mobile Dropdown */}
                         {item.dropdown && activeDropdown === item.name && (
                           <div 
-                            className={`mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#D84315] rounded-lg ${item.name === 'Products' ? 'max-h-[300px] overflow-y-auto' : ''}`}
+                            className={`mt-1 ml-3 pl-3 border-l-2 border-[#FF6B3D] bg-[#D84315] rounded-lg ${item.name === 'Products' ? 'max-h-[40vh] overflow-y-auto' : ''}`}
                           >
                             {item.dropdown.map((dropdownItem) => 
                               dropdownItem.external ? (
@@ -543,6 +542,7 @@ const Header = () => {
             </div>
           </div>
         )}
+          </div>
       </div>
     </header>
   );
