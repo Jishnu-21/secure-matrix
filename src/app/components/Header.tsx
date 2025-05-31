@@ -285,7 +285,7 @@ const Header = () => {
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex h-full items-center px-2 sm:px-3 md:px-4 lg:px-6 border-b border-gray-300 max-w-[1440px] mx-auto">
+      <div className="flex h-full items-center justify-between px-2 sm:px-3 md:px-4 lg:px-6 border-b border-gray-300 max-w-[1440px] mx-auto">
         <div className="flex-shrink-0">
           <Link href="/" className="flex items-center font-bold font-crimson text-black">
             <Image 
@@ -300,7 +300,7 @@ const Header = () => {
 
         {/* Mobile Menu Button */}
         <button
-          className="md:hidden flex-shrink-0 px-2 sm:px-4 text-[#D84315]"
+          className="md:hidden flex-shrink-0 px-0 text-[#D84315]"
           onClick={() => setMobileMenuOpen(!isMobileMenuOpen)}
         >
           <svg
@@ -322,7 +322,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:flex flex-grow justify-end">
-          <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-5 xl:space-x-6 pr-0 lg:pr-6">
+          <ul className="flex items-center space-x-1 sm:space-x-2 md:space-x-3 lg:space-x-5 xl:space-x-6 pr-0 lg:pr-0 ml-6 md:ml-8 lg:ml-12">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 

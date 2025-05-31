@@ -32,7 +32,7 @@ const Banner = () => {
 
   return (
     <>
-      <section className="relative min-h-[calc(100vh-80px)] flex items-center bg-[#FAFAFA] overflow-hidden">
+      <section className="relative min-h-[calc(100vh-60px)] sm:min-h-[calc(100vh-80px)] lg:min-h-[calc(100vh-90px)] flex items-center bg-[#FAFAFA] overflow-hidden">
         <div className="absolute inset-0">
           {bannerImages.map((image, index) => (
             <Image
@@ -49,25 +49,23 @@ const Banner = () => {
           ))}
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="relative z-10 h-full flex items-start pt-[150px]">
-          <div className="px-6 sm:px-20 md:pl-32 lg:pl-40 xl:pl-48 max-w-[1200px]">
-            <div className="space-y-3">
-              <h2 className="text-3xl sm:text-4xl md:text-3xl lg:text-[35px] xl:text-[40px] font-medium text-white leading-[1.2]">
+        <div className="relative z-10 h-full w-full flex items-start pt-[100px] sm:pt-[120px] md:pt-[140px] lg:pt-[150px]">
+          <div className="w-full px-2 sm:px-3 md:px-4 lg:px-6 max-w-[1440px] mx-auto">
+            <div className="space-y-3 max-w-[800px] text-left">
+              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] font-medium text-white leading-[1.2]">
                 We are 'The Guardians of Every Territory'.
               </h2>
             </div>
-            <p className="text-xs sm:text-sm md:text-[16px] lg:text-[16px] xl:text-[18px] text-white/95 mt-4 mb-12 leading-[1.8] max-w-[600px] font-light tracking-wide">
+            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mt-4 sm:mt-6 mb-8 sm:mb-12 leading-[1.8] max-w-[600px] font-light tracking-wide text-left">
               15+ years of Experience From Concept to Creation, we do it all.
               Security Shield for every space Environment Protection Solutions for
               Civil Engineering
             </p>
-            <div className="flex justify-center sm:justify-start">
-              <button className="inline-flex items-center bg-white text-[#FF4A17] px-5 sm:px-6 lg:px-7 xl:px-8 py-2.5 sm:py-2.5 lg:py-2.5 xl:py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-16 sm:mb-20 md:mb-24">
-               <Link href="/about"> 
-                <span className="mr-3 text-sm sm:text-base lg:text-base xl:text-lg font-medium">
+            <div className="flex justify-start">
+              <Link href="/about" className="inline-flex items-center bg-white text-[#D84315] px-4 sm:px-5 md:px-6 lg:px-7 py-2 sm:py-2.5 md:py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-10 sm:mb-16 md:mb-20 lg:mb-24"> 
+                <span className="mr-2 sm:mr-3 text-sm sm:text-base md:text-lg font-medium">
                   Know more
                 </span>
-                </Link>
                 <svg
                   className="w-4 h-4 sm:w-5 sm:h-5 lg:w-5 lg:h-5 xl:w-5 xl:h-5 transform group-hover:translate-x-1 transition-transform"
                   viewBox="0 0 24 24"
@@ -77,11 +75,11 @@ const Banner = () => {
                 >
                   <path d="M5 12h14M12 5l7 7-7 7" />
                 </svg>
-              </button>
+              </Link>
             </div>
           </div>
         </div>
-        <div className="absolute bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2">
+        <div className="absolute bottom-4 sm:bottom-6 md:bottom-8 left-1/2 transform -translate-x-1/2 flex space-x-2 z-20">
           {bannerImages.map((_, index) => (
             <button
               key={index}
@@ -99,10 +97,12 @@ const Banner = () => {
           ))}
         </div>
         {/* Depth Effect */}
-        <div className="absolute bottom-0 left-0 right-0 h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
+        <div className="absolute bottom-0 left-0 right-0 h-20 sm:h-24 md:h-28 lg:h-32 bg-gradient-to-t from-black/80 to-transparent pointer-events-none"></div>
       </section>
-      <div className="bg-gradient-to-b from-[#FAFAFA] to-gray-50 pb-10 flex justify-center w-full">
-        <Stats />
+      <div className="bg-gradient-to-b from-[#FAFAFA] to-gray-50 py-8 sm:py-10 md:py-12 w-full">
+        <div className="max-w-[1440px] w-full px-2 sm:px-3 md:px-4 lg:px-6 mx-auto">
+          <Stats />
+        </div>
       </div>
       {/* Depth Effect after Stats */}
     </>
