@@ -110,7 +110,7 @@ const Header = () => {
     // Default dropdown for products categories
     return (
       <div
-        className={`absolute top-[100%] mt-[-2px] left-0 w-48 bg-white shadow-lg rounded-b-lg py-2 z-50 ${
+        className={`absolute top-[100%] mt-[-2px] left-0 md:left-1/2 md:-translate-x-1/2 lg:left-0 lg:translate-x-0 w-44 sm:w-48 bg-white shadow-lg rounded-b-lg py-2 z-50 ${
           isDropdownOpen ? "block" : "hidden"
         }`}
       >
@@ -127,7 +127,7 @@ const Header = () => {
               {category.title}
             </Link>
             {category.products && category.products.length > 0 && (
-              <div className="absolute left-full top-0 w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block max-h-[400px] overflow-y-auto">
+              <div className="absolute md:left-full md:top-0 md:w-48 md:ml-0 lg:ml-0 w-44 sm:w-48 bg-white shadow-lg rounded-lg py-2 hidden group-hover/item:block max-h-[400px] overflow-y-auto md:right-auto right-full top-0">
                 {category.products.map((product) => (
                   <Link
                     key={product.id}
@@ -285,14 +285,14 @@ const Header = () => {
         isHeaderVisible ? "translate-y-0" : "-translate-y-full"
       }`}
     >
-      <div className="flex h-full justify-between items-center px-4 sm:px-6 lg:px-8 border-b border-gray-300">
-        <Link href="/" className="text-lg pl-0 sm:pl-4 lg:pl-20 font-bold font-crimson text-black">
+      <div className="flex h-full justify-between items-center px-2 sm:px-4 md:px-6 lg:px-8 border-b border-gray-300 max-w-[1440px] mx-auto">
+        <Link href="/" className="text-lg pl-0 sm:pl-2 md:pl-4 lg:pl-6 font-bold font-crimson text-black">
           <Image 
             src="/icons/logo.svg" 
             alt="Secure Matrix" 
             width={120} 
             height={120}
-            className="w-[90px] sm:w-[120px] h-auto" 
+            className="w-[80px] sm:w-[90px] md:w-[100px] lg:w-[120px] h-auto" 
           />
         </Link>
 
@@ -320,7 +320,7 @@ const Header = () => {
 
         {/* Desktop Navigation */}
         <nav className="hidden md:block">
-          <ul className="flex space-x-4 lg:space-x-6 pr-0 lg:pr-20">
+          <ul className="flex flex-wrap justify-end space-x-2 sm:space-x-3 md:space-x-4 lg:space-x-6 pr-0 lg:pr-20">
             {menuItems.map((item) => (
               <li 
                 key={item.name} 
@@ -330,7 +330,7 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black hover:text-[#D84315] text-base uppercase font-medium relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-[11px] sm:text-[12px] md:text-[13px] lg:text-[14px] uppercase font-medium relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                       ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
@@ -342,7 +342,7 @@ const Header = () => {
                     }
                   }}
                 >
-                  {item.name}
+                  {item.name.toUpperCase()}
                   {item.dropdown && (
                     <svg 
                       className={`w-3.5 h-3.5 ml-0.5 transition-transform duration-200 ${
@@ -365,7 +365,7 @@ const Header = () => {
                 {/* Dropdown */}
                 {item.dropdown && (
                   <div 
-                    className={`absolute top-[120%] mt-1 left-0 ${item.name === 'Contact-us' ? 'w-[180px]' : item.name === 'Projects' ? 'w-[320px]' : 'w-[240px]'} bg-[#FF5722] shadow-lg rounded-none transition-all duration-200 divide-y divide-white/60 ${item.name === 'Products' ? 'max-h-[400px] overflow-y-auto' : 'overflow-hidden'} ${
+                    className={`absolute top-[120%] mt-1 md:left-1/2 md:-translate-x-1/2 lg:left-0 lg:translate-x-0 ${item.name === 'Contact-us' ? 'w-[180px]' : item.name === 'Projects' ? 'w-[280px] md:w-[320px]' : 'w-[200px] md:w-[240px]'} bg-[#D84315] shadow-lg rounded-none transition-all duration-200 divide-y divide-white/60 ${item.name === 'Products' ? 'max-h-[400px] overflow-y-auto' : 'overflow-hidden'} ${
                       activeDropdown === item.name ? 'opacity-100 visible translate-y-0' : 'opacity-0 invisible translate-y-1'
                     }`}
                   >
@@ -376,7 +376,7 @@ const Header = () => {
                           href={dropdownItem.path}
                           target="_blank"
                           rel="noopener noreferrer"
-                          className={`block px-4 py-[8px] text-sm font-medium transition-colors text-white/90 hover:text-white hover:bg-[#c13d13]`}
+                          className={`block px-4 py-[8px] text-xs sm:text-[11px] md:text-[12px] font-medium transition-colors text-white/90 hover:text-white hover:bg-[#c13d13]`}
                         >
                           {dropdownItem.name}
                         </a>
@@ -384,7 +384,7 @@ const Header = () => {
                         <Link
                           key={dropdownItem.path}
                           href={dropdownItem.path}
-                          className={`block px-4 py-[8px] text-sm font-medium transition-colors
+                          className={`block px-4 py-[8px] text-xs sm:text-[11px] md:text-[12px] font-medium transition-colors
                             ${isUnderSection(dropdownItem.path) 
                               ? 'text-white bg-[#c13d13]' 
                               : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
@@ -420,7 +420,7 @@ const Header = () => {
                             {item.path !== '#' ? (
                               <Link
                                 href={item.path}
-                                className={`flex-grow py-3 px-3 text-base uppercase font-medium transition-colors rounded-l-lg ${
+                                className={`flex-grow py-3 px-3 text-sm uppercase font-medium transition-colors rounded-l-lg ${
                                   isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                                     ? 'text-[#D84315] bg-gray-50' 
                                     : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
@@ -430,17 +430,17 @@ const Header = () => {
                                   setMobileMenuOpen(false);
                                 }}
                               >
-                                {item.name}
+                                {item.name.toUpperCase()}
                               </Link>
                             ) : (
                               <div 
-                                className={`flex-grow py-3 px-3 text-base uppercase font-medium transition-colors ${
+                                className={`flex-grow py-3 px-3 text-sm uppercase font-medium transition-colors ${
                                   isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                                     ? 'text-[#D84315] bg-gray-50' 
                                     : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
                                 }`}
                               >
-                                {item.name}
+                                {item.name.toUpperCase()}
                               </div>
                             )}
                             <div 
