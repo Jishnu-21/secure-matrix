@@ -199,14 +199,14 @@ const Header = () => {
         { name: "SECURE COMPOSITE MESH", path: "/products/secure-composite-mesh/secure-composite-mesh" },
         { name: "SECURE PRO 3D", path: "/products/secure-pro-3d/secure-pro-3d" },
         { name: "SECURE PRO AURA 3D", path: "/products/secure-pro-aura-3d/secure-pro-aura-3d" },
-        { name: "SECURE PRO 3D", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "POLY SECURE", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "SECURE GEO COMPOSITE", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "SECURE SACK GABION", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "SECURE GEO CELL", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "SECURELINK-GEOGRID", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "GREEN SECUREMESH SYSTEM", path: "/products/double-securemesh-system/double-securemesh-system" },
-        { name: "SECURE GREEN TERRAIN MESH", path: "/products/double-securemesh-system/double-securemesh-system" },  
+        { name: "SECURE PRO 3D PLUS", path: "/products/secure-pro-3d-plus/secure-pro-3d-plus" },
+        { name: "POLY SECURE", path: "/products/poly-secure/poly-secure" },
+        { name: "SECURE GEO COMPOSITE", path: "/products/secure-geo-composite/secure-geo-composite" },
+        { name: "SECURE SACK GABION", path: "/products/secure-sack-gabion/secure-sack-gabion" },
+        { name: "SECURE GEO CELL", path: "/products/secure-geo-cell/secure-geo-cell" },
+        { name: "SECURELINK-GEOGRID", path: "/products/securelink-geogrid/securelink-geogrid" },
+        { name: "GREEN SECUREMESH SYSTEM", path: "/products/green-securemesh-system/green-securemesh-system" },
+        { name: "SECURE GREEN TERRAIN MESH", path: "/products/secure-green-terrain-mesh/secure-green-terrain-mesh" },  
   
       ]
     },
@@ -408,54 +408,85 @@ const Header = () => {
 
         {/* Mobile Navigation */}
         {isMobileMenuOpen && (
-          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: '70px' }}>
-            <div className="h-[calc(100vh-70px)] overflow-y-auto bg-white shadow-lg">
+          <div className="md:hidden fixed inset-0 bg-white/95 backdrop-blur-sm z-50" style={{ top: typeof window !== 'undefined' ? (window.innerWidth < 640 ? '70px' : '100px') : '70px' }}>
+            <div className="h-[calc(100vh-70px)] sm:h-[calc(100vh-100px)] overflow-y-auto bg-white shadow-lg">
               <div className="container mx-auto px-4">
                 <ul className="py-4">
                   {menuItems.map((item) => (
                     <div key={item.name} className="mb-2">
-                      <div
-                        className="relative"
-                        onClick={() => {
-                          if (item.dropdown) {
-                            setActiveDropdown(activeDropdown === item.name ? null : item.name);
-                          }
-                        }}
-                      >
-                        <Link
-                          href={item.path}
-                          className={`block py-3 px-3 text-base font-medium transition-colors rounded-lg inline-flex items-center justify-between w-full ${
-                            isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
-                              ? 'text-[#D84315] bg-gray-50' 
-                              : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
-                          }`}
-                          onClick={(e) => {
-                            if (item.dropdown && item.path === '#') {
-                              e.preventDefault();
-                            } else {
-                              setMobileMenuOpen(false);
-                            }
-                          }}
-                        >
-                          {item.name}
-                          {item.dropdown && (
-                            <svg 
-                              className={`w-4 h-4 transition-transform duration-200 ${
-                                activeDropdown === item.name ? 'rotate-180 transform' : ''
+                      <div className="relative">
+                        {item.dropdown ? (
+                          <div className="flex w-full">
+                            {item.path !== '#' ? (
+                              <Link
+                                href={item.path}
+                                className={`flex-grow py-3 px-3 text-base font-medium transition-colors rounded-l-lg ${
+                                  isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
+                                    ? 'text-[#D84315] bg-gray-50' 
+                                    : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
+                                }`}
+                                onClick={(e) => {
+                                  e.stopPropagation();
+                                  setMobileMenuOpen(false);
+                                }}
+                              >
+                                {item.name}
+                              </Link>
+                            ) : (
+                              <div 
+                                className={`flex-grow py-3 px-3 text-base font-medium transition-colors ${
+                                  isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
+                                    ? 'text-[#D84315] bg-gray-50' 
+                                    : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
+                                }`}
+                              >
+                                {item.name}
+                              </div>
+                            )}
+                            <div 
+                              className={`py-3 px-3 text-base font-medium transition-colors rounded-r-lg cursor-pointer ${
+                                isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
+                                  ? 'text-[#D84315] bg-gray-50' 
+                                  : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
                               }`}
-                              fill="none" 
-                              stroke="currentColor" 
-                              viewBox="0 0 24 24"
+                              onClick={(e) => {
+                                e.stopPropagation();
+                                setActiveDropdown(activeDropdown === item.name ? null : item.name);
+                              }}
                             >
-                              <path 
-                                strokeLinecap="round" 
-                                strokeLinejoin="round" 
-                                strokeWidth={2} 
-                                d="M19 9l-7 7-7-7"
-                              />
-                            </svg>
-                          )}
-                        </Link>
+                              <svg 
+                                className={`w-4 h-4 transition-transform duration-200 ${
+                                  activeDropdown === item.name ? 'rotate-180 transform' : ''
+                                }`}
+                                fill="none" 
+                                stroke="currentColor" 
+                                viewBox="0 0 24 24"
+                              >
+                                <path 
+                                  strokeLinecap="round" 
+                                  strokeLinejoin="round" 
+                                  strokeWidth={2} 
+                                  d="M19 9l-7 7-7-7"
+                                />
+                              </svg>
+                            </div>
+                          </div>
+                        ) : (
+                          <Link
+                            href={item.path}
+                            className={`block py-3 px-3 text-base font-medium transition-colors rounded-lg inline-flex items-center justify-between w-full ${
+                              isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
+                                ? 'text-[#D84315] bg-gray-50' 
+                                : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
+                            }`}
+                            onClick={(e) => {
+                              e.stopPropagation();
+                              setMobileMenuOpen(false);
+                            }}
+                          >
+                            {item.name}
+                          </Link>
+                        )}
 
                         {/* Mobile Dropdown */}
                         {item.dropdown && activeDropdown === item.name && (
@@ -470,7 +501,10 @@ const Header = () => {
                                   target="_blank"
                                   rel="noopener noreferrer"
                                   className={`block py-[8px] px-4 text-[14px] font-medium transition-colors text-white/90 hover:text-white hover:bg-[#c13d13]`}
-                                  onClick={() => setMobileMenuOpen(false)}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(false);
+                                  }}
                                 >
                                   {dropdownItem.name}
                                 </a>
@@ -483,7 +517,10 @@ const Header = () => {
                                       ? 'text-white bg-[#c13d13]' 
                                       : 'text-white/90 hover:text-white hover:bg-[#c13d13]'
                                     }`}
-                                  onClick={() => setMobileMenuOpen(false)}
+                                  onClick={(e) => {
+                                    e.stopPropagation();
+                                    setMobileMenuOpen(false);
+                                  }}
                                 >
                                   {dropdownItem.name}
                                 </Link>
