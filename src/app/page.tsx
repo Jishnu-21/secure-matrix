@@ -11,6 +11,7 @@ import LogoMarquee from './components/LogoMarquee';
 import LatestNews from './components/LatestNews';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
+import CompanyProfile from './components/CompanyProfile';
 
 const Page = () => {
     return (
@@ -18,6 +19,7 @@ const Page = () => {
             <Header />
             <main>
                 <Banner />
+                <CompanyProfile />
                 
                 <div className="relative bg-[#FAFAFA]">
                   {/* Main Content */}
