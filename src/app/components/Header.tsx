@@ -330,7 +330,7 @@ const Header = () => {
               >
                 <Link
                   href={item.path}
-                  className={`cursor-pointer text-black hover:text-[#D84315] text-sm font-crimson relative inline-flex items-center gap-0.5 ${
+                  className={`cursor-pointer text-black hover:text-[#D84315] text-base uppercase font-medium relative inline-flex items-center gap-0.5 ${
                     isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                       ? 'text-[#D84315] after:content-[""] after:absolute after:bottom-[-16px] after:left-0 after:w-full after:h-[3px] after:bg-[#D84315]'
                       : 'hover:after:content-[""] hover:after:absolute hover:after:bottom-[-16px] hover:after:left-0 hover:after:w-full hover:after:h-[3px] hover:after:bg-[#D84315]'
@@ -420,7 +420,7 @@ const Header = () => {
                             {item.path !== '#' ? (
                               <Link
                                 href={item.path}
-                                className={`flex-grow py-3 px-3 text-base font-medium transition-colors rounded-l-lg ${
+                                className={`flex-grow py-3 px-3 text-base uppercase font-medium transition-colors rounded-l-lg ${
                                   isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                                     ? 'text-[#D84315] bg-gray-50' 
                                     : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
@@ -434,7 +434,7 @@ const Header = () => {
                               </Link>
                             ) : (
                               <div 
-                                className={`flex-grow py-3 px-3 text-base font-medium transition-colors ${
+                                className={`flex-grow py-3 px-3 text-base uppercase font-medium transition-colors ${
                                   isActivePath(item.path) || (item.dropdown && isUnderSection('/' + item.name.toLowerCase())) 
                                     ? 'text-[#D84315] bg-gray-50' 
                                     : 'text-gray-800 hover:bg-gray-100 hover:text-[#D84315]'
