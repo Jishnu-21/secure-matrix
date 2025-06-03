@@ -68,27 +68,15 @@ const getSectionIcon = (title: string, size: number = 24) => {
 
 // Application data
 const sectorData = {
-  'agriculture-farming': {
-    title: 'Agriculture & Farming',
-    description: 'Geosynthetics play a pivotal role in Agriculture by enhancing soil stability, improving drainage, and preventing erosion. Our advanced solutions help increase agricultural productivity while promoting sustainable farming practices.',
+  'agricultural-purpose': {
+    title: 'Agricultural Purpose',
+    description: 'Agribusiness is a vital component of the global economy, underpinning the production, processing, and distribution of essential agricultural commodities. At Secure Matrix, we recognize the critical role this sector plays in ensuring global food security. Our engineering solutions are tailored to reinforce agribusiness operations, enhance resilience to climate change, and promote sustainable practices across the entire agricultural value chain.',
     mainImage: [
       '/images/sector/agriculture/1.jpg',
       '/images/sector/agriculture/2.jpg',
       '/images/sector/agriculture/3.jpg',
+      '/images/sector/agriculture/4.jpg',
     ],
-    leftSection: {
-      title: 'Agricultural Applications',
-      purpose: 'Enhances soil stability and improves drainage systems',
-      materials: 'Synthetic polymers (polyester, polyethylene, polypropylene) in woven, non-woven, and knitted forms',
-      installationSteps: [
-        'Clear area of vegetation and debris, level the ground',
-        'Measure and cut geosynthetic material with overlap allowance',
-        'Lay material on prepared surface with proper alignment',
-        'Secure edges using staples, pins, or burial method',
-        'Add and distribute soil/aggregate evenly',
-        'Compact covering material to specified density'
-      ]
-    },
     rightSection: {
       title: 'Agricultural Benefits',
       advantages: [
@@ -96,15 +84,12 @@ const sectorData = {
         'Facilitates efficient water movement',
         'Protects against wind and water erosion',
         'Reduces traditional stabilization costs',
-        'Maintains soil integrity'
-      ],
-      benefits: [
-        'Increased Agricultural Productivity',
+        'Maintains soil integrity',
+        'Increased Agricultural productivity',
         'Enhanced Soil Stability',
         'Improved Drainage Systems',
-        'Environmental Sustainability',
-        'Cost-Effective Solutions'
-      ]
+        'Cost Effective Solutions',
+      ],
     },
     galleryImages: [
       { url: '/images/application/agri-1.jpg', title: 'Soil Stabilization', link: 'soil-stabilization' },
@@ -114,42 +99,24 @@ const sectorData = {
       { url: '/images/application/agri-5.jpg', title: 'Water Management', link: 'water-management' },
     ]
   },
-  'construction-mining': {
-    title: 'Construction & Mining',
-    description: 'Geosynthetics are widely used in construction and mining for soil stabilization, erosion control, drainage, and reinforcement. Their application enhances the durability and efficiency of structures while reducing costs.',
+  'environmental-protection': {
+    title: 'Environmental Protection',
+    description: 'At Secure Matrix, we deliver advanced, engineered solutions for environmental protection and restoration, with a focus on waste management, land rehabilitation, and pollution mitigation. Our systems are designed to ensure landfill stability, control erosion, and reinforce soil integrity, supporting long-term sustainability while reducing ecological impact.',
     mainImage: [
-      '/images/sector/construction/1.jpg',
-      '/images/sector/construction/2.jpg',
-      '/images/sector/construction/3.jpg',
+      '/images/sector/environmental/1.jpg',
+      '/images/sector/environmental/2.jpg',
+      '/images/sector/environmental/3.jpg',
     ],
-    leftSection: {
-      title: 'Construction Applications',
-      purpose: 'Enhances structural stability and soil reinforcement',
-      materials: 'Polypropylene (PP), Polyester (PET), Polyethylene (PE), PVC for various applications',
-      installationSteps: [
-        'Clear debris, level the ground, and prepare the subgrade',
-        'Cut geotextiles or geogrids to required dimensions',
-        'Lay geosynthetic material with proper overlaps',
-        'Secure material with pins, staples, or weights',
-        'Add and compact soil, gravel, or aggregate layers',
-        'Ensure proper drainage and stability'
-      ]
-    },
     rightSection: {
-      title: 'Construction Benefits',
+      title: 'Environmental Benefits',
       advantages: [
-        'Strengthens weak soils',
-        'Supports heavy machinery loads',
-        'Reduces material expenses',
-        'Prevents clogging and erosion',
-        'Increases structure lifespan'
+        'Coastal Protection, Marine Structures & Pipeline Protection',
+        'Drainage of Structures',
+        'Environment, Dewatering & Landfills',
+        'Erosion Control',
+        'Landscape & Architecture',
+        'Retaining Walls & Soil Reinforcement'
       ],
-      benefits: [
-        'Safer Construction Sites',
-        'Cost-Effective Solutions',
-        'Environmental Protection',
-        'Longevity of Infrastructure'
-      ]
     },
     galleryImages: [
       { url: '/images/application/const-1.jpg', title: 'Soil Reinforcement', link: 'soil-reinforcement' },
@@ -158,48 +125,29 @@ const sectorData = {
       { url: '/images/application/const-4.jpg', title: 'Foundation Work', link: 'foundations' }
     ]
   },
-  'coastal-defence': {
-    title: 'Coastal Defence & River Water Stabilization',
-    description: 'Geosynthetics play a crucial role by preventing erosion, reinforcing embankments, and improving water flow management. These materials enhance durability, reduce maintenance costs, and provide long-term solutions to environmental challenges.',
+  'coastal-river-control-work': {
+    title: 'COASTAL & RIVER CONTROL WORK',
+    description: 'Secure Matrix has maintained a leading position in coastal and river engineering for over a year, beginning with the reconstruction of the River Reno’s banks. We offer bespoke solutions that combine project-specific strategies, environmentally sustainable materials, and state-of-the-art technologies—ensuring the seamless integration of human activities with the natural environment.',
     mainImage: [
       '/images/sector/coastal/1.jpg',
       '/images/sector/coastal/2.jpg',
       '/images/sector/coastal/3.jpg',
       '/images/sector/coastal/4.jpg',
-      '/images/sector/coastal/5.jpg',
-      '/images/sector/coastal/6.jpg',
-      '/images/sector/coastal/7.jpg',
-      '/images/sector/coastal/8.jpg',
     ],
-    leftSection: {
-      title: 'Coastal Protection Systems',
-      purpose: 'Prevents shoreline erosion and reinforces water management structures',
-      materials: 'Geotextiles (Woven & Non-Woven), Geogrids, Geomembranes, Geobags & Geotubes',
-      installationSteps: [
-        'Clear debris and level surface along coastline',
-        'Lay geotextiles for separation and filtration',
-        'Secure material with weights or anchors',
-        'Place geogrids in reinforcement areas',
-        'Fill geobags with sand or soil',
-        'Compact materials and ensure alignment'
-      ]
-    },
     rightSection: {
       title: 'Coastal Defence Benefits',
       advantages: [
-        'Protects shorelines from waves',
-        'Reinforces levees and embankments',
-        'Reduces sediment displacement',
-        'Minimizes hard structures',
-        'Supports natural ecosystems'
+        'Protects shorelines from waves                           ',
+        'Reinforces leaves and embankments                       ',
+        'Reduces sediment displacement                           ',
+        'Minimizes hard structures                                ',
+        'Supports natural ecosystems                             ',
+        'Long-Term Protection                                  ',
+        'Reduced Maintenance Costs                             ',
+        'Improved Water Flow Regulation                        ',
+        'Resilient Against Climate Change                      ',
+        'Aesthetic and Ecological Balance                      '
       ],
-      benefits: [
-        'Long-Term Protection',
-        'Reduced Maintenance Costs',
-        'Improved Water Flow Regulation',
-        'Resilient Against Climate Change',
-        'Aesthetic and Ecological Balance'
-      ]
     },
     galleryImages: [
       { url: '/images/application/coastal-1.jpg', title: 'Shoreline Protection', link: 'shoreline' },
@@ -208,48 +156,22 @@ const sectorData = {
       { url: '/images/application/coastal-4.jpg', title: 'Embankment Protection', link: 'embankment' }
     ]
   },
-  'real-estate': {
-    title: 'Real Estate and Urban Development',
-    description: 'Geosynthetics play a vital role in enhancing soil stability, drainage, and sustainability in urban development. They are used in roads, building foundations, landscaping, and drainage systems, ensuring long-term durability and cost-effectiveness.',
+  'emergency-flood': {
+    title: 'Emergency Flood',
+    description: 'Secure Matrix provides specialized solutions to mitigate floods, landslides, and other natural disasters, drawing on over a century of expertise in emergency interventions. Our approach integrates rapid response with long-term resilience strategies, ensuring the safety of communities and the protection of critical infrastructure across both urban and rural environments.',
     mainImage: [
-      '/images/sector/realestate/1.jpg',
-      '/images/sector/realestate/2.jpg',
-      '/images/sector/realestate/3.jpg',
-      '/images/sector/realestate/4.jpg',
-      '/images/sector/realestate/5.jpg',
-      '/images/sector/realestate/6.jpg',
-      '/images/sector/realestate/7.jpg',
-      '/images/sector/realestate/8.jpg',
+      '/images/sector/flood/1.jpg',
+      '/images/sector/flood/2.jpg',
+      '/images/sector/flood/3.jpg',
     ],
-    leftSection: {
-      title: 'Urban Development Applications',
-      purpose: 'Enhances infrastructure stability and sustainability',
-      materials: 'Geotextiles, Geogrids, Geomembranes, Geocells, Drainage Geocomposites',
-      installationSteps: [
-        'Clear area and level the ground',
-        'Lay geotextiles for separation',
-        'Position geogrids for reinforcement',
-        'Add and compact fill materials',
-        'Install drainage systems',
-        'Ensure proper alignment'
-      ]
-    },
+
     rightSection: {
-      title: 'Urban Development Benefits',
+      title: 'Emergency Flood Benefits',
       advantages: [
-        'Prevents soil erosion',
-        'Strengthens infrastructure',
-        'Ensures efficient drainage',
-        'Reduces maintenance costs',
-        'Supports green initiatives'
+        'Erosion Control',
+        'Hydraulic Works',
+        'Retaining Walls & Soil Reinforcement',
       ],
-      benefits: [
-        'Sustainable Urban Growth',
-        'Eco-Friendly Solutions',
-        'Cost-Effective Construction',
-        'Enhanced Safety & Stability',
-        'Aesthetic & Functional Integration'
-      ]
     },
     galleryImages: [
       { url: '/images/application/urban-1.jpg', title: 'Road Construction', link: 'roads' },
@@ -258,47 +180,112 @@ const sectorData = {
       { url: '/images/application/urban-4.jpg', title: 'Green Spaces', link: 'green-spaces' }
     ]
   },
-  'defence': {
-    title: 'Defence and Security',
-    description: 'Geosynthetics play a crucial role in enhancing fortifications, military infrastructure, and protective barriers. These materials provide rapid deployment solutions for military bases, bunkers, roads, and flood control, ensuring protection, durability, and operational efficiency.',
+  'water-resources-irrigation': {
+    title: 'WATER RESOURCES & IRRIGATION',
+    description: 'River training works typically encompass the construction of revetments, reinforced soil slopes and walls, gabion retaining walls, groynes, scour protection systems, riverbank protection and stabilization measures, as well as channel widening. At Secure Matrix, we design cost-effective solutions tailored to project-specific requirements and site conditions, utilizing our specialized range of engineered products.',
+    mainImage: [
+      '/images/sector/water/1.jpg',
+      '/images/sector/water/2.jpg',
+      '/images/sector/water/3.jpg',
+      '/images/sector/water/4.jpg',
+    ],
+    rightSection: {
+      title: 'Water Resources Benefits',
+      advantages: [
+        'Enhanced Stability and Erosion Control',
+        'Flexibility and Adaptability',
+        'Natural Aesthetics and Environmental Benefits',
+        'Efficient Water Management',
+        'Long Lifespan and Low Maintenance',
+        'Durability and Resistance',
+        'Environmental Friendliness',
+        'Cost-Effectiveness',
+        'Aesthetic and Ecological Balance',
+      ],
+    },
+    galleryImages: [
+      { url: '/images/application/defence-1.jpg', title: 'Military Roads', link: 'military-roads' },
+      { url: '/images/application/defence-2.jpg', title: 'Protective Barriers', link: 'barriers' },
+      { url: '/images/application/defence-3.jpg', title: 'Bunker Systems', link: 'bunkers' },
+      { url: '/images/application/defence-4.jpg', title: 'Field Fortifications', link: 'fortifications' }
+    ]
+  },
+  'transportation-infrastructure': {
+    title: 'TRANSPORTATION INFRASTRUCTURE',
+    description: 'Secure Matrix provides advanced, sustainable solutions for the development and enhancement of transportation infrastructure across multiple sectors, including roads, railways, airports, bridges, and tunnels. Through our specialized expertise, we ensure the delivery of resilient and efficient transport systems that facilitate reliable connectivity and contribute to the creation of safer, more sustainable urban and rural environments.',
+    mainImage: [
+      '/images/sector/transportation/1.jpg',
+      '/images/sector/transportation/2.jpg',
+      '/images/sector/transportation/3.jpg',
+    ],
+    rightSection: {
+      title: 'Transportation Infrastructure Benefits',
+      advantages: [
+        'Basal Reinforcement',
+        'Drainage of Structures',
+        'Erosion Control',
+        'Fencing & Wire',
+        'Hydraulic Works',
+        'Retaining Walls & Soil Reinforcement',
+        'Rockfall Protection & Snow Barriers',
+        'Safety & Noise Barriers',
+        'Soil Stabilisation & Pavements',
+        'Tunnelling',
+      ],
+    },
+    galleryImages: [
+      { url: '/images/application/defence-1.jpg', title: 'Military Roads', link: 'military-roads' },
+      { url: '/images/application/defence-2.jpg', title: 'Protective Barriers', link: 'barriers' },
+      { url: '/images/application/defence-3.jpg', title: 'Bunker Systems', link: 'bunkers' },
+      { url: '/images/application/defence-4.jpg', title: 'Field Fortifications', link: 'fortifications' }
+    ]
+  },
+  'defence-security': {
+    title: 'DEFENCE & SECURITY',
+    description: 'The defence and security sector face significant global threats, such as hostile vehicle breaches and explosive attacks. Effective protection is vital to ensure the safety of military personnel, civilians, and essential infrastructure. Secure Matrix delivers cutting-edge solutions tailored to address these critical security challenges.',
     mainImage: [
       '/images/sector/defence/1.jpg',
       '/images/sector/defence/2.jpg',
       '/images/sector/defence/3.jpg',
       '/images/sector/defence/4.jpg',
-      '/images/sector/defence/5.jpg',
-      '/images/sector/defence/6.jpg',
-      '/images/sector/defence/7.jpg',
     ],
-    leftSection: {
-      title: 'Military Applications',
-      purpose: 'Reinforces military infrastructure and protective barriers',
-      materials: 'Geotextiles, Geogrids, Geomembranes, Geocells, Ballistic Geosynthetics',
-      installationSteps: [
-        'Clear area for construction',
-        'Deploy geotextiles for stabilization',
-        'Install geogrids for reinforcement',
-        'Backfill and compact layers',
-        'Apply waterproofing materials',
-        'Install protective barriers'
-      ]
-    },
     rightSection: {
-      title: 'Defence Benefits',
+      title: 'Defence Security Benefits',
       advantages: [
-        'Quick installation capability',
-        'High mobility and transportability',
-        'Extreme condition resistance',
-        'Enhanced blast protection',
-        'Cost-effective solutions'
-      ],
-      benefits: [
+        'Quick installation capability                                           ',
+        'High mobility ',
+        'Extreme condition resistance                                          ',
+        'Enhanced blast protection                                                ',
+        'Cost-effective solutions                                                   ',
         'Stronger Military Infrastructure',
         'Increased Safety for Personnel',
         'Sustainable & Low Maintenance',
         'Tactical Advantage',
-        'Versatile Application'
-      ]
+        'Versatile Application',
+      ],
+    },
+    galleryImages: [
+      { url: '/images/application/defence-1.jpg', title: 'Military Roads', link: 'military-roads' },
+      { url: '/images/application/defence-2.jpg', title: 'Protective Barriers', link: 'barriers' },
+      { url: '/images/application/defence-3.jpg', title: 'Bunker Systems', link: 'bunkers' },
+      { url: '/images/application/defence-4.jpg', title: 'Field Fortifications', link: 'fortifications' }
+    ]
+  },
+  'mining': {
+    title: 'MINING',
+    description: 'The mining industry faces growing demands to enhance efficiency and safety while reducing environmental and social impacts. Secure Matrix offers innovative solutions that optimize all phases of the mining lifecycle, ensuring operational safety and sustainability through the application of advanced engineering technologies and methodologies.',
+    mainImage: [
+      '/images/sector/mining/1.jpg',
+    ],
+    rightSection: {
+      title: 'Mining Benefits',
+      advantages: [
+        'Flexibility and Adaptability',
+        'Providing a long-lasting solution',
+        'Drainage of Structures',
+        'Erosion Control',
+        'Tunnelling',
+      ],
     },
     galleryImages: [
       { url: '/images/application/defence-1.jpg', title: 'Military Roads', link: 'military-roads' },
@@ -406,9 +393,10 @@ export default function SectorPage({ params }: PageParams) {
                       fill
                       priority={index === 0}
                       style={{
-                        objectFit: 'cover',
+                        objectFit: 'contain',
                         opacity: currentImageIndex === index ? 1 : 0,
                         transition: 'opacity 0.5s ease-in-out'
+                      
                       }}
                     />
                   ))}
@@ -461,48 +449,39 @@ export default function SectorPage({ params }: PageParams) {
           </div>
         </section>
 
-        {/* Two Column Features Section */}
-        <div className="w-full bg-white py-8 sm:py-12 md:py-16">
-          <div className="w-full border-t-2 border-[#D84315] relative">
-            {/* Vertical divider line - shown only on md and up */}
-            <div className="absolute top-[-2px] bottom-[-2px] left-1/2 w-[2px] bg-[#D84315] hidden md:block" style={{ transform: 'translateX(-1px)' }}></div>
-            
+        {/* Single Column Features Section */}
+        <div className="w-full bg-white py-12 sm:py-16 md:py-20">
+          <div className="w-full border-t-2 border-[#D84315] relative">            
             <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid md:grid-cols-2 gap-12 md:gap-0 pt-8 pb-8">
-                {/* Left Column */}
-                <div className="bg-white md:pr-8 lg:pr-16">
-                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F8D7D0] flex items-center justify-center flex-shrink-0">
-                      {getSectionIcon(data.leftSection.title, 32)}
-                    </div>
-                    <div className="flex-grow">
-                      <h2 className="text-xl sm:text-2xl font-bold text-black mb-6">{data.leftSection.title}</h2>
-                      <div className="space-y-4">
-                        {Object.entries(data.leftSection)
-                          .filter(([key]) => key !== 'title')
-                          .map(([key, value]) => renderContent(key, value))}
-                      </div>
-                    </div>
-                  </div>
+              <div className="pt-12 pb-12">
+                {/* Section Title */}
+                <div className="text-center mb-10">
+                  <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 inline-flex items-center justify-center">
+                    Advantages
+                  </h2>
+                  <div className="w-24 h-1 bg-[#D84315] mx-auto"></div>
                 </div>
-
-                <hr className="md:hidden border-t-2 border-gray-200 my-4 mx-2" />
-
-                {/* Right Column */}
-                <div className="bg-white md:pl-8 lg:pl-16">
-                  <div className="flex flex-col sm:flex-row items-start gap-4 sm:gap-6">
-                    <div className="w-12 h-12 sm:w-16 sm:h-16 rounded-full bg-[#F8D7D0] flex items-center justify-center flex-shrink-0">
-                      {getSectionIcon(data.rightSection.title, 32)}
+                
+                {/* Single Column Content */}
+                <div className="bg-white max-w-4xl mx-auto">
+                  {/* Display advantages from rightSection */}
+                  {data.rightSection && data.rightSection.advantages && (
+                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+                      {data.rightSection.advantages.map((item: string, index: number) => (
+                        <div 
+                          key={index} 
+                          className="flex items-start p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-[#D84315]"
+                        >
+                          <div className="mr-4 mt-1">
+                            {getContentIcon(item)}
+                          </div>
+                          <div className="flex-1">
+                            <p className="text-gray-800 text-lg font-medium">{item}</p>
+                          </div>
+                        </div>
+                      ))}
                     </div>
-                    <div className="flex-grow">
-                      <h2 className="text-xl sm:text-2xl font-bold text-black mb-6">{data.rightSection.title}</h2>
-                      <div className="space-y-4">
-                        {Object.entries(data.rightSection)
-                          .filter(([key]) => key !== 'title')
-                          .map(([key, value]) => renderContent(key, value))}
-                      </div>
-                    </div>
-                  </div>
+                  )}
                 </div>
               </div>
             </div>
@@ -511,47 +490,7 @@ export default function SectorPage({ params }: PageParams) {
           <div className="w-full border-b-2 border-[#D84315]" style={{ marginTop: '-2px' }}></div>
         </div>
 
-        {/* Gallery Section */}
-        {data.galleryImages && data.galleryImages.length > 0 && (
-          <section className="py-12 sm:py-16 md:py-20 bg-gray-50">
-            <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-              <h2 className="text-2xl sm:text-3xl font-bold text-center mb-8 sm:mb-12">Applications</h2>
-              <div className="relative">
-                <div className="flex overflow-x-auto pb-4 snap-x snap-mandatory scrollbar-hide">
-                  <div className="flex gap-6 sm:gap-8 mx-auto">
-                    {data.galleryImages.map((image, index) => (
-                      <Link 
-                        key={index} 
-                        href={`/applications/${image.link}`} 
-                        className="group flex-none w-[calc(33.333%-16px)] min-w-[280px] max-w-[400px]"
-                      >
-                        <div className="relative aspect-[4/3] overflow-hidden rounded-lg shadow-md transition-transform duration-300 group-hover:scale-[1.02]">
-                          <Image
-                            src={image.url}
-                            alt={image.title}
-                            fill
-                            className="object-cover transition-transform duration-300 group-hover:scale-110"
-                          />
-                          <div className="absolute inset-0 bg-black bg-opacity-40 transition-opacity duration-300 group-hover:bg-opacity-30"></div>
-                          <div className="absolute inset-0 flex items-center justify-center">
-                            <h3 className="text-white text-lg sm:text-xl font-semibold text-center px-4">{image.title}</h3>
-                          </div>
-                        </div>
-                      </Link>
-                    ))}
-                  </div>
-                </div>
-                {/* Scroll indicators */}
-                {data.galleryImages.length > 3 && (
-                  <>
-                    <div className="absolute left-0 top-0 bottom-4 w-8 bg-gradient-to-r from-gray-50 pointer-events-none"></div>
-                    <div className="absolute right-0 top-0 bottom-4 w-8 bg-gradient-to-l from-gray-50 pointer-events-none"></div>
-                  </>
-                )}
-              </div>
-            </div>
-          </section>
-        )}
+ 
       </div>
       <Footer />
     </main>

@@ -55,6 +55,23 @@ const Header = () => {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
 
+  // Function to handle smooth scrolling to sections
+  const scrollToSection = (elementId: string) => {
+    const element = document.getElementById(elementId);
+    
+    if (element) {
+      // Add offset to account for fixed header height
+      const headerHeight = 90; // Adjust based on your header height
+      const elementPosition = element.getBoundingClientRect().top;
+      const offsetPosition = elementPosition + window.pageYOffset - headerHeight;
+      
+      window.scrollTo({
+        top: offsetPosition,
+        behavior: 'smooth'
+      });
+    }
+  };
+
   const handleScroll = () => {
     if (typeof window !== "undefined") {
       const currentScrollY = window.scrollY;
@@ -99,6 +116,21 @@ const Header = () => {
                 ? "text-[#D84315] bg-gray-50" 
                 : "text-gray-800 hover:text-[#D84315]"
               }`}
+              onClick={(e) => {
+                // Handle smooth scrolling for hash links
+                if (item.path.includes('#')) {
+                  e.preventDefault();
+                  const elementId = item.path.split('#')[1];
+                  if (elementId) {
+                    // If it's a different page, navigate first then scroll
+                    if (item.path.startsWith('/') && !item.path.startsWith('/#')) {
+                      window.location.href = item.path;
+                    } else {
+                      scrollToSection(elementId);
+                    }
+                  }
+                }
+              }}
             >
               {item.name}
             </Link>
@@ -521,6 +553,20 @@ const Header = () => {
                                   onClick={(e) => {
                                     e.stopPropagation();
                                     setMobileMenuOpen(false);
+                                    
+                                    // Handle smooth scrolling for hash links
+                                    if (dropdownItem.path.includes('#')) {
+                                      e.preventDefault();
+                                      const elementId = dropdownItem.path.split('#')[1];
+                                      if (elementId) {
+                                        // If it's a different page, navigate first then scroll
+                                        if (dropdownItem.path.startsWith('/') && !dropdownItem.path.startsWith('/#')) {
+                                          window.location.href = dropdownItem.path;
+                                        } else {
+                                          scrollToSection(elementId);
+                                        }
+                                      }
+                                    }
                                   }}
                                 >
                                   {dropdownItem.name}
