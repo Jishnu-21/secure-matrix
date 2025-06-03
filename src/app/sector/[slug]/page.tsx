@@ -214,8 +214,8 @@ const sectorData = {
     title: 'TRANSPORTATION INFRASTRUCTURE',
     description: 'Secure Matrix provides advanced, sustainable solutions for the development and enhancement of transportation infrastructure across multiple sectors, including roads, railways, airports, bridges, and tunnels. Through our specialized expertise, we ensure the delivery of resilient and efficient transport systems that facilitate reliable connectivity and contribute to the creation of safer, more sustainable urban and rural environments.',
     mainImage: [
-      '/images/sector/transportation/1.jpg',
-      '/images/sector/transportation/2.jpg',
+      '/images/sector/transportation/1.png',
+      '/images/sector/transportation/2.png',
       '/images/sector/transportation/3.jpg',
     ],
     rightSection: {
