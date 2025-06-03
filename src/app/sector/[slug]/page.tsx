@@ -381,12 +381,12 @@ export default function SectorPage({ params }: PageParams) {
       <div className="flex-grow w-full">
         {/* Main Image and Title Section */}
         <section className="mt-5 sm:mt-8 md:mt-10 top-20 sm:top-28 md:top-40 relative">
-          <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-            <div className="relative w-full h-[300px] sm:h-[400px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg">
+          <div className="max-w-[1800px] mx-auto px-3 sm:px-6 lg:px-8">
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-md">
               {Array.isArray(data?.mainImage) ? (
                 <>
                   {data.mainImage.map((image, index) => (
-                    <div key={index} className="absolute inset-0 w-full h-full transition-opacity duration-500" style={{
+                    <div key={index} className="absolute inset-0 w-full h-full transition-opacity duration-500 bg-gray-100" style={{
                       opacity: currentImageIndex === index ? 1 : 0,
                     }}>
                       <Image
@@ -405,7 +405,7 @@ export default function SectorPage({ params }: PageParams) {
                   {/* Left Arrow */}
                   <button 
                     onClick={() => setCurrentImageIndex(prev => prev === 0 ? data.mainImage.length - 1 : prev - 1)}
-                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
+                    className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
@@ -414,7 +414,7 @@ export default function SectorPage({ params }: PageParams) {
                   {/* Right Arrow */}
                   <button 
                     onClick={() => setCurrentImageIndex(prev => prev === data.mainImage.length - 1 ? 0 : prev + 1)}
-                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
+                    className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-8 h-8 sm:w-10 sm:h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
                   >
                     <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
@@ -422,12 +422,12 @@ export default function SectorPage({ params }: PageParams) {
                   </button>
                   
                   {/* Slider Controls */}
-                  <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-3">
+                  <div className="absolute bottom-3 sm:bottom-4 left-0 right-0 flex justify-center space-x-2 sm:space-x-3">
                     {data.mainImage.map((_, index) => (
                       <button
                         key={index}
                         onClick={() => setCurrentImageIndex(index)}
-                        className={`w-3 h-3 rounded-full transition-colors ${currentImageIndex === index ? 'bg-[#D84315]' : 'bg-white bg-opacity-70'}`}
+                        className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${currentImageIndex === index ? 'bg-[#D84315]' : 'bg-white bg-opacity-70'}`}
                         aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
@@ -445,17 +445,17 @@ export default function SectorPage({ params }: PageParams) {
             </div>
             
             {/* Location Information */}
-            {Array.isArray(data?.mainImage) && (
-              <div className="mt-4 text-center bg-gray-50 p-3 rounded-md border border-gray-200 shadow-sm">
-                <p className="text-base md:text-lg font-bold text-black">
-                  <span className="font-semibold"></span> {data.mainImage[currentImageIndex].location}
+            {Array.isArray(data?.mainImage) && data.mainImage[currentImageIndex].location && (
+              <div className="mt-3 sm:mt-4 text-center bg-gray-50 py-2 px-3 sm:p-3 rounded-md border border-gray-200 shadow-sm">
+                <p className="text-sm sm:text-base md:text-lg font-bold text-black">
+                  {data.mainImage[currentImageIndex].location}
                 </p>
               </div>
             )}
             
-            <div className="mt-8 sm:mt-10 md:mt-12 mb-16 sm:mb-24 md:mb-32">
-              <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-black mb-4 sm:mb-6 px-4">{data.title}</h1>
-              <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-4">
+            <div className="mt-6 sm:mt-8 md:mt-10 mb-12 sm:mb-16 md:mb-24">
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-black mb-3 sm:mb-4 md:mb-6 px-3 sm:px-4">{data.title}</h1>
+              <p className="text-sm sm:text-base md:text-lg text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-3 sm:px-4">
                 {data.description}
               </p>
             </div>
@@ -466,41 +466,41 @@ export default function SectorPage({ params }: PageParams) {
         <div className="w-full bg-white py-12 sm:py-16 md:py-20">
           <div className="w-full border-t-2 border-[#D84315] relative">            
             <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="pt-12 pb-12">
+              <div className="pt-6 pb-6 sm:pt-8 sm:pb-8">
                 {/* Section Title */}
-                <div className="text-center mb-10">
+                <div className="text-center mb-4 sm:mb-6">
                   <h2 className="text-2xl sm:text-3xl md:text-4xl font-bold text-gray-800 mb-4 inline-flex items-center justify-center">
                     Advantages
                   </h2>
                   <div className="w-24 h-1 bg-[#D84315] mx-auto"></div>
                 </div>
-                
-                {/* Single Column Content */}
-                <div className="bg-white max-w-4xl mx-auto">
-                  {/* Display advantages from rightSection */}
-                  {data.rightSection && data.rightSection.advantages && (
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {data.rightSection.advantages.map((item: string, index: number) => (
-                        <div 
-                          key={index} 
-                          className="flex items-start p-5 bg-gray-50 rounded-lg shadow-sm hover:shadow-md transition-shadow duration-300 border-l-4 border-[#D84315]"
-                        >
-                          <div className="mr-4 mt-1">
-                            {getContentIcon(item)}
-                          </div>
-                          <div className="flex-1">
-                            <p className="text-gray-800 text-lg font-medium">{item}</p>
-                          </div>
-                        </div>
-                      ))}
-                    </div>
-                  )}
-                </div>
               </div>
             </div>
           </div>
-          {/* Bottom border line */}
-          <div className="w-full border-b-2 border-[#D84315]" style={{ marginTop: '-2px' }}></div>
+          
+          {/* Advantages Section */}
+          <div className="py-4 sm:py-6 md:py-8 bg-gray-50">
+            <div className="max-w-7xl mx-auto px-3 sm:px-6 lg:px-8">
+              <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8 max-w-7xl mx-auto">
+                {data.rightSection.advantages.map((advantage, index) => (
+                  <div key={index} className="bg-white rounded-lg shadow-md overflow-hidden border-l-4 border-[#D84315] p-4 sm:p-6">
+                    <div className="flex">
+                      <div className="flex-shrink-0 mr-3 sm:mr-4">
+                        <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-orange-100 flex items-center justify-center">
+                          <span className="text-[#D84315] text-lg sm:text-xl inline-flex items-center justify-center">
+                            {getContentIcon(advantage)}
+                          </span>
+                        </div>
+                      </div>
+                      <div className="flex items-center">
+                        <h3 className="text-base sm:text-lg font-semibold text-gray-900">{advantage}</h3>
+                      </div>
+                    </div>
+                  </div>
+                ))}
+              </div>
+            </div>
+          </div>
         </div>
 
  
