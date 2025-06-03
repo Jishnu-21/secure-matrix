@@ -22,10 +22,10 @@ const CompanyProfile = () => {
       </div>
       <div className="container mx-auto max-w-[1400px] relative z-10">
         <div className="max-w-[900px] mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-8 md:mb-10 relative inline-block w-full">
-            <span className="relative z-10 text-black">COMPANY PROFILE</span>
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#D84315] rounded-full"></span>
-          </h2>
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">COMPANY PROFILE</h2>
+          <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
+        </div>
           
           <div className="mb-8 md:mb-12 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <p className="text-base md:text-lg mb-4 text-gray-800">

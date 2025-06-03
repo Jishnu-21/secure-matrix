@@ -83,9 +83,6 @@ const Features = () => {
                 <br className="hidden sm:block" />
                 <span className="text-[#1A5632]">Engineering the Future of Safety.</span>
               </h2>
-              <p className="text-gray-600 text-opacity-80 text-sm sm:text-base mb-8 md:mb-12 leading-relaxed">
-                We Secure Matrix Constro Engineering Solutions, are manufacturers of innovative construction materials that enhance security. Since 2017, we have specialized in manufacturing and supplying a wide range of products, including PVC-coated wire, gabion mattresses, fencing systems, and wall finishing solutions. Our focus is on delivering innovative, sustainable, and reliable materials that meet the needs of both residential and industrial projects. With a commitment to integrity and customer satisfaction, we strive to be a trusted partner in the construction industry. 
-              </p>
 
               {/* Features Grid */}
               <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 md:gap-8">
