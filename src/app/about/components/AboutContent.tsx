@@ -5,30 +5,28 @@ const AboutContent = () => {
     <section className="py-16 px-4 relative z-20 -mt-10">
       <div className="container mx-auto max-w-[1400px] min-h-[800px] bg-white p-12 rounded-lg shadow-lg">
         <div className="space-y-20">
-          <div>
-            <h2 className="text-3xl font-medium mb-4 text-center text-black">Who we are </h2>
+          <div id="company-history">
+            <h2 className="text-3xl font-medium mb-4 text-center text-black">Company History </h2>
             <div className="w-20 h-0.5 bg-gray-300 mx-auto mb-8"></div>
             <div className="max-w-[800px] mx-auto">
               <p className="text-gray-700 text-base leading-relaxed">
-              We are a leading provider of innovative, sustainable, and high-quality solutions for civil, geotechnical, and environmental infrastructural challenges. We specialize in designing, developing, and implementing durable and eco-friendly solutions that meet the complex needs of our clients.
+              We at Secure Matrix Constro Engineering Solutions are manufacturers of innovative construction materials designed to enhance security and durability. Since 2017, we have specialized in the production and supply of a wide range of products, including PVC-coated wire, gabion mattresses, fencing systems, and wall finishing solutions.
               <br></br>
               <br></br>
-              Our commitment to excellence and customer satisfaction drives us to deliver timely, high-quality services. We consistently push the boundaries of engineering and construction for every small or large-scale project, making sure our expertise and dedication ensure your vision becomes a remarkable reality!
-              </p>
+              Our focus is on delivering innovative, sustainable, and reliable materials that cater to the needs of both residential and industrial projects. Guided by a strong commitment to integrity and customer satisfaction, we aim to be a trusted partner in the construction industry.              </p>
             </div>
           </div>
 
-          <div>
+          <div id="vision">
             <h2 className="text-3xl font-medium mb-4 text-center text-black">Our Vision </h2>
             <div className="w-20 h-0.5 bg-gray-300 mx-auto mb-8"></div>
             <div className="max-w-[800px] mx-auto">
               <p className="text-gray-700 text-base leading-relaxed">
-               We envision taking our technologically advanced solutions globally benefiting it all. We strive to to be a global leader in engineering solutions, committed to innovation and excellence, a company that consistently pushes the boundaries setting new industry standards while exceeding the expectations of our clients through sustainable and high-quality offerings.
-              </p>
+              We envision taking our technologically advanced solutions to the global stage, benefiting industries and communities worldwide. Our goal is to become a global leader in engineering solutions, driven by a commitment to innovation and excellence. We aim to consistently push the boundaries, set new industry standards, and exceed client expectations through sustainable, high-quality offerings.              </p>
             </div>
           </div>
 
-          <div>
+          <div id="mission">
             <h2 className="text-3xl font-medium mb-4 text-center text-black">Our Mission 
             </h2>
             <div className="w-20 h-0.5 bg-gray-300 mx-auto mb-8"></div>

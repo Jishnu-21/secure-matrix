@@ -6,7 +6,7 @@ import { MdConstruction, MdPsychology, MdSecurity, MdFoundation, MdEco, MdVerifi
 
 const CompanyProfile = () => {
   return (
-    <section className="py-8 md:py-12 lg:py-16 bg-white relative overflow-hidden">
+    <section id="company-profile" className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 relative overflow-hidden bg-white">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-5">
         <div 
@@ -20,7 +20,7 @@ const CompanyProfile = () => {
           }}
         />
       </div>
-      <div className="container mx-auto px-4 relative z-10">
+      <div className="container mx-auto max-w-[1400px] relative z-10">
         <div className="max-w-[900px] mx-auto">
           <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-8 md:mb-10 relative inline-block w-full">
             <span className="relative z-10 text-black">COMPANY PROFILE</span>

@@ -152,16 +152,16 @@ const Header = () => {
   const menuItems: MenuItem[] = [
     { name: "Home", path: "/" ,
       dropdown:[
-        {name:"COMPANY PROFILE",path: '/profile'},
-        {name:"CERTIFICATIONS",path: '/certifications'},
+        {name:"COMPANY PROFILE",path: '/#company-profile'},
+        {name:"CERTIFICATIONS",path: '/#certifications'},
       ]
     },
     { name: "About", path: "/about",
       dropdown:[
-        {name:"COMPANY HISTORY",path:'/companu-history'},
-        {name:"VISION",path:'/vision'},
-        {name:"MISSION",path:'/mission'},
-        {name:"PHOTOS",path:'/photos'},
+        {name:'COMPANY HISTORY',path:'/about#company-history'},
+        {name:'VISION',path:'/about#vision'},
+        {name:'MISSION',path:'/about#mission'},
+        {name:'PHOTOS',path:'/photos'},
       ]
      },
  

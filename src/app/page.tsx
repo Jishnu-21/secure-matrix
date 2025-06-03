@@ -12,6 +12,7 @@ import LatestNews from './components/LatestNews';
 import CTA from './components/CTA';
 import Footer from './components/Footer';
 import CompanyProfile from './components/CompanyProfile';
+import Certifications from './components/Certifications';
 
 const Page = () => {
     return (
@@ -20,6 +21,7 @@ const Page = () => {
             <main>
                 <Banner />
                 <CompanyProfile />
+                <Certifications />
                 
                 <div className="relative bg-[#FAFAFA]">
                   {/* Main Content */}
