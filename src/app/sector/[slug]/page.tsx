@@ -72,10 +72,10 @@ const sectorData = {
     title: 'Agricultural Purpose',
     description: 'Agribusiness is a vital component of the global economy, underpinning the production, processing, and distribution of essential agricultural commodities. At Secure Matrix, we recognize the critical role this sector plays in ensuring global food security. Our engineering solutions are tailored to reinforce agribusiness operations, enhance resilience to climate change, and promote sustainable practices across the entire agricultural value chain.',
     mainImage: [
-      '/images/sector/agriculture/1.jpg',
-      '/images/sector/agriculture/2.jpg',
-      '/images/sector/agriculture/3.jpg',
-      '/images/sector/agriculture/4.jpg',
+      { url: '/images/sector/agriculture/1.jpg', location: '' },
+      { url: '/images/sector/agriculture/2.jpg', location: '' },
+      { url: '/images/sector/agriculture/3.jpg', location: 'RATNAGIRI SITE, MAHARASHTRA' },
+      { url: '/images/sector/agriculture/4.jpg', location: 'KD INFRA VALSAD,GUJRAT' },
     ],
     rightSection: {
       title: 'Agricultural Benefits',
@@ -103,9 +103,9 @@ const sectorData = {
     title: 'Environmental Protection',
     description: 'At Secure Matrix, we deliver advanced, engineered solutions for environmental protection and restoration, with a focus on waste management, land rehabilitation, and pollution mitigation. Our systems are designed to ensure landfill stability, control erosion, and reinforce soil integrity, supporting long-term sustainability while reducing ecological impact.',
     mainImage: [
-      '/images/sector/environmental/1.jpg',
-      '/images/sector/environmental/2.jpg',
-      '/images/sector/environmental/3.jpg',
+      { url: '/images/sector/environmental/1.jpg', location: 'RMK TAEGAON MIDC PUNE, MAHARASHTRA' },
+      { url: '/images/sector/environmental/2.jpg', location: 'KD INFRA VALSAD,GUJRAT' },
+      { url: '/images/sector/environmental/3.jpg', location: 'KHOPOLI SITE MUMBAI, MAHARASHTRA' },
     ],
     rightSection: {
       title: 'Environmental Benefits',
@@ -129,10 +129,10 @@ const sectorData = {
     title: 'COASTAL & RIVER CONTROL WORK',
     description: 'Secure Matrix has maintained a leading position in coastal and river engineering for over a year, beginning with the reconstruction of the River Reno’s banks. We offer bespoke solutions that combine project-specific strategies, environmentally sustainable materials, and state-of-the-art technologies—ensuring the seamless integration of human activities with the natural environment.',
     mainImage: [
-      '/images/sector/coastal/1.jpg',
-      '/images/sector/coastal/2.jpg',
-      '/images/sector/coastal/3.jpg',
-      '/images/sector/coastal/4.jpg',
+      { url: '/images/sector/coastal/1.jpg', location: 'Baramati Nagar Parishad: River Karva' },
+      { url: '/images/sector/coastal/2.jpg', location: '' },
+      { url: '/images/sector/coastal/3.jpg', location: 'Pimpri Chinchwad Municipal Corporation' },
+      { url: '/images/sector/coastal/4.jpg', location: 'Baramati Nagar Parishad: River Karva' },
     ],
     rightSection: {
       title: 'Coastal Defence Benefits',
@@ -160,9 +160,9 @@ const sectorData = {
     title: 'Emergency Flood',
     description: 'Secure Matrix provides specialized solutions to mitigate floods, landslides, and other natural disasters, drawing on over a century of expertise in emergency interventions. Our approach integrates rapid response with long-term resilience strategies, ensuring the safety of communities and the protection of critical infrastructure across both urban and rural environments.',
     mainImage: [
-      '/images/sector/flood/1.jpg',
-      '/images/sector/flood/2.jpg',
-      '/images/sector/flood/3.jpg',
+      { url: '/images/sector/flood/1.jpg', location: 'SARKHEJ, JAMMU & KASHMIR' },
+      { url: '/images/sector/flood/2.jpg', location: 'Pimpri Chinchwad Municipal Corporation' },
+      { url: '/images/sector/flood/3.jpg', location: 'NAINA NAVI MUMBAI ,MAHARASHTRA' },
     ],
 
     rightSection: {
@@ -184,10 +184,10 @@ const sectorData = {
     title: 'WATER RESOURCES & IRRIGATION',
     description: 'River training works typically encompass the construction of revetments, reinforced soil slopes and walls, gabion retaining walls, groynes, scour protection systems, riverbank protection and stabilization measures, as well as channel widening. At Secure Matrix, we design cost-effective solutions tailored to project-specific requirements and site conditions, utilizing our specialized range of engineered products.',
     mainImage: [
-      '/images/sector/water/1.jpg',
-      '/images/sector/water/2.jpg',
-      '/images/sector/water/3.jpg',
-      '/images/sector/water/4.jpg',
+      { url: '/images/sector/water/1.jpg', location: 'Baramati Nagar Parishad: River Karva' },
+      { url: '/images/sector/water/2.jpg', location: 'RMK TAEGAON MIDC PUNE, MAHARASHTRA' },
+      { url: '/images/sector/water/3.jpg', location: 'SAROL WATER POINT ,JAMMU' },
+      { url: '/images/sector/water/4.jpg', location: 'NAINA NAVI MUMBAI ,MAHARASHTRA' },
     ],
     rightSection: {
       title: 'Water Resources Benefits',
@@ -214,9 +214,9 @@ const sectorData = {
     title: 'TRANSPORTATION INFRASTRUCTURE',
     description: 'Secure Matrix provides advanced, sustainable solutions for the development and enhancement of transportation infrastructure across multiple sectors, including roads, railways, airports, bridges, and tunnels. Through our specialized expertise, we ensure the delivery of resilient and efficient transport systems that facilitate reliable connectivity and contribute to the creation of safer, more sustainable urban and rural environments.',
     mainImage: [
-      '/images/sector/transportation/1.png',
-      '/images/sector/transportation/2.png',
-      '/images/sector/transportation/3.jpg',
+      { url: '/images/sector/transportation/1.png', location: '' },
+      { url: '/images/sector/transportation/2.png', location: '' },
+      { url: '/images/sector/transportation/3.jpg', location: '' },
     ],
     rightSection: {
       title: 'Transportation Infrastructure Benefits',
@@ -244,10 +244,10 @@ const sectorData = {
     title: 'DEFENCE & SECURITY',
     description: 'The defence and security sector face significant global threats, such as hostile vehicle breaches and explosive attacks. Effective protection is vital to ensure the safety of military personnel, civilians, and essential infrastructure. Secure Matrix delivers cutting-edge solutions tailored to address these critical security challenges.',
     mainImage: [
-      '/images/sector/defence/1.jpg',
-      '/images/sector/defence/2.jpg',
-      '/images/sector/defence/3.jpg',
-      '/images/sector/defence/4.jpg',
+      { url: '/images/sector/defence/1.jpg', location: '' },
+      { url: '/images/sector/defence/2.jpg', location: '' },
+      { url: '/images/sector/defence/3.jpg', location: '' },
+      { url: '/images/sector/defence/4.jpg', location: '' },
     ],
     rightSection: {
       title: 'Defence Security Benefits',
@@ -275,7 +275,7 @@ const sectorData = {
     title: 'MINING',
     description: 'The mining industry faces growing demands to enhance efficiency and safety while reducing environmental and social impacts. Secure Matrix offers innovative solutions that optimize all phases of the mining lifecycle, ensuring operational safety and sustainability through the application of advanced engineering technologies and methodologies.',
     mainImage: [
-      '/images/sector/mining/1.jpg',
+      { url: '/images/sector/mining/1.jpg', location: '' },
     ],
     rightSection: {
       title: 'Mining Benefits',
@@ -386,19 +386,21 @@ export default function SectorPage({ params }: PageParams) {
               {Array.isArray(data?.mainImage) ? (
                 <>
                   {data.mainImage.map((image, index) => (
-                    <Image
-                      key={index}
-                      src={image}
-                      alt={`${data.title} ${index + 1}`}
-                      fill
-                      priority={index === 0}
-                      style={{
-                        objectFit: 'contain',
-                        opacity: currentImageIndex === index ? 1 : 0,
-                        transition: 'opacity 0.5s ease-in-out'
-                      
-                      }}
-                    />
+                    <div key={index} className="absolute inset-0 w-full h-full transition-opacity duration-500" style={{
+                      opacity: currentImageIndex === index ? 1 : 0,
+                    }}>
+                      <Image
+                        src={image.url}
+                        alt={`${data.title} - Image ${index + 1}`}
+                        className="w-full h-full"
+                        fill
+                        priority={index === 0}
+                        style={{
+                          objectFit: 'contain',
+                          transition: 'opacity 0.5s ease-in-out'
+                        }}
+                      />
+                    </div>
                   ))}
                   {/* Left Arrow */}
                   <button 
@@ -418,14 +420,15 @@ export default function SectorPage({ params }: PageParams) {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
                     </svg>
                   </button>
-                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                  
+                  {/* Slider Controls */}
+                  <div className="absolute bottom-4 left-0 right-0 flex justify-center space-x-3">
                     {data.mainImage.map((_, index) => (
                       <button
                         key={index}
-                        className={`w-2 h-2 rounded-full ${
-                          currentImageIndex === index ? 'bg-[#D84315]' : 'bg-white bg-opacity-50'
-                        }`}
                         onClick={() => setCurrentImageIndex(index)}
+                        className={`w-3 h-3 rounded-full transition-colors ${currentImageIndex === index ? 'bg-[#D84315]' : 'bg-white bg-opacity-70'}`}
+                        aria-label={`Go to slide ${index + 1}`}
                       />
                     ))}
                   </div>
@@ -440,6 +443,16 @@ export default function SectorPage({ params }: PageParams) {
                 />
               )}
             </div>
+            
+            {/* Location Information */}
+            {Array.isArray(data?.mainImage) && (
+              <div className="mt-4 text-center bg-gray-50 p-3 rounded-md border border-gray-200 shadow-sm">
+                <p className="text-base md:text-lg font-bold text-black">
+                  <span className="font-semibold"></span> {data.mainImage[currentImageIndex].location}
+                </p>
+              </div>
+            )}
+            
             <div className="mt-8 sm:mt-10 md:mt-12 mb-16 sm:mb-24 md:mb-32">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-black mb-4 sm:mb-6 px-4">{data.title}</h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-4">
