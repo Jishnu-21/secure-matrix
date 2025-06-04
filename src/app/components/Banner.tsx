@@ -41,7 +41,7 @@ const Banner = () => {
               alt={`Banner ${index + 1}`}
               fill
               className={`object-cover transition-all duration-1000 absolute inset-0
-                ${currentImageIndex === index ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-110'}
+                ${currentImageIndex === index ? 'opacity-100 transform scale-100' : 'opacity-0 transform scale-105'}
                 ${isAnimating ? 'transition-all duration-1000' : ''}
               `}
               priority={index === 0}
@@ -49,21 +49,21 @@ const Banner = () => {
           ))}
           <div className="absolute inset-0 bg-black/60" />
         </div>
-        <div className="relative z-10 h-full w-full flex items-start pt-[80px] sm:pt-[90px] md:pt-[100px] lg:pt-[120px] xl:pt-[130px]">
-          <div className="w-full px-2 sm:px-3 md:px-4 lg:px-6 max-w-[1440px] mx-auto">
-            <div className="space-y-3 max-w-[800px] text-left">
-              <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[42px] xl:text-[48px] font-medium text-white leading-[1.2]">
+        <div className="relative z-10 h-full w-full flex items-start pt-[70px] sm:pt-[80px] md:pt-[90px] lg:pt-[110px] xl:pt-[120px]">
+          <div className="w-full px-4 sm:px-5 md:px-6 lg:px-8 max-w-[1440px] mx-auto">
+            <div className="space-y-3 max-w-[700px] text-left">
+              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[26px] xl:text-[42px] font-medium text-white leading-[1.2]">
                 We are 'The Guardians of Every Territory'.
               </h2>
             </div>
-            <p className="text-sm sm:text-base md:text-lg lg:text-xl text-white/95 mt-4 sm:mt-6 mb-8 sm:mb-12 leading-[1.8] max-w-[600px] font-light tracking-wide text-left">
+            <p className="text-xs sm:text-sm md:text-base lg:text-[14px] xl:text-[20px] text-white/95 mt-3 sm:mt-5 mb-7 sm:mb-11 leading-[1.8] max-w-[500px] font-light tracking-wide text-left">
               15+ years of Experience From Concept to Creation, we do it all.
               Security Shield for every space Environment Protection Solutions for
               Civil Engineering
             </p>
             <div className="flex justify-start">
-              <Link href="/about" className="inline-flex items-center bg-white text-[#D84315] px-4 sm:px-5 md:px-6 lg:px-7 py-2 sm:py-2.5 md:py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-10 sm:mb-16 md:mb-20 lg:mb-24"> 
-                <span className="mr-2 sm:mr-3 text-sm sm:text-base md:text-lg font-medium">
+              <Link href="/about" className="inline-flex items-center bg-white text-[#D84315] px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-9 sm:mb-15 md:mb-19 lg:mb-23"> 
+                <span className="mr-2 sm:mr-3 lg:text-[14px] text-sm sm:text-base md:text-lg  font-medium">
                   Know more
                 </span>
                 <svg

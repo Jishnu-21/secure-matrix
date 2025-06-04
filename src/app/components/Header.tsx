@@ -313,11 +313,9 @@ const Header = () => {
 
   return (
     <header
-      className={`fixed top-0 w-full h-[50px] sm:h-[60px] md:h-[70px] lg:h-[80px] xl:h-[90px] bg-[#E8E8E8] transition-transform duration-300 z-50 ${
-        isHeaderVisible ? "translate-y-0" : "-translate-y-full"
-      }`}
+      className="fixed top-0 left-0 right-0 bg-white shadow-md z-50 px-4 sm:px-6 md:px-8 lg:px-10"
     >
-      <div className="container mx-auto px-4">
+      <div className="container mx-auto max-w-[1440px]">
         <div className="flex items-center justify-between w-full py-1 sm:py-1.5 md:py-2 lg:py-2.5 xl:py-3">
           <div className="flex-shrink-0 flex items-center">
             <Link href="/" className="flex items-center font-bold font-crimson text-black">
