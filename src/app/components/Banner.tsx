@@ -52,7 +52,7 @@ const Banner = () => {
         <div className="relative z-10 h-full w-full flex items-start pt-[70px] sm:pt-[80px] md:pt-[90px] lg:pt-[110px] xl:pt-[120px]">
           <div className="w-full px-4 sm:px-5 md:px-6 lg:px-8 max-w-[1440px] mx-auto">
             <div className="space-y-3 max-w-[700px] text-left">
-              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-2xl font-medium text-white leading-[1.2]">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-2xl xl:text-3xl font-medium text-white leading-[1.2]">
                 We are 'The Guardians of Every Territory'.
               </h2>
             </div>
