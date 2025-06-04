@@ -57,9 +57,8 @@ const Banner = () => {
               </h2>
             </div>
             <p className="text-xs sm:text-sm md:text-base lg:text-[14px] xl:text-[20px] text-white/95 mt-3 sm:mt-5 mb-7 sm:mb-11 leading-[1.8] max-w-[500px] font-light tracking-wide text-left">
-              15+ years of Experience From Concept to Creation, we do it all.
-              Security Shield for every space Environment Protection Solutions for
-              Civil Engineering
+              15+ years of Experience From Concept to Creation, we do it all. Security Shield for every space.
+              Comprehensive Environment Protection Solutions for Civil Engineering.
             </p>
             <div className="flex justify-start">
               <Link href="/about" className="inline-flex items-center bg-white text-[#D84315] px-3 sm:px-4 md:px-5 lg:px-6 py-2 sm:py-2.5 md:py-3 rounded-sm group hover:bg-opacity-95 transition-all mb-9 sm:mb-15 md:mb-19 lg:mb-23"> 
