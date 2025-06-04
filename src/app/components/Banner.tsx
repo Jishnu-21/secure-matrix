@@ -52,11 +52,11 @@ const Banner = () => {
         <div className="relative z-10 h-full w-full flex items-start pt-[70px] sm:pt-[80px] md:pt-[90px] lg:pt-[110px] xl:pt-[120px]">
           <div className="w-full px-4 sm:px-5 md:px-6 lg:px-8 max-w-[1440px] mx-auto">
             <div className="space-y-3 max-w-[700px] text-left">
-              <h2 className="text-xl sm:text-2xl md:text-3xl lg:text-[26px] xl:text-[42px] font-medium text-white leading-[1.2]">
+              <h2 className="text-lg sm:text-xl md:text-2xl lg:text-[26px] xl:text-[42px] font-medium text-white leading-[1.2]">
                 We are 'The Guardians of Every Territory'.
               </h2>
             </div>
-            <p className="text-xs sm:text-sm md:text-base lg:text-[14px] xl:text-[20px] text-white/95 mt-3 sm:mt-5 mb-7 sm:mb-11 leading-[1.8] max-w-[500px] font-light tracking-wide text-left">
+            <p className="text-xs sm:text-sm md:text-base lg:text-[14px] xl:text-[18px] text-white/95 mt-3 sm:mt-5 mb-7 sm:mb-11 leading-[1.8] max-w-[500px] font-light tracking-wide text-left">
               15+ years of Experience From Concept to Creation, we do it all. Security Shield for every space.
               Comprehensive Environment Protection Solutions for Civil Engineering.
             </p>
