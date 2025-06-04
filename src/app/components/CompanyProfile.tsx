@@ -37,8 +37,8 @@ const CompanyProfile = () => {
             </p>
           </div>
           
-          {/* Key Features */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-16 w-full">
+          {/* Key Features 
+         <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-16 w-full">
             <div className="bg-gray-50 p-4 rounded-lg shadow-sm flex items-start">
               <div className="mr-3 mt-1">
                 <MdConstruction className="text-[#D84315] text-xl md:text-2xl" />
@@ -93,7 +93,8 @@ const CompanyProfile = () => {
                 <p className="text-sm text-gray-700">Quality backed by expertise</p>
               </div>
             </div>
-          </div>
+          </div>*/}
+      
 
           <Features/>
           
