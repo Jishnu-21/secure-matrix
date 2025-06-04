@@ -11,12 +11,12 @@ interface FeatureItemProps {
 const FeatureItem = ({ icon, title, description }: FeatureItemProps) => (
   <div className="flex items-start gap-4 p-4 rounded-lg hover:bg-gray-50 transition-colors">
     <div className="flex-shrink-0 w-12 h-12 sm:w-14 sm:h-14 md:w-16 md:h-16 rounded-full bg-[#F8D7CE] flex items-center justify-center">
-      <span className="material-icons text-[#1A5632] text-2xl sm:text-3xl md:text-4xl">
+      <span className="material-icons text-[#D84315] text-2xl sm:text-3xl md:text-4xl">
         {icon}
       </span>
     </div>
     <div className="flex-1">
-      <h3 className="text-base sm:text-lg font-medium text-[#1A5632] mb-1">{title}</h3>
+      <h3 className="text-base sm:text-lg font-medium text-[#D84315] mb-1">{title}</h3>
       <p className="text-sm text-gray-500 text-opacity-80 leading-relaxed">{description}</p>
     </div>
   </div>
