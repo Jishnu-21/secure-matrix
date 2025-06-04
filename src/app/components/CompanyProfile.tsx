@@ -3,10 +3,11 @@
 import React from 'react';
 import Image from 'next/image';
 import { MdConstruction, MdPsychology, MdSecurity, MdFoundation, MdEco, MdVerified } from 'react-icons/md';
+import Features from './Features';
 
 const CompanyProfile = () => {
   return (
-    <section id="company-profile" className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 relative overflow-hidden bg-white">
+    <section id="company-profile" className="py-12 sm:py-16 md:py-20 lg:py-24 px-4 relative overflow-hidden bg-white w-full">
       {/* Background Pattern */}
       <div className="absolute inset-0 z-0 opacity-5">
         <div 
@@ -20,12 +21,12 @@ const CompanyProfile = () => {
           }}
         />
       </div>
-      <div className="container mx-auto max-w-[1400px] relative z-10">
-        <div className="max-w-[900px] mx-auto">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-medium text-center mb-8 md:mb-10 relative inline-block w-full">
-            <span className="relative z-10 text-black">COMPANY PROFILE</span>
-            <span className="absolute bottom-0 left-1/2 transform -translate-x-1/2 w-24 h-1 bg-[#D84315] rounded-full"></span>
-          </h2>
+      <div className="container mx-auto max-w-[1500px] relative z-10">
+        <div className="max-w-[1300px] mx-auto">
+        <div className="text-center mb-8 md:mb-10">
+          <h2 className="text-3xl md:text-4xl font-medium text-gray-900 mb-4">Company Profile</h2>
+          <div className="w-20 h-1 bg-[#DA491A] mx-auto"></div>
+        </div>
           
           <div className="mb-8 md:mb-12 bg-white p-6 rounded-lg shadow-sm border border-gray-100">
             <p className="text-base md:text-lg mb-4 text-gray-800">
@@ -37,7 +38,7 @@ const CompanyProfile = () => {
           </div>
           
           {/* Key Features */}
-          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-16">
+          <div className="grid grid-cols-2 md:grid-cols-3 gap-4 md:gap-6 mb-10 md:mb-16 w-full">
             <div className="bg-gray-50 p-4 rounded-lg shadow-sm flex items-start">
               <div className="mr-3 mt-1">
                 <MdConstruction className="text-[#D84315] text-xl md:text-2xl" />
@@ -93,6 +94,8 @@ const CompanyProfile = () => {
               </div>
             </div>
           </div>
+
+          <Features/>
           
           {/* Company Facts Table */}
           <div className="mb-6 text-center">
@@ -102,7 +105,7 @@ const CompanyProfile = () => {
             </h3>
           </div>
           
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-10 w-full">
             {/* Left Column */}
             <div className="bg-white rounded-lg shadow-md overflow-hidden border border-gray-100">
               <div className="bg-[#f8f8f8] p-4 border-b border-gray-200">

@@ -26,7 +26,6 @@ const Page = () => {
                 <div className="relative bg-[#FAFAFA]">
                   {/* Main Content */}
                   <div className="relative z-20 space-y-6 md:space-y-10">
-                    <Features />
                     <Products />
                     <WhyChooseUs />
                     <PopularProducts />
