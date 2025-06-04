@@ -79,9 +79,9 @@ const Features = () => {
           <div className="lg:col-span-7 lg:pl-8 order-1 lg:order-2">
             <div className="sticky top-24">
               <h2 className="text-2xl sm:text-3xl md:text-4xl lg:text-[40px] font-medium mb-4 leading-tight">
-                <span className="text-[#1A5632]">Secure Matrix,</span>
+                <span className="text-black">Secure Matrix,</span>
                 <br className="hidden sm:block" />
-                <span className="text-[#1A5632]">Engineering the Future of Safety.</span>
+                <span className="text-black">Engineering the Future of Safety.</span>
               </h2>
 
               {/* Features Grid */}
