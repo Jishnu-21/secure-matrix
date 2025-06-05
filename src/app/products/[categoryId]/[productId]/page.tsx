@@ -177,7 +177,7 @@ export default function ProductPage({ params }: PageProps) {
               </div>
 
               {/* Technical Aspects Table */}
-              {product.technicalAspects && product.technicalAspects.length > 0 && (
+              {product.technicalAspects && (
                 <div className="mt-8 bg-white rounded-lg overflow-hidden">
                   <table className="w-full border-collapse border border-black">
                     <thead className="bg-gray-100">
