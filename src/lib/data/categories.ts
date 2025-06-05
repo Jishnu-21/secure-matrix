@@ -5,7 +5,6 @@ export interface Product {
   title: string;
   description: string;
   technicalAspects?: { srNo: number; characteristic: string; values: string[] }[];
-  meshTypes?: string[];
   imagePath: string[];
   applications?: {
     name: string;
@@ -41,7 +40,6 @@ export const categories: Category[] = [
           { srNo: 5, characteristic: "Typical Sizes Length x Width X Height(m)", values: ["4 x 1 x 1 (3 Nos.), 3 x 1 x 1 (2 Nos.), 2 x 1 x 1 (1 No.), 1.5 x 1 x 1 (0 No.), 2 x 1 x 0.5 (1 No.), 3 x 1 x 0.5 (2 Nos.), 4 x 1 x 0.5 (3 Nos.), 2 x 1 x 0.3 (1 No.), 3 x 1 x 0.3 (2 Nos.), 4 x 1 x 0.3 (3 Nos.)"] },
           { srNo: 6, characteristic: "Tolerances in size of gabion boxes", values: ["Length and Width: ± 5 percent; Height > 0.3 m: ± 5 percent and Height ≤ 0.3 m: ± 10 percent"] }
         ],
-        meshTypes: ["10x12 D=100 mm", "8x10 D=80 mm"],
         imagePath: [
           "/images/products/gabion-box/1.png",
         ],
