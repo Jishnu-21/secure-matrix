@@ -137,7 +137,36 @@ export default function ProductPage({ params }: PageProps) {
                     className="object-cover rounded-lg"
                     priority
                   />
-            
+                  {/* Left Arrow */}
+                  <button 
+                    onClick={() => setSelectedImage(prev => prev === 0 ? productImages.length - 1 : prev - 1)}
+                    className="absolute left-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                    </svg>
+                  </button>
+                  {/* Right Arrow */}
+                  <button 
+                    onClick={() => setSelectedImage(prev => prev === productImages.length - 1 ? 0 : prev + 1)}
+                    className="absolute right-4 top-1/2 transform -translate-y-1/2 bg-black/50 hover:bg-black/70 text-white w-10 h-10 rounded-full flex items-center justify-center transition-all z-10 cursor-pointer"
+                  >
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                    </svg>
+                  </button>
+                  {/* Image Indicators */}
+                  <div className="absolute bottom-4 left-1/2 transform -translate-x-1/2 flex gap-2 z-10">
+                    {productImages.map((_, index) => (
+                      <button
+                        key={index}
+                        className={`w-2 h-2 rounded-full transition-colors ${
+                          selectedImage === index ? 'bg-[#D84315]' : 'bg-white bg-opacity-50'
+                        }`}
+                        onClick={() => setSelectedImage(index)}
+                      />
+                    ))}
+                  </div>
                 </div>
               </div>
 
@@ -145,21 +174,48 @@ export default function ProductPage({ params }: PageProps) {
               <div className="flex flex-col items-center gap-4">
                 <h1 className="text-xl md:text-3xl font-bold text-gray-900 text-center">{product.title.toUpperCase()}</h1>
                 <p className="text-center text-gray-700">{product.description}</p>
-                {product.tableImg && (
-                  <div className="mt-4">
-                    <Image
-                      src={product.tableImg}
-                      alt="Technical Aspects Table"
-                      width={800}
-                      height={600}
-                      className="rounded-lg shadow-md"
-                    />
-                  </div>
-                )}
               </div>
 
               {/* Technical Aspects Table */}
-     
+              {product.technicalAspects && product.technicalAspects.length > 0 && (
+                <div className="mt-8 bg-white rounded-lg overflow-hidden">
+                  <table className="w-full border-collapse border border-black">
+                    <thead className="bg-gray-100">
+                      <tr>
+                        <th rowSpan={2} className="border border-black p-2">Sr. No.</th>
+                        <th rowSpan={2} className="border border-black p-2">Characteristics</th>
+                        <th colSpan={2} className="border border-black p-2">Mesh Type 10x12<br/>D=100 mm</th>
+                        <th colSpan={2} className="border border-black p-2">Mesh Type 8x10<br/>D=80 mm</th>
+                      </tr>
+                      <tr>
+                        <th className="border border-black p-2">Only Zinc / Zinc Alloy<sup>2</sup> coated</th>
+                        <th className="border border-black p-2">Zinc / Zinc Alloy<sup>2</sup> + Polymer coated</th>
+                        <th className="border border-black p-2">Only Zinc / Zinc Alloy<sup>2</sup> coated</th>
+                        <th className="border border-black p-2">Zinc / Zinc Alloy<sup>2</sup> + Polymer coated</th>
+                      </tr>
+                    </thead>
+                    <tbody>
+                      {product.technicalAspects.map((aspect, index) => (
+                        <tr key={index} className="odd:bg-white even:bg-gray-50">
+                          <td className="border border-black p-2">{aspect.srNo}</td>
+                          <td className="border border-black p-2">{aspect.characteristic}</td>
+                          {aspect.srNo === 5 || aspect.srNo === 6 ? (
+                            <td colSpan={4} className="border border-black p-2">{aspect.values[0]}</td>
+                          ) : (
+                            aspect.values.map((value: string, index: number) => (
+                              <td key={index} className="border border-black p-2">{value}</td>
+                            ))
+                          )}
+                        </tr>
+                      ))}
+                    </tbody>
+                  </table>
+                  <div className="text-xs mt-2">
+                    <p className="mb-1">1) Internal diameter/External diameter of polymer coated wire.</p>
+                    <p>2) Zinc Alloy shall consist to 90 percent zinc + 10 percent Aluminium or 95 percent Zinc + 5 percent Aluminium.</p>
+                  </div>
+                </div>
+              )}
             </div>
           </div>
 
