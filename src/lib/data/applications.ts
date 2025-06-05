@@ -143,13 +143,8 @@ export const applicationData = {
   '/images/application/coastal-protection/1.jpg',
   '/images/application/coastal-protection/2.jpg',
   '/images/application/coastal-protection/3.jpeg',
-  '/images/application/coastal-protection/4.jpeg',
-  '/images/application/coastal-protection/5.jpeg',
-  '/images/application/coastal-protection/6.jpg',
-  '/images/application/coastal-protection/7.jpg',
   '/images/application/coastal-protection/8.jpg',
   '/images/application/coastal-protection/9.jpeg',
-  '/images/application/coastal-protection/10.jpeg',  
 ], 
  leftSection: {
    title: 'How Gabion Boxes Mitigate Coastal Flooding',

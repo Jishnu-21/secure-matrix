@@ -256,7 +256,7 @@ const Header = () => {
         },
         { 
           name: "EROSION CONTROL & SOIL STABILIZATION WITH GABION BOXES & GEOTEXTILES", 
-          path: "/application/gabion-architecture",
+          path: "/application/erosion-control",
         },
         { 
           name: "MARINE WORK", 
