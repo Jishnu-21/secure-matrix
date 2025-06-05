@@ -17,7 +17,7 @@ export interface Category {
   id: string;
   title: string;
   description: string;
-  imagePath: string;
+  imagePath: string[];
   products: Product[];
 }
 
@@ -26,7 +26,7 @@ export const categories: Category[] = [
     id: 'gabion-box',
     title: "SECURE GABION BOX",
     description: "The Secure Gabion Box is a high-strength, rectangular wire mesh container designed for structural reinforcement and erosion control. Constructed with double-twisted hexagonal mesh, it offers superior flexibility and resistance to environmental stresses. Zinc galvanization protects it from rust and corrosion, while the advanced PA6 polymer coating adds extra durability in aggressive environments. The interconnection of mesh wires ensures excellent stability, making it an ideal solution for infrastructure, defence, and industrial applications.",
-    imagePath: "/images/products/gabion-box/1.png",
+    imagePath: ["/images/products/gabion-box/1.png"],
     products: [
       {
         id: 'gabion-box',
