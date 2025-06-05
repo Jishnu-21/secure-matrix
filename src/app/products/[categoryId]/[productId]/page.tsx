@@ -61,7 +61,7 @@ export default function ProductPage({ params }: PageProps) {
     product
   })
 
-  const productImages = product.imagePath
+  const productImages = Array.isArray(product.imagePath) ? product.imagePath : [product.imagePath];
   const maxScrollIndex = Math.max(0, productImages.length - 4)
   const visibleThumbnails = productImages.slice(startIndex, startIndex + 4)
 
