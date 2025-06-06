@@ -59,7 +59,7 @@ export const applicationData = {
   ],  
   leftSection: {
     title: 'Types of Rock Fall Netting',
-    wireMeshNetting: {
+    'Wire Mesh Netting': {
       material: 'Galvanized or stainless steel wires with PVC coating for extra durability.',
       structure: 'Double-twisted mesh for added strength.',
       features: [
@@ -68,7 +68,7 @@ export const applicationData = {
         'Ideal for small- to medium-sized rock containment'
       ]
     },
-    ropeMeshNetting: {
+    'Rope Mesh Netting': {
       material: 'High-tensile steel cables with wire knot connections.',
       structure: 'Flexible yet strong mesh that absorbs impact.',
       features: [
@@ -79,12 +79,12 @@ export const applicationData = {
   },
   rightSection: {
     title: 'Advantages and Installation',
-    advantages: [
+    'Advantages': [
       'Slope Stabilization: Holds loose rocks in place, preventing slides.',
       'Rockfall Barriers: Acts as a shield, catching falling debris before it reaches roads or structures.',
       'Debris Flow Protection: Helps contain and redirect mudflows and loose materials.'
     ],
-    installationConsiderations: [
+    'Installation Considerations': [
       'Anchoring: Secure anchors drilled into the rock face to ensure the net stays firmly in place.',
       'Overlap: Mesh panels must overlap properly to prevent gaps and ensure full coverage.'
     ]
@@ -254,13 +254,13 @@ export const applicationData = {
        'PVC-Coated Wire: Added durability.',
        'Stainless Steel: High corrosion resistance (ideal for harsh environments).'
      ],
-     wireTwisting: 'Twisted intersections provide strength and rigidity, keeping the box secure even under pressure.',
-     modularDesign: [
+     'Wire Twisting': 'Twisted intersections provide strength and rigidity, keeping the box secure even under pressure.',
+     'Modular Design': [
        'Can be stacked or connected to build walls and embankments.',
        'Delivered pre-assembled or flat-packed for easy transport and setup.',
        'Some gabions include internal dividers to prevent shifting and maintain stability.'
      ],
-     installationProcess: [
+     'Installation Process': [
        'Foundation: Ensure a stable, level base to prevent shifting.',
        'Filling: Use angular, weather-resistant stones (100 mm to 300 mm size).',
        'Closure: Secure with lacing wire ties for a firm hold.',
@@ -284,18 +284,14 @@ export const applicationData = {
        'Protection: Shields the soil surface from erosion — promoting long-term stability.'
      ]
    },
-   combinedBenefits: [
+   'Combined Benefits': [
      'Enhanced Durability: Increases lifespan by preventing soil loss and erosion.',
      'Environmental Benefits: Encourages vegetation growth while minimizing environmental damage.',
      'Cost-Effectiveness: More affordable than traditional erosion control methods.',
      'Versatility: Suitable for slopes, shorelines, riverbanks, and retaining walls.'
    ]
  },
- galleryImages: [
-   '/images/application/product.png',
-   '/images/application/product.png',
-   '/images/application/product.png',
- ]
+
 },
 'fencing-wire': {
  title: 'Fencing Wire',
