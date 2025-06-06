@@ -231,7 +231,6 @@ const Header = () => {
         { name: "SECURE COMPOSITE MESH", path: "/products/composite-mesh" },
         { name: "SECURE PRO 3D", path: "/products/pro-3d" },
         { name: "SECURE PRO AURA 3D", path: "/products/proaura-3d" },
-        { name: "SECURE PRO 3D PLUS", path: "/products/pro-3d-plus" },
         { name: "POLY SECURE", path: "/products/poly-secure" },
         { name: "SECURE GEO COMPOSITE", path: "/products/geo-composite" },
         { name: "SECURE SACK GABION", path: "/products/sack-gabion" },
