@@ -8,6 +8,7 @@ export interface Application {
   description: string;
   image: string;
   link: string;
+  location?: string;
 }
 
 export interface Product {
@@ -17,6 +18,7 @@ export interface Product {
   features?: string[];
   specifications?: ProductSpecification[];
   price?: string;
+
   tradeInformation?: ProductSpecification[];
   productDetails?: ProductSpecification[];
   shortDescription: string;

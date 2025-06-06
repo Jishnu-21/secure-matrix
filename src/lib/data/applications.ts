@@ -4,12 +4,12 @@ export const applicationData = {
     title: 'Retaining Wall & Soil Reinforcement',
     description: 'A gabion box is a wire mesh container filled with stones, commonly used for soil stabilization, erosioncontrol, and retaining walls. Combined with soil reinforcement techniques, it enhances stability andprevents slope failure.',
     mainImage: [
-      '/images/application/retaining-wall/1.jpg',
-      '/images/application/retaining-wall/2.jpg',
-      '/images/application/retaining-wall/3.jpeg',
-      '/images/application/retaining-wall/4.jpeg',
-      '/images/application/retaining-wall/5.jpeg',
-      '/images/application/retaining-wall/6.jpeg',
+      {location: 'AVIAN VALLEY PROJECT , BHUGAON, PUNE, MAHARASHTRA', image: '/images/application/retaining-wall/1.jpg'},
+      {location: 'KD INFRA VALSAD, GUJRAT', image: '/images/application/retaining-wall/2.jpg'},
+      {location: 'DAMLE KARJAT PUNE, MAHARASHTRA', image: '/images/application/retaining-wall/3.jpg'},
+      {location: 'DAMLE KARJAT PUNE, MAHARASHTRA', image: '/images/application/retaining-wall/4.jpg'},
+      {location: 'KMV PROJECTS RANCHI, JHARKHNAD', image: '/images/application/retaining-wall/5.jpg'},
+      {location: 'AVIAN VALLEY PROJECT , BHUGAON, PUNE, MAHARASHTRA', image: '/images/application/retaining-wall/6.jpg'},
     ],
     leftSection: {
       title: 'Gabion Box for Retaining Walls',
@@ -50,12 +50,12 @@ export const applicationData = {
   },
  'rock-fall-mitigation': {
   title: 'Rock Fall Mitigation Systems',
-  description: 'Rock fall mitigation systems help prevent and control rockfalls, ensuring slope stability and safety in rocky terrains.',
+  description: 'Rockfall Protection involves engineering solutions to mitigate the hazards associated with falling rocks, preventing damage to infrastructure and ensuring public safety. This includes a range of measures, from natural treatments like forests, to engineered structures like barriers and netting. A professional description would encompass the need for thorough analysis, selection of appropriate systems, and ongoing maintenance to ensure effectiveness. ',
   mainImage: [
-    '/images/application/rock-fall/1.jpg',
-    '/images/application/rock-fall/2.jpg',
-    '/images/application/rock-fall/3.jpg',
-    '/images/application/rock-fall/4.jpg',
+    {location: '', image: '/images/application/rock-fall/2.jpg'},
+    {location: '', image: '/images/application/rock-fall/4.jpg'},
+    {location: 'KARJAT-LONAWALA, MAHARASHTRA', image: '/images/application/rock-fall/1.jpg'},
+    {location: 'KARJAT-LONAWALA, MAHARASHTRA', image: '/images/application/rock-fall/3.jpg'},
   ],  
   leftSection: {
     title: 'Types of Rock Fall Netting',
@@ -99,12 +99,12 @@ export const applicationData = {
   title: 'Residential & Industrial Architecture with Gabion Boxes',
   description: 'Wire mesh gabion boxes are a versatile cornerstone in modern architecture, blending strength, sustainability, and aesthetic appeal. Made from galvanized or PVC-coated steel wire and filled with natural stones or materials, they create strong, flexible, and visually striking architectural elements.',
   mainImage: [
-    '/images/application/residential-industrial-arch/1.jpg',
-    '/images/application/residential-industrial-arch/2.jpg',
-    '/images/application/residential-industrial-arch/3.jpg',
-    '/images/application/residential-industrial-arch/4.jpeg',
-    '/images/application/residential-industrial-arch/5.jpg',
-    '/images/application/residential-industrial-arch/6.jpg',
+    {location: 'Location 1', image: '/images/application/residential-industrial-arch/1.jpg'},
+    {location: 'Location 2', image: '/images/application/residential-industrial-arch/2.jpg'},
+    {location: 'Location 3', image: '/images/application/residential-industrial-arch/3.jpg'},
+    {location: 'Location 4', image: '/images/application/residential-industrial-arch/4.jpeg'},
+    {location: 'Location 5', image: '/images/application/residential-industrial-arch/5.jpg'},
+    {location: 'Location 6', image: '/images/application/residential-industrial-arch/6.jpg'},
   ],  
     leftSection: {
     title: 'Residential Architecture Applications',
@@ -136,128 +136,85 @@ export const applicationData = {
     '/images/application/product.png',
   ]
 },
-'coastal-protection': {
- title: 'Coastal Protection from Floods with Gabion Boxes',
- description: 'Wire mesh gabion boxes provide robust, flexible, and durable coastal flood protection. They outperform traditional methods by absorbing and dissipating water pressure, adapting to shifting landscapes for long-lasting coastal defense.',
+'marine-works': {
+ title: 'MARINE WORK',
+ description: 'Gabion work, specifically in marine applications, involves using wire mesh cages filled with rocks to create structures that offer protection against erosion, shoreline damage, and wave action. These structures are commonly used for sea walls, revetments, and other coastal defences, utilizing the flexibility and permeability of gabions to withstand harsh marine environments.',
  mainImage: [
-  '/images/application/coastal-protection/1.jpg',
-  '/images/application/coastal-protection/2.jpg',
-  '/images/application/coastal-protection/3.jpeg',
-  '/images/application/coastal-protection/8.jpg',
-  '/images/application/coastal-protection/9.jpeg',
+  {location: 'image not available', image: '/images/application/marine/1.jpg'},
+
 ], 
  leftSection: {
-   title: 'How Gabion Boxes Mitigate Coastal Flooding',
-   waveEnergyDissipation: [
-     'Reduces wave intensity upon impact, protecting the shoreline.',
-     'Form a protective barrier, minimizing damage from powerful waves.',
-     'Withstands harsh marine conditions like saltwater and constant wave action.',
-     'Blend naturally into coastal environments, supporting eco-friendly integration.'
+   title: 'Installation Steps',
+   '': [
+     'Excavate the site and prepare a level base.',
+     'Place geotextile fabric (if needed) to prevent soil migration',
+     'Assemble and position gabion boxes',
+     'Fill the boxes with stones, ensuring minimal voids for stability.',
+     'Secure and fasten the mesh covers tightly',
+     'Backfill with compacted soil behind the wall to support the structure.',
    ],
-   coastalErosionControl: [
-     'Stabilizes shorelines by holding back soil, reducing erosion.',
-     'Acts as a barrier against rising tides and storm surges, preventing land loss.'
-   ],
-   floodwaterManagement: [
-     'Slows down floodwaters with a permeable surface, reducing water velocity.',
-     'Prevents sudden flooding, especially in vulnerable coastal regions.'
-   ]
+   
  },
  rightSection: {
-   title: 'Advantages & Applications',
-   flexibility: [
-     'Adapts to shifting sands and fluctuating water levels due to its flexible structure.',
-     'Ideal for dynamic environments where conditions frequently change.'
+   title: 'Advantages',
+   '': [
+     'Shoreline and Coastal Slope Protection.',
+     'Erosion Control',
+     'Improved Drainage',
+     'Natural Aesthetic and Ecological Benefits',
+     'Cost-Effectiveness and Ease of Installation',
    ],
-   costEffective: [
-     'More affordable than concrete seawalls and traditional barriers.',
-     'Promotes biodiversity — vegetation can grow between the rocks over time, creating a natural coastal habitat.'
-   ],
-   applications: [
-     'Coastal retaining walls',
-     'Beach reinforcement structures',
-     'Riverbank and shoreline protection'
-   ]
+ 
  },
- galleryImages: [
-   '/images/application/product.png',
-   '/images/application/product.png',
-   '/images/application/product.png',
- ]
 },
-'transport-infrastructure': {
- title: 'Gabion Boxes in Transport and Mobility Infrastructure',
- description: 'Gabion boxes are a superior choice for transport and mobility infrastructure, thanks to their durability, flexibility, and eco-friendly design. They withstand dynamic loads, prevent erosion, and support natural drainage, offering a resilient, cost-effective solution for challenging terrains.',
+'hydraulic-works': {
+ title: 'Hydraulic',
+ description: 'Hydraulic engineering is intimately related to the design of bridges, dams, channels, canals, and levees.The main objective of Irrigation engineering is to create irrigation potential in the drought prone areas, upland areas and upkeep of the existing projects to enhance the agriculture productivity per unit of water with increased water use efficiency.Geosynthetics can be used for construction or erosion protection- bridges, dams, canals, lift irrigation project.Gabion boxes are a superior choice for transport and mobility infrastructure, thanks to their durability, flexibility, and eco-friendly design. They withstand dynamic loads, prevent erosion, and support natural drainage, offering a resilient, cost-effective solution for challenging terrains.',
  mainImage: [
-  '/images/application/transport-mobility/1.jpg',
-  '/images/application/transport-mobility/2.jpg',
-  '/images/application/transport-mobility/3.jpg',
-  '/images/application/transport-mobility/4.jpeg',
+  {location: 'No image Provided', image: '/images/application/hydraulic/1.png'},
+
 ], 
  leftSection: {
-   title: 'Applications in Transport/Mobility Infrastructure',
-   roadHighwayWalls: [
-     'Stabilizes slopes to prevent landslides along highways and roads.',
-     'Ideal for hilly and mountainous regions.'
+   title: 'Advantages',
+   '': [
+     'River Bank Protection/Revetments.',
+     'Channelling Works.',
+     'Longitudinal Protection',
+   
    ],
-   bridgesTunnels: [
-     'Serves as abutments and wing walls to support bridges and tunnel structures.',
-     'Protects bridge foundations from water erosion.'
-   ],
-   railwayEmbankments: [
-     'Supports railway tracks by stabilizing slopes.',
-     'Prevents track deformation due to soil movement or erosion.'
-   ],
-   pedestrianCycling: [
-     'Retaining walls for elevated pathways and cycling tracks.',
-     'Enhances safety and stability in uneven landscapes.'
-   ],
-   marineRoads: [
-     'Shields roads near coastal areas from wave impact and shoreline erosion.',
-     'Withstand saltwater exposure without losing strength.'
-   ]
+
  },
  rightSection: {
-   title: 'Advantages & Design Considerations',
-   advantages: [
-     'Durability: Resistant to weathering, erosion, and marine conditions.',
-     'Flexibility: Adapts to ground shifts without cracking or collapsing.',
-     'Eco-Friendly: Can be filled with local materials — supports vegetation growth over time.',
-     'Cost-Effective: More affordable than traditional concrete structures.'
+   title: '',
+   '': [
+     'Waterproofing of Reservoirs, Lakes and Channels',
+     'Weirs, Culverts and Transverse Structures.',
+     'River Training Works.',
    ],
-   designConsiderations: [
-     'Mesh Type: Choose galvanized or PVC-coated mesh for harsh environments.',
-     'Fill Material: Use stones or recycled materials to meet project requirements.',
-     'Foundation Preparation: Ensure a stable base to prevent sinking or settling.'
-   ]
+ 
  },
- galleryImages: [
-   '/images/application/product.png',
-   '/images/application/product.png',
-   '/images/application/product.png',
- ]
 },
 'defence-security': {
- title: 'Gabion Boxes in Defence & Security',
+ title: 'Defence & Security',
  description: 'Wire mesh gabion boxes are a vital component in defense and security infrastructure, offering strength, versatility, and rapid deployment. Made from heavy-duty galvanized or PVC-coated steel wire, they\'re filled with stones or other materials, creating robust protective barriers. In military and security applications, gabions absorb and dissipate energy from explosions and ballistic impacts, making them essential for fortifications, perimeter security, and critical infrastructure protection.',
  mainImage: [
-  '/images/application/defence-security/1.jpg',
-  '/images/application/defence-security/2.jpeg',
-  '/images/application/defence-security/3.jpeg',
-  '/images/application/defence-security/4.jpeg',
-  '/images/application/defence-security/5.jpeg',
-  '/images/application/defence-security/6.jpeg',
-  '/images/application/defence-security/7.jpeg',
-  '/images/application/defence-security/8.jpeg',
+  {location: '', image: '/images/application/defence-security/1.jpg'},
+  {location: '', image: '/images/application/defence-security/2.jpeg'},
+  {location: '', image: '/images/application/defence-security/3.jpeg'},
+  {location: '', image: '/images/application/defence-security/4.jpeg'},
+  {location: '', image: '/images/application/defence-security/5.jpeg'},
+  {location: '', image: '/images/application/defence-security/6.jpeg'},
+  {location: '', image: '/images/application/defence-security/7.jpeg'},
+  {location: '', image: '/images/application/defence-security/8.jpeg'},
 ], 
  leftSection: {
    title: 'Defensive Barriers',
-   militaryFortifications: [
+   'military Fortifications': [
      'Military Fortifications: Build protective walls around bases, outposts, and checkpoints. Resistant to artillery fire, ensuring troop safety.',
      'Blast Protection: Filled with rocks or sand to absorb explosive energy, minimizing blast damage and shrapnel impact.',
      'Bullet Barriers: Slows down or stop bullets, safeguarding personnel and equipment from gunfire.'
    ],
-   perimeterSecurity: [
+   'perimeter Security': [
      'Border Control: Deployed along borders to prevent illegal crossings and enhance border security.',
      'Critical Infrastructure Protection: Secures power stations, water treatment plants, airports, and embassies against attacks and unauthorized access.'
    ]
@@ -284,11 +241,9 @@ export const applicationData = {
  title: 'Erosion Control & Soil Stabilization with Gabion Boxes and Geotextiles',
  description: 'Soil erosion and instability are major challenges in construction, infrastructure, and environmental conservation. Factors like heavy rainfall, wind, water flow, and human activities cause slope failures, sedimentation, and soil degradation — leading to environmental damage and infrastructure failure. The combination of gabion boxes and geotextiles has revolutionized modern civil engineering, offering a powerful solution for erosion control, slope reinforcement, and soil stabilization.',
  mainImage: [
-  '/images/application/residential-industrial-arch/1.jpg',
-  '/images/application/residential-industrial-arch/2.jpg',
-  '/images/application/residential-industrial-arch/3.jpg',
-  '/images/application/residential-industrial-arch/4.jpeg',
-  '/images/application/residential-industrial-arch/5.jpg',
+  {location: 'IR AAMBY PALI MUMBAI ,MAHARASHTRA', image: '/images/application/erosion-control/2.jpg'},
+  {location: 'KMV PROJECTS RANCHI, JHARKHNAD', image: '/images/application/erosion-control/1.jpg'},
+  
 ], 
  leftSection: {
    title: 'Gabion Boxes: Strength & Durability',
@@ -342,18 +297,18 @@ export const applicationData = {
    '/images/application/product.png',
  ]
 },
-'fencing-wire-systems': {
- title: 'Fencing & Wire Systems',
+'fencing-wire': {
+ title: 'Fencing Wire',
  description: 'Fencing and wire systems are essential for security, safety, and boundary definition across residential, commercial, industrial, and agricultural applications. From safeguarding properties to managing livestock and enhancing aesthetics, fences play a critical role in maintaining control and protection.',
  mainImage: [
-  '/images/application/fencing-wiring/1.jpg',
-  '/images/application/fencing-wiring/2.jpg',
-  '/images/application/fencing-wiring/3.jpg',
-  '/images/application/fencing-wiring/4.jpg',
+  {location: '', image: '/images/application/fencing-wiring/1.jpg'},
+  {location: '', image: '/images/application/fencing-wiring/2.jpg'},
+  {location: '', image: '/images/application/fencing-wiring/3.jpg'},
+  {location: '', image: '/images/application/fencing-wiring/4.jpg'},
 ], 
  leftSection: {
    title: 'Types of Fencing Systems',
-   concertinaWire: {
+   'galvanized Iron Concertina Wire Fence System': {
      title: 'Galvanized Iron Concertina Wire Fence System',
      description: 'A high-security barrier made from coiled razor wire, commonly used in military bases, prisons, and other high-security zones.',
      features: [
@@ -364,7 +319,7 @@ export const applicationData = {
        'Customization: Available in various coil diameters, blade styles, and wire thicknesses.'
      ]
    },
-   weldMesh: {
+   'cast Iron Weld Mesh Fence Panel System': {
      title: 'Cast Iron Weld Mesh Fence Panel System',
      description: 'Ideal for highways, sports areas, airports, leisure zones, playgrounds, and residential properties, providing impact resistance with visual appeal.',
      features: [
@@ -375,55 +330,22 @@ export const applicationData = {
        'Customization: Available in multiple colors to match surroundings.'
      ]
    },
-   polyEpoxy: {
-     title: 'Zinc and Poly Epoxy Security Fence System',
-     description: 'Built for strength, longevity, and visual appeal — ideal for industrial and commercial properties.',
-     features: [
-       'Material: Galvanized/zinc-alum wire, iron, and Poly Epoxy for superior corrosion resistance.',
-       'Design: Pre-assembled for a consistent factory finish and faster installation.',
-       'Installation: No on-site fabrication is required, ensuring an efficient setup.',
-       'Security Level: High-security barrier resistant to tampering.',
-       'Customization: Tailored to fit diverse property sizes and configurations.'
-     ]
-   }
  },
  rightSection: {
-   title: 'More Systems & Benefits',
-   antiClimb: {
-     title: 'Anti-Climb Up Security Fence System',
-     description: 'Designed to prevent climbing and cutting, making it a top choice for both industrial and residential high-security needs.',
-     features: [
-       'Material: Strong welded mesh panels, and galvanized cast iron for extra durability.',
-       'Design: Small mesh openings deter climbing and resist cutting with basic hand tools.',
-       'Installation: Quick assembly with minimal equipment.',
-       'Security Level: Anti-climb and anti-cutting features ensure maximum protection.',
-       'Customization: Available in various heights, widths, and finishes to match security requirements and aesthetics.'
-     ]
-   },
-   powderCoated: {
-     title: 'Mild Steel Powder Coated Mesh Fence System',
-     description: 'A perfect blend of durability and style, suitable for residential, agricultural, and boundary wall applications.',
-     features: [
-       'Material: High-quality mild steel with a powder-coated finish for corrosion resistance.',
-       'Design: Rectangular mesh design, with wire diameters ranging from 2mm to 5mm.',
-       'Installation: Easy setup requiring minimal tools, making it a budget-friendly solution.',
-       'Security Level: Strong, reliable protection.',
-       'Customization: Adjustable heights (5 to 7 feet) and wire diameters to meet specific needs.'
-     ]
-   },
-   benefits: [
-     'Enhanced Security: Our systems are designed to withstand tampering, climbing, and weather conditions.',
-     'Durability: Built with high-quality materials like galvanized iron, cast iron, and Poly Epoxy coatings for long-lasting performance.',
-     'Customizable Designs: Tailored options to match aesthetics, terrain, and security requirements.',
-     'Easy Installation: Pre-assembled components ensure faster, hassle-free installation.',
-     'Cost-Effective: Offering high-level security without compromising on visual appeal or budget.'
-   ]
- },
- galleryImages: [
-   '/images/application/product.png',
-   '/images/application/product.png',
-   '/images/application/product.png',
- ]
+   title: '',
+   'zinc and Poly Epoxy Security Fence System': {
+    title: 'Zinc and Poly Epoxy Security Fence System',
+    description: 'Built for strength, longevity, and visual appeal — ideal for industrial and commercial properties.',
+    features: [
+      'Material: Galvanized/zinc-alum wire, iron, and Poly Epoxy for superior corrosion resistance.',
+      'Design: Pre-assembled for a consistent factory finish and faster installation.',
+      'Installation: No on-site fabrication is required, ensuring an efficient setup.',
+      'Security Level: High-security barrier resistant to tampering.',
+      'Customization: Tailored to fit diverse property sizes and configurations.'
+    ]
+  }
+}
+
 }
 };
 

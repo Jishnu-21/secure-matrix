@@ -259,19 +259,19 @@ const Header = () => {
         },
         { 
           name: "MARINE WORK", 
-          path: "/application/coastal-protection",
+          path: "/application/marine-works",
         },
         { 
           name: "DEFENCE & SECURITY", 
-          path: "/application/transport-infrastructure",
-        },
-        { 
-          name: "FENCING WIRE", 
           path: "/application/defence-security",
         },
         { 
+          name: "FENCING WIRE", 
+          path: "/application/fencing-wire",
+        },
+        { 
           name: "HYDRAULIC WORK", 
-          path: "/application/erosion-control",
+          path: "/application/hydraulic-works",
         },
       ]
     },

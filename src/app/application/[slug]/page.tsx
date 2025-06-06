@@ -37,10 +37,10 @@ type BenefitsSection = {
   installationConsiderations?: string[];
 }
 
-type ApplicationData = {
+interface ApplicationData {
   title: string;
   description: string;
-  mainImage: string | string[];
+  mainImage: { location: string; image: string; }[];
   leftSection: InstallationSection;
   rightSection: BenefitsSection;
   galleryImages?: string[];
@@ -65,7 +65,14 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
     return () => clearInterval(interval);
   }, [data.mainImage]);
 
-  if (!data) return <div>Application not found</div>
+  if (!data) {
+    return <div>Application not found</div>;
+  }
+
+  // Ensure data has a title before rendering
+  if (!data.title) {
+    return <div>Application title not available</div>;
+  }
 
   // Helper function to format key for display
   const formatKey = (key: string) => {
@@ -314,12 +321,12 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
                   {data.mainImage.map((image, index) => (
                     <Image
                       key={index}
-                      src={image}
+                      src={image.image}
                       alt={`${data.title} ${index + 1}`}
                       fill
                       priority={index === 0}
                       style={{
-                        objectFit: 'cover',
+                        objectFit: 'contain',
                         opacity: currentImageIndex === index ? 1 : 0,
                         transition: 'opacity 0.5s ease-in-out'
                       }}
@@ -365,6 +372,14 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
                 />
               )}
             </div>
+            {Array.isArray(data?.mainImage) && data.mainImage[currentImageIndex].location && (
+              <div className="mt-3 sm:mt-4 text-center bg-gray-50 py-2 px-3 sm:p-3 rounded-md border border-gray-200 shadow-sm">
+                <p className="text-sm sm:text-base md:text-lg font-bold text-black">
+                  {data.mainImage[currentImageIndex].location}
+                </p>
+              </div>
+            )}
+
             <div className="mt-8 sm:mt-10 md:mt-12 mb-16 sm:mb-24 md:mb-32">
               <h1 className="text-2xl sm:text-3xl md:text-4xl font-bold text-center text-black mb-4 sm:mb-6 px-4">{data.title}</h1>
               <p className="text-base sm:text-lg md:text-xl text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-4">
@@ -424,26 +439,6 @@ export default function ApplicationPage({ params }: { params: Promise<{ slug: st
           <div className="w-full border-b-2 border-[#D84315]"></div>
         </div>
 
-        {/* Gallery Section */}
-        {data.galleryImages && data.galleryImages.length > 0 && (
-          <div className="w-full bg-gray-50 py-8 sm:py-12 md:py-16">
-            <div className="max-w-[1800px] mx-auto px-4 sm:px-6 lg:px-8">
-              <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 sm:gap-8 md:gap-12 lg:gap-16">
-                {data.galleryImages.map((image, index) => (
-                  <div key={index} className="relative h-[250px] sm:h-[300px] md:h-[350px] lg:h-[400px] overflow-hidden">
-                    <Image
-                      src={image}
-                      alt={`${data.title} Gallery Image ${index + 1}`}
-                      fill
-                      style={{ objectFit: 'cover' }}
-                      className="rounded-lg hover:scale-105 transition-transform duration-300"
-                    />
-                  </div>
-                ))}
-              </div>
-            </div>
-          </div>
-        )}
       </div>
       <Footer />
     </main>
