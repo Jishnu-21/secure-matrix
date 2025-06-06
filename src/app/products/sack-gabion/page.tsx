@@ -3,7 +3,7 @@ import Image from 'next/image';
 import Footer from '@/app/components/Footer';
 import Header from '@/app/components/Header';
 
-const GabionBoxPage = () => {
+const SackGabionPage = () => {
   const tableData = {
     meshWireDia_10x12_Zinc: "2.70",
     meshWireDia_10x12_Polymer: "3.00",
@@ -35,12 +35,12 @@ const GabionBoxPage = () => {
         <section className="mt-5 sm:mt-8 md:mt-10 top-20 sm:top-28 md:top-40 relative">
           <div className="max-w-[1200px] mx-auto">
             <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-md">
-              <Image src="/images/products/gabion-box/1.png" alt="Gabion Box" fill style={{ objectFit: 'contain' }} />
+              <Image src="/images/products/sack-gabion/1.png" alt="Gabion Box" fill style={{ objectFit: 'contain' }} />
             </div>
             <div className="mt-6 sm:mt-8 md:mt-10 mb-12 sm:mb-16 md:mb-24">
-              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-black mb-3 sm:mb-4 md:mb-6 px-3 sm:px-4">SECURE GABION BOX</h1>
+              <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-black mb-3 sm:mb-4 md:mb-6 px-3 sm:px-4">SECURE SACK GABION</h1>
               <p className="text-sm sm:text-base md:text-lg text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-3 sm:px-4">
-              The Secure Gabion Box is a high-strength, rectangular wire mesh container designed for structural reinforcement and erosion control. Constructed with double-twisted hexagonal mesh, it offers superior flexibility and resistance to environmental stresses. Zinc galvanization protects it from rust and corrosion, while the advanced PA6 polymer coating adds extra durability in aggressive environments. The interconnection of mesh wires ensures excellent stability, making it an ideal solution for infrastructure, defence, and industrial applications.              </p>
+              Our Stainless-steel Sack Gabion Mattress is designed to provide effective erosion protection for riverbanks. It is also used around bridge piers to offer immediate defence against water-induced erosion. These are tubular units made from stainless steel, filled with gabion stones to prevent displacement. Once filled, the units are tightly laced and placed at the project site. The mesh has a hexagonal shape and is treated with galvanization for a durable, finished surface. The primary purpose of our Stainless-Steel Sack Gabion Mattress is to ensure safety and structural security.</p>
             </div>
             {/* Dynamic Table */}
             <div className="overflow-x-auto">
@@ -49,66 +49,55 @@ const GabionBoxPage = () => {
                   <tr>
                     <th rowSpan={2} className="border p-2">Sr. No.</th>
                     <th rowSpan={2} className="border p-2">Characteristics</th>
-                    <th colSpan={2} className="border p-2">Mesh Type 10x12<br />D=100 mm</th>
-                    <th colSpan={2} className="border p-2">Mesh Type 8x10<br />D=80 mm</th>
+                    <th colSpan={2} className="border p-2">Mesh Type</th>
                   </tr>
                   <tr>
-                    <th className="border p-2">Only Zinc / Zinc Alloy² coated</th>
-                    <th className="border p-2">Zinc / Zinc Alloy² + Polymer coated</th>
-                    <th className="border p-2">Only Zinc / Zinc Alloy² coated</th>
-                    <th className="border p-2">Zinc / Zinc Alloy² + Polymer coated</th>
+                    <th className="border p-2">10x12<br />D=100 mm</th>
+                    <th className="border p-2">8x10<br />D=80 mm</th>
                   </tr>
                 </thead>
                 <tbody>
                   <tr>
                     <td className="border p-2">1</td>
                     <td className="border p-2">Mesh wire dia, mm</td>
-                    <td className="border p-2">{tableData.meshWireDia_10x12_Zinc}</td>
-                    <td className="border p-2">{tableData.meshWireDia_10x12_Polymer}</td>
-                    <td className="border p-2">{tableData.meshWireDia_8x10_Zinc}</td>
-                    <td className="border p-2">{tableData.meshWireDia_8x10_Polymer}</td>
+                    <td className="border p-2">2.70</td>
+                    <td className="border p-2">2.70</td>
                   </tr>
                   <tr>
                     <td className="border p-2">2</td>
                     <td className="border p-2">Edge/Selvedge wire dia, mm</td>
-                    <td className="border p-2">{tableData.edgeWireDia_10x12_Zinc}</td>
-                    <td className="border p-2">{tableData.edgeWireDia_10x12_Polymer}</td>
-                    <td className="border p-2">{tableData.edgeWireDia_8x10_Zinc}</td>
-                    <td className="border p-2">{tableData.edgeWireDia_8x10_Polymer}</td>
+                    <td className="border p-2">3.40</td>
+                    <td className="border p-2">3.40</td>
                   </tr>
                   <tr>
                     <td className="border p-2">3</td>
                     <td className="border p-2">Lacing wire dia, mm</td>
-                    <td className="border p-2">{tableData.lacingWireDia_10x12_Zinc}</td>
-                    <td className="border p-2">{tableData.lacingWireDia_10x12_Polymer}</td>
-                    <td className="border p-2">{tableData.lacingWireDia_8x10_Zinc}</td>
-                    <td className="border p-2">{tableData.lacingWireDia_8x10_Polymer}</td>
+                    <td className="border p-2">2.20</td>
+                    <td className="border p-2">2.20</td>
                   </tr>
                   <tr>
                     <td className="border p-2">4</td>
                     <td className="border p-2">Polymer coating thickness, mm</td>
-                    <td className="border p-2">{tableData.polymerThickness_10x12_Zinc}</td>
-                    <td className="border p-2">{tableData.polymerThickness_10x12_Polymer}</td>
-                    <td className="border p-2">{tableData.polymerThickness_8x10_Zinc}</td>
-                    <td className="border p-2">{tableData.polymerThickness_8x10_Polymer}</td>
+                    <td className="border p-2">NA</td>
+                    <td className="border p-2">Nominal-0.50, Minimum-0.40</td>
                   </tr>
                   <tr>
                     <td className="border p-2">5</td>
-                    <td className="border p-2">Typical Sizes<br />Length x Width x Height(m)<br />(Number of diaphragms)</td>
-                    <td colSpan={4} className="border p-2">{tableData.typicalSizes}</td>
+                    <td className="border p-2">Typical sizes<br />Length X Diameter (m)</td>
+                    <td colSpan={2} className="border p-2">1.5 x 0.74, 2 x 0.96</td>
                   </tr>
                   <tr>
                     <td className="border p-2">6</td>
-                    <td className="border p-2">Tolerances in size of gabion boxes</td>
-                    <td colSpan={4} className="border p-2">{tableData.tolerances}</td>
+                    <td className="border p-2">Tolerances in size of units</td>
+                    <td colSpan={2} className="border p-2">Length and Diameter: ± 5 percent; Height &gt; 0.3 m: ± 5 percent and Height &lt; 0.3 m: ± 10 percent</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             {/* Notes Section */}
             <div className="text-sm text-left mb-50 mt-10">
-              <p>¹ Internal diameter/External diameter of polymer coated wire.</p>
-              <p>² Zinc Alloy shall consist to 90 percent Zinc + 10 percent Aluminium or 95 percent Zinc + 5 percent Aluminium.</p>
+              <p><sup>1</sup> Internal diameter/External diameter of polymer coated wire.</p>
+              <p><sup>2</sup> Zinc Alloy shall consist to 90 percent zinc + 10 percent Aluminium or 95 percent Zinc + 5 percent Aluminium.</p>
             </div>
           </div>
         </section>
@@ -120,4 +109,4 @@ const GabionBoxPage = () => {
   );
 };
 
-export default GabionBoxPage;
+export default SackGabionPage;
