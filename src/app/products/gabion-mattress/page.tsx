@@ -14,7 +14,7 @@ const GabionMattressPage = () => {
     polymerThickness_6x8_Zinc: "NA",
     polymerThickness_6x8_Polymer: "Nominal-0.50, Minimum-0.40",
     typicalSizes: "4 x 2 x 0.17 (3 Nos.), 3 x 2 x 0.17 (2 Nos.), 2 x 2 x 0.17 (1 No.), 4 x 2 x 0.23 (3 Nos.), 3 x 2 x 0.23 (2 Nos.), 2 x 2 x 0.23 (1 No.), 4 x 2 x 0.30 (3 Nos.), 3 x 2 x 0.30 (2 Nos.), 2 x 2 x 0.30 (1 No.)",
-    tolerances: "Length and Width: ± 5 percent; Height < 0.3 m: ± 10 percent"
+    tolerances: "Length and Width... ± 5 percent; Height < 0.3 m... ± 10 percent"
   };
 
   return (

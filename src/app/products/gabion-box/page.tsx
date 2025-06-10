@@ -44,7 +44,7 @@ const GabionBoxPage = () => {
             <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-md">
               <Image src="/images/products/gabion-box/1.png" alt="Gabion Box" fill style={{ objectFit: 'contain' }} />
             </div>
-            
+
             {/* Dynamic Table */}
             <div className="overflow-x-auto mb-50">
   <table className="table-auto border-collapse w-full max-w-screen-xl mx-auto text-xs bg-white shadow font-bold">
@@ -127,7 +127,7 @@ const GabionBoxPage = () => {
         <td className="border border-black text-center px-4 py-4">6</td>
         <td className="border border-black text-left px-4 py-4">Tolerances in size of gabion boxes</td>
         <td colSpan={6} className="border border-black text-left px-4 py-4 text-[11px] leading-relaxed break-words">
-          Length and Width: ± 5 percent; Height &gt; 0.3 m: ± 5 percent and Height &lt; 0.3 m: ± 10 percent
+          Length and Width.. 5 percent; Height &gt; 0.3 m... ± 5 percent and Height &lt; 0.3 m... ± 10 percent
         </td>
       </tr>
     </tbody>
