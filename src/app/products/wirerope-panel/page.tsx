@@ -13,15 +13,20 @@ const WireRopePanelPage = () => {
         {/* Product Image and Title Section */}
         <section className="mt-5 sm:mt-8 md:mt-10 top-20 sm:top-28 md:top-40 relative">
           <div className="max-w-[1200px] mx-auto">
-            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-md">
-              <Image src="/images/products/wire-rope/1.png" alt="Wire Rope Panel" fill style={{ objectFit: 'contain' }} />
-            </div>
+         
             <div className="mt-6 sm:mt-8 md:mt-10 mb-12 sm:mb-16 md:mb-24">
               <h1 className="text-xl sm:text-2xl md:text-3xl lg:text-4xl font-bold text-center text-black mb-3 sm:mb-4 md:mb-6 px-3 sm:px-4">SECURE WIRE ROPE PANEL</h1>
               <p className="text-sm sm:text-base md:text-lg text-gray-700 text-center max-w-5xl mx-auto leading-relaxed px-3 sm:px-4">
               Secure Rhomboidal Rockfall Netting is an advanced, high-strength protective mesh system designed to ensure maximum safety in challenging terrains. It features reinforced, high-strength wire knots that enhance durability and resistance to both static and dynamic stresses. These reinforcements use double steel wire knots, providing double binding with two separate wires for increased reliability. Ideal for rockfall protection, slope stabilization, and infrastructure security, this netting delivers superior flexibility, impact resistance, and long-term performance.              </p>
             </div>
+            
+            <div className="relative w-full h-[250px] sm:h-[350px] md:h-[500px] lg:h-[600px] overflow-hidden rounded-lg shadow-md">
+              <Image src="/images/products/wire-rope/1.png" alt="Wire Rope Panel" fill style={{ objectFit: 'contain' }} />
+            </div>
+
             {/* Dynamic Table */}
+
+
             <div className="overflow-x-auto">
               <table className="w-full border-collapse mt-8">
                 <thead>
