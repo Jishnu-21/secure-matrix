@@ -4,26 +4,7 @@ import Footer from '@/app/components/Footer';
 import Header from '@/app/components/Header';
 
 const GabionBoxPage = () => {
-  const tableData = {
-    meshWireDia_10x12_Zinc: "2.70",
-    meshWireDia_10x12_Polymer: "3.00",
-    meshWireDia_8x10_Zinc: "2.70",
-    meshWireDia_8x10_Polymer: "3.00",
-    edgeWireDia_10x12_Zinc: "3.40",
-    edgeWireDia_10x12_Polymer: "3.90",
-    edgeWireDia_8x10_Zinc: "3.40",
-    edgeWireDia_8x10_Polymer: "3.90",
-    lacingWireDia_10x12_Zinc: "2.20",
-    lacingWireDia_10x12_Polymer: "2.20",
-    lacingWireDia_8x10_Zinc: "2.20",
-    lacingWireDia_8x10_Polymer: "2.20",
-    polymerThickness_10x12_Zinc: "NA",
-    polymerThickness_10x12_Polymer: "Nominal-0.50, Minimum-0.40",
-    polymerThickness_8x10_Zinc: "NA",
-    polymerThickness_8x10_Polymer: "Nominal-0.50, Minimum-0.40",
-    typicalSizes: "4 x 1 x 1 (3 Nos.), 3 x 1 x 1 (2 Nos.), 2 x 1 x 1 (1 No.), 1.5 x 1 x 1 (0 No.), 2 x 1 x 0.5 (1 No.), 3 x 1 x 0.5 (2 Nos.), 4 x 1 x 0.5 (3 Nos.), 2 x 1 x 0.3 (1 No.), 3 x 1 x 0.3 (2 Nos.), 4 x 1 x 0.3 (3 Nos.)",
-    tolerances: "Length and Width: ± 5 percent; Height > 0.3 m: ± 5 percent and Height ≤ 0.3 m: ± 10 percent"
-  };
+
 
   return (
     <main className="min-h-screen flex flex-col bg-white">
