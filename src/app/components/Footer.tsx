@@ -92,7 +92,7 @@ const Footer = () => {
                 playsInline
               >
                 <source 
-                  src="https://orig-videos.tradeindia.com/video/flv/catalogs/134484/video134484_001.mp4" 
+                  src="https://www.youtube.com/watch?v=BDnKGZQFI9U" 
                   type="video/mp4" 
                 />
                 Your browser does not support the video tag.
